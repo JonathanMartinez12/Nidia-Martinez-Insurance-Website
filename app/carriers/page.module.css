@@ -1,0 +1,81 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2c5282 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.whySection {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carriersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.carrierCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.carrierDescription {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.carrierDescription h3 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.carrierDescription p {
+  color: var(--color-text-light);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+}
+
+.visitLink {
+  color: var(--color-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.visitLink:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+  padding-left: 0.5rem;
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  padding: var(--spacing-3xl) 0;
+  color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carriersGrid {
+    grid-template-columns: 1fr;
+  }
+}
