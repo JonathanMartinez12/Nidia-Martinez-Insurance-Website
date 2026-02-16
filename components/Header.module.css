@@ -2,12 +2,16 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-md);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
 }
 
 .topBar {
-  background-color: var(--color-primary);
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: var(--color-white);
   padding: 0.5rem 0;
   font-size: 0.875rem;
@@ -69,7 +73,7 @@
 }
 
 .nav {
-  background-color: var(--color-white);
+  background-color: transparent;
   padding: 1rem 0;
 }
 

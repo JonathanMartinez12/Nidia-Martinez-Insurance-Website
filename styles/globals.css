@@ -7,15 +7,17 @@
 }
 
 :root {
-  /* Color Palette */
-  --color-primary: #1E3A5F;
-  --color-secondary: #2A9D8F;
-  --color-accent: #E8F4F8;
-  --color-text: #333333;
-  --color-text-light: #666666;
+  /* Premium Color Palette */
+  --color-primary: #0F172A;
+  --color-primary-light: #1E293B;
+  --color-secondary: #D4AF37;
+  --color-accent: #F8FAFC;
+  --color-text: #1E293B;
+  --color-text-light: #64748B;
   --color-white: #FFFFFF;
-  --color-gray-light: #F5F5F5;
-  --color-gray: #E0E0E0;
+  --color-gray-light: #F8FAFC;
+  --color-gray: #E2E8F0;
+  --color-border: rgba(226, 232, 240, 0.8);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -159,15 +161,16 @@ button {
 }
 
 .btn-primary {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: var(--color-white);
+  box-shadow: 0 4px 14px 0 rgba(15, 23, 42, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: #248c7f;
+  background-color: var(--color-primary-light);
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 6px 20px 0 rgba(15, 23, 42, 0.35);
 }
 
 .btn-secondary {

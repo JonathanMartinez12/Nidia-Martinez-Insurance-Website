@@ -122,12 +122,42 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-3">
-            <CarrierLogo name="Humana" href="https://www.humana.com" logoText="HUMANA" />
-            <CarrierLogo name="UnitedHealthcare" href="https://www.uhc.com" logoText="UnitedHealthcare" />
-            <CarrierLogo name="AARP Medicare" href="https://www.aarpmedicareplans.com" logoText="AARP Medicare" />
-            <CarrierLogo name="Devoted Health" href="https://www.devoted.com" logoText="Devoted Health" />
-            <CarrierLogo name="Aetna" href="https://www.aetna.com" logoText="AETNA" />
-            <CarrierLogo name="Blue Cross Blue Shield" href="https://www.bcbs.com" logoText="Blue Cross Blue Shield" />
+            <CarrierLogo
+              name="Humana"
+              href="https://www.humana.com"
+              logoUrl="https://logo.clearbit.com/humana.com"
+              logoText="HUMANA"
+            />
+            <CarrierLogo
+              name="UnitedHealthcare"
+              href="https://www.uhc.com"
+              logoUrl="https://logo.clearbit.com/uhc.com"
+              logoText="UnitedHealthcare"
+            />
+            <CarrierLogo
+              name="AARP Medicare"
+              href="https://www.aarpmedicareplans.com"
+              logoUrl="https://logo.clearbit.com/aarp.org"
+              logoText="AARP Medicare"
+            />
+            <CarrierLogo
+              name="Devoted Health"
+              href="https://www.devoted.com"
+              logoUrl="https://logo.clearbit.com/devoted.com"
+              logoText="Devoted Health"
+            />
+            <CarrierLogo
+              name="Aetna"
+              href="https://www.aetna.com"
+              logoUrl="https://logo.clearbit.com/aetna.com"
+              logoText="AETNA"
+            />
+            <CarrierLogo
+              name="Blue Cross Blue Shield"
+              href="https://www.bcbs.com"
+              logoUrl="https://logo.clearbit.com/bcbs.com"
+              logoText="Blue Cross Blue Shield"
+            />
           </div>
         </div>
       </section>
