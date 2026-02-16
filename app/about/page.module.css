@@ -1,0 +1,209 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2c5282 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.bioGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+.bioImage {
+  position: sticky;
+  top: 100px;
+}
+
+.bioContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.bioParagraph {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.licensesSection {
+  text-align: center;
+}
+
+.sectionHeader {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.sectionIcon {
+  color: var(--color-secondary);
+  margin: 0 auto var(--spacing-md);
+}
+
+.statesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stateCard {
+  background-color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--color-secondary);
+  transition: var(--transition);
+}
+
+.stateCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.stateCard h3 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.specialtyCard {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: var(--transition);
+}
+
+.specialtyCard:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.checkIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.specialtyCard span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.commitmentSection {
+  text-align: center;
+}
+
+.commitmentHeader {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.commitmentItem {
+  display: flex;
+  align-items: start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.commitmentItem:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(5px);
+}
+
+.checkIconSmall {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.commitmentItem span {
+  text-align: left;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.ctaSection {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  padding: var(--spacing-3xl) 0;
+  color: var(--color-white);
+}
+
+.ctaTitle {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.ctaText {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-xl);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .bioGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bioImage {
+    position: static;
+  }
+
+  .statesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaButtons .btn {
+    width: 100%;
+  }
+}
