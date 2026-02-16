@@ -53,7 +53,7 @@ body {
 }
 
 body {
-  font-size: 16px;
+  font-size: 17px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -192,15 +192,17 @@ button {
 .card {
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
   height: 100%;
+  border: 1px solid var(--color-gray);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-secondary);
 }
 
 /* Grid */
