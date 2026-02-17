@@ -125,37 +125,34 @@ export default function HomePage() {
             <CarrierLogo
               name="Humana"
               href="https://www.humana.com"
-              logoUrl="https://logo.clearbit.com/humana.com"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2q9P9yMYX58qynqoRGANv2_w0XC-3qGaIg&s"
               logoText="HUMANA"
             />
             <CarrierLogo
               name="UnitedHealthcare"
               href="https://www.uhc.com"
-              logoUrl="https://logo.clearbit.com/uhc.com"
+              logoUrl="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/UnitedHealthcare_%28logo%29.svg/1280px-UnitedHealthcare_%28logo%29.svg.png"
               logoText="UnitedHealthcare"
             />
             <CarrierLogo
               name="AARP Medicare"
               href="https://www.aarpmedicareplans.com"
-              logoUrl="https://logo.clearbit.com/aarp.org"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDs7JsysvJQHd1yoWJrNrs7VKjibv11MQtVw&s"
               logoText="AARP Medicare"
             />
             <CarrierLogo
               name="Devoted Health"
               href="https://www.devoted.com"
-              logoUrl="https://logo.clearbit.com/devoted.com"
               logoText="Devoted Health"
             />
             <CarrierLogo
               name="Aetna"
               href="https://www.aetna.com"
-              logoUrl="https://logo.clearbit.com/aetna.com"
               logoText="AETNA"
             />
             <CarrierLogo
               name="Blue Cross Blue Shield"
               href="https://www.bcbs.com"
-              logoUrl="https://logo.clearbit.com/bcbs.com"
               logoText="Blue Cross Blue Shield"
             />
           </div>
