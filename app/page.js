@@ -143,16 +143,19 @@ export default function HomePage() {
             <CarrierLogo
               name="Devoted Health"
               href="https://www.devoted.com"
+              logoUrl="https://healthnewsillinois.com/wp-content/uploads/2021/10/Devoted-Health-logo.jpg"
               logoText="Devoted Health"
             />
             <CarrierLogo
               name="Aetna"
               href="https://www.aetna.com"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsp-EvNr_FL1nJqLBL0rwgYkUiOKBbasqtkA&s"
               logoText="AETNA"
             />
             <CarrierLogo
               name="Blue Cross Blue Shield"
               href="https://www.bcbs.com"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_cfU1H8rUjvP79s1Gn0TuUu8KaSNGumx-A&s"
               logoText="Blue Cross Blue Shield"
             />
           </div>
