@@ -40,7 +40,11 @@ export default function HomePage() {
               </div>
             </div>
             <div className={styles.heroImage}>
-              <div className="placeholder-image">Image 1</div>
+              <img
+                src="/images/hero/Nidia.png"
+                alt="Nidia Martinez - Licensed Insurance Agent"
+                style={{ borderRadius: 'var(--radius-xl)', maxWidth: '100%', height: 'auto' }}
+              />
             </div>
           </div>
         </div>
