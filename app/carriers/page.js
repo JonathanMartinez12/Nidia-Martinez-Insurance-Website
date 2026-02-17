@@ -19,36 +19,42 @@ const carriers = [
   {
     name: 'Humana',
     href: 'https://www.humana.com',
+    logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2q9P9yMYX58qynqoRGANv2_w0XC-3qGaIg&s',
     logoText: 'HUMANA',
     description: 'One of the nation\'s largest health insurance companies, Humana offers comprehensive Medicare Advantage plans with excellent benefits and customer service.'
   },
   {
     name: 'UnitedHealthcare',
     href: 'https://www.uhc.com',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/29/UnitedHealthcare_%28logo%29.svg/1280px-UnitedHealthcare_%28logo%29.svg.png',
     logoText: 'UnitedHealthcare',
     description: 'UnitedHealthcare provides a wide range of Medicare Advantage and Medicare Supplement plans with extensive provider networks nationwide.'
   },
   {
     name: 'AARP Medicare Supplements',
     href: 'https://www.aarpmedicareplans.com',
+    logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDs7JsysvJQHd1yoWJrNrs7VKjibv11MQtVw&s',
     logoText: 'AARP Medicare',
     description: 'AARP offers highly-rated Medicare Supplement (Medigap) plans through UnitedHealthcare, providing comprehensive coverage to fill gaps in Original Medicare.'
   },
   {
     name: 'Devoted Health',
     href: 'https://www.devoted.com',
+    logoUrl: 'https://healthnewsillinois.com/wp-content/uploads/2021/10/Devoted-Health-logo.jpg',
     logoText: 'Devoted Health',
     description: 'Devoted Health is revolutionizing Medicare Advantage with technology-driven, personalized care and exceptional member support.'
   },
   {
     name: 'Aetna',
     href: 'https://www.aetna.com',
+    logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsp-EvNr_FL1nJqLBL0rwgYkUiOKBbasqtkA&s',
     logoText: 'AETNA',
     description: 'Aetna, a CVS Health company, offers comprehensive Medicare Advantage plans with integrated pharmacy benefits and preventive care focus.'
   },
   {
     name: 'Blue Cross Blue Shield',
     href: 'https://www.bcbs.com',
+    logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_cfU1H8rUjvP79s1Gn0TuUu8KaSNGumx-A&s',
     logoText: 'Blue Cross Blue Shield',
     description: 'Blue Cross Blue Shield is a trusted name in healthcare, offering Medicare Advantage and Medicare Supplement plans with extensive provider networks.'
   },
@@ -115,6 +121,7 @@ export default function CarriersPage() {
                 <CarrierLogo
                   name={carrier.name}
                   href={carrier.href}
+                  logoUrl={carrier.logoUrl}
                   logoText={carrier.logoText}
                 />
                 <div className={styles.carrierDescription}>

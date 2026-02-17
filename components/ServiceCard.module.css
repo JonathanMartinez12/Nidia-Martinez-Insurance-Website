@@ -2,7 +2,7 @@
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   padding: var(--spacing-xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
   text-decoration: none;
   display: flex;
@@ -10,19 +10,19 @@
   align-items: center;
   text-align: center;
   height: 100%;
-  border: 2px solid transparent;
+  border: 2px solid var(--color-gray);
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
   border-color: var(--color-secondary);
   text-decoration: none;
 }
 
 .iconWrapper {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
   display: flex;
@@ -33,16 +33,17 @@
 }
 
 .title {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: var(--spacing-md);
+  line-height: 1.3;
 }
 
 .description {
-  color: var(--color-text-light);
-  font-size: 1rem;
-  line-height: 1.6;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  line-height: 1.7;
   margin-bottom: var(--spacing-lg);
   flex-grow: 1;
 }
@@ -50,11 +51,11 @@
 .learnMore {
   color: var(--color-secondary);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   transition: var(--transition);
 }
 
 .card:hover .learnMore {
-  transform: translateX(5px);
+  transform: translateX(3px);
   display: inline-block;
 }

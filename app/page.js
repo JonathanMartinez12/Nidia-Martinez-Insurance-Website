@@ -40,7 +40,11 @@ export default function HomePage() {
               </div>
             </div>
             <div className={styles.heroImage}>
-              <div className="placeholder-image">Image 1</div>
+              <img
+                src="/images/nidia.png"
+                alt="Nidia Martinez - Licensed Insurance Agent"
+                style={{ borderRadius: 'var(--radius-xl)', maxWidth: '100%', height: 'auto' }}
+              />
             </div>
           </div>
         </div>
@@ -122,12 +126,42 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-3">
-            <CarrierLogo name="Humana" href="https://www.humana.com" logoText="HUMANA" />
-            <CarrierLogo name="UnitedHealthcare" href="https://www.uhc.com" logoText="UnitedHealthcare" />
-            <CarrierLogo name="AARP Medicare" href="https://www.aarpmedicareplans.com" logoText="AARP Medicare" />
-            <CarrierLogo name="Devoted Health" href="https://www.devoted.com" logoText="Devoted Health" />
-            <CarrierLogo name="Aetna" href="https://www.aetna.com" logoText="AETNA" />
-            <CarrierLogo name="Blue Cross Blue Shield" href="https://www.bcbs.com" logoText="Blue Cross Blue Shield" />
+            <CarrierLogo
+              name="Humana"
+              href="https://www.humana.com"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2q9P9yMYX58qynqoRGANv2_w0XC-3qGaIg&s"
+              logoText="HUMANA"
+            />
+            <CarrierLogo
+              name="UnitedHealthcare"
+              href="https://www.uhc.com"
+              logoUrl="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/UnitedHealthcare_%28logo%29.svg/1280px-UnitedHealthcare_%28logo%29.svg.png"
+              logoText="UnitedHealthcare"
+            />
+            <CarrierLogo
+              name="AARP Medicare"
+              href="https://www.aarpmedicareplans.com"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDs7JsysvJQHd1yoWJrNrs7VKjibv11MQtVw&s"
+              logoText="AARP Medicare"
+            />
+            <CarrierLogo
+              name="Devoted Health"
+              href="https://www.devoted.com"
+              logoUrl="https://healthnewsillinois.com/wp-content/uploads/2021/10/Devoted-Health-logo.jpg"
+              logoText="Devoted Health"
+            />
+            <CarrierLogo
+              name="Aetna"
+              href="https://www.aetna.com"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsp-EvNr_FL1nJqLBL0rwgYkUiOKBbasqtkA&s"
+              logoText="AETNA"
+            />
+            <CarrierLogo
+              name="Blue Cross Blue Shield"
+              href="https://www.bcbs.com"
+              logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj_cfU1H8rUjvP79s1Gn0TuUu8KaSNGumx-A&s"
+              logoText="Blue Cross Blue Shield"
+            />
           </div>
         </div>
       </section>

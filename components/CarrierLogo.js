@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import styles from './CarrierLogo.module.css';
 
-export default function CarrierLogo({ name, href, logoText }) {
+export default function CarrierLogo({ name, href, logoUrl, logoText }) {
   return (
     <a
       href={href}
@@ -10,7 +11,15 @@ export default function CarrierLogo({ name, href, logoText }) {
       aria-label={`Visit ${name} website`}
     >
       <div className={styles.logoPlaceholder}>
-        <span className={styles.logoText}>{logoText || name}</span>
+        {logoUrl ? (
+          <img
+            src={logoUrl}
+            alt={`${name} logo`}
+            className={styles.logoImage}
+          />
+        ) : (
+          <span className={styles.logoText}>{logoText || name}</span>
+        )}
       </div>
     </a>
   );
