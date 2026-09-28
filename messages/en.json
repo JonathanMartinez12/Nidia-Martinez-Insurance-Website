@@ -1,135 +1,135 @@
 {
   "Meta": {
     "home": {
-      "title": "Medicare Advisor in New Orleans, LA | Plus 65 Medicare",
+      "title": "Medicare Advisor in New Orleans | Martinez Insurance Agency",
       "description": "Local, licensed Medicare advisors in New Orleans with {years} years of experience. No-cost, in-person help choosing a plan. Hablamos español."
     },
     "services": {
       "medicare-advantage": {
-        "title": "Medicare Advantage Plans in Louisiana | Plus 65",
+        "title": "Medicare Advantage Plans in Louisiana | Martinez Insurance",
         "description": "Compare Humana, Peoples Health, UnitedHealthcare and Devoted Health Medicare Advantage plans with a local agent. {years} years of experience. No cost."
       },
       "medicare-supplement": {
-        "title": "Medicare Supplement Plans in New Orleans | Plus 65",
+        "title": "Medicare Supplement Plans in Louisiana | Martinez Insurance",
         "description": "Medigap plans in Louisiana, including AARP Medicare Supplement and Humana, explained by a local advisor with {years} years of experience. No-cost help."
       },
       "part-d-prescription-drug-plans": {
-        "title": "Medicare Part D Drug Plans in Louisiana | Plus 65",
+        "title": "Medicare Part D Drug Plans in Louisiana | Martinez Insurance",
         "description": "Find a Part D prescription drug plan that covers your medicines at the pharmacy you use. No-cost help from bilingual Medicare agents in New Orleans."
       },
       "special-needs-plans": {
-        "title": "Medicare Plans for Diabetes & Heart Conditions | Plus 65",
+        "title": "Medicare Plans for Diabetes & Heart | Martinez Insurance",
         "description": "Chronic Condition Special Needs Plans (C-SNPs) for diabetes and heart conditions may offer extra benefits. See if you qualify, at no cost to you."
       },
       "dental-vision-insurance": {
-        "title": "Dental & Vision Insurance for Seniors in LA | Plus 65",
+        "title": "Dental & Vision Insurance for Seniors | Martinez Insurance",
         "description": "Original Medicare doesn't cover routine dental or vision care. Compare dental and vision plans with a local, bilingual agent in Greater New Orleans."
       },
       "final-expense-insurance": {
-        "title": "Final Expense Insurance in Louisiana | Plus 65",
+        "title": "Final Expense Insurance in Louisiana | Martinez Insurance",
         "description": "Final expense (burial) insurance helps cover funeral costs so your family isn't left with the bill. Friendly, bilingual help in Greater New Orleans."
       },
       "life-insurance": {
-        "title": "Low-Cost Life Insurance in Louisiana | Plus 65",
+        "title": "Low-Cost Life Insurance in Louisiana | Martinez Insurance",
         "description": "Affordable term and whole life insurance for Louisiana families. A licensed local agent compares options with you in plain English or Spanish."
       },
       "hospital-indemnity-insurance": {
-        "title": "Hospital Indemnity Insurance in Louisiana | Plus 65",
+        "title": "Hospital Indemnity Insurance in LA | Martinez Insurance",
         "description": "Hospital indemnity plans pay you cash for covered hospital stays, which can help with Medicare Advantage copays. Local, no-cost guidance."
       },
       "health-insurance": {
-        "title": "Health Insurance Under 65 in Louisiana | Plus 65",
+        "title": "Health Insurance Under 65 in Louisiana | Martinez Insurance",
         "description": "Not on Medicare yet? Get help finding individual and family health insurance in Louisiana from licensed, bilingual agents in Greater New Orleans."
       }
     },
     "aep": {
-      "title": "Medicare Annual Enrollment (Oct 15–Dec 7) | Plus 65",
+      "title": "Medicare Enrollment: Oct 15–Dec 7 | Martinez Insurance",
       "description": "The Medicare Annual Enrollment Period runs October 15 to December 7. Learn what your Annual Notice of Change means and book a free plan review."
     },
     "scam": {
-      "title": "How to Avoid Medicare Scams | Plus 65 Medicare Advisors",
+      "title": "How to Avoid Medicare Scams | Martinez Insurance Agency",
       "description": "Medicare scam calls, texts and emails are common. Learn the warning signs, what Medicare will never ask for, and how to report fraud in Louisiana."
     },
     "about": {
-      "title": "About Nidia & John Martinez | Plus 65 Medicare Advisors",
+      "title": "About Nidia & John Martinez | Martinez Insurance Agency",
       "description": "Meet Nidia and John Martinez, a licensed husband-and-wife team with {years} years of experience helping Louisiana seniors. Hablamos español."
     },
     "agents": {
       "nidia-martinez": {
-        "title": "Nidia Martinez, Medicare Agent in New Orleans | Plus 65",
+        "title": "Nidia Martinez, Medicare Agent | Martinez Insurance Agency",
         "description": "Nidia Martinez is a licensed, bilingual Medicare agent with {years} years of experience in Medicare Advantage and Medicare Supplement plans."
       },
       "john-martinez": {
-        "title": "John Martinez, Licensed Insurance Agent | Plus 65",
+        "title": "John Martinez, Licensed Insurance Agent | Martinez Insurance",
         "description": "John Martinez helps Louisiana families with final expense, life, hospital indemnity, dental, vision and health insurance. Hablamos español."
       }
     },
     "serviceArea": {
-      "title": "Medicare Help Across Louisiana | Plus 65 Medicare Advisors",
+      "title": "Medicare Help Across Louisiana | Martinez Insurance Agency",
       "description": "We help people across Louisiana with Medicare, with in-person appointments throughout Greater New Orleans, the Northshore and Baton Rouge."
     },
     "cities": {
       "new-orleans": {
-        "title": "New Orleans Medicare Agent | Plus 65 Medicare Advisors",
+        "title": "New Orleans Medicare Agent | Martinez Insurance Agency",
         "description": "A local, bilingual Medicare agent for New Orleans neighborhoods. Compare Medicare Advantage, Supplement and Part D plans in person, at no cost."
       },
       "metairie": {
-        "title": "Medicare Agent in Metairie, LA | Plus 65 Medicare Advisors",
+        "title": "Medicare Agent in Metairie, LA | Martinez Insurance Agency",
         "description": "Looking for a Medicare agent in Metairie? Get no-cost, in-person help comparing plans that work with your Jefferson Parish doctors. Se habla español."
       },
       "kenner": {
-        "title": "Medicare Agent in Kenner, LA | Plus 65 Medicare Advisors",
+        "title": "Medicare Agent in Kenner, LA | Martinez Insurance Agency",
         "description": "Bilingual Medicare help in Kenner. We compare Medicare Advantage, Medigap and drug plans with you in English or Spanish, at no cost to you."
       },
       "gretna": {
-        "title": "Medicare Agent in Gretna & the West Bank | Plus 65",
+        "title": "Medicare Agent in Gretna & West Bank | Martinez Insurance",
         "description": "Medicare help for Gretna, Marrero, Harvey and the West Bank. Compare plans with a licensed local agent who checks your doctors and pharmacy."
       },
       "chalmette": {
-        "title": "Medicare Agent in Chalmette, LA | Plus 65 Medicare Advisors",
+        "title": "Medicare Agent in Chalmette, LA | Martinez Insurance Agency",
         "description": "No-cost Medicare guidance for Chalmette and St. Bernard Parish. Review your plan each fall, avoid scams and get answers from a local agent."
       },
       "slidell": {
-        "title": "Medicare Agent in Slidell, LA | Plus 65 Medicare Advisors",
+        "title": "Medicare Agent in Slidell, LA | Martinez Insurance Agency",
         "description": "Medicare help for Slidell and eastern St. Tammany Parish. Compare Medicare Advantage and Supplement plans with a licensed, bilingual agent."
       },
       "covington": {
-        "title": "Medicare Agent in Covington & Mandeville | Plus 65",
+        "title": "Medicare Agent, Covington & Mandeville | Martinez Insurance",
         "description": "Northshore Medicare help for Covington, Mandeville and western St. Tammany. Personal plan reviews with a licensed agent at no cost to you."
       },
       "baton-rouge": {
-        "title": "Medicare Agent in Baton Rouge, LA | Plus 65",
+        "title": "Medicare Agent in Baton Rouge, LA | Martinez Insurance",
         "description": "Medicare guidance for Baton Rouge from licensed, bilingual agents. Compare Medicare Advantage, Medigap and Part D plans by phone or in person."
       }
     },
     "faq": {
-      "title": "Medicare Questions Answered (FAQ) | Plus 65",
+      "title": "Medicare Questions Answered (FAQ) | Martinez Insurance",
       "description": "Plain-English answers about Medicare enrollment, Medicare Advantage vs. Medigap, Part D, costs, scams and working with a local Louisiana agent."
     },
     "contact": {
-      "title": "Contact Us for a Free Medicare Consultation | Plus 65",
+      "title": "Free Medicare Consultation | Martinez Insurance Agency",
       "description": "Call (504) 913-2398 or send a message to schedule a no-cost Medicare consultation in Greater New Orleans or anywhere in Louisiana. Hablamos español."
     },
     "privacy": {
-      "title": "Privacy Policy | Plus 65 Medicare Advisors",
-      "description": "How Plus 65 Medicare Advisors collects, uses and protects the information you share through our website and contact form."
+      "title": "Privacy Policy | Martinez Insurance Agency",
+      "description": "How Martinez Insurance Agency collects, uses and protects the information you share through our website and contact form."
     },
     "terms": {
-      "title": "Terms of Use | Plus 65 Medicare Advisors",
-      "description": "The terms that apply when you use the Plus 65 Medicare Advisors website, including important information about the educational content."
+      "title": "Terms of Use | Martinez Insurance Agency",
+      "description": "The terms that apply when you use the Martinez Insurance Agency website, including important information about the educational content."
     },
     "accessibility": {
-      "title": "Accessibility Statement | Plus 65 Medicare Advisors",
+      "title": "Accessibility Statement | Martinez Insurance Agency",
       "description": "Our commitment to an accessible website for everyone, including people who use screen readers, keyboards or larger text, and how to get help."
     },
     "notFound": {
-      "title": "Page Not Found | Plus 65 Medicare Advisors",
+      "title": "Page Not Found | Martinez Insurance Agency",
       "description": "We couldn't find that page. Call (504) 913-2398 or use the links on this page to find Medicare help."
     }
   },
   "Common": {
-    "siteName": "Plus 65 Medicare Advisors",
-    "tagline": "Medicare Advisors",
+    "siteName": "Martinez Insurance Agency",
+    "tagline": "Insurance Agency",
     "homeLabel": "home",
     "skipToContent": "Skip to main content",
     "callPhone": "Call {phone}",
@@ -161,8 +161,8 @@
     "yearsExperience": "{years} years of experience",
     "yearsHelping": "{years} Years Helping Louisiana Seniors",
     "combinedYears": "Over {years} years of combined experience",
-    "headshotAlt": "Portrait of {name}, licensed insurance agent with Plus 65 Medicare Advisors",
-    "nonAffiliation": "Plus 65 Medicare Advisors is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.",
+    "headshotAlt": "Portrait of {name}, licensed insurance agent with Martinez Insurance Agency",
+    "nonAffiliation": "Martinez Insurance Agency is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.",
     "backToTop": "Back to top"
   },
   "Header": {
@@ -205,7 +205,7 @@
     "accessibility": "Accessibility",
     "legalNav": "Legal",
     "footerNav": "Footer",
-    "copyright": "© {year} Plus 65 Medicare Advisors. All rights reserved.",
+    "copyright": "© {year} Martinez Insurance Agency. All rights reserved.",
     "disclaimerHeading": "Important information",
     "educational": "Content on this site is for general education. Plan benefits, costs, networks and availability vary by plan and change each year; always review a plan's official documents before enrolling."
   },
@@ -388,7 +388,7 @@
     "bestTimeNone": "No preference",
     "message": "How can we help?",
     "messageHint": "Optional. Please don't include your Medicare number or health details.",
-    "consent": "I agree that Plus 65 Medicare Advisors may contact me by phone, text or email about Medicare and other insurance products. Consent is not required to buy anything, and I can opt out at any time.",
+    "consent": "I agree that Martinez Insurance Agency may contact me by phone, text or email about Medicare and other insurance products. Consent is not required to buy anything, and I can opt out at any time.",
     "required": "required",
     "optional": "optional",
     "submit": "Send my request",
@@ -416,12 +416,12 @@
       "consentRequired": "Please check the box so we're allowed to contact you."
     },
     "email_confirm": {
-      "subject": "We received your request — Plus 65 Medicare Advisors",
+      "subject": "We received your request — Martinez Insurance Agency",
       "greeting": "Hello {name},",
-      "body": "Thank you for contacting Plus 65 Medicare Advisors. A licensed agent will reach out soon.",
+      "body": "Thank you for contacting Martinez Insurance Agency. A licensed agent will reach out soon.",
       "callUs": "If you'd like to talk sooner, call us:",
       "scamNote": "For your protection: we will never ask for your Medicare number, Social Security number or bank information by email.",
-      "signoff": "Nidia & John Martinez — Plus 65 Medicare Advisors"
+      "signoff": "Nidia & John Martinez — Martinez Insurance Agency"
     }
   },
   "NotFound": {

@@ -89,8 +89,8 @@ export const agents: Agent[] = [
     phone: { display: '(504) 913-2398', e164: '+15049132398' },
     phoneLabel: 'direct',
     email: 'nidiamartinez576@outlook.com',
-    headshot: null, // TODO: add Nidia's headshot (match John's style) → "/images/team/nidia-martinez.jpg"
-    headshotSize: null,
+    headshot: '/images/team/nidia-martinez.jpg',
+    headshotSize: { width: 720, height: 900 },
     languages: ['en', 'es'],
     licenseNumber: null, // TODO
     npn: null, // TODO
@@ -111,8 +111,8 @@ export const agents: Agent[] = [
     phone: { display: '(504) 313-2317', e164: '+15043132317' },
     phoneLabel: 'cell',
     email: 'martj5493@gmail.com',
-    headshot: null, // TODO: optimise assets/John_Martinez_Headshot__1_.jpg → "/images/team/john-martinez.jpg"
-    headshotSize: null,
+    headshot: '/images/team/john-martinez.jpg',
+    headshotSize: { width: 720, height: 900 },
     languages: ['en', 'es'],
     licenseNumber: null, // TODO
     npn: null, // TODO
@@ -143,8 +143,8 @@ export const carriers: { medicareAdvantage: Carrier[]; medicareSupplement: Carri
 // ─── Business ────────────────────────────────────────────────────────────────
 
 export const site = {
-  name: 'Plus 65 Medicare Advisors',
-  shortName: 'Plus 65',
+  name: 'Martinez Insurance Agency',
+  shortName: 'Martinez Insurance',
   /** Business email used in schema and the footer. */
   email: 'nidiamartinez576@outlook.com',
   /** The primary business line (header, sticky call bar, schema). Nidia's number. */
@@ -190,9 +190,9 @@ export const site = {
   brand: {
     navy: '#233E84',
     red: '#C8202F',
-    logo: '/brand/plus65-logo.svg',
-    logoPng: '/brand/plus65-logo.png',
-    mark: '/brand/plus65-mark.svg',
+    logo: '/brand/logo.svg',
+    logoPng: '/brand/logo.png',
+    mark: '/brand/mark.svg',
   },
 } as const;
 

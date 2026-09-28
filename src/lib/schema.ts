@@ -159,7 +159,6 @@ export function websiteSchema(locale: AppLocale, description: string): WithConte
     description,
     inLanguage: [hreflangCode.en, hreflangCode.es],
     publisher: { '@type': 'InsuranceAgency', '@id': agencyId(), name: site.name },
-    ...(locale === 'es' ? { alternateName: 'Plus 65 Asesores de Medicare' } : {}),
   };
 }
 

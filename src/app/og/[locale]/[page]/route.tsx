@@ -57,12 +57,19 @@ export async function GET(_req: Request, { params }: { params: Promise<{ locale:
         <svg width="76" height="76" viewBox="0 0 64 64">
           <rect width="64" height="64" rx="15" fill="#233E84" />
           <path d="M-4 52.5C15 42 43 41.5 68 50.5" fill="none" stroke="#C8202F" strokeWidth="4.5" />
-          <path d="M32 13.5V38.5M19.5 26H44.5" stroke="#FFFFFF" strokeWidth="8" strokeLinecap="round" />
+          <path
+            d="M18 39V15.5L32 30L46 15.5V39"
+            fill="none"
+            stroke="#FFFFFF"
+            strokeWidth="6.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
         <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 22 }}>
-          <div style={{ display: 'flex', fontFamily: 'SourceSerif', fontSize: 40, color: '#FFFFFF' }}>PLUS 65</div>
+          <div style={{ display: 'flex', fontFamily: 'SourceSerif', fontSize: 40, color: '#FFFFFF' }}>Martinez</div>
           <div style={{ display: 'flex', fontSize: 17, letterSpacing: 5, color: '#C9D3EC', fontWeight: 700 }}>
-            MEDICARE ADVISORS
+            INSURANCE AGENCY
           </div>
         </div>
       </div>

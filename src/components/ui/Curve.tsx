@@ -1,4 +1,4 @@
-/** Gentle wave echoing the curves on the Plus 65 business card. Uses currentColor. */
+/** Gentle wave echoing the curves on the business card. Uses currentColor. */
 export function Curve({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden focusable="false" className={className}>

@@ -1,8 +1,8 @@
 {
-  "name": "plus65-medicare-advisors",
+  "name": "martinez-insurance-agency",
   "version": "1.0.0",
   "private": true,
-  "description": "Bilingual (EN/ES) local-SEO website for Plus 65 Medicare Advisors — Greater New Orleans, Louisiana.",
+  "description": "Bilingual (EN/ES) local-SEO website for Martinez Insurance Agency — Greater New Orleans, Louisiana.",
   "engines": {
     "node": ">=20.9.0"
   },

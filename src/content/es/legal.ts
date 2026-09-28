@@ -10,7 +10,7 @@ export const privacy: LegalContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Esta política explica cómo Plus 65 Medicare Advisors (“nosotros”) recopila, usa y protege la información cuando usted visita este sitio web o se comunica con nosotros a través de él.',
+          text: 'Esta política explica cómo Martinez Insurance Agency (“nosotros”) recopila, usa y protege la información cuando usted visita este sitio web o se comunica con nosotros a través de él.',
         },
       ],
     },
@@ -142,7 +142,7 @@ export const terms: LegalContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Plus 65 Medicare Advisors es una agencia de seguros con licencia. No estamos afiliados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare.',
+          text: 'Martinez Insurance Agency es una agencia de seguros con licencia. No estamos afiliados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare.',
         },
       ],
     },
@@ -192,7 +192,7 @@ export const terms: LegalContent = {
       blocks: [
         {
           type: 'p',
-          text: 'El contenido, el diseño y el logotipo de este sitio pertenecen a Plus 65 Medicare Advisors, salvo que se indique lo contrario. Los nombres de las compañías de seguros son marcas de sus dueños y se usan solo para identificar a las compañías que representamos.',
+          text: 'El contenido, el diseño y el logotipo de este sitio pertenecen a Martinez Insurance Agency, salvo que se indique lo contrario. Los nombres de las compañías de seguros son marcas de sus dueños y se usan solo para identificar a las compañías que representamos.',
         },
       ],
     },

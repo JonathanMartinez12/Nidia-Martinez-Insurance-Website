@@ -1,4 +1,4 @@
-# Launch checklist — Plus 65 Medicare Advisors
+# Launch checklist — Martinez Insurance Agency
 
 Work top to bottom. Items marked **BLOCKER** must be done before the site goes live.
 
@@ -11,18 +11,17 @@ Run `npm run check:launch` to see what's still open.
 - [ ] **BLOCKER — TPMO disclaimer "Y":** set `site.compliance.plansOffered` to the number of
       plans/products the organizations you represent offer in your service area (confirm the
       figure you use for compliance). `NODE_ENV=production npm run verify` fails until it's set.
-- [ ] Nidia's headshot (match John's style) → `public/images/team/nidia-martinez.jpg`, set
-      `headshot` + `headshotSize`. (A candidate photo exists at
-      `public/images/Screenshot 2026-02-16 180035.png` — use it only if it is Nidia.)
-- [ ] John's headshot (`assets/John_Martinez_Headshot__1_.jpg` from the brief) → optimize to
-      ~1200px tall JPG, save as `public/images/team/john-martinez.jpg`, set `headshot` + `headshotSize`.
+- [ ] Confirm Nidia's phone number: the site uses **(504) 913-2398** (from the brief), but her
+      business card shows **504-913-7153**. Update `primaryPhone` and Nidia's `phone` if needed.
+- [ ] Confirm whether **110 Veterans Blvd. Suite 100 A, Metairie, LA 70005** (from Nidia's Plus 65
+      business card) is the agency's public office address before adding it as `site.address`.
 - [ ] John's years of experience (`yearsExperience`) — turns on his badge and the combined-years line.
 - [ ] Louisiana license numbers and NPNs for both agents (`licenseNumber`, `npn`).
 - [ ] Street address (or confirm you're a service-area business with no public address).
 - [ ] Office hours (`site.hours`).
 - [ ] Confirm Blue Cross and Blue Shield of Louisiana for Medicare Supplement → `confirmed: true`.
-- [ ] Replace the recreated logo in `public/brand/` with the official PLUS 65 artwork from the
-      business card (then run `npm run icons` if you also want new favicons from it).
+- [ ] Replace the interim "M" logo in `public/brand/` with official Martinez Insurance Agency
+      artwork if there is one (then run `npm run icons` to regenerate favicons).
 - [ ] Review every page's copy with both agents (facts, tone, Spanish wording).
 - [ ] Set `site.contentLastReviewed` to the date of that review.
 
@@ -49,7 +48,7 @@ Run `npm run check:launch` to see what's still open.
       (tighten to `quarantine` after a few clean weeks).
 - [ ] Create an API key (sending access only) → `RESEND_API_KEY`.
 - [ ] `CONTACT_FROM_EMAIL` = an address on the verified domain, e.g.
-      `Plus 65 Medicare Advisors <leads@your-domain.com>`.
+      `Martinez Insurance Agency <leads@your-domain.com>`.
 - [ ] Add the from-address to both inboxes' contacts/safe senders (Outlook and Gmail) so leads
       never land in spam.
 
@@ -72,7 +71,7 @@ Run `npm run check:launch` to see what's still open.
 ## 5. Google Business Profile (the #1 source of local calls)
 
 - [ ] Create/claim the profile at business.google.com with the exact business name
-      **Plus 65 Medicare Advisors** (no keywords stuffed into the name).
+      **Martinez Insurance Agency** (no keywords stuffed into the name).
 - [ ] **Primary category:** Insurance agency. **Additional:** Health insurance agency,
       Life insurance agency, Insurance broker. In the category picker also search "Medicare" — if a
       Medicare-specific category is offered in your region, add it.
@@ -86,14 +85,14 @@ Run `npm run check:launch` to see what's still open.
       **Languages spoken: Spanish** / "Se habla español".
 - [ ] Description (max 750 characters) — paste one of these and edit to taste:
 
-  > **EN:** Plus 65 Medicare Advisors is a local, licensed husband-and-wife team — Nidia and John
+  > **EN:** Martinez Insurance Agency is a local, licensed husband-and-wife team — Nidia and John
   > Martinez — helping Greater New Orleans and all of Louisiana with Medicare Advantage, Medicare
   > Supplement, Part D, Special Needs Plans, dental and vision, final expense, life, hospital
   > indemnity and under-65 health insurance. We meet in person, explain your options in plain
   > English or Spanish, and our help costs you nothing. Hablamos español. We do not offer every
   > plan available in your area.
 
-  > **ES:** Plus 65 Medicare Advisors es un matrimonio de agentes locales con licencia —Nidia y John
+  > **ES:** Martinez Insurance Agency es un matrimonio de agentes locales con licencia —Nidia y John
   > Martinez— que ayuda a residentes del área de Nueva Orleans y de toda Luisiana con Medicare
   > Advantage, Medicare Suplementario, Parte D, planes para necesidades especiales, dental y visión,
   > gastos finales, vida, indemnización hospitalaria y seguros de salud para menores de 65. Nos
@@ -114,7 +113,7 @@ Run `npm run check:launch` to see what's still open.
 
 ## 6. NAP citations (Name, Address, Phone — identical everywhere)
 
-Use exactly: **Plus 65 Medicare Advisors · (504) 913-2398 · your-domain.com** (plus the address
+Use exactly: **Martinez Insurance Agency · (504) 913-2398 · your-domain.com** (plus the address
 if public). Keep a spreadsheet of logins.
 
 - [ ] Apple Business Connect (Apple Maps)

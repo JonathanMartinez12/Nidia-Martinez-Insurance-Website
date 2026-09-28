@@ -246,7 +246,7 @@ export const scam: GuideContent = {
 
 export const about: AboutContent = {
   h1: 'Un matrimonio al servicio de los adultos mayores de Luisiana',
-  lede: 'Plus 65 Medicare Advisors somos Nidia y John Martinez, agentes de seguros bilingües y con licencia en el área de Nueva Orleans. Nos sentamos con usted, le explicamos sus opciones con palabras sencillas y seguimos a su lado mucho después de que se inscribe.',
+  lede: 'En Martinez Insurance Agency somos Nidia y John Martinez, agentes de seguros bilingües y con licencia en el área de Nueva Orleans. Nos sentamos con usted, le explicamos sus opciones con palabras sencillas y seguimos a su lado mucho después de que se inscribe.',
   sections: [
     {
       id: 'local-personal-bilingual',
@@ -254,7 +254,7 @@ export const about: AboutContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Plus 65 Medicare Advisors nace de una idea sencilla: la ayuda con Medicare debe ser honesta, paciente y personal. Nidia aporta décadas de experiencia con planes Medicare Advantage y Medicare Suplementario. John ayuda a las familias con seguros de gastos finales, de vida, de indemnización hospitalaria, dentales y de visión, y de salud. Juntos respondemos las preguntas que surgen a partir de los 65 años.',
+          text: 'Martinez Insurance Agency nace de una idea sencilla: la ayuda con Medicare debe ser honesta, paciente y personal. Nidia aporta décadas de experiencia con planes Medicare Advantage y Medicare Suplementario. John ayuda a las familias con seguros de gastos finales, de vida, de indemnización hospitalaria, dentales y de visión, y de salud. Juntos respondemos las preguntas que surgen a partir de los 65 años.',
         },
         {
           type: 'p',
@@ -306,7 +306,7 @@ export const agents: Record<string, AgentContent> = {
     bio: [
       'Nidia Martinez es agente de seguros con licencia y ha dedicado una larga trayectoria a ayudar a las personas a entender sus opciones de seguro. Hoy Nidia se enfoca en los planes Medicare Advantage y Medicare Suplementario para adultos mayores de toda el área de Nueva Orleans y del resto de Luisiana.',
       'Nidia habla español e inglés con fluidez y se toma el tiempo de explicar cada opción con claridad, comparar planes lado a lado y asegurarse de que cada cliente tome su decisión con confianza antes de inscribirse.',
-      'Junto a John Martinez en Plus 65 Medicare Advisors, Nidia ofrece ayuda personal y en persona sin costo para usted, además de una voz conocida a quien llamar cuando su plan cambie cada año. Conozca los planes [Medicare Advantage](page:service-medicare-advantage) y [Medicare Suplementario](page:service-medicare-supplement).',
+      'Junto a John Martinez en Martinez Insurance Agency, Nidia ofrece ayuda personal y en persona sin costo para usted, además de una voz conocida a quien llamar cuando su plan cambie cada año. Conozca los planes [Medicare Advantage](page:service-medicare-advantage) y [Medicare Suplementario](page:service-medicare-supplement).',
     ],
     focus: [
       'Medicare Advantage (Parte C)',
@@ -354,7 +354,7 @@ export const agents: Record<string, AgentContent> = {
   'john-martinez': {
     headline: 'Agente de seguros con licencia: gastos finales, vida, indemnización hospitalaria, dental y visión, y salud',
     bio: [
-      'John Martinez es agente de seguros con licencia y trabaja junto a Nidia en Plus 65 Medicare Advisors. John ayuda a las familias de Luisiana con las coberturas que complementan a Medicare: seguros de gastos finales y de vida a buen precio, planes de indemnización hospitalaria, cobertura dental y de visión, y seguros de salud para menores de 65 años.',
+      'John Martinez es agente de seguros con licencia y trabaja junto a Nidia en Martinez Insurance Agency. John ayuda a las familias de Luisiana con las coberturas que complementan a Medicare: seguros de gastos finales y de vida a buen precio, planes de indemnización hospitalaria, cobertura dental y de visión, y seguros de salud para menores de 65 años.',
       'John habla español e inglés con fluidez y atiende a sus clientes en persona y por teléfono. Ya sea que quiera planificar el futuro de su familia o busque ayuda con los copagos del hospital, John le explicará sus opciones con palabras sencillas y le ayudará a elegir una cobertura que se ajuste a su presupuesto.',
       'John también ayuda a sus clientes a protegerse de los fraudes de Medicare. Si recibe una llamada sospechosa sobre Medicare, no se inscriba por teléfono con un desconocido: mejor llame a John. Lea nuestra [guía de protección contra fraudes de Medicare](page:scam).',
     ],

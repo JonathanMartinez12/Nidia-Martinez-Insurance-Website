@@ -1,6 +1,6 @@
-# Plus 65 Medicare Advisors — website
+# Martinez Insurance Agency — website
 
-Bilingual (English / Spanish) local-SEO website for **Plus 65 Medicare Advisors**, a
+Bilingual (English / Spanish) local-SEO website for **Martinez Insurance Agency**, a
 husband-and-wife Medicare and insurance agency (Nidia & John Martinez) serving Greater
 New Orleans and all of Louisiana. The goal of every page: phone calls and form leads
 from Google Search and Maps.
@@ -58,9 +58,11 @@ ever renders "TODO"). Examples:
 
 - **John's years of experience:** set `yearsExperience` on John → his badge appears and the
   "Over X years of combined experience" line turns on automatically.
-- **Headshots:** put the optimized JPG in `public/images/team/` and set `headshot` +
-  `headshotSize` (`{ width, height }` in pixels). The hero switches from initials to photos
-  automatically (both photos once both exist). The hero photo is prioritized for LCP.
+- **Headshots:** live in `public/images/team/` (720×900 JPG, 4:5). To replace one, export a new
+  4:5 JPG there and update `headshot` + `headshotSize` (`{ width, height }` in pixels). Without a
+  headshot the site falls back to an initials monogram. next/image serves AVIF/WebP automatically.
+- **Reference material** (business cards, the client letter, original photos) is in
+  `assets/reference/` — kept out of `public/` so it is never published.
 - **Address / hours:** fill `site.address` / `site.hours` → they appear in the footer,
   contact page and `InsuranceAgency` schema.
 - **Carriers:** edit `carriers`. `confirmed: false` hides a carrier everywhere. Logos are

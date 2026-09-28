@@ -246,7 +246,7 @@ export const scam: GuideContent = {
 
 export const about: AboutContent = {
   h1: 'A Husband-and-Wife Team Helping Louisiana Seniors',
-  lede: 'Plus 65 Medicare Advisors is Nidia and John Martinez — licensed, bilingual insurance agents based in Greater New Orleans. We sit down with you, explain your options in plain language, and stay by your side long after you enroll.',
+  lede: 'Martinez Insurance Agency is Nidia and John Martinez — licensed, bilingual insurance agents based in Greater New Orleans. We sit down with you, explain your options in plain language, and stay by your side long after you enroll.',
   sections: [
     {
       id: 'local-personal-bilingual',
@@ -254,7 +254,7 @@ export const about: AboutContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Plus 65 Medicare Advisors is built around a simple idea: Medicare help should be honest, patient and personal. Nidia brings decades of experience with Medicare Advantage and Medicare Supplement plans. John helps families with final expense, life, hospital indemnity, dental and vision, and health insurance. Together we cover the questions that come up at 65 and beyond.',
+          text: 'Martinez Insurance Agency is built around a simple idea: Medicare help should be honest, patient and personal. Nidia brings decades of experience with Medicare Advantage and Medicare Supplement plans. John helps families with final expense, life, hospital indemnity, dental and vision, and health insurance. Together we cover the questions that come up at 65 and beyond.',
         },
         {
           type: 'p',
@@ -306,7 +306,7 @@ export const agents: Record<string, AgentContent> = {
     bio: [
       'Nidia Martinez is a licensed insurance agent who has spent a long career helping people understand their insurance options. Today Nidia focuses on Medicare Advantage and Medicare Supplement plans for seniors across Greater New Orleans and throughout Louisiana.',
       'Nidia is fluent in English and Spanish and takes the time to explain each option clearly, compare plans side by side, and make sure every client feels confident before enrolling.',
-      'Working alongside John Martinez at Plus 65 Medicare Advisors, Nidia offers personal, in-person help at no cost to you, plus a familiar voice to call when your plan changes each year. Learn about [Medicare Advantage](page:service-medicare-advantage) and [Medicare Supplement](page:service-medicare-supplement) plans.',
+      'Working alongside John Martinez at Martinez Insurance Agency, Nidia offers personal, in-person help at no cost to you, plus a familiar voice to call when your plan changes each year. Learn about [Medicare Advantage](page:service-medicare-advantage) and [Medicare Supplement](page:service-medicare-supplement) plans.',
     ],
     focus: [
       'Medicare Advantage (Part C)',
@@ -354,7 +354,7 @@ export const agents: Record<string, AgentContent> = {
   'john-martinez': {
     headline: 'Licensed insurance agent for final expense, life, hospital indemnity, dental & vision and health insurance',
     bio: [
-      'John Martinez is a licensed insurance agent who works alongside Nidia at Plus 65 Medicare Advisors. John helps Louisiana families with the coverage that fills the gaps around Medicare — final expense and low-cost life insurance, hospital indemnity plans, dental and vision coverage, and health insurance for people under 65.',
+      'John Martinez is a licensed insurance agent who works alongside Nidia at Martinez Insurance Agency. John helps Louisiana families with the coverage that fills the gaps around Medicare — final expense and low-cost life insurance, hospital indemnity plans, dental and vision coverage, and health insurance for people under 65.',
       "John is fluent in English and Spanish and works with clients in person and by phone. Whether you're planning ahead for your family or looking for help with hospital copays, John will explain your options in plain language and help you choose coverage that fits your budget.",
       "John also helps clients stay safe from Medicare scams. If you get a suspicious call about Medicare, don't enroll over the phone with a stranger — call John instead. Read our [Medicare scam protection guide](page:scam).",
     ],

@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from 'react';
 
 type Size = 'normal' | 'large';
-const KEY = 'p65-text-size';
+const KEY = 'text-size';
 
 function subscribe(cb: () => void) {
   const observer = new MutationObserver(cb);

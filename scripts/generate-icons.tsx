@@ -1,14 +1,14 @@
 /**
  * Generates the brand assets from code (run `npm run icons`, then commit the output):
- *   public/brand/plus65-mark.svg     — the mark
- *   public/brand/plus65-logo.svg     — mark + wordmark, text converted to outlines
- *   public/brand/plus65-logo.png     — raster logo for schema.org / email
+ *   public/brand/mark.svg     — the "M" monogram mark
+ *   public/brand/logo.svg     — mark + wordmark, text converted to outlines
+ *   public/brand/logo.png     — raster logo for schema.org / email
  *   src/app/favicon.ico, icon.svg, apple-icon.png
  *   public/icon-192.png, icon-512.png, icon-maskable-512.png (web manifest)
  *
- * The original PLUS 65 logo (business card PDF) wasn't available when this was built;
- * this is a faithful-in-spirit recreation in the brand navy/red. Replace the files in
- * public/brand/ with the official artwork when you have it.
+ * No official Martinez Insurance Agency logo was available when this was built; this is
+ * a clean interim mark in the brand navy/red. Replace the files in public/brand/ with the
+ * official artwork when you have it.
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -21,7 +21,7 @@ const RED = '#C8202F';
 
 const markSvg = (opts: { rounded?: boolean; padded?: boolean } = {}) => {
   const rx = opts.rounded === false ? 0 : 15;
-  const inner = `<g clip-path="url(#c)"><rect width="64" height="64" fill="${NAVY}"/><path d="M-4 49C14 38 44 37 68 47V70H-4Z" fill="${NAVY_DARK}"/><path d="M-4 52.5C15 42 43 41.5 68 50.5" fill="none" stroke="${RED}" stroke-width="4.5"/><path d="M32 13.5V38.5M19.5 26H44.5" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/></g>`;
+  const inner = `<g clip-path="url(#c)"><rect width="64" height="64" fill="${NAVY}"/><path d="M-4 49C14 38 44 37 68 47V70H-4Z" fill="${NAVY_DARK}"/><path d="M-4 52.5C15 42 43 41.5 68 50.5" fill="none" stroke="${RED}" stroke-width="4.5"/><path d="M18 39V15.5L32 30L46 15.5V39" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/></g>`;
   if (opts.padded) {
     // Maskable icon: full-bleed navy with the mark inside the safe zone.
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><clipPath id="c"><rect width="64" height="64"/></clipPath></defs><rect width="64" height="64" fill="${NAVY}"/><g transform="translate(12.8 12.8) scale(0.6)">${inner}</g></svg>`;
@@ -62,7 +62,7 @@ async function main() {
   const sansBold = readFileSync(path.join(fonts, 'atkinson-hyperlegible-next-latin-700-normal.woff'));
 
   const mark = markSvg();
-  writeFileSync(path.join(brandDir, 'plus65-mark.svg'), mark);
+  writeFileSync(path.join(brandDir, 'mark.svg'), mark);
   writeFileSync(path.join(root, 'src', 'app', 'icon.svg'), mark);
 
   // Wordmark logo (text → outlines via satori).
@@ -72,11 +72,9 @@ async function main() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={markDataUri} width={96} height={96} alt="" />
       <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 22 }}>
-        <div style={{ display: 'flex', fontFamily: 'Serif', fontSize: 62, lineHeight: 1, color: '#111F4A' }}>
-          PLUS&nbsp;<span style={{ color: RED }}>65</span>
-        </div>
-        <div style={{ display: 'flex', fontFamily: 'Sans', fontSize: 19, letterSpacing: 4.5, marginTop: 8, color: NAVY }}>
-          MEDICARE ADVISORS
+        <div style={{ display: 'flex', fontFamily: 'Serif', fontSize: 62, lineHeight: 1, color: '#111F4A' }}>Martinez</div>
+        <div style={{ display: 'flex', fontFamily: 'Sans', fontSize: 19, letterSpacing: 3.6, marginTop: 8, color: RED }}>
+          INSURANCE AGENCY
         </div>
       </div>
     </div>,
@@ -89,13 +87,13 @@ async function main() {
       ],
     },
   );
-  writeFileSync(path.join(brandDir, 'plus65-logo.svg'), logoSvg);
+  writeFileSync(path.join(brandDir, 'logo.svg'), logoSvg);
   // White-background PNG (schema.org logos should be legible on white).
   await sharp(Buffer.from(logoSvg), { density: 300 })
     .resize(960, 220, { fit: 'contain', background: '#FFFFFF' })
     .flatten({ background: '#FFFFFF' })
     .png()
-    .toFile(path.join(brandDir, 'plus65-logo.png'));
+    .toFile(path.join(brandDir, 'logo.png'));
 
   const png = (svg: string, size: number) => sharp(Buffer.from(svg), { density: 600 }).resize(size, size).png().toBuffer();
   const sizes = [16, 32, 48];
