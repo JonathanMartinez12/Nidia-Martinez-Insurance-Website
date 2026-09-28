@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# verification artifacts
+/.lighthouseci/
+/playwright-report/
+/test-results/
+/.e2e-outbox/
+/screenshots/
+lighthouse-scores.md

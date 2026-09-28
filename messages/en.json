@@ -1,0 +1,471 @@
+{
+  "Meta": {
+    "home": {
+      "title": "Medicare Advisor in New Orleans, LA | Plus 65 Medicare",
+      "description": "Local, licensed Medicare advisors in New Orleans with {years} years of experience. No-cost, in-person help choosing a plan. Hablamos español."
+    },
+    "services": {
+      "medicare-advantage": {
+        "title": "Medicare Advantage Plans in Louisiana | Plus 65",
+        "description": "Compare Humana, Peoples Health, UnitedHealthcare and Devoted Health Medicare Advantage plans with a local agent. {years} years of experience. No cost."
+      },
+      "medicare-supplement": {
+        "title": "Medicare Supplement Plans in New Orleans | Plus 65",
+        "description": "Medigap plans in Louisiana, including AARP Medicare Supplement and Humana, explained by a local advisor with {years} years of experience. No-cost help."
+      },
+      "part-d-prescription-drug-plans": {
+        "title": "Medicare Part D Drug Plans in Louisiana | Plus 65",
+        "description": "Find a Part D prescription drug plan that covers your medicines at the pharmacy you use. No-cost help from bilingual Medicare agents in New Orleans."
+      },
+      "special-needs-plans": {
+        "title": "Medicare Plans for Diabetes & Heart Conditions | Plus 65",
+        "description": "Chronic Condition Special Needs Plans (C-SNPs) for diabetes and heart conditions may offer extra benefits. See if you qualify, at no cost to you."
+      },
+      "dental-vision-insurance": {
+        "title": "Dental & Vision Insurance for Seniors in LA | Plus 65",
+        "description": "Original Medicare doesn't cover routine dental or vision care. Compare dental and vision plans with a local, bilingual agent in Greater New Orleans."
+      },
+      "final-expense-insurance": {
+        "title": "Final Expense Insurance in Louisiana | Plus 65",
+        "description": "Final expense (burial) insurance helps cover funeral costs so your family isn't left with the bill. Friendly, bilingual help in Greater New Orleans."
+      },
+      "life-insurance": {
+        "title": "Low-Cost Life Insurance in Louisiana | Plus 65",
+        "description": "Affordable term and whole life insurance for Louisiana families. A licensed local agent compares options with you in plain English or Spanish."
+      },
+      "hospital-indemnity-insurance": {
+        "title": "Hospital Indemnity Insurance in Louisiana | Plus 65",
+        "description": "Hospital indemnity plans pay you cash for covered hospital stays, which can help with Medicare Advantage copays. Local, no-cost guidance."
+      },
+      "health-insurance": {
+        "title": "Health Insurance Under 65 in Louisiana | Plus 65",
+        "description": "Not on Medicare yet? Get help finding individual and family health insurance in Louisiana from licensed, bilingual agents in Greater New Orleans."
+      }
+    },
+    "aep": {
+      "title": "Medicare Annual Enrollment (Oct 15–Dec 7) | Plus 65",
+      "description": "The Medicare Annual Enrollment Period runs October 15 to December 7. Learn what your Annual Notice of Change means and book a free plan review."
+    },
+    "scam": {
+      "title": "How to Avoid Medicare Scams | Plus 65 Medicare Advisors",
+      "description": "Medicare scam calls, texts and emails are common. Learn the warning signs, what Medicare will never ask for, and how to report fraud in Louisiana."
+    },
+    "about": {
+      "title": "About Nidia & John Martinez | Plus 65 Medicare Advisors",
+      "description": "Meet Nidia and John Martinez, a licensed husband-and-wife team with {years} years of experience helping Louisiana seniors. Hablamos español."
+    },
+    "agents": {
+      "nidia-martinez": {
+        "title": "Nidia Martinez, Medicare Agent in New Orleans | Plus 65",
+        "description": "Nidia Martinez is a licensed, bilingual Medicare agent with {years} years of experience in Medicare Advantage and Medicare Supplement plans."
+      },
+      "john-martinez": {
+        "title": "John Martinez, Licensed Insurance Agent | Plus 65",
+        "description": "John Martinez helps Louisiana families with final expense, life, hospital indemnity, dental, vision and health insurance. Hablamos español."
+      }
+    },
+    "serviceArea": {
+      "title": "Medicare Help Across Louisiana | Plus 65 Medicare Advisors",
+      "description": "We help people across Louisiana with Medicare, with in-person appointments throughout Greater New Orleans, the Northshore and Baton Rouge."
+    },
+    "cities": {
+      "new-orleans": {
+        "title": "New Orleans Medicare Agent | Plus 65 Medicare Advisors",
+        "description": "A local, bilingual Medicare agent for New Orleans neighborhoods. Compare Medicare Advantage, Supplement and Part D plans in person, at no cost."
+      },
+      "metairie": {
+        "title": "Medicare Agent in Metairie, LA | Plus 65 Medicare Advisors",
+        "description": "Looking for a Medicare agent in Metairie? Get no-cost, in-person help comparing plans that work with your Jefferson Parish doctors. Se habla español."
+      },
+      "kenner": {
+        "title": "Medicare Agent in Kenner, LA | Plus 65 Medicare Advisors",
+        "description": "Bilingual Medicare help in Kenner. We compare Medicare Advantage, Medigap and drug plans with you in English or Spanish, at no cost to you."
+      },
+      "gretna": {
+        "title": "Medicare Agent in Gretna & the West Bank | Plus 65",
+        "description": "Medicare help for Gretna, Marrero, Harvey and the West Bank. Compare plans with a licensed local agent who checks your doctors and pharmacy."
+      },
+      "chalmette": {
+        "title": "Medicare Agent in Chalmette, LA | Plus 65 Medicare Advisors",
+        "description": "No-cost Medicare guidance for Chalmette and St. Bernard Parish. Review your plan each fall, avoid scams and get answers from a local agent."
+      },
+      "slidell": {
+        "title": "Medicare Agent in Slidell, LA | Plus 65 Medicare Advisors",
+        "description": "Medicare help for Slidell and eastern St. Tammany Parish. Compare Medicare Advantage and Supplement plans with a licensed, bilingual agent."
+      },
+      "covington": {
+        "title": "Medicare Agent in Covington & Mandeville | Plus 65",
+        "description": "Northshore Medicare help for Covington, Mandeville and western St. Tammany. Personal plan reviews with a licensed agent at no cost to you."
+      },
+      "baton-rouge": {
+        "title": "Medicare Agent in Baton Rouge, LA | Plus 65",
+        "description": "Medicare guidance for Baton Rouge from licensed, bilingual agents. Compare Medicare Advantage, Medigap and Part D plans by phone or in person."
+      }
+    },
+    "faq": {
+      "title": "Medicare Questions Answered (FAQ) | Plus 65",
+      "description": "Plain-English answers about Medicare enrollment, Medicare Advantage vs. Medigap, Part D, costs, scams and working with a local Louisiana agent."
+    },
+    "contact": {
+      "title": "Contact Us for a Free Medicare Consultation | Plus 65",
+      "description": "Call (504) 913-2398 or send a message to schedule a no-cost Medicare consultation in Greater New Orleans or anywhere in Louisiana. Hablamos español."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Plus 65 Medicare Advisors",
+      "description": "How Plus 65 Medicare Advisors collects, uses and protects the information you share through our website and contact form."
+    },
+    "terms": {
+      "title": "Terms of Use | Plus 65 Medicare Advisors",
+      "description": "The terms that apply when you use the Plus 65 Medicare Advisors website, including important information about the educational content."
+    },
+    "accessibility": {
+      "title": "Accessibility Statement | Plus 65 Medicare Advisors",
+      "description": "Our commitment to an accessible website for everyone, including people who use screen readers, keyboards or larger text, and how to get help."
+    },
+    "notFound": {
+      "title": "Page Not Found | Plus 65 Medicare Advisors",
+      "description": "We couldn't find that page. Call (504) 913-2398 or use the links on this page to find Medicare help."
+    }
+  },
+  "Common": {
+    "siteName": "Plus 65 Medicare Advisors",
+    "tagline": "Medicare Advisors",
+    "homeLabel": "home",
+    "skipToContent": "Skip to main content",
+    "callPhone": "Call {phone}",
+    "callNow": "Call now",
+    "callUs": "Call us",
+    "freeConsultation": "Free consultation",
+    "bookFreeConsultation": "Book a free consultation",
+    "hablamos": "Hablamos español",
+    "noCost": "No cost to you",
+    "lastReviewed": "Last reviewed {date}",
+    "breadcrumb": "Breadcrumb",
+    "home": "Home",
+    "email": "Email",
+    "phone": "Phone",
+    "direct": "Direct",
+    "cell": "Cell",
+    "languagesSpoken": "Languages",
+    "english": "English",
+    "spanish": "Spanish",
+    "onThisPage": "On this page",
+    "relatedCoverage": "Related coverage",
+    "relatedIntro": "People who ask about {product} often ask about these too.",
+    "exploreProduct": "Explore {product}",
+    "readAboutProduct": "Read about {product}",
+    "seeAllFaqs": "See all Medicare questions",
+    "licensed": "Licensed",
+    "licenseNumber": "Louisiana license #{number}",
+    "npn": "NPN {number}",
+    "yearsExperience": "{years} years of experience",
+    "yearsHelping": "{years} Years Helping Louisiana Seniors",
+    "combinedYears": "Over {years} years of combined experience",
+    "headshotAlt": "Portrait of {name}, licensed insurance agent with Plus 65 Medicare Advisors",
+    "nonAffiliation": "Plus 65 Medicare Advisors is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.",
+    "backToTop": "Back to top"
+  },
+  "Header": {
+    "primaryNav": "Main",
+    "utility": "Language and text size",
+    "utilityMessage": "No-cost Medicare help across Louisiana",
+    "plans": "Plans",
+    "medicarePlans": "Medicare plans",
+    "otherCoverage": "More coverage",
+    "resources": "Resources",
+    "aep": "Annual Enrollment",
+    "scam": "Scam Protection",
+    "faq": "Medicare FAQ",
+    "about": "About Us",
+    "serviceArea": "Service Area",
+    "contact": "Contact",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileNav": "Site menu",
+    "textSize": "Text size",
+    "textNormal": "Standard text size",
+    "textLarge": "Larger text size",
+    "language": "Language",
+    "switchLanguage": "Leer esta página en español",
+    "currentLanguage": "English (current)"
+  },
+  "Footer": {
+    "contactHeading": "Contact us",
+    "plansHeading": "Medicare plans",
+    "coverageHeading": "More coverage",
+    "resourcesHeading": "Resources",
+    "areasHeading": "Areas we serve",
+    "teamHeading": "Talk to an agent",
+    "allAreas": "All of Louisiana",
+    "serviceAreaLine": "Serving Greater New Orleans and all of Louisiana",
+    "hours": "Hours",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "accessibility": "Accessibility",
+    "legalNav": "Legal",
+    "footerNav": "Footer",
+    "copyright": "© {year} Plus 65 Medicare Advisors. All rights reserved.",
+    "disclaimerHeading": "Important information",
+    "educational": "Content on this site is for general education. Plan benefits, costs, networks and availability vary by plan and change each year; always review a plan's official documents before enrolling."
+  },
+  "MobileBar": {
+    "label": "Quick contact",
+    "callLabel": "Call",
+    "consult": "Free consult"
+  },
+  "Products": {
+    "medicare-advantage": {
+      "name": "Medicare Advantage",
+      "short": "All-in-one Part C plans that can include drug coverage and extra benefits."
+    },
+    "medicare-supplement": {
+      "name": "Medicare Supplement",
+      "short": "Medigap policies that help pay what Original Medicare doesn't."
+    },
+    "part-d-prescription-drug-plans": {
+      "name": "Part D Drug Plans",
+      "short": "Prescription coverage matched to your medicines and pharmacy."
+    },
+    "special-needs-plans": {
+      "name": "Special Needs Plans",
+      "short": "Plans for people with diabetes or heart conditions, with added benefits."
+    },
+    "dental-vision-insurance": {
+      "name": "Dental & Vision",
+      "short": "Coverage for checkups, fillings, eye exams and glasses."
+    },
+    "final-expense-insurance": {
+      "name": "Final Expense",
+      "short": "Whole life coverage to help with funeral and end-of-life costs."
+    },
+    "life-insurance": {
+      "name": "Low-Cost Life Insurance",
+      "short": "Affordable term and whole life protection for your family."
+    },
+    "hospital-indemnity-insurance": {
+      "name": "Hospital Indemnity",
+      "short": "Cash benefits for hospital stays to help with copays."
+    },
+    "health-insurance": {
+      "name": "Health Insurance (Under 65)",
+      "short": "Individual and family coverage before you're on Medicare."
+    }
+  },
+  "Home": {
+    "h1": "Medicare Advisor in New Orleans, Louisiana",
+    "lede": "Personal, in-person help choosing the right Medicare plan — from a local husband-and-wife team who will be here for you year after year.",
+    "reassurance": "No cost to you. No pressure. Se habla español.",
+    "teamLabel": "Your local team",
+    "teamCaption": "Nidia & John Martinez · Licensed agents · Husband-and-wife team",
+    "trustHeading": "Why families trust us",
+    "trust": {
+      "years": "{years} years of experience",
+      "licensed": "Licensed agents",
+      "noCost": "No cost to you",
+      "local": "Local to New Orleans",
+      "spanish": "Hablamos español"
+    },
+    "productsEyebrow": "What we help with",
+    "productsHeading": "Coverage for every stage after 65",
+    "productsIntro": "We explain your options in plain language, compare plans side by side, and help you enroll. Our help is at no cost to you.",
+    "medicareGroup": "Medicare plans",
+    "coverageGroup": "Additional coverage",
+    "howEyebrow": "How it works",
+    "howHeading": "Three simple steps",
+    "steps": {
+      "one": {
+        "title": "Call or send a message",
+        "body": "Tell us a little about what you need. We'll set up a time that works for you — in person, by phone, in English or Spanish."
+      },
+      "two": {
+        "title": "Review your options together",
+        "body": "We look at your doctors, prescriptions and budget, then compare plans side by side in plain language."
+      },
+      "three": {
+        "title": "Enroll with confidence",
+        "body": "We help with the paperwork and stay available all year for questions, claims help and your annual review."
+      }
+    },
+    "faqEyebrow": "Common questions",
+    "faqHeading": "Straight answers about Medicare",
+    "ctaHeading": "Let's find the right plan for you",
+    "ctaBody": "Call us or send a short message. A licensed local agent will get back to you soon.",
+    "ctaFormHeading": "Request a free consultation"
+  },
+  "Aep": {
+    "preTitle": "Annual Enrollment starts October 15",
+    "preBody": "Your Annual Notice of Change (ANOC) should arrive by the end of September. It lists how your plan will change for {coverageYear}. Book your review early so you have time to compare.",
+    "openTitle": "Annual Enrollment is open now — through December 7",
+    "openBody": "This is your chance to review your plan for {coverageYear}. Happy with it? It renews automatically. Unhappy with the changes? Let's review your options in person.",
+    "cta": "About the Annual Enrollment Period",
+    "book": "Book your plan review"
+  },
+  "Scam": {
+    "eyebrow": "Protect yourself",
+    "heading": "Beware of Medicare scams",
+    "body": "Be cautious of unsolicited calls, texts or emails about Medicare.",
+    "points": {
+      "one": "Never give your Medicare number or personal information to someone who contacts you out of the blue.",
+      "two": "Don't enroll over the phone with a stranger. Hang up and call a local agent you know.",
+      "three": "Not sure? Call us — Nidia at {nidiaPhone} or John at {johnPhone}. We'll help you check."
+    },
+    "cta": "How to spot and report Medicare scams"
+  },
+  "Service": {
+    "whoFor": "Who it's for",
+    "covers": "What it covers",
+    "faqHeading": "Common questions about {product}",
+    "carriersHeading": "Carriers we work with",
+    "carriersIntro": "We are appointed with the following companies for {product} in Louisiana. Plan availability varies by parish.",
+    "carriersNote": "Company names are shown for identification only. We do not offer every plan available in your area.",
+    "compactFormHeading": "Questions about {product}?",
+    "compactFormBody": "Leave your name and number and a licensed agent will call you back. There's no cost and no obligation.",
+    "aepLink": "Annual Enrollment Period: dates and what to do",
+    "contactLink": "Contact a local agent",
+    "moreHelp": "More help"
+  },
+  "About": {
+    "teamHeading": "Meet your agents",
+    "viewProfile": "Read {name}'s profile",
+    "specialties": "Focus areas",
+    "directContact": "Direct contact",
+    "whyNoCost": "Why our help costs you nothing"
+  },
+  "Agent": {
+    "role": "Licensed Insurance Agent",
+    "roleMedicare": "Licensed Medicare Agent",
+    "contactHeading": "Contact {name}",
+    "callAgent": "Call {name}",
+    "emailAgent": "Email {name}",
+    "credentials": "Credentials",
+    "credentialsPending": "License details available on request.",
+    "otherAgent": "Also on our team",
+    "focusHeading": "How I help",
+    "licensedIn": "Licensed insurance agent"
+  },
+  "Areas": {
+    "citiesHeading": "Local pages",
+    "alsoServing": "We also serve",
+    "nearbyHeading": "Nearby areas we serve",
+    "parish": "Parish",
+    "servicesHeading": "How we can help in {city}",
+    "exploreCity": "Medicare help in {city}"
+  },
+  "Faq": {
+    "categoriesNav": "Question categories"
+  },
+  "Contact": {
+    "callHeading": "Prefer to talk?",
+    "callBody": "Call or text. If we're with a client, leave a message and we'll call you back.",
+    "emailHeading": "Email",
+    "areaHeading": "Service area",
+    "hoursHeading": "Hours",
+    "hoursByAppointment": "Call to set up an appointment at a time that works for you.",
+    "formHeading": "Send us a message",
+    "formIntro": "Fields marked with * are required. It takes about a minute."
+  },
+  "ContactForm": {
+    "name": "Your name",
+    "phone": "Phone number",
+    "phoneHint": "Example: (504) 555-0123",
+    "email": "Email",
+    "emailHint": "Optional — for a copy of your request",
+    "language": "Preferred language",
+    "languageEn": "English",
+    "languageEs": "Español",
+    "contactMethod": "Best way to reach you",
+    "methodCall": "Phone call",
+    "methodText": "Text message",
+    "methodEmail": "Email",
+    "interests": "I'm interested in",
+    "interestsHint": "Choose any that apply",
+    "bestTime": "Best time to call",
+    "bestTimeAny": "Anytime",
+    "bestTimeMorning": "Morning",
+    "bestTimeAfternoon": "Afternoon",
+    "bestTimeEvening": "Evening",
+    "bestTimeNone": "No preference",
+    "message": "How can we help?",
+    "messageHint": "Optional. Please don't include your Medicare number or health details.",
+    "consent": "I agree that Plus 65 Medicare Advisors may contact me by phone, text or email about Medicare and other insurance products. Consent is not required to buy anything, and I can opt out at any time.",
+    "required": "required",
+    "optional": "optional",
+    "submit": "Send my request",
+    "submitting": "Sending…",
+    "privacyNote": "We will never ask for your Medicare number, Social Security number or bank information online.",
+    "honeypot": "Leave this field empty",
+    "errorSummary": "Please fix the following:",
+    "successTitle": "Thank you — we received your request.",
+    "successBody": "A licensed agent will contact you soon. If you'd rather talk now, call us at {phone}.",
+    "failureTitle": "Sorry — your message didn't go through.",
+    "failureBody": "Please call us at {phone} and we'll help you right away.",
+    "rateLimited": "We've received several requests from this connection. Please call us at {phone}.",
+    "errors": {
+      "nameRequired": "Please enter your name.",
+      "nameTooLong": "Please shorten your name to 100 characters or fewer.",
+      "phoneRequired": "Please enter a phone number so we can reach you.",
+      "phoneInvalid": "Please enter a 10-digit U.S. phone number, like (504) 555-0123.",
+      "emailInvalid": "Please enter a valid email address, like name@example.com.",
+      "emailRequiredForMethod": "Please add your email address, or choose phone call or text.",
+      "languageInvalid": "Please choose a language.",
+      "contactMethodInvalid": "Please choose how we should contact you.",
+      "interestInvalid": "Please choose from the listed options.",
+      "bestTimeInvalid": "Please choose a time from the list.",
+      "messageTooLong": "Please shorten your message to 2,000 characters or fewer.",
+      "consentRequired": "Please check the box so we're allowed to contact you."
+    },
+    "email_confirm": {
+      "subject": "We received your request — Plus 65 Medicare Advisors",
+      "greeting": "Hello {name},",
+      "body": "Thank you for contacting Plus 65 Medicare Advisors. A licensed agent will reach out soon.",
+      "callUs": "If you'd like to talk sooner, call us:",
+      "scamNote": "For your protection: we will never ask for your Medicare number, Social Security number or bank information by email.",
+      "signoff": "Nidia & John Martinez — Plus 65 Medicare Advisors"
+    }
+  },
+  "NotFound": {
+    "eyebrow": "Page not found",
+    "heading": "We couldn't find that page",
+    "body": "The link may be old or mistyped. These pages can help — or call us and we'll point you in the right direction.",
+    "otherLanguage": "¿Busca información en español?",
+    "otherLanguageLink": "Ir a la página principal en español",
+    "popular": "Popular pages"
+  },
+  "AepPage": {
+    "eyebrow": "Medicare Annual Enrollment Period",
+    "faqHeading": "Annual Enrollment questions",
+    "statusOpen": "Open now: make changes for {year} coverage through December 7",
+    "statusUpcoming": "Next Annual Enrollment: October 15 – December 7, {year} (for {coverageYear} coverage)",
+    "dates": {
+      "openDay": "Oct 15",
+      "open": "Annual Enrollment opens",
+      "closeDay": "Dec 7",
+      "close": "Last day to make changes",
+      "startDay": "Jan 1",
+      "start": "New coverage begins for {year}"
+    },
+    "reviewHeading": "Book your annual review",
+    "reviewBody": "Bring your Annual Notice of Change and your list of medicines. We'll go through it together — at no cost to you."
+  },
+  "ScamPage": {
+    "eyebrow": "Protect yourself and your family",
+    "faqHeading": "Questions about Medicare scams",
+    "rulesHeading": "Four rules to remember",
+    "rules": {
+      "one": "Treat your Medicare card like a credit card.",
+      "two": "Hang up on unexpected calls about Medicare.",
+      "three": "Never enroll over the phone with a stranger.",
+      "four": "When in doubt, call someone you know and trust."
+    },
+    "print": "Print this page",
+    "share": "Email this page to a loved one",
+    "shareSubject": "How to avoid Medicare scams",
+    "shareBody": "I thought you'd find this helpful — a plain-English guide to spotting and reporting Medicare scams:",
+    "askHeading": "Got a suspicious call?",
+    "askBody": "Before you share anything, call us. We'll help you check whether it's real — free of charge, in English or Spanish."
+  },
+  "Legal": {
+    "updated": "Last updated"
+  }
+}

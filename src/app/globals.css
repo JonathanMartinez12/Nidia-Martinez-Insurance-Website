@@ -1,0 +1,223 @@
+@import 'tailwindcss';
+
+/*
+ * Plus 65 design tokens. Navy leads, red is reserved for calls to action and key
+ * accents, warm "paper" and "sand" surfaces keep it human. Body text is AAA on every
+ * surface it sits on.
+ */
+@theme {
+  --color-navy-950: #0b1532;
+  --color-navy-900: #111f4a;
+  --color-navy-800: #1a2f66;
+  --color-navy-700: #233e84;
+  --color-navy-600: #2f4fa0;
+  --color-navy-500: #4a67b5;
+  --color-navy-300: #9fb0dc;
+  --color-navy-200: #c9d3ec;
+  --color-navy-100: #e3e9f6;
+  --color-navy-50: #f2f5fb;
+
+  --color-red-800: #8c1520;
+  --color-red-700: #a51a27;
+  --color-red-600: #c8202f;
+  --color-red-100: #f9dde0;
+  --color-red-50: #fcf0f1;
+
+  --color-ink: #14213d;
+  --color-muted: #475273;
+  --color-line: #d9dfec;
+  --color-paper: #fffdf9;
+  --color-sand: #f7f1e6;
+  --color-sand-200: #ede3d0;
+  --color-gold: #f2c14e;
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-display), ui-serif, Georgia, serif;
+
+  --radius-card: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(17 31 74 / 0.06), 0 8px 24px -12px rgb(17 31 74 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(17 31 74 / 0.06), 0 18px 40px -18px rgb(17 31 74 / 0.35);
+}
+
+@layer base {
+  html {
+    /* 18px base; the header "A+" toggle raises it to 20px (everything is rem-based). */
+    font-size: 112.5%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+  html[data-text-size='large'] {
+    font-size: 125%;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    color: var(--color-navy-900);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a {
+    color: var(--color-navy-700);
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 0.08em;
+  }
+  :focus-visible {
+    outline: 3px solid var(--focus-ring, var(--color-red-600));
+    outline-offset: 3px;
+    border-radius: 0.375rem;
+  }
+  .on-dark {
+    --focus-ring: var(--color-gold);
+  }
+  ::selection {
+    background: var(--color-navy-100);
+    color: var(--color-navy-900);
+  }
+  summary {
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 74rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-red-700);
+  }
+
+  /* Long-form article typography (service, city and guide pages). */
+  .prose-page {
+    font-size: 1.0625rem;
+    max-width: 44rem;
+  }
+  .prose-page > * + *,
+  .prose-page > section > * + * {
+    margin-top: 1.1em;
+  }
+  .prose-page h2 {
+    font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem);
+    margin-top: 2.2em;
+    scroll-margin-top: 6rem;
+  }
+  .prose-page h3 {
+    font-size: 1.35rem;
+    margin-top: 1.8em;
+  }
+  .prose-page h2 + *,
+  .prose-page h3 + * {
+    margin-top: 0.7em;
+  }
+  .prose-page ul,
+  .prose-page ol {
+    padding-left: 1.4em;
+  }
+  .prose-page ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .prose-page ul > li {
+    position: relative;
+    padding-left: 1.75em;
+  }
+  .prose-page ul > li + li,
+  .prose-page ol > li + li {
+    margin-top: 0.55em;
+  }
+  .prose-page ul > li::before {
+    content: '';
+    position: absolute;
+    left: 0.35em;
+    top: 0.62em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 999px;
+    background: var(--color-red-600);
+  }
+  .prose-page ol {
+    list-style: decimal;
+  }
+  .prose-page ol > li::marker {
+    color: var(--color-navy-700);
+    font-weight: 700;
+  }
+  .prose-page strong {
+    color: var(--color-navy-900);
+  }
+  .prose-page a {
+    font-weight: 600;
+  }
+
+  .tap {
+    min-height: 3rem;
+    min-width: 3rem;
+  }
+}
+
+/* Header fit on small phones: the wordmark text yields to the phone number and menu. */
+@media (max-width: 399px) {
+  header .p65-wordmark {
+    display: none;
+  }
+}
+@media (max-width: 479px) {
+  html[data-text-size='large'] header .p65-wordmark {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    font-size: 12pt;
+  }
+}

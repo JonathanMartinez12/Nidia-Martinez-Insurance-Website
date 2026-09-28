@@ -1,282 +1,143 @@
-# Nidia Martinez Insurance LLC Website
+# Plus 65 Medicare Advisors — website
 
-A modern, SEO-optimized Next.js 14 website for Nidia Martinez Insurance LLC, a Medicare and individual insurance agency serving Louisiana, Florida, and Mississippi.
+Bilingual (English / Spanish) local-SEO website for **Plus 65 Medicare Advisors**, a
+husband-and-wife Medicare and insurance agency (Nidia & John Martinez) serving Greater
+New Orleans and all of Louisiana. The goal of every page: phone calls and form leads
+from Google Search and Maps.
 
-## Features
+- **Stack:** Next.js 16 (App Router, static generation) · React 19 · TypeScript (strict) ·
+  Tailwind CSS v4 · next-intl (locale-prefixed, translated slugs) · Server Actions + zod ·
+  Resend · Playwright + axe · Vitest · Lighthouse CI
+- **Zero i18n JS in the browser:** translations and localized links resolve on the server;
+  client JS is limited to the contact form, menus and the text-size toggle.
 
-- ✅ **Next.js 14** with App Router
-- ✅ **Bilingual Support** - Full English and Spanish translations
-- ✅ **SEO Optimized** - Meta tags, schema markup, sitemap, robots.txt
-- ✅ **Responsive Design** - Mobile-first approach
-- ✅ **Modern UI** - Clean, professional design with CSS Modules
-- ✅ **EmailJS Integration** - Contact form with email functionality
-- ✅ **Blog Structure** - Ready for content management
-- ✅ **Schema.org Markup** - LocalBusiness, FAQPage, and BreadcrumbList schemas
-
-## Business Information
-
-- **Company:** Nidia Martinez Insurance LLC
-- **Phone:** (504) 913-7153
-- **Email:** nidiamartinez576@outlook.com
-- **Office:** 110 Veterans Blvd Suite 100-A, Metairie, LA 70005
-- **Service Areas:** Louisiana, Florida, Mississippi
-- **Languages:** English & Spanish (Bilingual Services)
-
-## Services
-
-1. Medicare Advantage Plans
-2. Medicare Supplement Plans (Medigap)
-3. Individual Dental Insurance
-4. Individual Vision Insurance
-
-## Carrier Partners
-
-- Humana
-- UnitedHealthcare / People Health
-- AARP Medicare Supplements
-- Devoted Health
-- Aetna
-- Blue Cross Blue Shield
-
-## Tech Stack
-
-- **Framework:** Next.js 14.2.0
-- **React:** 18.3.0
-- **Styling:** CSS Modules
-- **Icons:** Lucide React
-- **Email:** EmailJS Browser 4.3.3
-- **Deployment:** Vercel-ready
-
-## Project Structure
-
-```
-nidia-martinez-insurance/
-├── app/
-│   ├── layout.js                    # Root layout (English)
-│   ├── page.js                      # Homepage (English)
-│   ├── about/page.js                # About page
-│   ├── services/
-│   │   ├── page.js                  # Services overview
-│   │   ├── medicare-advantage/
-│   │   ├── medicare-supplements/
-│   │   ├── dental-insurance/
-│   │   └── vision-insurance/
-│   ├── carriers/page.js             # Carriers page
-│   ├── contact/page.js              # Contact page with form
-│   ├── blog/
-│   │   ├── page.js                  # Blog listing
-│   │   └── [slug]/page.js           # Dynamic blog posts
-│   ├── es/                          # Spanish pages
-│   │   ├── layout.js                # Spanish layout
-│   │   ├── page.js                  # Spanish homepage
-│   │   └── ...                      # Spanish versions of all pages
-│   ├── sitemap.js                   # Dynamic sitemap
-│   └── robots.js                    # Robots.txt
-├── components/
-│   ├── Header.js                    # Main navigation with language toggle
-│   ├── Footer.js                    # Footer with contact info
-│   ├── ContactForm.js               # EmailJS contact form
-│   ├── ServiceCard.js               # Service cards
-│   ├── TestimonialCard.js           # Testimonial cards
-│   ├── CarrierLogo.js               # Carrier logo component
-│   └── SEO/
-│       ├── LocalBusinessSchema.js   # Schema markup
-│       └── FAQSchema.js             # FAQ schema
-├── lib/
-│   ├── emailjs.js                   # EmailJS configuration
-│   └── translations.js              # English/Spanish translations
-├── public/
-│   └── images/
-│       ├── carriers/                # Carrier logos
-│       └── placeholders/            # Placeholder images
-├── styles/
-│   └── globals.css                  # Global styles and CSS variables
-├── package.json
-├── next.config.js
-└── README.md
-```
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18.x or higher
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository:**
-
-```bash
-git clone <repository-url>
-cd Nidia-Martinez-Insurance-Website
-```
-
-2. **Install dependencies:**
+## Quick start
 
 ```bash
 npm install
+cp .env.example .env.local   # fill in values (see below)
+npm run dev                  # http://localhost:3000  (Spanish at /es)
 ```
 
-3. **Set up EmailJS:**
+## Environment variables
 
-   - Create a free account at [EmailJS](https://www.emailjs.com/)
-   - Create an email service (Gmail, Outlook, etc.)
-   - Create an email template with these variables:
-     - `{{from_name}}` - sender's name
-     - `{{from_email}}` - sender's email
-     - `{{phone}}` - sender's phone
-     - `{{preferred_language}}` - preferred language
-     - `{{service_interest}}` - service they're interested in
-     - `{{message}}` - message content
-   - Get your Service ID, Template ID, and Public Key
-   - Update `lib/emailjs.js` with your credentials:
+| Variable | Required | Purpose |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | yes (prod) | Canonical origin, e.g. `https://www.example.com` (falls back to Vercel's production URL) |
+| `RESEND_API_KEY` | yes (prod) | Resend API key for lead emails |
+| `CONTACT_TO_EMAILS` | yes | Comma-separated list — **every** lead goes to all of them |
+| `CONTACT_FROM_EMAIL` | yes (prod) | Sender on a Resend-verified domain |
+| `NEXT_PUBLIC_GA_ID` | no | GA4 ID. If unset, no analytics loads |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY` | no | Cloudflare Turnstile on the form (both required to enable) |
+| `FORM_MIN_SUBMIT_MS`, `FORM_RATE_LIMIT` | no | Spam-check tuning (defaults 3000 ms, 5 per 10 min per IP) |
 
-```javascript
-export const EMAILJS_CONFIG = {
-  SERVICE_ID: 'your_service_id',
-  TEMPLATE_ID: 'your_template_id',
-  PUBLIC_KEY: 'your_public_key',
-};
+If email sending fails (or isn't configured), the form shows the phone number and the
+error is logged server-side — a lead is never silently lost.
+
+## Where things live
+
+```
+src/config/site.ts        ← ALL business facts: agents, phones, emails, carriers, hours,
+                            address, TPMO "Y" count, review list. TODOs live here.
+src/config/products.ts    ← the 9 products, related-product links, schema serviceType
+src/config/cities.ts      ← cities that have their own page
+src/config/pages.ts       ← registry of every page (drives sitemap, OG images, tests, Lighthouse)
+src/i18n/routing.ts       ← locales + translated URL slugs
+messages/en.json, es.json ← UI strings + every page's <title>/<meta description>
+src/content/{en,es}/      ← long-form page content (services, cities, guides, FAQ, legal)
+src/app/[locale]/…        ← routes (folder names = English slugs)
+src/app/og/…              ← branded Open Graph images per page per locale (built statically)
+src/app/actions/contact.ts← contact form Server Action (validation, spam checks, Resend)
+tests/unit, tests/e2e     ← Vitest and Playwright suites
+scripts/verify.ts         ← the full quality gate
 ```
 
-4. **Run the development server:**
+### Editing business facts
+Edit `src/config/site.ts`. Anything `null` is a TODO and is **hidden** until set (nothing
+ever renders "TODO"). Examples:
 
-```bash
-npm run dev
-```
+- **John's years of experience:** set `yearsExperience` on John → his badge appears and the
+  "Over X years of combined experience" line turns on automatically.
+- **Headshots:** put the optimized JPG in `public/images/team/` and set `headshot` +
+  `headshotSize` (`{ width, height }` in pixels). The hero switches from initials to photos
+  automatically (both photos once both exist). The hero photo is prioritized for LCP.
+- **Address / hours:** fill `site.address` / `site.hours` → they appear in the footer,
+  contact page and `InsuranceAgency` schema.
+- **Carriers:** edit `carriers`. `confirmed: false` hides a carrier everywhere. Logos are
+  never shown unless you add `logo: { src, width, height, approved: true }` (only with carrier
+  approval). Note: the Medicare Advantage meta description in `messages/*.json` also names the
+  carriers — update it if the list changes.
+- **TPMO disclaimer "Y":** set `site.compliance.plansOffered`. "X" is computed from confirmed
+  Medicare Advantage carriers. Until Y is set, the disclaimer uses CMS's earlier wording and
+  `npm run check:launch` reports it as a **launch blocker**.
+- **Reviews:** only add real reviews to `site.reviews`. The site never emits Review/Rating
+  schema otherwise.
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+Run `npm run check:launch` any time to list open TODOs.
 
-### Building for Production
+### Editing text and translations
+- Short UI strings, page titles and meta descriptions: `messages/en.json` and
+  `messages/es.json`. **Both files must have exactly the same keys** (a unit test enforces this,
+  plus title ≤ 60 / description ≤ 155 characters and site-wide uniqueness).
+- Long-form content: `src/content/en/*.ts` and `src/content/es/*.ts`. Both are typed with
+  `src/content/types.ts`; the structure (sections, lists, FAQs) must match between languages.
+  Inline formatting: `**bold**` and `[link text](page:<page-id>)` (e.g. `page:aep`,
+  `page:service-medicare-advantage`) — internal links resolve to the right language automatically.
+- Write Spanish natively (usted register), not word-for-word.
+- Product pages show "Last reviewed" from `site.contentLastReviewed` — update it after a review.
 
-```bash
-npm run build
-npm start
-```
+### Adding a city page
+1. Add the city to `cityPages` in `src/config/cities.ts` (`slug`, names, parish EN/ES).
+2. Add `Meta.cities.<slug>` title/description to **both** message files.
+3. Add content under `cities.<slug>` in `src/content/en/cities.ts` **and** `src/content/es/cities.ts`.
+   Write genuinely local content (parish, nearby hospitals/areas, how to meet). The content QA
+   fails if any two city pages are more than 40% similar.
+4. Run `npm run verify`. Sitemap, OG image, hreflang, footer links and tests pick it up automatically.
 
-## Deployment
+## Quality gate: `npm run verify`
 
-This website is optimized for deployment on Vercel:
+Runs, in order, and fails on the first category that doesn't pass:
 
-1. **Push to GitHub:**
+1. Launch-blocker check (`NODE_ENV=production npm run verify` fails while a blocker is open)
+2. `tsc --noEmit`, ESLint with zero warnings
+3. Vitest: utilities, translation-key completeness, meta lengths/uniqueness, content parity,
+   service-page word counts (600–1,200), city similarity, schema builders, form logic
+4. `next build` (fails on any warning)
+5. Playwright against the production build:
+   SEO (status, one H1, title/description, canonical, hreflang reciprocity, `lang`, OG/Twitter +
+   OG image fetch, image alt/dimensions, JSON-LD validity + expected types + FAQ/visible match),
+   sitemap ↔ pages parity, robots, full internal-link crawl, axe-core (mobile + desktop, WCAG 2.2
+   AA + best practices, zero violations), keyboard navigation, contact form e2e (mock email),
+   language toggle on every page, content QA (≥ 400 words, no visible TODO, no untranslated
+   English on `/es`), 404s
+6. Lighthouse CI on every route in both locales (mobile): Performance ≥ 95, Accessibility,
+   Best Practices and SEO = 100. Scores are written to `lighthouse-scores.md`.
 
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
+Other scripts: `npm run test:unit`, `npm run test:e2e` (needs a build), `npm run lhci`,
+`npm run screenshots` (mobile + desktop, both locales → `screenshots/`), `npm run icons`
+(regenerates favicons/logo files from code).
 
-2. **Deploy to Vercel:**
+### Structured data
+Every page carries `InsuranceAgency`; plus `WebSite` (home), `Service` (product pages),
+`Person` (About + agent profiles), `FAQPage` (pages with visible FAQs) and `BreadcrumbList`
+(inner pages). Types are checked at compile time with `schema-dts` and at runtime by
+`src/lib/schema-validate.ts` in unit and e2e tests. To double-check with Google after deploy:
+paste a URL into the [Rich Results Test](https://search.google.com/test/rich-results) and the
+[Schema Markup Validator](https://validator.schema.org/).
 
-   - Go to [Vercel](https://vercel.com)
-   - Import your GitHub repository
-   - Vercel will automatically detect Next.js and configure the build
-   - Deploy!
+## Deploying to Vercel
+1. Import the GitHub repo in Vercel (framework: Next.js; defaults are fine).
+2. Add the environment variables above for **Production** (and Preview if you want the form
+   to work there).
+3. Deploy, then add the custom domain and set `NEXT_PUBLIC_SITE_URL` to it; redeploy.
+4. Work through [`LAUNCH_CHECKLIST.md`](./LAUNCH_CHECKLIST.md).
 
-### Environment Variables (Optional)
+Rate limiting is in-memory per server instance — fine for a small site; swap in a shared
+store (e.g. Upstash Redis) if spam ever becomes a problem.
 
-If you want to keep EmailJS credentials private:
-
-1. Create a `.env.local` file:
-
-```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-2. Update `lib/emailjs.js` to use environment variables:
-
-```javascript
-export const EMAILJS_CONFIG = {
-  SERVICE_ID: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-  TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-  PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-};
-```
-
-3. Add environment variables in Vercel dashboard
-
-## Customization
-
-### Adding Images
-
-Replace placeholder images in:
-- Hero sections: Professional photos of Nidia or office
-- About page: Nidia's professional photo
-- Service pages: Relevant service imagery
-- Blog posts: Blog header images
-
-### Adding Carrier Logos
-
-Add actual carrier logos to `public/images/carriers/` and update the `CarrierLogo` component to use them.
-
-### Updating Content
-
-All English and Spanish content is centralized in `lib/translations.js`. Update translations there to change site content.
-
-### Adding More Blog Posts
-
-Add new blog posts to the `blogPosts` object in:
-- `app/blog/page.js` (blog listing)
-- `app/blog/[slug]/page.js` (blog post content)
-
-### Customizing Styles
-
-Global CSS variables are defined in `styles/globals.css`. Update the color palette, spacing, or other design tokens there.
-
-## SEO Features
-
-✅ **Meta Tags:** All pages have optimized title tags, meta descriptions, and Open Graph tags
-✅ **Schema Markup:** LocalBusiness, FAQPage schemas implemented
-✅ **Sitemap:** Dynamic XML sitemap at `/sitemap.xml`
-✅ **Robots.txt:** Configured at `/robots.txt`
-✅ **Canonical URLs:** All pages have canonical URLs
-✅ **Hreflang Tags:** English and Spanish versions linked
-✅ **Semantic HTML:** Proper heading hierarchy
-✅ **Alt Text:** Placeholders for image alt text
-
-## Accessibility
-
-- Semantic HTML5 elements
-- Proper ARIA labels
-- Keyboard navigation support
-- Color contrast ratios meet WCAG standards
-- Responsive font sizes
-
-## Performance Optimizations
-
-- Next.js automatic code splitting
-- Image optimization ready (add actual images)
-- Minimal JavaScript bundle
-- CSS Modules for scoped styling
-- Font optimization with Google Fonts
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Android)
-
-## Future Enhancements
-
-- [ ] Add actual professional photos
-- [ ] Replace carrier logo placeholders with actual logos
-- [ ] Implement Google Maps embed for office location
-- [ ] Add Google Analytics or similar tracking
-- [ ] Integrate with a CMS for blog management
-- [ ] Add client testimonial submission form
-- [ ] Implement live chat or chatbot
-
-## Support
-
-For questions or issues, contact:
-- **Email:** nidiamartinez576@outlook.com
-- **Phone:** (504) 913-7153
-
-## License
-
-© 2026 Nidia Martinez Insurance LLC. All rights reserved.
+## Compliance notes
+- The CMS TPMO disclaimer and the "not connected with the U.S. government or the federal
+  Medicare program" statement are in the footer on every page and on the contact page.
+- The form never asks for Medicare number, SSN, date of birth or health details; the TCPA
+  consent box is unchecked by default and the exact consent wording is stored with the lead.
+- No government logos, no carrier logos without approval, no "free gifts", no fake urgency.
