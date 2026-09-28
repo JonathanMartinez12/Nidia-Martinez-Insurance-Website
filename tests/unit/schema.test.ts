@@ -17,7 +17,7 @@ const profileUrls = {
 };
 
 describe('JSON-LD builders', () => {
-  it('InsuranceAgency is valid and omits TODO fields', () => {
+  it('InsuranceAgency is valid, has the address and omits TODO fields', () => {
     const a = agencySchema({
       locale: 'en',
       description: 'Local Medicare help',
@@ -25,8 +25,8 @@ describe('JSON-LD builders', () => {
       jobTitle: 'Licensed Insurance Agent',
     });
     expect(validateJsonLd(a)).toEqual([]);
-    expect(a).toMatchObject({ '@type': 'InsuranceAgency', knowsLanguage: ['en', 'es'], telephone: '+15049132398' });
-    expect(a).not.toHaveProperty('address');
+    expect(a).toMatchObject({ '@type': 'InsuranceAgency', knowsLanguage: ['en', 'es'], telephone: '+15049137153' });
+    expect(a).toMatchObject({ address: { '@type': 'PostalAddress', addressLocality: 'Metairie', postalCode: '70005' } });
     expect(a).not.toHaveProperty('openingHoursSpecification');
     expect(a).not.toHaveProperty('aggregateRating');
     expect(a).not.toHaveProperty('review');

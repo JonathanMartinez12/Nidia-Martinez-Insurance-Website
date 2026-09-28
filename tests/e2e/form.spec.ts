@@ -79,7 +79,7 @@ test.describe('contact form', () => {
 
     const success = page.getByTestId('contact-success');
     await expect(success).toBeVisible();
-    await expect(success).toContainText('(504) 913-2398');
+    await expect(success).toContainText('(504) 913-7153');
 
     await expect.poll(async () => (await outbox()).filter((m) => m.subject.includes(name)).length).toBe(1);
     const lead = (await outbox()).find((m) => m.subject.includes(name))!;

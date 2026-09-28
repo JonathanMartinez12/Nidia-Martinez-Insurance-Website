@@ -18,9 +18,9 @@ import type { ProductKey } from './products';
 export type Locale = 'en' | 'es';
 
 export type Phone = {
-  /** Human-readable, e.g. "(504) 913-2398" */
+  /** Human-readable, e.g. "(504) 913-7153" */
   display: string;
-  /** E.164, e.g. "+15049132398" — used for tel: links and schema */
+  /** E.164, e.g. "+15049137153" — used for tel: links and schema */
   e164: string;
 };
 
@@ -86,8 +86,8 @@ export const agents: Agent[] = [
     familyName: 'Martinez',
     yearsExperience: 27,
     specialties: ['medicare-advantage', 'medicare-supplement'],
-    phone: { display: '(504) 913-2398', e164: '+15049132398' },
-    phoneLabel: 'direct',
+    phone: { display: '(504) 913-7153', e164: '+15049137153' },
+    phoneLabel: 'cell',
     email: 'nidiamartinez576@outlook.com',
     headshot: '/images/team/nidia-martinez.jpg',
     headshotSize: { width: 720, height: 900 },
@@ -148,9 +148,14 @@ export const site = {
   /** Business email used in schema and the footer. */
   email: 'nidiamartinez576@outlook.com',
   /** The primary business line (header, sticky call bar, schema). Nidia's number. */
-  primaryPhone: { display: '(504) 913-2398', e164: '+15049132398' } satisfies Phone,
+  primaryPhone: { display: '(504) 913-7153', e164: '+15049137153' } satisfies Phone,
   /** Street address. `null` = TODO → omitted from NAP and schema (service-area business). */
-  address: null as PostalAddress | null,
+  address: {
+    streetAddress: '110 Veterans Blvd., Suite 100 A',
+    addressLocality: 'Metairie',
+    addressRegion: 'LA',
+    postalCode: '70005',
+  } as PostalAddress | null,
   /** Office hours. `null` = TODO → hours hidden, `openingHoursSpecification` omitted. */
   hours: null as OpeningHours[] | null,
   /** Social / citation profile URLs used in schema `sameAs`. Empty until real profiles exist. */

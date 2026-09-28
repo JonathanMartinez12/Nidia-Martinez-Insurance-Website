@@ -11,13 +11,8 @@ Run `npm run check:launch` to see what's still open.
 - [ ] **BLOCKER — TPMO disclaimer "Y":** set `site.compliance.plansOffered` to the number of
       plans/products the organizations you represent offer in your service area (confirm the
       figure you use for compliance). `NODE_ENV=production npm run verify` fails until it's set.
-- [ ] Confirm Nidia's phone number: the site uses **(504) 913-2398** (from the brief), but her
-      business card shows **504-913-7153**. Update `primaryPhone` and Nidia's `phone` if needed.
-- [ ] Confirm whether **110 Veterans Blvd. Suite 100 A, Metairie, LA 70005** (from Nidia's Plus 65
-      business card) is the agency's public office address before adding it as `site.address`.
 - [ ] John's years of experience (`yearsExperience`) — turns on his badge and the combined-years line.
 - [ ] Louisiana license numbers and NPNs for both agents (`licenseNumber`, `npn`).
-- [ ] Street address (or confirm you're a service-area business with no public address).
 - [ ] Office hours (`site.hours`).
 - [ ] Confirm Blue Cross and Blue Shield of Louisiana for Medicare Supplement → `confirmed: true`.
 - [ ] Replace the interim "M" logo in `public/brand/` with official Martinez Insurance Agency
@@ -79,7 +74,7 @@ Run `npm run check:launch` to see what's still open.
       and list service areas (up to 20): New Orleans, Metairie, Kenner, Harahan, River Ridge,
       Chalmette, Gretna, Marrero, Slidell, Mandeville, Covington, LaPlace, Baton Rouge, plus the
       parishes (Orleans, Jefferson, St. Bernard, St. Tammany, St. John the Baptist).
-- [ ] Phone: **(504) 913-2398** (identical to the website). Website: the home page URL, optionally
+- [ ] Phone: **(504) 913-7153** (identical to the website). Website: the home page URL, optionally
       with `?utm_source=google&utm_medium=organic&utm_campaign=gbp`.
 - [ ] Hours (same as `site.hours`), "Identifies as" attributes you're comfortable sharing, and
       **Languages spoken: Spanish** / "Se habla español".
@@ -113,7 +108,7 @@ Run `npm run check:launch` to see what's still open.
 
 ## 6. NAP citations (Name, Address, Phone — identical everywhere)
 
-Use exactly: **Martinez Insurance Agency · (504) 913-2398 · your-domain.com** (plus the address
+Use exactly: **Martinez Insurance Agency · (504) 913-7153 · your-domain.com** (plus the address
 if public). Keep a spreadsheet of logins.
 
 - [ ] Apple Business Connect (Apple Maps)
