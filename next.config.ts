@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
   },
   // Fonts read by the OG image route at build time.
   outputFileTracingIncludes: {
-    '/og/[locale]/[page]': ['./assets/fonts/**/*'],
+    '/og/[locale]/[page]': ['./assets/fonts/**/*', './public/brand/logo-white.png'],
   },
   async headers() {
     return [

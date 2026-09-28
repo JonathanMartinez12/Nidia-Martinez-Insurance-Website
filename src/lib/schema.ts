@@ -22,7 +22,7 @@ export function agencySchema(opts: {
   agentProfileUrls: Record<string, string>;
   jobTitle: string;
 }): WithContext<InsuranceAgency> {
-  const logo = absoluteUrl(site.brand.logoPng);
+  const logo = absoluteUrl(site.brand.seal);
   const node: WithContext<InsuranceAgency> = {
     '@context': 'https://schema.org',
     '@type': 'InsuranceAgency',
@@ -30,7 +30,7 @@ export function agencySchema(opts: {
     name: site.name,
     url: absoluteUrl('/'),
     logo,
-    image: logo,
+    image: absoluteUrl(site.brand.logo),
     description: opts.description,
     telephone: site.primaryPhone.e164,
     email: site.email,

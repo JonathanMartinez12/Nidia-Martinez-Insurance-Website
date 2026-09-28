@@ -29,11 +29,13 @@ export async function GET(_req: Request, { params }: { params: Promise<{ locale:
   const title = t(`${page.metaKey}.title` as 'home.title', metaValues()).split(' | ')[0]!;
   const years = headlineYears();
 
-  const [serif, sans, sansBold] = await Promise.all([
+  const [serif, sans, sansBold, logoPng] = await Promise.all([
     readFile(path.join(fontDir, 'source-serif-4-latin-600-normal.woff')),
     readFile(path.join(fontDir, 'atkinson-hyperlegible-next-latin-400-normal.woff')),
     readFile(path.join(fontDir, 'atkinson-hyperlegible-next-latin-700-normal.woff')),
+    readFile(path.join(process.cwd(), 'public', 'brand', 'logo-white.png')),
   ]);
+  const logo = `data:image/png;base64,${logoPng.toString('base64')}`;
 
   return new ImageResponse(
     <div
@@ -53,25 +55,9 @@ export async function GET(_req: Request, { params }: { params: Promise<{ locale:
         <path d="M0 482C285 374 650 352 1200 444" fill="none" stroke="#C8202F" strokeWidth="10" />
         <circle cx="1090" cy="110" r="150" fill="none" stroke="#FFFFFF" strokeOpacity="0.07" strokeWidth="26" />
       </svg>
-      <div style={{ display: 'flex', alignItems: 'center', padding: '56px 72px 0' }}>
-        <svg width="76" height="76" viewBox="0 0 64 64">
-          <rect width="64" height="64" rx="15" fill="#233E84" />
-          <path d="M-4 52.5C15 42 43 41.5 68 50.5" fill="none" stroke="#C8202F" strokeWidth="4.5" />
-          <path
-            d="M18 39V15.5L32 30L46 15.5V39"
-            fill="none"
-            stroke="#FFFFFF"
-            strokeWidth="6.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 22 }}>
-          <div style={{ display: 'flex', fontFamily: 'SourceSerif', fontSize: 40, color: '#FFFFFF' }}>Martinez</div>
-          <div style={{ display: 'flex', fontSize: 17, letterSpacing: 5, color: '#C9D3EC', fontWeight: 700 }}>
-            INSURANCE AGENCY
-          </div>
-        </div>
+      <div style={{ display: 'flex', alignItems: 'center', padding: '52px 72px 0' }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logo} width={360} height={116} alt="" />
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', padding: '64px 72px 0', maxWidth: 1060 }}>
         <div

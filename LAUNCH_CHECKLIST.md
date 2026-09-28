@@ -15,8 +15,6 @@ Run `npm run check:launch` to see what's still open.
 - [ ] Louisiana license numbers and NPNs for both agents (`licenseNumber`, `npn`).
 - [ ] Office hours (`site.hours`).
 - [ ] Confirm Blue Cross and Blue Shield of Louisiana for Medicare Supplement → `confirmed: true`.
-- [ ] Replace the interim "M" logo in `public/brand/` with official Martinez Insurance Agency
-      artwork if there is one (then run `npm run icons` to regenerate favicons).
 - [ ] Review every page's copy with both agents (facts, tone, Spanish wording).
 - [ ] Set `site.contentLastReviewed` to the date of that review.
 

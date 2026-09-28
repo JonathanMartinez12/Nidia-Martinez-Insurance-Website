@@ -116,8 +116,7 @@ Runs, in order, and fails on the first category that doesn't pass:
    Best Practices and SEO = 100. Scores are written to `lighthouse-scores.md`.
 
 Other scripts: `npm run test:unit`, `npm run test:e2e` (needs a build), `npm run lhci`,
-`npm run screenshots` (mobile + desktop, both locales → `screenshots/`), `npm run icons`
-(regenerates favicons/logo files from code).
+`npm run screenshots` (mobile + desktop, both locales → `screenshots/`).
 
 ### Structured data
 Every page carries `InsuranceAgency`; plus `WebSite` (home), `Service` (product pages),

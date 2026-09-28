@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import type { ReactNode } from 'react';
+import { site } from '@/config/site';
 import type { AppLocale } from '@/i18n/routing';
 import { Breadcrumbs, type Crumb } from '@/components/layout/Breadcrumbs';
 import { Curve } from '@/components/ui/Curve';
@@ -24,6 +26,13 @@ export function PageHeader({
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full border-[28px] border-white/60"
+      />
+      <Image
+        src={site.brand.seal}
+        alt={site.name}
+        width={176}
+        height={176}
+        className="pointer-events-none absolute top-16 right-[max(2rem,calc((100vw-74rem)/2+2rem))] hidden h-44 w-44 drop-shadow-[0_18px_30px_rgb(17_31_74/0.18)] xl:block"
       />
       <div className="container-page relative pt-6 pb-16 sm:pt-8 sm:pb-20">
         <Breadcrumbs locale={locale} items={crumbs} />

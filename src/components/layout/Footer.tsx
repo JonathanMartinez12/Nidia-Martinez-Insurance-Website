@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/Link';
 import type { AppLocale } from '@/i18n/routing';
@@ -6,7 +7,6 @@ import { agents, site } from '@/config/site';
 import { cityPages } from '@/config/cities';
 import { productKeys, products } from '@/config/products';
 import { telHref } from '@/lib/phone';
-import { Logo } from '@/components/ui/Logo';
 import { TpmoDisclaimer } from '@/components/sections/TpmoDisclaimer';
 
 const dayNames = {
@@ -29,7 +29,16 @@ export async function Footer({ locale }: { locale: AppLocale }) {
       <div className="container-page pt-16 pb-32 md:pb-12">
         <div className="grid gap-12 lg:grid-cols-[1fr_2.2fr]">
           <div>
-            <Logo tone="dark" homeLabel={tc('homeLabel')} tagline={tc('tagline')} />
+            <Link href="/" className="inline-block rounded-lg">
+              <Image
+                src={site.brand.logoWhite}
+                alt={`${site.name} — ${tc('homeLabel')}`}
+                width={site.brand.logoSize.width}
+                height={site.brand.logoSize.height}
+                sizes="20rem"
+                className="h-auto w-72 sm:w-80"
+              />
+            </Link>
             <h2 className={`${heading} mt-8`}>{t('contactHeading')}</h2>
             <address className="mt-3 space-y-1 not-italic">
               <p className="font-serif text-xl font-semibold">{site.name}</p>

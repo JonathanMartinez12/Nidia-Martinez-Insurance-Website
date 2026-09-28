@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/Link';
 import { getContent } from '@/content';
@@ -52,6 +53,14 @@ export default async function ContactPage({ params }: LocaleParams) {
             aria-labelledby="call-heading"
             className="on-dark rounded-[var(--radius-card)] bg-navy-800 p-6 text-white sm:p-8"
           >
+            <Image
+              src={site.brand.logoWhite}
+              alt={site.name}
+              width={site.brand.logoSize.width}
+              height={site.brand.logoSize.height}
+              sizes="18rem"
+              className="mb-6 h-auto w-64 border-b border-white/15 pb-6"
+            />
             <h2 id="call-heading" className="flex items-center gap-2 text-2xl font-semibold text-white">
               <Phone aria-hidden className="h-6 w-6" />
               {t('callHeading')}

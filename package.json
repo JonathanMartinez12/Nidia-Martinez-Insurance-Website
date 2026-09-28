@@ -2,7 +2,7 @@
   "name": "martinez-insurance-agency",
   "version": "1.0.0",
   "private": true,
-  "description": "Bilingual (EN/ES) local-SEO website for Martinez Insurance Agency — Greater New Orleans, Louisiana.",
+  "description": "Bilingual (EN/ES) local-SEO website for Martinez Insurance Agency \u2014 Greater New Orleans, Louisiana.",
   "engines": {
     "node": ">=20.9.0"
   },
@@ -16,7 +16,6 @@
     "test:e2e": "playwright test",
     "lhci": "tsx scripts/lhci-urls.ts && lhci autorun",
     "check:launch": "tsx scripts/check-launch-blockers.ts",
-    "icons": "tsx scripts/generate-icons.tsx",
     "screenshots": "tsx scripts/screenshots.ts",
     "verify": "tsx scripts/verify.ts",
     "format": "prettier --write ."

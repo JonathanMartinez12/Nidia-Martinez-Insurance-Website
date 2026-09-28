@@ -1,4 +1,5 @@
 import { site } from '@/config/site';
+import { absoluteUrl } from '@/lib/urls';
 import { formatUsPhone } from '@/lib/phone';
 import type { ContactLead } from './schema';
 import type { LeadOwner } from './routing';
@@ -22,9 +23,7 @@ function shell(title: string, body: string): string {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6fb;padding:24px 0;">
 <tr><td align="center">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #dde3f0;">
-<tr><td style="background:${navy};padding:20px 28px;color:#ffffff;font-size:20px;font-weight:bold;">
-<span style="color:#ffffff;">${esc(site.name)}</span><span style="display:inline-block;width:28px;height:3px;background:${red};margin-left:12px;vertical-align:middle;"></span>
-</td></tr>
+<tr><td style="background:${navy};padding:18px 28px;"><img src="${absoluteUrl(site.brand.logoWhite)}" width="220" height="71" alt="${esc(site.name)}" style="display:block;border:0;width:220px;height:auto;"></td></tr>
 <tr><td style="padding:28px;font-size:16px;line-height:1.6;">${body}</td></tr>
 <tr><td style="padding:16px 28px;background:#f8f9fc;color:#4a5578;font-size:13px;line-height:1.5;">
 ${esc(site.name)} · ${esc(site.primaryPhone.display)} · ${esc(site.email)}

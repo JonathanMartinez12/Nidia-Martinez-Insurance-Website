@@ -1,4 +1,5 @@
 import { Phone } from 'lucide-react';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import type { AppLocale } from '@/i18n/routing';
 import type { ProductKey } from '@/config/products';
@@ -30,6 +31,13 @@ export async function FinalCta({
       className="on-dark relative overflow-hidden bg-navy-900 py-16 text-white sm:py-20 lg:py-24"
     >
       <Swoosh className="absolute inset-x-0 bottom-0 h-64 w-full opacity-70" />
+      <Image
+        src={site.brand.sealWhite}
+        alt={site.name}
+        width={416}
+        height={416}
+        className="pointer-events-none absolute -top-16 -left-24 hidden h-[26rem] w-[26rem] opacity-[0.06] lg:block"
+      />
       <div className="container-page relative grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-start">
         <div>
           <h2 id="final-cta" className="text-4xl font-semibold text-white sm:text-5xl">

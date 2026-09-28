@@ -195,9 +195,12 @@ export const site = {
   brand: {
     navy: '#233E84',
     red: '#C8202F',
-    logo: '/brand/logo.svg',
-    logoPng: '/brand/logo.png',
-    mark: '/brand/mark.svg',
+    /** Official artwork (source files: assets/reference/martinez-insurance-agency-logo-pack.zip). */
+    logo: '/brand/logo.png',
+    logoWhite: '/brand/logo-white.png',
+    logoSize: { width: 1200, height: 385 },
+    seal: '/brand/seal.png',
+    sealWhite: '/brand/seal-white.png',
   },
 } as const;
 

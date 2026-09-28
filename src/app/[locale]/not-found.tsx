@@ -1,4 +1,5 @@
 import { Phone } from 'lucide-react';
+import Image from 'next/image';
 import NextLink from 'next/link';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/Link';
@@ -30,6 +31,7 @@ export default async function NotFound() {
   return (
     <PageShell locale={locale}>
       <div className="container-page py-16 sm:py-24">
+        <Image src={site.brand.seal} alt={site.name} width={96} height={96} className="mb-6 h-24 w-24" />
         <p className="eyebrow">{t('eyebrow')} · 404</p>
         <h1 className="mt-3 max-w-3xl text-4xl font-semibold sm:text-5xl">{t('heading')}</h1>
         <p className="mt-5 max-w-2xl text-lg">{t('body')}</p>
