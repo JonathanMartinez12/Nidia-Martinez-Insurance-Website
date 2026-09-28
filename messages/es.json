@@ -1,0 +1,471 @@
+{
+  "Meta": {
+    "home": {
+      "title": "Asesores de Medicare en Nueva Orleans | Plus 65",
+      "description": "Agentes de Medicare locales y con licencia en Nueva Orleans, con {years} años de experiencia. Ayuda personal y sin costo para elegir su plan. Hablamos español."
+    },
+    "services": {
+      "medicare-advantage": {
+        "title": "Planes Medicare Advantage en Luisiana | Plus 65",
+        "description": "Compare planes Medicare Advantage de Humana, Peoples Health, UnitedHealthcare y Devoted Health con un agente local con {years} años de experiencia."
+      },
+      "medicare-supplement": {
+        "title": "Seguro Suplementario de Medicare en Luisiana | Plus 65",
+        "description": "Planes Medigap en Luisiana, incluido AARP Medicare Supplement y Humana, explicados por nuestro equipo local, con {years} años de experiencia."
+      },
+      "part-d-prescription-drug-plans": {
+        "title": "Planes de Medicamentos Parte D en Luisiana | Plus 65",
+        "description": "Encuentre un plan de la Parte D que cubra sus medicinas en la farmacia que usted usa. Ayuda sin costo de agentes bilingües en Nueva Orleans."
+      },
+      "special-needs-plans": {
+        "title": "Planes de Medicare para Diabetes y Corazón | Plus 65",
+        "description": "Los planes C-SNP para personas con diabetes o enfermedades del corazón pueden ofrecer beneficios adicionales. Averigüe si califica, sin costo."
+      },
+      "dental-vision-insurance": {
+        "title": "Seguro Dental y de Visión para Mayores | Plus 65",
+        "description": "Medicare Original no cubre la atención dental ni de la vista de rutina. Compare planes dentales y de visión con un agente bilingüe en Nueva Orleans."
+      },
+      "final-expense-insurance": {
+        "title": "Seguro de Gastos Finales en Luisiana | Plus 65",
+        "description": "El seguro de gastos finales ayuda a cubrir el funeral para que su familia no tenga que pagarlo. Atención amable y bilingüe en el área de Nueva Orleans."
+      },
+      "life-insurance": {
+        "title": "Seguro de Vida Económico en Luisiana | Plus 65",
+        "description": "Seguro de vida a término y permanente a buen precio para familias de Luisiana. Un agente local con licencia compara opciones con usted en español."
+      },
+      "hospital-indemnity-insurance": {
+        "title": "Seguro de Indemnización Hospitalaria | Plus 65",
+        "description": "Estos planes le pagan dinero en efectivo por estadías cubiertas en el hospital, lo que ayuda con los copagos de Medicare Advantage. Asesoría sin costo."
+      },
+      "health-insurance": {
+        "title": "Seguro de Salud para Menores de 65 | Plus 65",
+        "description": "¿Aún no tiene Medicare? Reciba ayuda para encontrar seguro médico individual y familiar en Luisiana con agentes bilingües y con licencia."
+      }
+    },
+    "aep": {
+      "title": "Inscripción Anual de Medicare (15 oct–7 dic) | Plus 65",
+      "description": "El Período de Inscripción Anual de Medicare va del 15 de octubre al 7 de diciembre. Entienda su Aviso Anual de Cambios y pida una revisión gratis."
+    },
+    "scam": {
+      "title": "Cómo Evitar Fraudes de Medicare | Plus 65",
+      "description": "Las llamadas y mensajes fraudulentos sobre Medicare son comunes. Conozca las señales de alerta, lo que Medicare nunca le pedirá y cómo denunciarlo."
+    },
+    "about": {
+      "title": "Nidia y John Martinez | Plus 65 Medicare Advisors",
+      "description": "Conozca a Nidia y John Martinez, un matrimonio de agentes con licencia y {years} años de experiencia ayudando a personas mayores en Luisiana."
+    },
+    "agents": {
+      "nidia-martinez": {
+        "title": "Nidia Martinez, Agente de Medicare | Plus 65",
+        "description": "Nidia Martinez es agente de Medicare bilingüe y con licencia, con {years} años de experiencia en planes Medicare Advantage y Medicare Suplementario."
+      },
+      "john-martinez": {
+        "title": "John Martinez, Agente de Seguros | Plus 65",
+        "description": "John Martinez ayuda a familias de Luisiana con seguros de gastos finales, vida, indemnización hospitalaria, dental, visión y salud. Hablamos español."
+      }
+    },
+    "serviceArea": {
+      "title": "Ayuda con Medicare en toda Luisiana | Plus 65",
+      "description": "Ayudamos con Medicare en toda Luisiana, con citas en persona en el área metropolitana de Nueva Orleans, la orilla norte del lago y Baton Rouge."
+    },
+    "cities": {
+      "new-orleans": {
+        "title": "Agente de Medicare en Nueva Orleans | Plus 65",
+        "description": "Agente de Medicare local y bilingüe para los vecindarios de Nueva Orleans. Compare planes Medicare Advantage, Suplementario y Parte D, sin costo."
+      },
+      "metairie": {
+        "title": "Agente de Medicare en Metairie, LA | Plus 65",
+        "description": "¿Busca un agente de Medicare en Metairie? Reciba ayuda en persona y sin costo para comparar planes que acepten a sus médicos de la parroquia Jefferson."
+      },
+      "kenner": {
+        "title": "Agente de Medicare en Kenner, LA | Plus 65",
+        "description": "Ayuda con Medicare en español en Kenner. Comparamos planes Medicare Advantage, Medigap y de medicamentos con usted, sin ningún costo."
+      },
+      "gretna": {
+        "title": "Agente de Medicare en Gretna y el West Bank | Plus 65",
+        "description": "Ayuda con Medicare para Gretna, Marrero, Harvey y el West Bank. Compare planes con un agente local que revisa sus médicos y su farmacia."
+      },
+      "chalmette": {
+        "title": "Agente de Medicare en Chalmette, LA | Plus 65",
+        "description": "Orientación sobre Medicare sin costo para Chalmette y la parroquia St. Bernard. Revise su plan cada otoño, evite fraudes y resuelva sus dudas."
+      },
+      "slidell": {
+        "title": "Agente de Medicare en Slidell, LA | Plus 65",
+        "description": "Ayuda con Medicare para Slidell y el este de la parroquia St. Tammany. Compare planes Medicare Advantage y Suplementario con un agente bilingüe."
+      },
+      "covington": {
+        "title": "Agente de Medicare en Covington y Mandeville | Plus 65",
+        "description": "Ayuda con Medicare en la orilla norte para Covington, Mandeville y el oeste de St. Tammany. Revisiones personales con un agente, sin costo."
+      },
+      "baton-rouge": {
+        "title": "Agente de Medicare en Baton Rouge, LA | Plus 65",
+        "description": "Orientación sobre Medicare para Baton Rouge con agentes bilingües y con licencia. Compare planes Medicare Advantage, Medigap y Parte D."
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes sobre Medicare | Plus 65",
+      "description": "Respuestas claras sobre la inscripción en Medicare, Medicare Advantage vs. Medigap, la Parte D, costos, fraudes y cómo trabajar con un agente local."
+    },
+    "contact": {
+      "title": "Contáctenos: Consulta Gratis sobre Medicare | Plus 65",
+      "description": "Llame al (504) 913-2398 o envíenos un mensaje para una consulta sin costo sobre Medicare en el área de Nueva Orleans o en toda Luisiana."
+    },
+    "privacy": {
+      "title": "Política de Privacidad | Plus 65 Medicare Advisors",
+      "description": "Cómo Plus 65 Medicare Advisors recopila, usa y protege la información que usted comparte en nuestro sitio web y formulario de contacto."
+    },
+    "terms": {
+      "title": "Términos de Uso | Plus 65 Medicare Advisors",
+      "description": "Los términos que aplican al usar el sitio web de Plus 65 Medicare Advisors, incluida información importante sobre el contenido educativo."
+    },
+    "accessibility": {
+      "title": "Declaración de Accesibilidad | Plus 65",
+      "description": "Nuestro compromiso con un sitio accesible para todos, incluidas las personas que usan lectores de pantalla, teclado o letra más grande."
+    },
+    "notFound": {
+      "title": "Página no encontrada | Plus 65 Medicare Advisors",
+      "description": "No encontramos esa página. Llame al (504) 913-2398 o use los enlaces de esta página para encontrar ayuda con Medicare."
+    }
+  },
+  "Common": {
+    "siteName": "Plus 65 Medicare Advisors",
+    "tagline": "Asesores de Medicare",
+    "homeLabel": "inicio",
+    "skipToContent": "Saltar al contenido principal",
+    "callPhone": "Llame al {phone}",
+    "callNow": "Llame ahora",
+    "callUs": "Llámenos",
+    "freeConsultation": "Consulta gratis",
+    "bookFreeConsultation": "Pida una consulta gratis",
+    "hablamos": "Hablamos español",
+    "noCost": "Sin costo para usted",
+    "lastReviewed": "Última revisión: {date}",
+    "breadcrumb": "Ruta de navegación",
+    "home": "Inicio",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "direct": "Directo",
+    "cell": "Celular",
+    "languagesSpoken": "Idiomas",
+    "english": "inglés",
+    "spanish": "español",
+    "onThisPage": "En esta página",
+    "relatedCoverage": "Coberturas relacionadas",
+    "relatedIntro": "Quienes preguntan por {product} suelen preguntar también por estas opciones.",
+    "exploreProduct": "Conozca {product}",
+    "readAboutProduct": "Información sobre {product}",
+    "seeAllFaqs": "Ver todas las preguntas sobre Medicare",
+    "licensed": "Con licencia",
+    "licenseNumber": "Licencia de Luisiana n.º {number}",
+    "npn": "NPN {number}",
+    "yearsExperience": "{years} años de experiencia",
+    "yearsHelping": "{years} años ayudando a los adultos mayores de Luisiana",
+    "combinedYears": "Más de {years} años de experiencia combinada",
+    "headshotAlt": "Retrato de {name}, agente de seguros con licencia de Plus 65 Medicare Advisors",
+    "nonAffiliation": "Plus 65 Medicare Advisors es una agencia de seguros con licencia. No estamos afiliados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare.",
+    "backToTop": "Volver arriba"
+  },
+  "Header": {
+    "primaryNav": "Principal",
+    "utility": "Idioma y tamaño del texto",
+    "utilityMessage": "Ayuda con Medicare sin costo en toda Luisiana",
+    "plans": "Planes",
+    "medicarePlans": "Planes de Medicare",
+    "otherCoverage": "Otras coberturas",
+    "resources": "Recursos",
+    "aep": "Inscripción Anual",
+    "scam": "Protección contra fraudes",
+    "faq": "Preguntas sobre Medicare",
+    "about": "Nosotros",
+    "serviceArea": "Área de servicio",
+    "contact": "Contacto",
+    "menu": "Menú",
+    "openMenu": "Abrir el menú",
+    "closeMenu": "Cerrar el menú",
+    "mobileNav": "Menú del sitio",
+    "textSize": "Tamaño del texto",
+    "textNormal": "Tamaño de texto normal",
+    "textLarge": "Texto más grande",
+    "language": "Idioma",
+    "switchLanguage": "Read this page in English",
+    "currentLanguage": "Español (actual)"
+  },
+  "Footer": {
+    "contactHeading": "Contáctenos",
+    "plansHeading": "Planes de Medicare",
+    "coverageHeading": "Otras coberturas",
+    "resourcesHeading": "Recursos",
+    "areasHeading": "Áreas que atendemos",
+    "teamHeading": "Hable con un agente",
+    "allAreas": "Toda Luisiana",
+    "serviceAreaLine": "Atendemos el área de Nueva Orleans y toda Luisiana",
+    "hours": "Horario",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "accessibility": "Accesibilidad",
+    "legalNav": "Información legal",
+    "footerNav": "Pie de página",
+    "copyright": "© {year} Plus 65 Medicare Advisors. Todos los derechos reservados.",
+    "disclaimerHeading": "Información importante",
+    "educational": "El contenido de este sitio es de carácter educativo. Los beneficios, costos, redes y disponibilidad de los planes varían según el plan y cambian cada año; revise siempre los documentos oficiales de un plan antes de inscribirse."
+  },
+  "MobileBar": {
+    "label": "Contacto rápido",
+    "callLabel": "Llamar al",
+    "consult": "Consulta gratis"
+  },
+  "Products": {
+    "medicare-advantage": {
+      "name": "Medicare Advantage",
+      "short": "Planes todo en uno (Parte C) que pueden incluir medicamentos y beneficios adicionales."
+    },
+    "medicare-supplement": {
+      "name": "Medicare Suplementario",
+      "short": "Pólizas Medigap que ayudan a pagar lo que Medicare Original no cubre."
+    },
+    "part-d-prescription-drug-plans": {
+      "name": "Planes de medicamentos (Parte D)",
+      "short": "Cobertura de recetas según sus medicinas y su farmacia."
+    },
+    "special-needs-plans": {
+      "name": "Planes para necesidades especiales",
+      "short": "Planes para personas con diabetes o problemas del corazón, con beneficios adicionales."
+    },
+    "dental-vision-insurance": {
+      "name": "Dental y visión",
+      "short": "Cobertura para chequeos, empastes, exámenes de la vista y lentes."
+    },
+    "final-expense-insurance": {
+      "name": "Gastos finales",
+      "short": "Seguro de vida permanente para ayudar con el funeral y otros gastos finales."
+    },
+    "life-insurance": {
+      "name": "Seguro de vida económico",
+      "short": "Protección a término o permanente para su familia, a buen precio."
+    },
+    "hospital-indemnity-insurance": {
+      "name": "Indemnización hospitalaria",
+      "short": "Dinero en efectivo por estadías en el hospital para ayudar con los copagos."
+    },
+    "health-insurance": {
+      "name": "Seguro de salud (menores de 65)",
+      "short": "Cobertura individual y familiar antes de tener Medicare."
+    }
+  },
+  "Home": {
+    "h1": "Asesores de Medicare en Nueva Orleans, Luisiana",
+    "lede": "Ayuda personal y en persona para elegir el plan de Medicare adecuado, de un matrimonio de agentes locales que estará a su lado año tras año.",
+    "reassurance": "Sin costo para usted. Sin presiones. Hablamos español.",
+    "teamLabel": "Su equipo local",
+    "teamCaption": "Nidia y John Martinez · Agentes con licencia · Un matrimonio a su servicio",
+    "trustHeading": "Por qué las familias confían en nosotros",
+    "trust": {
+      "years": "{years} años de experiencia",
+      "licensed": "Agentes con licencia",
+      "noCost": "Sin costo para usted",
+      "local": "De aquí, de Nueva Orleans",
+      "spanish": "Hablamos español"
+    },
+    "productsEyebrow": "En qué le ayudamos",
+    "productsHeading": "Cobertura para cada etapa después de los 65",
+    "productsIntro": "Le explicamos sus opciones con palabras sencillas, comparamos planes lado a lado y le ayudamos a inscribirse. Nuestra ayuda no le cuesta nada.",
+    "medicareGroup": "Planes de Medicare",
+    "coverageGroup": "Coberturas adicionales",
+    "howEyebrow": "Cómo funciona",
+    "howHeading": "Tres pasos sencillos",
+    "steps": {
+      "one": {
+        "title": "Llámenos o envíe un mensaje",
+        "body": "Cuéntenos un poco lo que necesita. Buscaremos un horario que le convenga: en persona o por teléfono, en español o en inglés."
+      },
+      "two": {
+        "title": "Revisamos juntos sus opciones",
+        "body": "Tomamos en cuenta sus médicos, sus medicamentos y su presupuesto, y comparamos planes lado a lado con palabras claras."
+      },
+      "three": {
+        "title": "Inscríbase con confianza",
+        "body": "Le ayudamos con los trámites y seguimos disponibles todo el año para sus preguntas, reclamos y su revisión anual."
+      }
+    },
+    "faqEyebrow": "Preguntas frecuentes",
+    "faqHeading": "Respuestas claras sobre Medicare",
+    "ctaHeading": "Encontremos el plan adecuado para usted",
+    "ctaBody": "Llámenos o envíe un breve mensaje. Un agente local con licencia se comunicará con usted pronto.",
+    "ctaFormHeading": "Pida una consulta gratis"
+  },
+  "Aep": {
+    "preTitle": "La Inscripción Anual comienza el 15 de octubre",
+    "preBody": "Su Aviso Anual de Cambios (ANOC) debe llegar antes de que termine septiembre. Allí se explica cómo cambiará su plan para {coverageYear}. Programe su revisión con tiempo para poder comparar.",
+    "openTitle": "La Inscripción Anual está abierta hasta el 7 de diciembre",
+    "openBody": "Es su oportunidad de revisar su plan para {coverageYear}. ¿Le gusta su plan? Se renueva automáticamente. ¿No le gustan los cambios? Revisemos sus opciones en persona.",
+    "cta": "Sobre el Período de Inscripción Anual",
+    "book": "Programe la revisión de su plan"
+  },
+  "Scam": {
+    "eyebrow": "Protéjase",
+    "heading": "Cuidado con los fraudes de Medicare",
+    "body": "Desconfíe de llamadas, mensajes de texto o correos electrónicos que no pidió sobre Medicare.",
+    "points": {
+      "one": "Nunca dé su número de Medicare ni información personal a alguien que se comunique con usted sin que usted lo haya pedido.",
+      "two": "No se inscriba por teléfono con un desconocido. Cuelgue y llame a un agente local de confianza.",
+      "three": "¿Tiene dudas? Llámenos: Nidia al {nidiaPhone} o John al {johnPhone}. Le ayudamos a verificar."
+    },
+    "cta": "Cómo reconocer y denunciar fraudes de Medicare"
+  },
+  "Service": {
+    "whoFor": "Para quién es",
+    "covers": "Qué cubre",
+    "faqHeading": "Preguntas frecuentes sobre {product}",
+    "carriersHeading": "Compañías con las que trabajamos",
+    "carriersIntro": "Estamos nombrados por las siguientes compañías para {product} en Luisiana. La disponibilidad de planes varía según la parroquia.",
+    "carriersNote": "Los nombres de las compañías se muestran solo para identificarlas. No ofrecemos todos los planes disponibles en su área.",
+    "compactFormHeading": "¿Preguntas sobre {product}?",
+    "compactFormBody": "Déjenos su nombre y teléfono, y un agente con licencia le devolverá la llamada. Sin costo ni compromiso.",
+    "aepLink": "Período de Inscripción Anual: fechas y qué hacer",
+    "contactLink": "Comuníquese con un agente local",
+    "moreHelp": "Más ayuda"
+  },
+  "About": {
+    "teamHeading": "Conozca a sus agentes",
+    "viewProfile": "Ver el perfil de {name}",
+    "specialties": "Especialidades",
+    "directContact": "Contacto directo",
+    "whyNoCost": "Por qué nuestra ayuda no le cuesta nada"
+  },
+  "Agent": {
+    "role": "Agente de seguros con licencia",
+    "roleMedicare": "Agente de Medicare con licencia",
+    "contactHeading": "Comuníquese con {name}",
+    "callAgent": "Llamar a {name}",
+    "emailAgent": "Escribir a {name}",
+    "credentials": "Credenciales",
+    "credentialsPending": "Los datos de la licencia están disponibles a solicitud.",
+    "otherAgent": "También en nuestro equipo",
+    "focusHeading": "Cómo puedo ayudarle",
+    "licensedIn": "Agente de seguros con licencia"
+  },
+  "Areas": {
+    "citiesHeading": "Páginas locales",
+    "alsoServing": "También atendemos",
+    "nearbyHeading": "Áreas cercanas que atendemos",
+    "parish": "Parroquia",
+    "servicesHeading": "Cómo podemos ayudarle en {city}",
+    "exploreCity": "Ayuda con Medicare en {city}"
+  },
+  "Faq": {
+    "categoriesNav": "Categorías de preguntas"
+  },
+  "Contact": {
+    "callHeading": "¿Prefiere hablar?",
+    "callBody": "Llame directamente a cualquiera de los dos. Si estamos con un cliente, deje un mensaje y le devolveremos la llamada.",
+    "emailHeading": "Correo electrónico",
+    "areaHeading": "Área de servicio",
+    "hoursHeading": "Horario",
+    "hoursByAppointment": "Llámenos para programar una cita en el horario que mejor le convenga.",
+    "formHeading": "Envíenos un mensaje",
+    "formIntro": "Los campos marcados con * son obligatorios. Toma alrededor de un minuto."
+  },
+  "ContactForm": {
+    "name": "Su nombre",
+    "phone": "Número de teléfono",
+    "phoneHint": "Ejemplo: (504) 555-0123",
+    "email": "Correo electrónico",
+    "emailHint": "Opcional: para enviarle una copia de su solicitud",
+    "language": "Idioma de preferencia",
+    "languageEn": "English",
+    "languageEs": "Español",
+    "contactMethod": "¿Cómo prefiere que nos comuniquemos con usted?",
+    "methodCall": "Llamada",
+    "methodText": "Mensaje de texto",
+    "methodEmail": "Correo electrónico",
+    "interests": "Me interesa",
+    "interestsHint": "Marque todas las opciones que correspondan",
+    "bestTime": "Mejor hora para llamarle",
+    "bestTimeAny": "Cualquier hora",
+    "bestTimeMorning": "Mañana",
+    "bestTimeAfternoon": "Tarde",
+    "bestTimeEvening": "Noche",
+    "bestTimeNone": "Sin preferencia",
+    "message": "¿En qué le podemos ayudar?",
+    "messageHint": "Opcional. Por favor, no incluya su número de Medicare ni detalles de salud.",
+    "consent": "Acepto que Plus 65 Medicare Advisors se comunique conmigo por teléfono, mensaje de texto o correo electrónico sobre Medicare y otros productos de seguros. Este consentimiento no es un requisito para comprar nada y puedo retirarlo en cualquier momento.",
+    "required": "obligatorio",
+    "optional": "opcional",
+    "submit": "Enviar mi solicitud",
+    "submitting": "Enviando…",
+    "privacyNote": "Nunca le pediremos por internet su número de Medicare, su número de Seguro Social ni datos bancarios.",
+    "honeypot": "Deje este campo vacío",
+    "errorSummary": "Por favor, corrija lo siguiente:",
+    "successTitle": "Gracias. Recibimos su solicitud.",
+    "successBody": "Un agente con licencia se comunicará con usted pronto. Si prefiere hablar ahora, llámenos al {phone}.",
+    "failureTitle": "Lo sentimos, su mensaje no se pudo enviar.",
+    "failureBody": "Por favor, llámenos al {phone} y le atenderemos de inmediato.",
+    "rateLimited": "Hemos recibido varias solicitudes desde esta conexión. Por favor, llámenos al {phone}.",
+    "errors": {
+      "nameRequired": "Por favor, escriba su nombre.",
+      "nameTooLong": "Por favor, use 100 caracteres o menos para su nombre.",
+      "phoneRequired": "Por favor, escriba un número de teléfono para poder comunicarnos con usted.",
+      "phoneInvalid": "Escriba un número de EE. UU. de 10 dígitos, por ejemplo (504) 555-0123.",
+      "emailInvalid": "Escriba un correo electrónico válido, por ejemplo nombre@ejemplo.com.",
+      "emailRequiredForMethod": "Agregue su correo electrónico o elija llamada o mensaje de texto.",
+      "languageInvalid": "Por favor, elija un idioma.",
+      "contactMethodInvalid": "Por favor, elija cómo prefiere que nos comuniquemos con usted.",
+      "interestInvalid": "Por favor, elija entre las opciones de la lista.",
+      "bestTimeInvalid": "Por favor, elija un horario de la lista.",
+      "messageTooLong": "Por favor, use 2,000 caracteres o menos en su mensaje.",
+      "consentRequired": "Por favor, marque la casilla para que podamos comunicarnos con usted."
+    },
+    "email_confirm": {
+      "subject": "Recibimos su solicitud — Plus 65 Medicare Advisors",
+      "greeting": "Hola, {name}:",
+      "body": "Gracias por comunicarse con Plus 65 Medicare Advisors. Un agente con licencia se pondrá en contacto con usted pronto.",
+      "callUs": "Si desea hablar antes, llámenos:",
+      "scamNote": "Para su protección: nunca le pediremos por correo electrónico su número de Medicare, su número de Seguro Social ni datos bancarios.",
+      "signoff": "Nidia y John Martinez — Plus 65 Medicare Advisors"
+    }
+  },
+  "NotFound": {
+    "eyebrow": "Página no encontrada",
+    "heading": "No encontramos esa página",
+    "body": "Es posible que el enlace sea antiguo o tenga un error. Estas páginas pueden ayudarle; también puede llamarnos y le orientamos.",
+    "otherLanguage": "Looking for information in English?",
+    "otherLanguageLink": "Go to the English home page",
+    "popular": "Páginas más visitadas"
+  },
+  "AepPage": {
+    "eyebrow": "Período de Inscripción Anual de Medicare",
+    "faqHeading": "Preguntas sobre la Inscripción Anual",
+    "statusOpen": "Abierta ahora: haga cambios para su cobertura de {year} hasta el 7 de diciembre",
+    "statusUpcoming": "Próxima Inscripción Anual: del 15 de octubre al 7 de diciembre de {year} (para la cobertura de {coverageYear})",
+    "dates": {
+      "openDay": "15 oct",
+      "open": "Comienza la Inscripción Anual",
+      "closeDay": "7 dic",
+      "close": "Último día para hacer cambios",
+      "startDay": "1 ene",
+      "start": "Empieza la nueva cobertura de {year}"
+    },
+    "reviewHeading": "Programe su revisión anual",
+    "reviewBody": "Traiga su Aviso Anual de Cambios y su lista de medicamentos. Lo revisamos juntos, sin costo para usted."
+  },
+  "ScamPage": {
+    "eyebrow": "Protéjase usted y a su familia",
+    "faqHeading": "Preguntas sobre fraudes de Medicare",
+    "rulesHeading": "Cuatro reglas para recordar",
+    "rules": {
+      "one": "Cuide su tarjeta de Medicare como si fuera una tarjeta de crédito.",
+      "two": "Cuelgue las llamadas inesperadas sobre Medicare.",
+      "three": "Nunca se inscriba por teléfono con un desconocido.",
+      "four": "Si tiene dudas, llame a alguien que conozca y en quien confíe."
+    },
+    "print": "Imprimir esta página",
+    "share": "Enviar esta página a un ser querido",
+    "shareSubject": "Cómo evitar fraudes de Medicare",
+    "shareBody": "Pensé que esto te sería útil: una guía sencilla para reconocer y denunciar fraudes de Medicare.",
+    "askHeading": "¿Recibió una llamada sospechosa?",
+    "askBody": "Antes de compartir cualquier dato, llámenos. Le ayudamos a verificar si es real, sin costo y en español o inglés."
+  },
+  "Legal": {
+    "updated": "Última actualización"
+  }
+}
