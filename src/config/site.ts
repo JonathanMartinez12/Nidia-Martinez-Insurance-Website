@@ -147,8 +147,8 @@ export const site = {
   shortName: 'Martinez Insurance',
   /** Business email used in schema and the footer. */
   email: 'nidiamartinez576@outlook.com',
-  /** The primary business line (header, sticky call bar, schema). Nidia's number. */
-  primaryPhone: { display: '(504) 913-7153', e164: '+15049137153' } satisfies Phone,
+  /** The primary business line (header, sticky call bar, schema). John's cell. */
+  primaryPhone: { display: '(504) 313-2317', e164: '+15043132317' } satisfies Phone,
   /** Street address. `null` = TODO → omitted from NAP and schema (service-area business). */
   address: {
     streetAddress: '110 Veterans Blvd., Suite 100 A',

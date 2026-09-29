@@ -51,7 +51,7 @@ test.describe('keyboard', () => {
     expect(joined).toContain('Standard text size');
     expect(joined).toContain('Larger text size');
     expect(joined).toMatch(/Leer esta página en español/);
-    expect(joined).toContain('(504) 913-7153');
+    expect(joined).toContain('(504) 313-2317');
     // Focus is always visible.
     for (const s of seen) expect(s.split('|')[3]).not.toBe('none');
 

@@ -72,7 +72,7 @@ Run `npm run check:launch` to see what's still open.
       and list service areas (up to 20): New Orleans, Metairie, Kenner, Harahan, River Ridge,
       Chalmette, Gretna, Marrero, Slidell, Mandeville, Covington, LaPlace, Baton Rouge, plus the
       parishes (Orleans, Jefferson, St. Bernard, St. Tammany, St. John the Baptist).
-- [ ] Phone: **(504) 913-7153** (identical to the website). Website: the home page URL, optionally
+- [ ] Phone: **(504) 313-2317** (identical to the website). Website: the home page URL, optionally
       with `?utm_source=google&utm_medium=organic&utm_campaign=gbp`.
 - [ ] Hours (same as `site.hours`), "Identifies as" attributes you're comfortable sharing, and
       **Languages spoken: Spanish** / "Se habla español".
@@ -106,7 +106,7 @@ Run `npm run check:launch` to see what's still open.
 
 ## 6. NAP citations (Name, Address, Phone — identical everywhere)
 
-Use exactly: **Martinez Insurance Agency · (504) 913-7153 · your-domain.com** (plus the address
+Use exactly: **Martinez Insurance Agency · (504) 313-2317 · your-domain.com** (plus the address
 if public). Keep a spreadsheet of logins.
 
 - [ ] Apple Business Connect (Apple Maps)

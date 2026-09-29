@@ -25,7 +25,7 @@ describe('JSON-LD builders', () => {
       jobTitle: 'Licensed Insurance Agent',
     });
     expect(validateJsonLd(a)).toEqual([]);
-    expect(a).toMatchObject({ '@type': 'InsuranceAgency', knowsLanguage: ['en', 'es'], telephone: '+15049137153' });
+    expect(a).toMatchObject({ '@type': 'InsuranceAgency', knowsLanguage: ['en', 'es'], telephone: '+15043132317' });
     expect(a).toMatchObject({ address: { '@type': 'PostalAddress', addressLocality: 'Metairie', postalCode: '70005' } });
     expect(a).not.toHaveProperty('openingHoursSpecification');
     expect(a).not.toHaveProperty('aggregateRating');
