@@ -33,7 +33,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ locale:
     readFile(path.join(fontDir, 'source-serif-4-latin-600-normal.woff')),
     readFile(path.join(fontDir, 'atkinson-hyperlegible-next-latin-400-normal.woff')),
     readFile(path.join(fontDir, 'atkinson-hyperlegible-next-latin-700-normal.woff')),
-    readFile(path.join(process.cwd(), 'public', 'brand', 'logo-white.png')),
+    readFile(path.join(process.cwd(), 'public', 'brand', 'seal-white.png')),
   ]);
   const logo = `data:image/png;base64,${logoPng.toString('base64')}`;
 
@@ -57,7 +57,13 @@ export async function GET(_req: Request, { params }: { params: Promise<{ locale:
       </svg>
       <div style={{ display: 'flex', alignItems: 'center', padding: '52px 72px 0' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={logo} width={360} height={116} alt="" />
+        <img src={logo} width={96} height={96} alt="" />
+        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 22, color: '#FFFFFF' }}>
+          <div style={{ display: 'flex', fontFamily: 'SourceSerif', fontSize: 50, lineHeight: 1 }}>Martinez</div>
+          <div style={{ display: 'flex', marginTop: 8, fontSize: 19, fontWeight: 700, letterSpacing: 4 }}>
+            {tc('tagline').toUpperCase()}
+          </div>
+        </div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', padding: '64px 72px 0', maxWidth: 1060 }}>
         <div

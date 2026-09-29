@@ -143,7 +143,7 @@ export const carriers: { medicareAdvantage: Carrier[]; medicareSupplement: Carri
 // ─── Business ────────────────────────────────────────────────────────────────
 
 export const site = {
-  name: 'Martinez Insurance Agency',
+  name: 'Martinez Insurance Solutions',
   shortName: 'Martinez Insurance',
   /** Business email used in schema and the footer. */
   email: 'nidiamartinez576@outlook.com',
@@ -195,10 +195,8 @@ export const site = {
   brand: {
     navy: '#233E84',
     red: '#C8202F',
-    /** Official artwork (source files: assets/reference/martinez-insurance-agency-logo-pack.zip). */
-    logo: '/brand/logo.png',
-    logoWhite: '/brand/logo-white.png',
-    logoSize: { width: 1200, height: 385 },
+    /** Official seal (source: assets/reference/martinez-insurance-agency-logo-pack.zip). The wordmark
+     *  next to it is live text so it always matches `name`. */
     seal: '/brand/seal.png',
     sealWhite: '/brand/seal-white.png',
   },

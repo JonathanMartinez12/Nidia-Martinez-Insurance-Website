@@ -30,7 +30,7 @@ export function agencySchema(opts: {
     name: site.name,
     url: absoluteUrl('/'),
     logo,
-    image: absoluteUrl(site.brand.logo),
+    image: logo,
     description: opts.description,
     telephone: site.primaryPhone.e164,
     email: site.email,

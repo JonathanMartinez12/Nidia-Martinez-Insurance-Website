@@ -10,7 +10,7 @@ export const privacy: LegalContent = {
       blocks: [
         {
           type: 'p',
-          text: 'This policy explains how Martinez Insurance Agency (“we,” “us”) collects, uses and protects information when you visit this website or contact us through it.',
+          text: 'This policy explains how Martinez Insurance Solutions (“we,” “us”) collects, uses and protects information when you visit this website or contact us through it.',
         },
       ],
     },
@@ -139,7 +139,7 @@ export const terms: LegalContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Martinez Insurance Agency is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.',
+          text: 'Martinez Insurance Solutions is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.',
         },
       ],
     },
@@ -189,7 +189,7 @@ export const terms: LegalContent = {
       blocks: [
         {
           type: 'p',
-          text: 'The content, design and logo of this site belong to Martinez Insurance Agency unless otherwise noted. Insurance company names are trademarks of their owners and are used only to identify the companies we represent.',
+          text: 'The content, design and logo of this site belong to Martinez Insurance Solutions unless otherwise noted. Insurance company names are trademarks of their owners and are used only to identify the companies we represent.',
         },
       ],
     },

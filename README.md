@@ -1,6 +1,6 @@
-# Martinez Insurance Agency — website
+# Martinez Insurance Solutions — website
 
-Bilingual (English / Spanish) local-SEO website for **Martinez Insurance Agency**, a
+Bilingual (English / Spanish) local-SEO website for **Martinez Insurance Solutions**, a
 husband-and-wife Medicare and insurance agency (Nidia & John Martinez) serving Greater
 New Orleans and all of Louisiana. The goal of every page: phone calls and form leads
 from Google Search and Maps.

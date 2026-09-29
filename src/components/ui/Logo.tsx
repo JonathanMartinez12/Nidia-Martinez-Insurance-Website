@@ -8,7 +8,7 @@ type Props = {
   className?: string;
 };
 
-/** Header logo: the official seal + the "Martinez / Insurance Agency" wordmark in live text (crisp at small sizes). */
+/** Header logo: the official seal + the "Martinez / Insurance Solutions" wordmark in live text (crisp at small sizes). */
 export function Logo({ homeLabel, tagline, className = '' }: Props) {
   return (
     <Link href="/" className={`group inline-flex min-h-12 items-center gap-2 no-underline sm:gap-3 ${className}`}>
@@ -27,5 +27,18 @@ export function Logo({ homeLabel, tagline, className = '' }: Props) {
         </span>
       </span>
     </Link>
+  );
+}
+
+/** Larger white lockup for navy surfaces (footer, contact card): seal + live-text wordmark. */
+export function BrandLockup({ alt, tagline, className = '' }: { alt: string; tagline: string; className?: string }) {
+  return (
+    <span className={`inline-flex items-center gap-4 ${className}`}>
+      <Image src={site.brand.sealWhite} alt={alt} width={72} height={72} className="h-16 w-16 shrink-0 sm:h-[4.5rem] sm:w-[4.5rem]" />
+      <span aria-hidden className="flex flex-col leading-none text-white">
+        <span className="font-serif text-[2.1rem] font-semibold tracking-tight sm:text-[2.4rem]">Martinez</span>
+        <span className="mt-2 text-[0.8rem] font-bold tracking-[0.2em] uppercase">{tagline}</span>
+      </span>
+    </span>
   );
 }

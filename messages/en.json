@@ -1,7 +1,7 @@
 {
   "Meta": {
     "home": {
-      "title": "Medicare Advisor in New Orleans | Martinez Insurance Agency",
+      "title": "New Orleans Medicare Advisor | Martinez Insurance Solutions",
       "description": "Local, licensed Medicare advisors in New Orleans with {years} years of experience. No-cost, in-person help choosing a plan. Hablamos español."
     },
     "services": {
@@ -47,16 +47,16 @@
       "description": "The Medicare Annual Enrollment Period runs October 15 to December 7. Learn what your Annual Notice of Change means and book a free plan review."
     },
     "scam": {
-      "title": "How to Avoid Medicare Scams | Martinez Insurance Agency",
+      "title": "How to Avoid Medicare Scams | Martinez Insurance Solutions",
       "description": "Medicare scam calls, texts and emails are common. Learn the warning signs, what Medicare will never ask for, and how to report fraud in Louisiana."
     },
     "about": {
-      "title": "About Nidia & John Martinez | Martinez Insurance Agency",
+      "title": "About Nidia & John Martinez | Martinez Insurance Solutions",
       "description": "Meet Nidia and John Martinez, a licensed husband-and-wife team with {years} years of experience helping Louisiana seniors. Hablamos español."
     },
     "agents": {
       "nidia-martinez": {
-        "title": "Nidia Martinez, Medicare Agent | Martinez Insurance Agency",
+        "title": "Nidia Martinez, Medicare Agent | Martinez Insurance",
         "description": "Nidia Martinez is a licensed, bilingual Medicare agent with {years} years of experience in Medicare Advantage and Medicare Supplement plans."
       },
       "john-martinez": {
@@ -65,20 +65,20 @@
       }
     },
     "serviceArea": {
-      "title": "Medicare Help Across Louisiana | Martinez Insurance Agency",
+      "title": "Medicare Help in Louisiana | Martinez Insurance Solutions",
       "description": "We help people across Louisiana with Medicare, with in-person appointments throughout Greater New Orleans, the Northshore and Baton Rouge."
     },
     "cities": {
       "new-orleans": {
-        "title": "New Orleans Medicare Agent | Martinez Insurance Agency",
+        "title": "New Orleans Medicare Agent | Martinez Insurance Solutions",
         "description": "A local, bilingual Medicare agent for New Orleans neighborhoods. Compare Medicare Advantage, Supplement and Part D plans in person, at no cost."
       },
       "metairie": {
-        "title": "Medicare Agent in Metairie, LA | Martinez Insurance Agency",
+        "title": "Medicare Agent in Metairie | Martinez Insurance Solutions",
         "description": "Looking for a Medicare agent in Metairie? Get no-cost, in-person help comparing plans that work with your Jefferson Parish doctors. Se habla español."
       },
       "kenner": {
-        "title": "Medicare Agent in Kenner, LA | Martinez Insurance Agency",
+        "title": "Medicare Agent in Kenner, LA | Martinez Insurance Solutions",
         "description": "Bilingual Medicare help in Kenner. We compare Medicare Advantage, Medigap and drug plans with you in English or Spanish, at no cost to you."
       },
       "gretna": {
@@ -86,11 +86,11 @@
         "description": "Medicare help for Gretna, Marrero, Harvey and the West Bank. Compare plans with a licensed local agent who checks your doctors and pharmacy."
       },
       "chalmette": {
-        "title": "Medicare Agent in Chalmette, LA | Martinez Insurance Agency",
+        "title": "Medicare Agent in Chalmette | Martinez Insurance Solutions",
         "description": "No-cost Medicare guidance for Chalmette and St. Bernard Parish. Review your plan each fall, avoid scams and get answers from a local agent."
       },
       "slidell": {
-        "title": "Medicare Agent in Slidell, LA | Martinez Insurance Agency",
+        "title": "Medicare Agent in Slidell, LA | Martinez Insurance Solutions",
         "description": "Medicare help for Slidell and eastern St. Tammany Parish. Compare Medicare Advantage and Supplement plans with a licensed, bilingual agent."
       },
       "covington": {
@@ -107,29 +107,29 @@
       "description": "Plain-English answers about Medicare enrollment, Medicare Advantage vs. Medigap, Part D, costs, scams and working with a local Louisiana agent."
     },
     "contact": {
-      "title": "Free Medicare Consultation | Martinez Insurance Agency",
+      "title": "Free Medicare Consultation | Martinez Insurance Solutions",
       "description": "Call (504) 313-2317 or send a message to schedule a no-cost Medicare consultation in Greater New Orleans or anywhere in Louisiana. Hablamos español."
     },
     "privacy": {
-      "title": "Privacy Policy | Martinez Insurance Agency",
-      "description": "How Martinez Insurance Agency collects, uses and protects the information you share through our website and contact form."
+      "title": "Privacy Policy | Martinez Insurance Solutions",
+      "description": "How Martinez Insurance Solutions collects, uses and protects the information you share through our website and contact form."
     },
     "terms": {
-      "title": "Terms of Use | Martinez Insurance Agency",
-      "description": "The terms that apply when you use the Martinez Insurance Agency website, including important information about the educational content."
+      "title": "Terms of Use | Martinez Insurance Solutions",
+      "description": "The terms that apply when you use the Martinez Insurance Solutions website, including important information about the educational content."
     },
     "accessibility": {
-      "title": "Accessibility Statement | Martinez Insurance Agency",
+      "title": "Accessibility Statement | Martinez Insurance Solutions",
       "description": "Our commitment to an accessible website for everyone, including people who use screen readers, keyboards or larger text, and how to get help."
     },
     "notFound": {
-      "title": "Page Not Found | Martinez Insurance Agency",
+      "title": "Page Not Found | Martinez Insurance Solutions",
       "description": "We couldn't find that page. Call (504) 313-2317 or use the links on this page to find Medicare help."
     }
   },
   "Common": {
-    "siteName": "Martinez Insurance Agency",
-    "tagline": "Insurance Agency",
+    "siteName": "Martinez Insurance Solutions",
+    "tagline": "Insurance Solutions",
     "homeLabel": "home",
     "skipToContent": "Skip to main content",
     "callPhone": "Call {phone}",
@@ -161,8 +161,8 @@
     "yearsExperience": "{years} years of experience",
     "yearsHelping": "{years} Years Helping Louisiana Seniors",
     "combinedYears": "Over {years} years of combined experience",
-    "headshotAlt": "Portrait of {name}, licensed insurance agent with Martinez Insurance Agency",
-    "nonAffiliation": "Martinez Insurance Agency is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.",
+    "headshotAlt": "Portrait of {name}, licensed insurance agent with Martinez Insurance Solutions",
+    "nonAffiliation": "Martinez Insurance Solutions is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.",
     "backToTop": "Back to top"
   },
   "Header": {
@@ -205,7 +205,7 @@
     "accessibility": "Accessibility",
     "legalNav": "Legal",
     "footerNav": "Footer",
-    "copyright": "© {year} Martinez Insurance Agency. All rights reserved.",
+    "copyright": "© {year} Martinez Insurance Solutions. All rights reserved.",
     "disclaimerHeading": "Important information",
     "educational": "Content on this site is for general education. Plan benefits, costs, networks and availability vary by plan and change each year; always review a plan's official documents before enrolling."
   },
@@ -388,7 +388,7 @@
     "bestTimeNone": "No preference",
     "message": "How can we help?",
     "messageHint": "Optional. Please don't include your Medicare number or health details.",
-    "consent": "I agree that Martinez Insurance Agency may contact me by phone, text or email about Medicare and other insurance products. Consent is not required to buy anything, and I can opt out at any time.",
+    "consent": "I agree that Martinez Insurance Solutions may contact me by phone, text or email about Medicare and other insurance products. Consent is not required to buy anything, and I can opt out at any time.",
     "required": "required",
     "optional": "optional",
     "submit": "Send my request",
@@ -416,12 +416,12 @@
       "consentRequired": "Please check the box so we're allowed to contact you."
     },
     "email_confirm": {
-      "subject": "We received your request — Martinez Insurance Agency",
+      "subject": "We received your request — Martinez Insurance Solutions",
       "greeting": "Hello {name},",
-      "body": "Thank you for contacting Martinez Insurance Agency. A licensed agent will reach out soon.",
+      "body": "Thank you for contacting Martinez Insurance Solutions. A licensed agent will reach out soon.",
       "callUs": "If you'd like to talk sooner, call us:",
       "scamNote": "For your protection: we will never ask for your Medicare number, Social Security number or bank information by email.",
-      "signoff": "Nidia & John Martinez — Martinez Insurance Agency"
+      "signoff": "Nidia & John Martinez — Martinez Insurance Solutions"
     }
   },
   "NotFound": {

@@ -1,8 +1,8 @@
 {
-  "name": "martinez-insurance-agency",
+  "name": "martinez-insurance-solutions",
   "version": "1.0.0",
   "private": true,
-  "description": "Bilingual (EN/ES) local-SEO website for Martinez Insurance Agency \u2014 Greater New Orleans, Louisiana.",
+  "description": "Bilingual (EN/ES) local-SEO website for Martinez Insurance Solutions \u2014 Greater New Orleans, Louisiana.",
   "engines": {
     "node": ">=20.9.0"
   },

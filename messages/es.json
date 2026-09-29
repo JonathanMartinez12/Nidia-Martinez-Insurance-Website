@@ -51,7 +51,7 @@
       "description": "Las llamadas y mensajes fraudulentos sobre Medicare son comunes. Conozca las señales de alerta, lo que Medicare nunca le pedirá y cómo denunciarlo."
     },
     "about": {
-      "title": "Nidia y John Martinez | Martinez Insurance Agency",
+      "title": "Nidia y John Martinez | Martinez Insurance Solutions",
       "description": "Conozca a Nidia y John Martinez, un matrimonio de agentes con licencia y {years} años de experiencia ayudando a personas mayores en Luisiana."
     },
     "agents": {
@@ -107,29 +107,29 @@
       "description": "Respuestas claras sobre la inscripción en Medicare, Medicare Advantage vs. Medigap, la Parte D, costos, fraudes y cómo trabajar con un agente local."
     },
     "contact": {
-      "title": "Consulta Gratis sobre Medicare | Martinez Insurance Agency",
+      "title": "Consulta Gratis de Medicare | Martinez Insurance Solutions",
       "description": "Llame al (504) 313-2317 o envíenos un mensaje para una consulta sin costo sobre Medicare en el área de Nueva Orleans o en toda Luisiana."
     },
     "privacy": {
-      "title": "Política de Privacidad | Martinez Insurance Agency",
-      "description": "Cómo Martinez Insurance Agency recopila, usa y protege la información que usted comparte en nuestro sitio web y formulario de contacto."
+      "title": "Política de Privacidad | Martinez Insurance Solutions",
+      "description": "Cómo Martinez Insurance Solutions recopila, usa y protege la información que usted comparte en nuestro sitio web y formulario de contacto."
     },
     "terms": {
-      "title": "Términos de Uso | Martinez Insurance Agency",
-      "description": "Los términos que aplican al usar el sitio web de Martinez Insurance Agency, incluida información importante sobre el contenido educativo."
+      "title": "Términos de Uso | Martinez Insurance Solutions",
+      "description": "Los términos que aplican al usar el sitio web de Martinez Insurance Solutions, incluida información importante sobre el contenido educativo."
     },
     "accessibility": {
       "title": "Declaración de Accesibilidad | Martinez Insurance",
       "description": "Nuestro compromiso con un sitio accesible para todos, incluidas las personas que usan lectores de pantalla, teclado o letra más grande."
     },
     "notFound": {
-      "title": "Página no encontrada | Martinez Insurance Agency",
+      "title": "Página no encontrada | Martinez Insurance Solutions",
       "description": "No encontramos esa página. Llame al (504) 313-2317 o use los enlaces de esta página para encontrar ayuda con Medicare."
     }
   },
   "Common": {
-    "siteName": "Martinez Insurance Agency",
-    "tagline": "Insurance Agency",
+    "siteName": "Martinez Insurance Solutions",
+    "tagline": "Insurance Solutions",
     "homeLabel": "inicio",
     "skipToContent": "Saltar al contenido principal",
     "callPhone": "Llame al {phone}",
@@ -161,8 +161,8 @@
     "yearsExperience": "{years} años de experiencia",
     "yearsHelping": "{years} años ayudando a los adultos mayores de Luisiana",
     "combinedYears": "Más de {years} años de experiencia combinada",
-    "headshotAlt": "Retrato de {name}, agente de seguros con licencia de Martinez Insurance Agency",
-    "nonAffiliation": "Martinez Insurance Agency es una agencia de seguros con licencia. No estamos afiliados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare.",
+    "headshotAlt": "Retrato de {name}, agente de seguros con licencia de Martinez Insurance Solutions",
+    "nonAffiliation": "Martinez Insurance Solutions es una agencia de seguros con licencia. No estamos afiliados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare.",
     "backToTop": "Volver arriba"
   },
   "Header": {
@@ -205,7 +205,7 @@
     "accessibility": "Accesibilidad",
     "legalNav": "Información legal",
     "footerNav": "Pie de página",
-    "copyright": "© {year} Martinez Insurance Agency. Todos los derechos reservados.",
+    "copyright": "© {year} Martinez Insurance Solutions. Todos los derechos reservados.",
     "disclaimerHeading": "Información importante",
     "educational": "El contenido de este sitio es de carácter educativo. Los beneficios, costos, redes y disponibilidad de los planes varían según el plan y cambian cada año; revise siempre los documentos oficiales de un plan antes de inscribirse."
   },
@@ -388,7 +388,7 @@
     "bestTimeNone": "Sin preferencia",
     "message": "¿En qué le podemos ayudar?",
     "messageHint": "Opcional. Por favor, no incluya su número de Medicare ni detalles de salud.",
-    "consent": "Acepto que Martinez Insurance Agency se comunique conmigo por teléfono, mensaje de texto o correo electrónico sobre Medicare y otros productos de seguros. Este consentimiento no es un requisito para comprar nada y puedo retirarlo en cualquier momento.",
+    "consent": "Acepto que Martinez Insurance Solutions se comunique conmigo por teléfono, mensaje de texto o correo electrónico sobre Medicare y otros productos de seguros. Este consentimiento no es un requisito para comprar nada y puedo retirarlo en cualquier momento.",
     "required": "obligatorio",
     "optional": "opcional",
     "submit": "Enviar mi solicitud",
@@ -416,12 +416,12 @@
       "consentRequired": "Por favor, marque la casilla para que podamos comunicarnos con usted."
     },
     "email_confirm": {
-      "subject": "Recibimos su solicitud — Martinez Insurance Agency",
+      "subject": "Recibimos su solicitud — Martinez Insurance Solutions",
       "greeting": "Hola, {name}:",
-      "body": "Gracias por comunicarse con Martinez Insurance Agency. Un agente con licencia se pondrá en contacto con usted pronto.",
+      "body": "Gracias por comunicarse con Martinez Insurance Solutions. Un agente con licencia se pondrá en contacto con usted pronto.",
       "callUs": "Si desea hablar antes, llámenos:",
       "scamNote": "Para su protección: nunca le pediremos por correo electrónico su número de Medicare, su número de Seguro Social ni datos bancarios.",
-      "signoff": "Nidia y John Martinez — Martinez Insurance Agency"
+      "signoff": "Nidia y John Martinez — Martinez Insurance Solutions"
     }
   },
   "NotFound": {

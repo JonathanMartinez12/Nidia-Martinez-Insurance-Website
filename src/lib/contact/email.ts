@@ -23,7 +23,10 @@ function shell(title: string, body: string): string {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f6fb;padding:24px 0;">
 <tr><td align="center">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #dde3f0;">
-<tr><td style="background:${navy};padding:18px 28px;"><img src="${absoluteUrl(site.brand.logoWhite)}" width="220" height="71" alt="${esc(site.name)}" style="display:block;border:0;width:220px;height:auto;"></td></tr>
+<tr><td style="background:${navy};padding:18px 28px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr>
+<td style="padding-right:14px;"><img src="${absoluteUrl(site.brand.sealWhite)}" width="56" height="56" alt="" style="display:block;border:0;width:56px;height:56px;"></td>
+<td style="color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:bold;line-height:1.2;">${esc(site.name)}</td>
+</tr></table></td></tr>
 <tr><td style="padding:28px;font-size:16px;line-height:1.6;">${body}</td></tr>
 <tr><td style="padding:16px 28px;background:#f8f9fc;color:#4a5578;font-size:13px;line-height:1.5;">
 ${esc(site.name)} · ${esc(site.primaryPhone.display)} · ${esc(site.email)}

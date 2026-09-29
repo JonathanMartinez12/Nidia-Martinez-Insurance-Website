@@ -1,4 +1,4 @@
-# Launch checklist — Martinez Insurance Agency
+# Launch checklist — Martinez Insurance Solutions
 
 Work top to bottom. Items marked **BLOCKER** must be done before the site goes live.
 
@@ -41,7 +41,7 @@ Run `npm run check:launch` to see what's still open.
       (tighten to `quarantine` after a few clean weeks).
 - [ ] Create an API key (sending access only) → `RESEND_API_KEY`.
 - [ ] `CONTACT_FROM_EMAIL` = an address on the verified domain, e.g.
-      `Martinez Insurance Agency <leads@your-domain.com>`.
+      `Martinez Insurance Solutions <leads@your-domain.com>`.
 - [ ] Add the from-address to both inboxes' contacts/safe senders (Outlook and Gmail) so leads
       never land in spam.
 
@@ -64,7 +64,7 @@ Run `npm run check:launch` to see what's still open.
 ## 5. Google Business Profile (the #1 source of local calls)
 
 - [ ] Create/claim the profile at business.google.com with the exact business name
-      **Martinez Insurance Agency** (no keywords stuffed into the name).
+      **Martinez Insurance Solutions** (no keywords stuffed into the name).
 - [ ] **Primary category:** Insurance agency. **Additional:** Health insurance agency,
       Life insurance agency, Insurance broker. In the category picker also search "Medicare" — if a
       Medicare-specific category is offered in your region, add it.
@@ -78,14 +78,14 @@ Run `npm run check:launch` to see what's still open.
       **Languages spoken: Spanish** / "Se habla español".
 - [ ] Description (max 750 characters) — paste one of these and edit to taste:
 
-  > **EN:** Martinez Insurance Agency is a local, licensed husband-and-wife team — Nidia and John
+  > **EN:** Martinez Insurance Solutions is a local, licensed husband-and-wife team — Nidia and John
   > Martinez — helping Greater New Orleans and all of Louisiana with Medicare Advantage, Medicare
   > Supplement, Part D, Special Needs Plans, dental and vision, final expense, life, hospital
   > indemnity and under-65 health insurance. We meet in person, explain your options in plain
   > English or Spanish, and our help costs you nothing. Hablamos español. We do not offer every
   > plan available in your area.
 
-  > **ES:** Martinez Insurance Agency es un matrimonio de agentes locales con licencia —Nidia y John
+  > **ES:** Martinez Insurance Solutions es un matrimonio de agentes locales con licencia —Nidia y John
   > Martinez— que ayuda a residentes del área de Nueva Orleans y de toda Luisiana con Medicare
   > Advantage, Medicare Suplementario, Parte D, planes para necesidades especiales, dental y visión,
   > gastos finales, vida, indemnización hospitalaria y seguros de salud para menores de 65. Nos
@@ -106,7 +106,7 @@ Run `npm run check:launch` to see what's still open.
 
 ## 6. NAP citations (Name, Address, Phone — identical everywhere)
 
-Use exactly: **Martinez Insurance Agency · (504) 313-2317 · your-domain.com** (plus the address
+Use exactly: **Martinez Insurance Solutions · (504) 313-2317 · your-domain.com** (plus the address
 if public). Keep a spreadsheet of logins.
 
 - [ ] Apple Business Connect (Apple Maps)
