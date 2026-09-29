@@ -14,6 +14,7 @@ import { PageHeader } from '@/components/sections/PageHeader';
 import { AgentCard } from '@/components/sections/AgentCard';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
+import { CarrierStrip } from '@/components/sections/CarrierStrip';
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   return pageMetadata(await pageLocale(params), 'about');
@@ -71,6 +72,7 @@ export default async function AboutPage({ params }: LocaleParams) {
         </div>
       </div>
 
+      <CarrierStrip locale={locale} variant="band" />
       <FinalCta locale={locale} />
 
       {agents.map((a) => {

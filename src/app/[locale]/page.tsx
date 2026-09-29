@@ -17,6 +17,7 @@ import { HowItWorks } from '@/components/sections/HowItWorks';
 import { FaqList } from '@/components/sections/FaqList';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
+import { CarrierStrip } from '@/components/sections/CarrierStrip';
 
 // Re-render daily so the Annual Enrollment callout switches on/off by date.
 export const revalidate = 86400;
@@ -37,6 +38,7 @@ export default async function HomePage({ params }: LocaleParams) {
       <Hero locale={locale} />
       <TrustStrip locale={locale} />
       <ProductsGrid locale={locale} />
+      <CarrierStrip locale={locale} variant="band" />
       <AepCallout locale={locale} />
       <ScamWarning locale={locale} />
       <HowItWorks locale={locale} />

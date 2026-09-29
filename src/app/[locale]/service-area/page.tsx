@@ -13,6 +13,7 @@ import { Sections } from '@/components/ui/Blocks';
 import { PageHeader } from '@/components/sections/PageHeader';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
+import { CarrierStrip } from '@/components/sections/CarrierStrip';
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   return pageMetadata(await pageLocale(params), 'service-area');
@@ -75,6 +76,7 @@ export default async function ServiceAreaPage({ params }: LocaleParams) {
           <Sections sections={content.serviceArea.sections} locale={locale} />
         </div>
       </div>
+      <CarrierStrip locale={locale} variant="band" />
       <FinalCta locale={locale} />
     </PageShell>
   );

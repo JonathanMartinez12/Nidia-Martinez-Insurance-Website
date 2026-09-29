@@ -26,8 +26,14 @@ export function openTodos(): LaunchItem[] {
   if (site.address === null)
     items.push({ id: 'site.address', blocker: false, message: 'Street address (or confirm service-area-only business)' });
   if (site.hours === null) items.push({ id: 'site.hours', blocker: false, message: 'Office hours' });
-  for (const c of [...carriers.medicareAdvantage, ...carriers.medicareSupplement]) {
+  for (const c of carriers) {
     if (!c.confirmed) items.push({ id: `carrier.${c.name}`, blocker: false, message: `Confirm carrier: ${c.name}` });
+    else if (!c.approved)
+      items.push({
+        id: `carrier-logo.${c.name}`,
+        blocker: false,
+        message: `Carrier logo: add a file under /public/carriers/ and set approved: true — ${c.name} shows as text until then`,
+      });
   }
   if (site.sameAs.length === 0)
     items.push({ id: 'site.sameAs', blocker: false, message: 'Google Business Profile / social profile URLs (schema sameAs)' });

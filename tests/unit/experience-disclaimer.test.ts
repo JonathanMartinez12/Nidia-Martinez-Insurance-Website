@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { combinedYears, headlineYears } from '@/lib/experience';
 import { organizationsRepresented, tpmoDisclaimer } from '@/lib/disclaimer';
-import { agents, carriers, confirmedCarriers, site, type Agent } from '@/config/site';
+import { agents, confirmedCarriers, site, type Agent } from '@/config/site';
 import { openTodos, launchBlockers } from '@/lib/launch';
 
 const agent = (years: number | null): Agent => ({ ...agents[0]!, yearsExperience: years });
@@ -21,7 +21,7 @@ describe('experience', () => {
 
 describe('TPMO disclaimer', () => {
   it('X is the number of confirmed Medicare Advantage carriers', () => {
-    expect(organizationsRepresented()).toBe(confirmedCarriers(carriers.medicareAdvantage).length);
+    expect(organizationsRepresented()).toBe(confirmedCarriers('medicare-advantage').length);
     expect(organizationsRepresented()).toBe(4);
   });
 
@@ -47,7 +47,7 @@ describe('TPMO disclaimer', () => {
   });
 
   it('unconfirmed carriers are hidden', () => {
-    expect(confirmedCarriers(carriers.medicareSupplement).map((c) => c.name)).not.toContain(
+    expect(confirmedCarriers('medicare-supplement').map((c) => c.name)).not.toContain(
       'Blue Cross and Blue Shield of Louisiana',
     );
   });

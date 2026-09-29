@@ -48,17 +48,24 @@ export type Agent = {
   npn: string | null;
 };
 
+export type CarrierLine = 'medicare-advantage' | 'medicare-supplement';
+
 export type Carrier = {
   name: string;
   /** Optional clarifying note, e.g. "insured by UnitedHealthcare" (bilingual). */
   note?: { en: string; es: string };
   /** Unconfirmed carriers are hidden everywhere until set to true. */
   confirmed: boolean;
+  /** Product lines we are appointed for with this carrier. */
+  lines: CarrierLine[];
   /**
-   * Carrier logos are NOT shown by default (trademark / carrier-approval rules).
-   * Add a logo only with written approval, and set `approved: true`.
+   * Official logo under /public/carriers/ (sources in public/carriers/SOURCES.md). `width`/`height`
+   * give the file's aspect ratio; it is displayed at a uniform height. `brand` = the name shown in
+   * the logo when it differs from `name` (used for alt text).
    */
-  logo?: { src: string; width: number; height: number; approved: boolean };
+  logo: { src: string; width: number; height: number; brand?: string } | null;
+  /** `true` = show the logo (the file must exist). `false` = show the carrier's name as text. */
+  approved: boolean;
 };
 
 export type OpeningHours = {
@@ -119,26 +126,57 @@ export const agents: Agent[] = [
   },
 ];
 
-// ─── Carriers (text only) ────────────────────────────────────────────────────
+// ─── Carriers ────────────────────────────────────────────────────────────────
 
-export const carriers: { medicareAdvantage: Carrier[]; medicareSupplement: Carrier[] } = {
-  medicareAdvantage: [
-    { name: 'Humana', confirmed: true },
-    { name: 'Peoples Health', confirmed: true },
-    { name: 'UnitedHealthcare', confirmed: true },
-    { name: 'Devoted Health', confirmed: true },
-  ],
-  medicareSupplement: [
-    {
-      name: 'AARP Medicare Supplement',
-      note: { en: 'insured by UnitedHealthcare', es: 'asegurado por UnitedHealthcare' },
-      confirmed: true,
+export const carriers: Carrier[] = [
+  {
+    name: 'Humana',
+    confirmed: true,
+    lines: ['medicare-advantage', 'medicare-supplement'],
+    logo: { src: '/carriers/humana.svg', width: 470, height: 100 },
+    approved: true,
+  },
+  {
+    name: 'Peoples Health',
+    confirmed: true,
+    lines: ['medicare-advantage'],
+    logo: { src: '/carriers/peoples-health.png', width: 360, height: 72 },
+    approved: true,
+  },
+  {
+    name: 'UnitedHealthcare',
+    confirmed: true,
+    lines: ['medicare-advantage'],
+    logo: { src: '/carriers/unitedhealthcare.svg', width: 594, height: 186 },
+    approved: true,
+  },
+  {
+    name: 'Devoted Health',
+    confirmed: true,
+    lines: ['medicare-advantage'],
+    logo: { src: '/carriers/devoted-health.svg', width: 216, height: 54 },
+    approved: true,
+  },
+  {
+    name: 'AARP Medicare Supplement',
+    note: {
+      en: 'Medicare Supplement plans, insured by UnitedHealthcare',
+      es: 'Planes Medicare Suplementario, asegurados por UnitedHealthcare',
     },
-    { name: 'Humana', confirmed: true },
-    // TODO: unconfirmed — hidden until the owner sets `confirmed: true`
-    { name: 'Blue Cross and Blue Shield of Louisiana', confirmed: false },
-  ],
-};
+    confirmed: true,
+    lines: ['medicare-supplement'],
+    logo: { src: '/carriers/aarp.svg', width: 120, height: 30, brand: 'AARP' },
+    approved: true,
+  },
+  // TODO: unconfirmed — hidden until the owner sets `confirmed: true`
+  {
+    name: 'Blue Cross and Blue Shield of Louisiana',
+    confirmed: false,
+    lines: ['medicare-supplement'],
+    logo: null,
+    approved: false,
+  },
+];
 
 // ─── Business ────────────────────────────────────────────────────────────────
 
@@ -146,7 +184,7 @@ export const site = {
   name: 'Martinez Insurance Solutions',
   shortName: 'Martinez Insurance',
   /** Business email used in schema and the footer. */
-  email: 'nidiamartinez576@outlook.com',
+  email: 'martinezinsurancesolutions@outlook.com',
   /** The primary business line (header, sticky call bar, schema). John's cell. */
   primaryPhone: { display: '(504) 313-2317', e164: '+15043132317' } satisfies Phone,
   /** Street address. `null` = TODO → omitted from NAP and schema (service-area business). */
@@ -210,8 +248,9 @@ export function getAgent(slug: string): Agent | undefined {
   return agents.find((a) => a.slug === slug);
 }
 
-export function confirmedCarriers(list: Carrier[]): Carrier[] {
-  return list.filter((c) => c.confirmed);
+/** Confirmed carriers, optionally only those for one product line. */
+export function confirmedCarriers(line?: CarrierLine): Carrier[] {
+  return carriers.filter((c) => c.confirmed && (!line || c.lines.includes(line)));
 }
 
 /**

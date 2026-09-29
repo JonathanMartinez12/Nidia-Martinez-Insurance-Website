@@ -1,9 +1,9 @@
-import { carriers, confirmedCarriers, site } from '@/config/site';
+import { confirmedCarriers, site } from '@/config/site';
 import type { AppLocale } from '@/i18n/routing';
 
 /** "X" in the CMS TPMO disclaimer: confirmed Medicare Advantage organizations we represent. */
 export function organizationsRepresented(): number {
-  return confirmedCarriers(carriers.medicareAdvantage).length;
+  return confirmedCarriers('medicare-advantage').length;
 }
 
 /** "Y" in the CMS TPMO disclaimer. `null` until the owner sets it (launch blocker). */

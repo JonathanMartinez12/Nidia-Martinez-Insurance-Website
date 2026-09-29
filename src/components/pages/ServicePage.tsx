@@ -2,7 +2,7 @@ import { CalendarCheck, CircleCheck, Phone, UserRound } from 'lucide-react';
 import { getFormatter, getTranslations } from 'next-intl/server';
 import type { AppLocale } from '@/i18n/routing';
 import { products, type ProductKey } from '@/config/products';
-import { carriers, site } from '@/config/site';
+import { site } from '@/config/site';
 import { getPage } from '@/config/pages';
 import { getContent } from '@/content';
 import { telHref } from '@/lib/phone';
@@ -14,7 +14,7 @@ import { Sections } from '@/components/ui/Blocks';
 import { RichText, stripRichText } from '@/components/ui/RichText';
 import { PageHeader } from '@/components/sections/PageHeader';
 import { FaqList } from '@/components/sections/FaqList';
-import { CarriersList } from '@/components/sections/CarriersList';
+import { CarrierStrip } from '@/components/sections/CarrierStrip';
 import { RelatedServices } from '@/components/sections/RelatedServices';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { TpmoDisclaimer } from '@/components/sections/TpmoDisclaimer';
@@ -33,12 +33,7 @@ export async function ServicePage({ locale, product }: { locale: AppLocale; prod
   const url = localizedUrl(locale, page.href);
   const reviewed = format.dateTime(new Date(`${site.contentLastReviewed}T12:00:00`), { dateStyle: 'long' });
   const isMedicare = products[product].category === 'medicare';
-  const carrierList =
-    product === 'medicare-advantage'
-      ? carriers.medicareAdvantage
-      : product === 'medicare-supplement'
-        ? carriers.medicareSupplement
-        : null;
+  const carrierLine = product === 'medicare-advantage' || product === 'medicare-supplement' ? product : null;
 
   return (
     <PageShell locale={locale} pageId={`service-${product}`}>
@@ -105,9 +100,9 @@ export async function ServicePage({ locale, product }: { locale: AppLocale; prod
             <Sections sections={content.sections} locale={locale} />
           </div>
 
-          {carrierList ? (
+          {carrierLine ? (
             <div className="pt-14">
-              <CarriersList locale={locale} carriers={carrierList} productName={name} />
+              <CarrierStrip locale={locale} line={carrierLine} productName={name} />
             </div>
           ) : null}
 

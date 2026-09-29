@@ -65,10 +65,12 @@ ever renders "TODO"). Examples:
   `assets/reference/` — kept out of `public/` so it is never published.
 - **Address / hours:** fill `site.address` / `site.hours` → they appear in the footer,
   contact page and `InsuranceAgency` schema.
-- **Carriers:** edit `carriers`. `confirmed: false` hides a carrier everywhere. Logos are
-  never shown unless you add `logo: { src, width, height, approved: true }` (only with carrier
-  approval). Note: the Medicare Advantage meta description in `messages/*.json` also names the
-  carriers — update it if the list changes.
+- **Carriers:** edit `carriers` (name, product `lines`, `logo`, `approved`). `confirmed: false`
+  hides a carrier everywhere. Logos live in `public/carriers/` with their source URLs in
+  `public/carriers/SOURCES.md`; a logo shows only while `approved: true`, otherwise the name shows as
+  text. The "Carriers we work with" strip (home, Medicare Advantage/Supplement, AEP, About, service
+  area and city pages) updates automatically. Note: the Medicare Advantage meta description in
+  `messages/*.json` also names the carriers — update it if the list changes.
 - **TPMO disclaimer "Y":** set `site.compliance.plansOffered`. "X" is computed from confirmed
   Medicare Advantage carriers. Until Y is set, the disclaimer uses CMS's earlier wording and
   `npm run check:launch` reports it as a **launch blocker**.

@@ -9,6 +9,7 @@ import { pageMetadata } from '@/lib/seo';
 import { telHref } from '@/lib/phone';
 import { btn } from '@/components/ui/styles';
 import { GuidePage } from '@/components/pages/GuidePage';
+import { CarrierStrip } from '@/components/sections/CarrierStrip';
 
 // Daily re-render keeps the "open now / starts soon" status and coverage year current.
 export const revalidate = 86400;
@@ -39,6 +40,7 @@ export default async function AepPage({ params }: LocaleParams) {
       crumbName={th('aep')}
       eyebrow={t('eyebrow')}
       faqHeading={t('faqHeading')}
+      beforeCta={<CarrierStrip locale={locale} variant="band" />}
       intro={
         <>
           <p

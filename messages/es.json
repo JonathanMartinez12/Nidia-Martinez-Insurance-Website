@@ -316,9 +316,6 @@
     "whoFor": "Para quién es",
     "covers": "Qué cubre",
     "faqHeading": "Preguntas frecuentes sobre {product}",
-    "carriersHeading": "Compañías con las que trabajamos",
-    "carriersIntro": "Estamos nombrados por las siguientes compañías para {product} en Luisiana. La disponibilidad de planes varía según la parroquia.",
-    "carriersNote": "Los nombres de las compañías se muestran solo para identificarlas. No ofrecemos todos los planes disponibles en su área.",
     "compactFormHeading": "¿Preguntas sobre {product}?",
     "compactFormBody": "Déjenos su nombre y teléfono, y un agente con licencia le devolverá la llamada. Sin costo ni compromiso.",
     "aepLink": "Período de Inscripción Anual: fechas y qué hacer",
@@ -467,5 +464,12 @@
   },
   "Legal": {
     "updated": "Última actualización"
+  },
+  "Carriers": {
+    "heading": "Compañías con las que trabajamos",
+    "intro": "Tenemos licencia y nombramiento con estas compañías de seguros en Luisiana, así que podemos comparar sus planes lado a lado por usted.",
+    "introProduct": "Estamos nombrados por las siguientes compañías para {product} en Luisiana.",
+    "logoAlt": "Logotipo de {name}",
+    "footnote": "Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños."
   }
 }

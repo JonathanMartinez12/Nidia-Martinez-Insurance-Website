@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { confirmedCarriers, type CarrierLine } from '../../src/config/site';
 import { routes, similarity, wordCount } from './routes';
 
 test.describe('content QA', () => {
@@ -68,12 +69,37 @@ test.describe('content QA', () => {
     }
     await page.goto('/medicare-advantage');
     await expect(page.getByRole('heading', { name: 'Carriers we work with' })).toBeVisible();
-    for (const c of ['Humana', 'Peoples Health', 'UnitedHealthcare', 'Devoted Health']) {
-      await expect(page.locator('#carriers-heading').locator('..').getByText(c, { exact: true })).toBeVisible();
-    }
     await page.goto('/medicare-supplement');
     await expect(page.getByText('Blue Cross and Blue Shield of Louisiana')).toHaveCount(0);
   });
+});
+
+test.describe('carrier strip', () => {
+  const cases: Array<{ path: string; line?: CarrierLine; vary: string; alt: (n: string) => string }> = [
+    { path: '/', vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.', alt: (n) => `${n} logo` },
+    { path: '/medicare-advantage', line: 'medicare-advantage', vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.', alt: (n) => `${n} logo` },
+    { path: '/medicare-supplement', line: 'medicare-supplement', vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.', alt: (n) => `${n} logo` },
+    { path: '/es', vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.', alt: (n) => `Logotipo de ${n}` },
+    { path: '/es/medicare-advantage', line: 'medicare-advantage', vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.', alt: (n) => `Logotipo de ${n}` },
+    { path: '/es/seguro-suplementario-medicare', line: 'medicare-supplement', vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.', alt: (n) => `Logotipo de ${n}` },
+  ];
+  for (const c of cases) {
+    test(c.path, async ({ page }) => {
+      await page.goto(c.path);
+      const strip = page.getByTestId('carrier-strip');
+      const list = confirmedCarriers(c.line);
+      await expect(strip.locator('li')).toHaveCount(list.length);
+      for (const carrier of list) {
+        if (carrier.approved) {
+          const img = strip.getByRole('img', { name: c.alt(carrier.logo!.brand ?? carrier.name), exact: true });
+          await expect(img).toBeVisible();
+          expect(await img.evaluate((el) => el.closest('a'))).toBeNull(); // logos are not links
+        }
+        else await expect(strip.getByText(carrier.name, { exact: true })).toBeVisible();
+      }
+      await expect(page.getByText(c.vary, { exact: true })).toBeVisible();
+    });
+  }
 });
 
 test.describe('404', () => {

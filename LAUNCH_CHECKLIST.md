@@ -15,6 +15,10 @@ Run `npm run check:launch` to see what's still open.
 - [ ] Louisiana license numbers and NPNs for both agents (`licenseNumber`, `npn`).
 - [ ] Office hours (`site.hours`).
 - [ ] Confirm Blue Cross and Blue Shield of Louisiana for Medicare Supplement → `confirmed: true`.
+- [ ] Carrier logos (`public/carriers/`, sources in `SOURCES.md`): check each carrier's agent
+      marketing / logo-usage rules (Humana, UnitedHealthcare/AARP, Peoples Health, Devoted). If a
+      carrier objects, set its `approved: false` — its name then shows as text. Ask Humana's agent
+      support for an official wordmark file to replace the Wikimedia Commons copy.
 - [ ] Review every page's copy with both agents (facts, tone, Spanish wording).
 - [ ] Set `site.contentLastReviewed` to the date of that review.
 

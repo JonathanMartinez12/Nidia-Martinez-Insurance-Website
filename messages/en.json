@@ -316,9 +316,6 @@
     "whoFor": "Who it's for",
     "covers": "What it covers",
     "faqHeading": "Common questions about {product}",
-    "carriersHeading": "Carriers we work with",
-    "carriersIntro": "We are appointed with the following companies for {product} in Louisiana. Plan availability varies by parish.",
-    "carriersNote": "Company names are shown for identification only. We do not offer every plan available in your area.",
     "compactFormHeading": "Questions about {product}?",
     "compactFormBody": "Leave your name and number and a licensed agent will call you back. There's no cost and no obligation.",
     "aepLink": "Annual Enrollment Period: dates and what to do",
@@ -467,5 +464,12 @@
   },
   "Legal": {
     "updated": "Last updated"
+  },
+  "Carriers": {
+    "heading": "Carriers we work with",
+    "intro": "We're licensed and appointed with these insurance companies in Louisiana, so we can compare their plans side by side for you.",
+    "introProduct": "We are appointed with the following companies for {product} in Louisiana.",
+    "logoAlt": "{name} logo",
+    "footnote": "Plans offered through these carriers vary by area. Logos are trademarks of their respective owners."
   }
 }

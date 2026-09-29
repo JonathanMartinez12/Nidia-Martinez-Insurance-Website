@@ -17,6 +17,7 @@ import { PageHeader } from '@/components/sections/PageHeader';
 import { ProductCard } from '@/components/sections/ProductsGrid';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
+import { CarrierStrip } from '@/components/sections/CarrierStrip';
 
 type Params = { params: Promise<{ locale: string; city: string }> };
 
@@ -104,6 +105,7 @@ export default async function CityPage({ params }: Params) {
         </ul>
       </section>
 
+      <CarrierStrip locale={locale} variant="band" />
       <FinalCta locale={locale} />
     </PageShell>
   );

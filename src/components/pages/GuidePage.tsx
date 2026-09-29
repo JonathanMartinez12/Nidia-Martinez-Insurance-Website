@@ -23,6 +23,7 @@ export async function GuidePage({
   intro,
   aside,
   faqHeading,
+  beforeCta,
 }: {
   locale: AppLocale;
   pageId: string;
@@ -32,6 +33,8 @@ export async function GuidePage({
   intro?: ReactNode;
   aside?: ReactNode;
   faqHeading: string;
+  /** Optional full-width section between the article and the closing CTA. */
+  beforeCta?: ReactNode;
 }) {
   const tc = await getTranslations({ locale, namespace: 'Common' });
   const path = localizedPath(locale, getPage(pageId).href);
@@ -76,6 +79,7 @@ export async function GuidePage({
           {aside}
         </div>
       </div>
+      {beforeCta}
       <FinalCta locale={locale} />
       <JsonLd data={faqSchema(content.faqs.map((f) => ({ q: f.q, a: stripRichText(f.a) })))} />
     </PageShell>
