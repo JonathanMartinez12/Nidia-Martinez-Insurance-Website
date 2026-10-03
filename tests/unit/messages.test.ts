@@ -1,12 +1,13 @@
+import { combinedYears, headlineYears } from '@/lib/experience';
 import { createTranslator } from 'next-intl';
 import { describe, expect, it } from 'vitest';
 import en from '@messages/en.json';
 import es from '@messages/es.json';
 import { pages } from '@/config/pages';
-import { agents } from '@/config/site';
 import { flattenKeys } from './helpers';
 
-const values = { years: agents[0]!.yearsExperience ?? 0, combinedYears: 0 };
+// Same values the site renders (see metaValues in src/lib/seo.ts).
+const values = { years: headlineYears() ?? 0, combinedYears: combinedYears() ?? 0 };
 const catalogs = { en, es } as const;
 
 const icuArgs = (s: string) => new Set([...s.matchAll(/\{(\w+)/g)].map((m) => m[1]));

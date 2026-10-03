@@ -57,9 +57,9 @@ test.describe('content QA', () => {
 
   test('home shows the experience badge computed from config', async ({ page }) => {
     await page.goto('/');
-    await expect(page.getByText('27 Years Helping Louisiana Seniors')).toBeVisible();
+    await expect(page.getByText('Over 20 Years Serving Seniors')).toBeVisible();
     await page.goto('/es');
-    await expect(page.getByText('27 años ayudando a los adultos mayores de Luisiana')).toBeVisible();
+    await expect(page.getByText('Más de 20 años al servicio de los adultos mayores')).toBeVisible();
   });
 
   test('TPMO disclaimer and non-affiliation statement appear in the footer and on contact', async ({ page }) => {

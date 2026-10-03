@@ -254,7 +254,7 @@ export const about: AboutContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Martinez Insurance Solutions is built around a simple idea: Medicare help should be honest, patient and personal. Nidia brings decades of experience with Medicare Advantage and Medicare Supplement plans. John helps families with final expense, life, hospital indemnity, dental and vision, and health insurance. Together we cover the questions that come up at 65 and beyond.',
+          text: 'Martinez Insurance Solutions is built around a simple idea: Medicare help should be honest, patient and personal. Nidia brings more than 20 years of experience with Medicare Advantage and Medicare Supplement plans. John helps families with final expense, life, hospital indemnity, dental and vision, and health insurance. Together we cover the questions that come up at 65 and beyond.',
         },
         {
           type: 'p',

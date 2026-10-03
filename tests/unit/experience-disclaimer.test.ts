@@ -8,8 +8,12 @@ const agent = (years: number | null): Agent => ({ ...agents[0]!, yearsExperience
 
 describe('experience', () => {
   it('headline years come from the primary agent config', () => {
-    expect(headlineYears()).toBe(agents[0]!.yearsExperience);
-    expect(headlineYears(agent(31))).toBe(31);
+    expect(headlineYears(agent(22))).toBe(20);
+    expect(headlineYears(agent(27))).toBe(20);
+    expect(headlineYears(agent(30))).toBe(20); // "Over 30" would be false at exactly 30
+    expect(headlineYears(agent(31))).toBe(30);
+    expect(headlineYears(agent(8))).toBeNull();
+    expect(headlineYears(agent(null))).toBeNull();
   });
 
   it('combined years stay hidden while any value is TODO', () => {

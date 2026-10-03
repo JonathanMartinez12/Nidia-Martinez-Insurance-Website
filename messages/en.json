@@ -2,16 +2,16 @@
   "Meta": {
     "home": {
       "title": "New Orleans Medicare Advisor | Martinez Insurance Solutions",
-      "description": "Local, licensed Medicare advisors in New Orleans with {years} years of experience. No-cost, in-person help choosing a plan. Hablamos español."
+      "description": "Local, licensed Medicare advisors in New Orleans with over {years} years of experience. No-cost, in-person help choosing a plan. Hablamos español."
     },
     "services": {
       "medicare-advantage": {
         "title": "Medicare Advantage Plans in Louisiana | Martinez Insurance",
-        "description": "Compare Humana, Peoples Health, UnitedHealthcare and Devoted Health Medicare Advantage plans with a local agent. {years} years of experience. No cost."
+        "description": "Compare Humana, Peoples Health, UnitedHealthcare and Devoted Health Medicare Advantage plans with a local agent. Over {years} years of experience. No cost."
       },
       "medicare-supplement": {
         "title": "Medicare Supplement Plans in Louisiana | Martinez Insurance",
-        "description": "Medigap plans in Louisiana, including AARP Medicare Supplement and Humana, explained by a local advisor with {years} years of experience. No-cost help."
+        "description": "Medigap plans in Louisiana, including AARP Medicare Supplement and Humana, explained by a local advisor with over {years} years of experience. No-cost help."
       },
       "part-d-prescription-drug-plans": {
         "title": "Medicare Part D Drug Plans in Louisiana | Martinez Insurance",
@@ -52,12 +52,12 @@
     },
     "about": {
       "title": "About Nidia & John Martinez | Martinez Insurance Solutions",
-      "description": "Meet Nidia and John Martinez, a licensed husband-and-wife team with {years} years of experience helping Louisiana seniors. Hablamos español."
+      "description": "Meet Nidia and John Martinez, a licensed husband-and-wife team with over {years} years of experience helping Louisiana seniors. Hablamos español."
     },
     "agents": {
       "nidia-martinez": {
         "title": "Nidia Martinez, Medicare Agent | Martinez Insurance",
-        "description": "Nidia Martinez is a licensed, bilingual Medicare agent with {years} years of experience in Medicare Advantage and Medicare Supplement plans."
+        "description": "Nidia Martinez is a licensed, bilingual Medicare agent with over {years} years of experience in Medicare Advantage and Medicare Supplement plans."
       },
       "john-martinez": {
         "title": "John Martinez, Licensed Insurance Agent | Martinez Insurance",
@@ -159,7 +159,7 @@
     "licenseNumber": "Louisiana license #{number}",
     "npn": "NPN {number}",
     "yearsExperience": "{years} years of experience",
-    "yearsHelping": "{years} Years Helping Louisiana Seniors",
+    "yearsHelping": "Over {years} Years Serving Seniors",
     "combinedYears": "Over {years} years of combined experience",
     "headshotAlt": "Portrait of {name}, licensed insurance agent with Martinez Insurance Solutions",
     "nonAffiliation": "Martinez Insurance Solutions is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.",
@@ -291,7 +291,8 @@
     "faqHeading": "Straight answers about Medicare",
     "ctaHeading": "Let's find the right plan for you",
     "ctaBody": "Call us or send a short message. A licensed local agent will get back to you soon.",
-    "ctaFormHeading": "Request a free consultation"
+    "ctaFormHeading": "Request a free consultation",
+    "callAgentDirect": "Or call {name} directly: {phone}"
   },
   "Aep": {
     "preTitle": "Annual Enrollment starts October 15",

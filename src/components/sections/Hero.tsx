@@ -46,7 +46,20 @@ export async function Hero({ locale }: { locale: AppLocale }) {
               {tc('freeConsultation')}
             </Link>
           </div>
-          <p className="mt-4 font-semibold text-muted">{t('reassurance')}</p>
+          {agents
+            .filter((a) => a.phone.e164 !== site.primaryPhone.e164)
+            .map((a) => (
+              <p key={a.slug} className="mt-3">
+                <a
+                  href={telHref(a.phone.e164)}
+                  className="inline-flex min-h-12 items-center gap-2 text-lg font-bold text-navy-800 underline underline-offset-4 hover:text-navy-900"
+                >
+                  <Phone aria-hidden className="h-5 w-5 shrink-0 text-red-600" />
+                  {t('callAgentDirect', { name: a.givenName, phone: a.phone.display })}
+                </a>
+              </p>
+            ))}
+          <p className="mt-3 font-semibold text-muted">{t('reassurance')}</p>
         </div>
 
         <figure className="relative">

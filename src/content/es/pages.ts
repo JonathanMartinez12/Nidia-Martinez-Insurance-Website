@@ -254,7 +254,7 @@ export const about: AboutContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Martinez Insurance Solutions nace de una idea sencilla: la ayuda con Medicare debe ser honesta, paciente y personal. Nidia aporta décadas de experiencia con planes Medicare Advantage y Medicare Suplementario. John ayuda a las familias con seguros de gastos finales, de vida, de indemnización hospitalaria, dentales y de visión, y de salud. Juntos respondemos las preguntas que surgen a partir de los 65 años.',
+          text: 'Martinez Insurance Solutions nace de una idea sencilla: la ayuda con Medicare debe ser honesta, paciente y personal. Nidia aporta más de 20 años de experiencia con planes Medicare Advantage y Medicare Suplementario. John ayuda a las familias con seguros de gastos finales, de vida, de indemnización hospitalaria, dentales y de visión, y de salud. Juntos respondemos las preguntas que surgen a partir de los 65 años.',
         },
         {
           type: 'p',
