@@ -74,8 +74,8 @@ export async function Header({ locale, alternatePath }: { locale: AppLocale; alt
       </div>
 
       <div className="relative">
-        <div className="container-page flex h-[4.5rem] items-center gap-3 lg:h-20">
-          <Logo homeLabel={tc('homeLabel')} tagline={tc('tagline')} className="mr-auto shrink-0 xl:mr-4" />
+        <div className="container-page flex h-[4.5rem] items-center gap-2 max-sm:px-4 sm:gap-3 lg:h-20">
+          <Logo homeLabel={tc('homeLabel')} tagline={tc('tagline')} className="mr-auto min-w-0 xl:mr-4 xl:shrink-0" />
 
           <nav aria-label={t('primaryNav')} className="hidden xl:block">
             <ul className="flex items-center gap-1">
@@ -119,10 +119,10 @@ export async function Header({ locale, alternatePath }: { locale: AppLocale; alt
             </ul>
           </nav>
 
-          <div className="flex items-center gap-2 xl:ml-auto">
+          <div className="flex items-center gap-1.5 sm:gap-2 xl:ml-auto">
             <a
               href={telHref(site.primaryPhone.e164)}
-              className="tap inline-flex items-center gap-2 rounded-xl bg-navy-700 px-2.5 font-bold whitespace-nowrap text-white no-underline hover:bg-navy-800 sm:px-4"
+              className="tap inline-flex items-center gap-2 rounded-xl bg-navy-700 px-2 font-bold whitespace-nowrap text-white no-underline hover:bg-navy-800 sm:px-4"
             >
               <Phone aria-hidden className="hidden h-5 w-5 shrink-0 sm:block" />
               <span className="sr-only">{tc('callUs')}: </span>

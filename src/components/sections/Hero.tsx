@@ -72,7 +72,7 @@ export async function Hero({ locale }: { locale: AppLocale }) {
                   <AgentPortrait
                     agent={agent}
                     alt={tc('headshotAlt', { name: agent.name })}
-                    sizes="(min-width: 1024px) 18rem, 45vw"
+                    sizes="(min-width: 1600px) 20vw, (min-width: 1024px) 18rem, 45vw"
                     priority={i === 0}
                     className="ring-4 ring-white/90"
                   />

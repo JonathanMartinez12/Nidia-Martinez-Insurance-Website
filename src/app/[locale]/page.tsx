@@ -14,6 +14,7 @@ import { ProductsGrid } from '@/components/sections/ProductsGrid';
 import { AepCallout } from '@/components/sections/AepCallout';
 import { ScamWarning } from '@/components/sections/ScamWarning';
 import { HowItWorks } from '@/components/sections/HowItWorks';
+import { OfficeSection } from '@/components/sections/OfficeSection';
 import { FaqList } from '@/components/sections/FaqList';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
@@ -42,6 +43,7 @@ export default async function HomePage({ params }: LocaleParams) {
       <AepCallout locale={locale} />
       <ScamWarning locale={locale} />
       <HowItWorks locale={locale} />
+      <OfficeSection locale={locale} />
       <section aria-labelledby="faq-teaser" className="py-16 sm:py-20 lg:py-24">
         <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.6fr]">
           <div>

@@ -292,7 +292,12 @@
     "ctaHeading": "Let's find the right plan for you",
     "ctaBody": "Call us or send a short message. A licensed local agent will get back to you soon.",
     "ctaFormHeading": "Request a free consultation",
-    "callAgentDirect": "Or call {name} directly: {phone}"
+    "callAgentDirect": "Or call {name} directly: {phone}",
+    "officeEyebrow": "Our office",
+    "officeHeading": "Sit down with us in {city}",
+    "officeBody": "Bring your list of doctors and prescriptions, and we'll go through your options together, at your pace, in English or Spanish. Prefer to talk by phone? That works too.",
+    "officeAppointment": "Visits are by appointment. Call {phone} to set up a time.",
+    "officeDirections": "Get directions"
   },
   "Aep": {
     "preTitle": "Annual Enrollment starts October 15",
@@ -472,5 +477,14 @@
     "introProduct": "We are appointed with the following companies for {product} in Louisiana.",
     "logoAlt": "{name} logo",
     "footnote": "Plans offered through these carriers vary by area. Logos are trademarks of their respective owners."
+  },
+  "Photos": {
+    "together": "Nidia and John Martinez working together at a laptop in their Metairie office",
+    "nidiaOffice": "Nidia Martinez reviewing paperwork at her desk, beneath a New Orleans painting",
+    "johnOffice": "John Martinez working at his desk, beneath a New Orleans painting",
+    "nidiaDesk": "Nidia Martinez smiling at her desk in the Martinez Insurance Solutions office",
+    "johnDesk": "John Martinez at his desk in the Martinez Insurance Solutions office",
+    "office": "The Martinez Insurance Solutions office in Metairie, with chairs ready for clients",
+    "caption": "In our Metairie office"
   }
 }

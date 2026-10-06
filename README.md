@@ -63,6 +63,9 @@ ever renders "TODO"). Examples:
   headshot the site falls back to an initials monogram. next/image serves AVIF/WebP automatically.
 - **Reference material** (business cards, the client letter, original photos) is in
   `assets/reference/` — kept out of `public/` so it is never published.
+- **Office photos:** web versions in `public/images/office/`, registered in `src/config/photos.ts`
+  (alt text in `messages/*.json` → `Photos`). Full-size originals are in
+  `assets/reference/office-photos/` for re-cropping.
 - **Address / hours:** fill `site.address` / `site.hours` → they appear in the footer,
   contact page and `InsuranceAgency` schema.
 - **Carriers:** edit `carriers` (name, product `lines`, `logo`, `approved`). `confirmed: false`

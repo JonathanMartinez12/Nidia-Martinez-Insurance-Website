@@ -6,6 +6,7 @@ import { Link } from '@/i18n/Link';
 import { routing } from '@/i18n/routing';
 import { getContent } from '@/content';
 import { agents } from '@/config/site';
+import { agentPhoto } from '@/config/photos';
 import { getPage } from '@/config/pages';
 import { setRequestLocaleFrom } from '@/lib/page-agent';
 import { pageMetadata } from '@/lib/seo';
@@ -18,6 +19,7 @@ import { Sections } from '@/components/ui/Blocks';
 import { btn, card } from '@/components/ui/styles';
 import { PageHeader } from '@/components/sections/PageHeader';
 import { AgentPortrait } from '@/components/sections/AgentPortrait';
+import { Photo } from '@/components/ui/Photo';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
 
@@ -42,6 +44,8 @@ export default async function AgentPage({ params }: Params) {
   const content = getContent(locale).agents[agent.slug];
   if (!content) notFound();
   const others = agents.filter((a) => a.slug !== agent.slug);
+  const tp = await getTranslations({ locale, namespace: 'Photos' });
+  const photo = agentPhoto[agent.slug];
   const href = { pathname: '/about/[agent]' as const, params: { agent: agent.slug } };
 
   return (
@@ -61,7 +65,7 @@ export default async function AgentPage({ params }: Params) {
           <AgentPortrait
             agent={agent}
             alt={tc('headshotAlt', { name: agent.name })}
-            sizes="(min-width: 1024px) 22rem, (min-width: 640px) 24rem, 100vw"
+            sizes="(min-width: 1600px) 24vw, (min-width: 1024px) 22rem, (min-width: 640px) 24rem, 100vw"
             priority
             className="mx-auto max-w-sm shadow-[var(--shadow-lift)]"
           />
@@ -92,6 +96,16 @@ export default async function AgentPage({ params }: Params) {
                 <RichText text={p} locale={locale} />
               </p>
             ))}
+          </div>
+          {photo ? (
+            <Photo
+              id={photo}
+              alt={tp(photo)}
+              sizes="(min-width: 1024px) 55vw, 100vw"
+              className="my-8 shadow-[var(--shadow-card)]"
+            />
+          ) : null}
+          <div className="prose-page">
             <h2>{t('focusHeading')}</h2>
             <ul>
               {content.focus.map((f) => (

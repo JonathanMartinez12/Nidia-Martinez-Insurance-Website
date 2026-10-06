@@ -292,7 +292,12 @@
     "ctaHeading": "Encontremos el plan adecuado para usted",
     "ctaBody": "Llámenos o envíe un breve mensaje. Un agente local con licencia se comunicará con usted pronto.",
     "ctaFormHeading": "Pida una consulta gratis",
-    "callAgentDirect": "O llame directamente a {name}: {phone}"
+    "callAgentDirect": "O llame directamente a {name}: {phone}",
+    "officeEyebrow": "Nuestra oficina",
+    "officeHeading": "Visítenos en {city}",
+    "officeBody": "Traiga su lista de médicos y medicamentos, y revisaremos sus opciones juntos, a su ritmo, en español o en inglés. ¿Prefiere hablar por teléfono? También podemos ayudarle así.",
+    "officeAppointment": "Las visitas son con cita previa. Llame al {phone} para coordinar un horario.",
+    "officeDirections": "Cómo llegar"
   },
   "Aep": {
     "preTitle": "La Inscripción Anual comienza el 15 de octubre",
@@ -472,5 +477,14 @@
     "introProduct": "Estamos nombrados por las siguientes compañías para {product} en Luisiana.",
     "logoAlt": "Logotipo de {name}",
     "footnote": "Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños."
+  },
+  "Photos": {
+    "together": "Nidia y John Martinez trabajando juntos frente a una computadora portátil en su oficina de Metairie",
+    "nidiaOffice": "Nidia Martinez revisando documentos en su escritorio, bajo un cuadro de Nueva Orleans",
+    "johnOffice": "John Martinez trabajando en su escritorio, bajo un cuadro de Nueva Orleans",
+    "nidiaDesk": "Nidia Martinez sonriendo en su escritorio de la oficina de Martinez Insurance Solutions",
+    "johnDesk": "John Martinez en su escritorio de la oficina de Martinez Insurance Solutions",
+    "office": "La oficina de Martinez Insurance Solutions en Metairie, con sillas listas para recibir a los clientes",
+    "caption": "En nuestra oficina de Metairie"
   }
 }

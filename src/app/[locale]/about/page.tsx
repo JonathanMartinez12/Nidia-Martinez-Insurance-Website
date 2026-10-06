@@ -15,6 +15,7 @@ import { AgentCard } from '@/components/sections/AgentCard';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
 import { CarrierStrip } from '@/components/sections/CarrierStrip';
+import { Photo } from '@/components/ui/Photo';
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   return pageMetadata(await pageLocale(params), 'about');
@@ -26,6 +27,7 @@ export default async function AboutPage({ params }: LocaleParams) {
   const th = await getTranslations({ locale, namespace: 'Header' });
   const tc = await getTranslations({ locale, namespace: 'Common' });
   const ta = await getTranslations({ locale, namespace: 'Agent' });
+  const tp = await getTranslations({ locale, namespace: 'Photos' });
   const content = getContent(locale);
   const years = headlineYears();
   const combined = combinedYears();
@@ -65,6 +67,14 @@ export default async function AboutPage({ params }: LocaleParams) {
           })}
         </div>
       </section>
+
+      <figure className="container-page pb-12">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <Photo id="nidiaOffice" alt={tp('nidiaOffice')} sizes="(min-width: 640px) 45vw, 100vw" />
+          <Photo id="johnOffice" alt={tp('johnOffice')} sizes="(min-width: 640px) 45vw, 100vw" />
+        </div>
+        <figcaption className="mt-3 text-center font-semibold text-muted">{tp('caption')}</figcaption>
+      </figure>
 
       <div className="container-page pb-16" data-content="about-body">
         <div className="prose-page">

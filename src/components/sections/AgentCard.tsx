@@ -29,7 +29,7 @@ export async function AgentCard({
       <AgentPortrait
         agent={agent}
         alt={t('headshotAlt', { name: agent.name })}
-        sizes="(min-width: 1280px) 16rem, (min-width: 1024px) 40vw, (min-width: 640px) 14rem, 100vw"
+        sizes="(min-width: 1600px) 18vw, (min-width: 1280px) 16rem, (min-width: 1024px) 40vw, (min-width: 640px) 14rem, 100vw"
         className="m-3 shrink-0 sm:w-56 lg:w-auto xl:w-56"
       />
       <div className="flex flex-1 flex-col p-6 pt-3 sm:pt-6 lg:pt-3 xl:pt-6">

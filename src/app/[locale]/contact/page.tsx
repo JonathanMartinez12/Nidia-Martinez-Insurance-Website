@@ -11,6 +11,7 @@ import { pageMetadata } from '@/lib/seo';
 import { localizedPath } from '@/lib/urls';
 import { telHref } from '@/lib/phone';
 import { card } from '@/components/ui/styles';
+import { Photo } from '@/components/ui/Photo';
 import { Sections } from '@/components/ui/Blocks';
 import { PageHeader } from '@/components/sections/PageHeader';
 import { TpmoDisclaimer } from '@/components/sections/TpmoDisclaimer';
@@ -27,6 +28,7 @@ export default async function ContactPage({ params }: LocaleParams) {
   const th = await getTranslations({ locale, namespace: 'Header' });
   const tc = await getTranslations({ locale, namespace: 'Common' });
   const tf = await getTranslations({ locale, namespace: 'Footer' });
+  const tp = await getTranslations({ locale, namespace: 'Photos' });
   const { contact } = getContent(locale);
 
   return (
@@ -91,6 +93,13 @@ export default async function ContactPage({ params }: LocaleParams) {
               {tc('hablamos')}
             </p>
           </section>
+
+          <Photo
+            id="office"
+            alt={tp('office')}
+            sizes="(min-width: 1280px) 34vw, (min-width: 1024px) 38vw, 100vw"
+            className="shadow-[var(--shadow-card)]"
+          />
 
           <section aria-labelledby="area-heading" className={`${card} p-6`}>
             <h2 id="area-heading" className="flex items-center gap-2 text-2xl font-semibold">

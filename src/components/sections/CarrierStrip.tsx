@@ -31,7 +31,10 @@ export async function CarrierStrip({
 
   const content = (
     <>
-      <h2 id="carriers-heading" className={variant === 'band' ? 'text-3xl font-semibold sm:text-4xl' : 'text-2xl font-semibold sm:text-3xl'}>
+      <h2
+        id="carriers-heading"
+        className={variant === 'band' ? 'text-3xl font-semibold sm:text-4xl' : 'text-2xl font-semibold sm:text-3xl'}
+      >
         {t('heading')}
       </h2>
       <p className="mt-2 max-w-3xl">{productName ? t('introProduct', { product: productName }) : t('intro')}</p>
