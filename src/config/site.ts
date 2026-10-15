@@ -51,7 +51,12 @@ export type Agent = {
 export type CarrierLine = 'medicare-advantage' | 'medicare-supplement';
 
 export type Carrier = {
+  /** Official name (used in copy, FAQ answers and alt text). */
   name: string;
+  /** Stable id, also the logo file name under /public/carriers/. */
+  slug: string;
+  /** Shorter display name for tight spots (text-only tiles). Defaults to `name`. */
+  shortName?: string;
   /** Optional clarifying note, e.g. "insured by UnitedHealthcare" (bilingual). */
   note?: { en: string; es: string };
   /** Unconfirmed carriers are hidden everywhere until set to true. */
@@ -131,6 +136,7 @@ export const agents: Agent[] = [
 export const carriers: Carrier[] = [
   {
     name: 'Humana',
+    slug: 'humana',
     confirmed: true,
     lines: ['medicare-advantage', 'medicare-supplement'],
     logo: { src: '/carriers/humana.svg', width: 470, height: 100 },
@@ -138,6 +144,7 @@ export const carriers: Carrier[] = [
   },
   {
     name: 'Peoples Health',
+    slug: 'peoples-health',
     confirmed: true,
     lines: ['medicare-advantage'],
     logo: { src: '/carriers/peoples-health.png', width: 360, height: 72 },
@@ -145,6 +152,7 @@ export const carriers: Carrier[] = [
   },
   {
     name: 'UnitedHealthcare',
+    slug: 'unitedhealthcare',
     confirmed: true,
     lines: ['medicare-advantage'],
     logo: { src: '/carriers/unitedhealthcare.svg', width: 594, height: 186 },
@@ -152,6 +160,7 @@ export const carriers: Carrier[] = [
   },
   {
     name: 'Devoted Health',
+    slug: 'devoted-health',
     confirmed: true,
     lines: ['medicare-advantage'],
     logo: { src: '/carriers/devoted-health.svg', width: 216, height: 54 },
@@ -159,6 +168,7 @@ export const carriers: Carrier[] = [
   },
   {
     name: 'AARP Medicare Supplement',
+    slug: 'aarp',
     note: {
       en: 'Medicare Supplement plans, insured by UnitedHealthcare',
       es: 'Planes Medicare Suplementario, asegurados por UnitedHealthcare',
@@ -168,13 +178,19 @@ export const carriers: Carrier[] = [
     logo: { src: '/carriers/aarp.svg', width: 120, height: 30, brand: 'AARP' },
     approved: true,
   },
-  // TODO: unconfirmed — hidden until the owner sets `confirmed: true`
   {
     name: 'Blue Cross and Blue Shield of Louisiana',
-    confirmed: false,
+    slug: 'blue-cross-louisiana',
+    shortName: 'Blue Cross Louisiana',
+    // The current logo reads "Louisiana Blue", so the note names the company in full.
+    note: {
+      en: 'Blue Cross and Blue Shield of Louisiana · Medicare Supplement plans',
+      es: 'Blue Cross and Blue Shield of Louisiana · Planes Medicare Suplementario',
+    },
+    confirmed: true, // appointment confirmed by Nidia, 2026-10-14
     lines: ['medicare-supplement'],
-    logo: null,
-    approved: false,
+    logo: { src: '/carriers/blue-cross-louisiana.svg', width: 422, height: 46 },
+    approved: true,
   },
 ];
 

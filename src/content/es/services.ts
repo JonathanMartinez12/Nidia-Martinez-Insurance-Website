@@ -1,5 +1,6 @@
 import type { ProductKey } from '@/config/products';
 import type { ServiceContent } from '../types';
+import { carrierNames } from '../carrier-names';
 
 const services: Record<ProductKey, ServiceContent> = {
   'medicare-advantage': {
@@ -106,7 +107,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         q: '¿Con qué compañías de Medicare Advantage trabajan?',
-        a: 'Puede ver las compañías que representamos en Luisiana en la sección “Compañías con las que trabajamos” de esta página. La disponibilidad de planes varía según la parroquia, y solo le recomendamos un plan que se ajuste a su situación.',
+        a: `Para Medicare Advantage en Luisiana trabajamos con ${carrierNames('medicare-advantage', 'es')}. Puede verlas en la sección “Compañías con las que trabajamos” de esta página. La disponibilidad de planes varía según la parroquia, y solo le recomendamos un plan que se ajuste a su situación.`,
       },
       {
         q: '¿Qué pasa si viajo o paso temporadas fuera del estado?',
@@ -201,7 +202,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: 'Las primas de Medigap pueden variar mucho entre compañías por exactamente el mismo plan. Comparamos las compañías que representamos, le explicamos cómo cada una ajusta sus precios con la edad y le acompañamos en la solicitud. Nuestra ayuda no tiene ningún cargo.',
+            text: `Las primas de Medigap pueden variar mucho entre compañías por exactamente el mismo plan. Comparamos las compañías que representamos (${carrierNames('medicare-supplement', 'es')}), le explicamos cómo cada una ajusta sus precios con la edad y le acompañamos en la solicitud. Nuestra ayuda no tiene ningún cargo.`,
           },
         ],
       },
@@ -226,6 +227,10 @@ const services: Record<ProductKey, ServiceContent> = {
       {
         q: '¿Necesito un plan de medicamentos aparte?',
         a: 'Sí, si desea cobertura de recetas, y la mayoría de las personas la necesita. Los planes Medigap actuales no incluyen medicamentos, así que también le ayudaremos a elegir un plan de la Parte D.',
+      },
+      {
+        q: '¿Con qué compañías de Medicare Suplementario trabajan?',
+        a: `Para planes Medicare Suplementario en Luisiana trabajamos con ${carrierNames('medicare-supplement', 'es')}. El precio de un mismo plan cambia de una compañía a otra, así que se los comparamos lado a lado.`,
       },
     ],
   },

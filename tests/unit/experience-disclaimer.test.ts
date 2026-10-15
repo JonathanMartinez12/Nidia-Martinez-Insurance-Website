@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { combinedYears, headlineYears } from '@/lib/experience';
 import { organizationsRepresented, tpmoDisclaimer } from '@/lib/disclaimer';
-import { agents, confirmedCarriers, site, type Agent } from '@/config/site';
+import { agents, carriers, confirmedCarriers, site, type Agent } from '@/config/site';
 import { openTodos, launchBlockers } from '@/lib/launch';
 
 const agent = (years: number | null): Agent => ({ ...agents[0]!, yearsExperience: years });
@@ -51,9 +51,13 @@ describe('TPMO disclaimer', () => {
   });
 
   it('unconfirmed carriers are hidden', () => {
-    expect(confirmedCarriers('medicare-supplement').map((c) => c.name)).not.toContain(
-      'Blue Cross and Blue Shield of Louisiana',
-    );
+    for (const c of carriers.filter((x) => !x.confirmed)) expect(confirmedCarriers().map((x) => x.slug)).not.toContain(c.slug);
+  });
+
+  it('Blue Cross and Blue Shield of Louisiana is a confirmed Medicare Supplement carrier only', () => {
+    const bcbs = carriers.find((c) => c.slug === 'blue-cross-louisiana');
+    expect(bcbs).toMatchObject({ confirmed: true, lines: ['medicare-supplement'] });
+    expect(confirmedCarriers('medicare-advantage').map((c) => c.slug)).not.toContain('blue-cross-louisiana');
   });
 });
 

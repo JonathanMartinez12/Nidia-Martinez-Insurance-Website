@@ -1,5 +1,6 @@
 import type { ProductKey } from '@/config/products';
 import type { ServiceContent } from '../types';
+import { carrierNames } from '../carrier-names';
 
 const services: Record<ProductKey, ServiceContent> = {
   'medicare-advantage': {
@@ -106,7 +107,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         q: 'Which Medicare Advantage companies do you work with?',
-        a: 'You can see the companies we represent in Louisiana under “Carriers we work with” on this page. Plan availability varies by parish, and we only recommend a plan that fits your situation.',
+        a: `For Medicare Advantage in Louisiana we work with ${carrierNames('medicare-advantage', 'en')}. You can see them under “Carriers we work with” on this page. Plan availability varies by parish, and we only recommend a plan that fits your situation.`,
       },
       {
         q: 'What if I travel or spend time out of state?',
@@ -201,7 +202,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: "Medigap premiums can vary widely between companies for the exact same plan letter. We compare the companies we represent, explain how each prices its plans as you age, and walk you through the application. There's no fee for our help.",
+            text: `Medigap premiums can vary widely between companies for the exact same plan letter. We compare the companies we represent — ${carrierNames('medicare-supplement', 'en')} — explain how each prices its plans as you age, and walk you through the application. There's no fee for our help.`,
           },
         ],
       },
@@ -226,6 +227,10 @@ const services: Record<ProductKey, ServiceContent> = {
       {
         q: 'Do I need a separate drug plan?',
         a: "Yes, if you want prescription coverage — and most people do. Medigap plans sold today don't include drug coverage, so we'll help you choose a Part D plan too.",
+      },
+      {
+        q: 'Which Medicare Supplement companies do you work with?',
+        a: `For Medicare Supplement plans in Louisiana we work with ${carrierNames('medicare-supplement', 'en')}. Prices for the same plan letter differ between companies, so we compare them side by side for you.`,
       },
     ],
   },

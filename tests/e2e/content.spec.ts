@@ -69,19 +69,45 @@ test.describe('content QA', () => {
     }
     await page.goto('/medicare-advantage');
     await expect(page.getByRole('heading', { name: 'Carriers we work with' })).toBeVisible();
-    await page.goto('/medicare-supplement');
-    await expect(page.getByText('Blue Cross and Blue Shield of Louisiana')).toHaveCount(0);
   });
 });
 
 test.describe('carrier strip', () => {
   const cases: Array<{ path: string; line?: CarrierLine; vary: string; alt: (n: string) => string }> = [
-    { path: '/', vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.', alt: (n) => `${n} logo` },
-    { path: '/medicare-advantage', line: 'medicare-advantage', vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.', alt: (n) => `${n} logo` },
-    { path: '/medicare-supplement', line: 'medicare-supplement', vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.', alt: (n) => `${n} logo` },
-    { path: '/es', vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.', alt: (n) => `Logotipo de ${n}` },
-    { path: '/es/medicare-advantage', line: 'medicare-advantage', vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.', alt: (n) => `Logotipo de ${n}` },
-    { path: '/es/seguro-suplementario-medicare', line: 'medicare-supplement', vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.', alt: (n) => `Logotipo de ${n}` },
+    {
+      path: '/',
+      vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.',
+      alt: (n) => `${n} logo`,
+    },
+    {
+      path: '/medicare-advantage',
+      line: 'medicare-advantage',
+      vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.',
+      alt: (n) => `${n} logo`,
+    },
+    {
+      path: '/medicare-supplement',
+      line: 'medicare-supplement',
+      vary: 'Plans offered through these carriers vary by area. Logos are trademarks of their respective owners.',
+      alt: (n) => `${n} logo`,
+    },
+    {
+      path: '/es',
+      vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.',
+      alt: (n) => `Logotipo de ${n}`,
+    },
+    {
+      path: '/es/medicare-advantage',
+      line: 'medicare-advantage',
+      vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.',
+      alt: (n) => `Logotipo de ${n}`,
+    },
+    {
+      path: '/es/seguro-suplementario-medicare',
+      line: 'medicare-supplement',
+      vary: 'Los planes que ofrecen estas compañías varían según el área. Los logotipos son marcas comerciales de sus respectivos dueños.',
+      alt: (n) => `Logotipo de ${n}`,
+    },
   ];
   for (const c of cases) {
     test(c.path, async ({ page }) => {
@@ -94,8 +120,7 @@ test.describe('carrier strip', () => {
           const img = strip.getByRole('img', { name: c.alt(carrier.logo!.brand ?? carrier.name), exact: true });
           await expect(img).toBeVisible();
           expect(await img.evaluate((el) => el.closest('a'))).toBeNull(); // logos are not links
-        }
-        else await expect(strip.getByText(carrier.name, { exact: true })).toBeVisible();
+        } else await expect(strip.getByText(carrier.name, { exact: true })).toBeVisible();
       }
       await expect(page.getByText(c.vary, { exact: true })).toBeVisible();
     });
@@ -116,5 +141,40 @@ test.describe('404', () => {
     expect(res?.status()).toBe(404);
     await expect(page.locator('h1')).toHaveText('No encontramos esa página');
     await expect(page.locator('html')).toHaveAttribute('lang', 'es-US');
+  });
+});
+
+// Every confirmed carrier must appear in the "Carriers we work with" strip wherever its product
+// line is shown: home (all carriers), Medicare Advantage and Medicare Supplement, in both locales.
+test.describe('confirmed carriers render', () => {
+  const pages: Array<{ path: string; line?: CarrierLine }> = [
+    { path: '/' },
+    { path: '/es' },
+    { path: '/medicare-advantage', line: 'medicare-advantage' },
+    { path: '/es/medicare-advantage', line: 'medicare-advantage' },
+    { path: '/medicare-supplement', line: 'medicare-supplement' },
+    { path: '/es/seguro-suplementario-medicare', line: 'medicare-supplement' },
+  ];
+  for (const pg of pages) {
+    test(pg.path, async ({ page }) => {
+      await page.goto(pg.path);
+      const expected = confirmedCarriers(pg.line)
+        .map((c) => c.slug)
+        .sort();
+      const shown = await page
+        .getByTestId('carrier-strip')
+        .locator('li[data-carrier]')
+        .evaluateAll((els) => els.map((e) => e.getAttribute('data-carrier')));
+      expect(shown.sort()).toEqual(expected);
+      for (const slug of expected) await expect(page.locator(`li[data-carrier="${slug}"]`)).toBeVisible();
+    });
+  }
+  test('Blue Cross and Blue Shield of Louisiana is with the Supplement carriers, not Medicare Advantage', async ({ page }) => {
+    await page.goto('/medicare-supplement');
+    await expect(page.locator('li[data-carrier="blue-cross-louisiana"]')).toContainText(
+      'Blue Cross and Blue Shield of Louisiana',
+    );
+    await page.goto('/medicare-advantage');
+    await expect(page.locator('li[data-carrier="blue-cross-louisiana"]')).toHaveCount(0);
   });
 });

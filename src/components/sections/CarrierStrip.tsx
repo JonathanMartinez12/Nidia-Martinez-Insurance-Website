@@ -41,7 +41,8 @@ export async function CarrierStrip({
       <ul className="mt-6 grid gap-3 sm:grid-cols-[repeat(auto-fit,minmax(14rem,1fr))]" data-testid="carrier-strip">
         {list.map((c) => (
           <li
-            key={c.name}
+            key={c.slug}
+            data-carrier={c.slug}
             className="flex min-h-20 flex-col items-center justify-center rounded-xl border border-line bg-white px-3 py-4 text-center"
           >
             {c.approved && c.logo ? (
@@ -54,7 +55,7 @@ export async function CarrierStrip({
                 className="h-8 w-auto max-w-full object-contain sm:h-10"
               />
             ) : (
-              <span className="font-serif text-xl leading-tight font-semibold text-navy-900">{c.name}</span>
+              <span className="font-serif text-xl leading-tight font-semibold text-navy-900">{c.shortName ?? c.name}</span>
             )}
             {c.note ? <span className="mt-1 block text-[0.95rem] text-muted">{c.note[locale]}</span> : null}
           </li>
