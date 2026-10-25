@@ -590,7 +590,7 @@ export const home: HomeContent = {
     blocks: [
       {
         type: 'p',
-        text: "A local Medicare agent gives you one person to call who knows the plans, the doctors and the hospitals around you, and our help costs you nothing. As independent, licensed agents (some people say Medicare brokers), we work with several insurance companies instead of just one, so we can show you options side by side and help you pick the plan that fits you.",
+        text: 'A local Medicare agent gives you one person to call who knows the plans, the doctors and the hospitals around you, and our help costs you nothing. As independent, licensed agents (some people say Medicare brokers), we work with several insurance companies instead of just one, so we can show you options side by side and help you pick the plan that fits you.',
       },
       {
         type: 'ul',
@@ -615,7 +615,7 @@ export const home: HomeContent = {
     },
     {
       q: 'Do you work for Medicare?',
-      a: "No. Martinez Insurance Solutions is a licensed private insurance agency. We are not Medicare or any government agency. For Medicare itself, call 1-800-MEDICARE or visit [Medicare.gov](https://www.medicare.gov). We help you compare and enroll in private plans, like Medicare Advantage, Medicare Supplement and Part D. See [where to get help from Medicare near you](page:guide-medicare-office).",
+      a: 'No. Martinez Insurance Solutions is a licensed private insurance agency. We are not Medicare or any government agency. For Medicare itself, call 1-800-MEDICARE or visit [Medicare.gov](https://www.medicare.gov). We help you compare and enroll in private plans, like Medicare Advantage, Medicare Supplement and Part D. See [where to get help from Medicare near you](page:guide-medicare-office).',
     },
     {
       q: 'Can I meet with a Medicare agent near me in person?',
@@ -671,7 +671,7 @@ export const contact: ContactPageContent = {
       blocks: [
         {
           type: 'p',
-          text: "We are a licensed private insurance agency, not Medicare or Social Security. To sign up for Part A and Part B, replace a Medicare card or ask about a claim, read our guide: [Is there a Medicare office near me in New Orleans?](page:guide-medicare-office)",
+          text: 'We are a licensed private insurance agency, not Medicare or Social Security. To sign up for Part A and Part B, replace a Medicare card or ask about a claim, read our guide: [Is there a Medicare office near me in New Orleans?](page:guide-medicare-office)',
         },
       ],
     },

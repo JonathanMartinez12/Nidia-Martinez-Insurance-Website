@@ -31,7 +31,7 @@ export async function ServicePage({ locale, product }: { locale: AppLocale; prod
   const name = tp(`${product}.name`);
   const page = getPage(`service-${product}`);
   const url = localizedUrl(locale, page.href);
-  const reviewed = format.dateTime(new Date(`${site.contentLastReviewed}T12:00:00`), { dateStyle: 'long' });
+  const reviewed = format.dateTime(new Date(`${page.lastModified ?? site.contentLastReviewed}T12:00:00`), { dateStyle: 'long' });
   const isMedicare = products[product].category === 'medicare';
   const carrierLine = product === 'medicare-advantage' || product === 'medicare-supplement' ? product : null;
 

@@ -11,7 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: localizedUrl(locale, page.href),
       lastModified: new Date(`${page.lastModified ?? site.contentLastReviewed}T00:00:00Z`),
       changeFrequency: page.kind === 'home' || page.kind === 'aep' ? ('weekly' as const) : ('monthly' as const),
-      priority: page.kind === 'home' ? 1 : page.kind === 'service' || page.kind === 'guide' ? 0.9 : page.kind === 'legal' ? 0.3 : 0.7,
+      priority:
+        page.kind === 'home' ? 1 : page.kind === 'service' || page.kind === 'guide' ? 0.9 : page.kind === 'legal' ? 0.3 : 0.7,
       alternates: { languages: languageAlternates(page.href) },
     })),
   );

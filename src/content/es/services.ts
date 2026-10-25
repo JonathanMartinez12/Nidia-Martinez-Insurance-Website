@@ -116,121 +116,261 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
   },
 
+  /* Fuentes: ver 'medicare-supplement' en src/content/en/services.ts (Medicare.gov, verificadas el 2026-10-25). */
   'medicare-supplement': {
-    h1: 'Planes Medicare Suplementario (Medigap) en Nueva Orleans',
-    lede: 'Un plan Medicare Suplementario —también llamado Medigap— ayuda a pagar los costos que Medicare Original deja pendientes, como deducibles, copagos y el 20 % de coseguro de las consultas médicas. Le explicamos los planes identificados con letras, comparamos precios de las compañías que representamos y le ayudamos con la solicitud.',
+    h1: 'Planes Suplementarios de Medicare (Medigap) en Luisiana',
+    lede: 'Un plan Suplementario de Medicare, también llamado Medigap, ayuda a pagar los costos que Medicare Original no cubre, como los deducibles y el 20% de coseguro. Aquí le explicamos cómo se comparan los planes por letra, las reglas que importan en Luisiana y cómo le ayudamos a elegir sin costo.',
     summary:
-      'Orientación sin costo para elegir y solicitar un seguro Medicare Suplementario (Medigap) en Luisiana, con agentes locales bilingües y con licencia.',
+      'Orientación sin costo para elegir y solicitar un seguro Suplementario de Medicare (Medigap) en Luisiana, con agentes locales bilingües y con licencia.',
     whoFor: [
       'Personas con Medicare Original (Partes A y B) que quieren menos sorpresas en sus gastos',
       'Quienes desean ver a cualquier médico u hospital del país que acepte Medicare',
-      'Personas que viajan o pasan parte del año entre Luisiana y otro estado',
+      'Personas que viajan o pasan parte del año fuera de Luisiana',
       'Quienes prefieren una prima mensual estable en lugar de copagos en cada visita',
     ],
     covers: [
-      'Parte o la totalidad de los deducibles, copagos y coseguros de Medicare, según la letra del plan',
-      'El 20 % de coseguro de la Parte B en la mayoría de los planes',
-      'Días adicionales de hospital cuando se agota la cobertura hospitalaria de Medicare',
+      'Parte o todos los deducibles, copagos y coseguros de Medicare, según la letra del plan',
+      'El 20% de coseguro de la Parte B en la mayoría de los planes',
+      'Días adicionales de hospital cuando se agota la cobertura de hospital de Medicare',
       'Atención de emergencia durante viajes al extranjero en muchos planes (hasta los límites del plan)',
     ],
     sections: [
       {
         id: 'how-medigap-works',
-        heading: 'Cómo funcionan los planes Medicare Suplementario',
+        heading: '¿Cómo funcionan los planes Suplementarios de Medicare?',
         blocks: [
           {
             type: 'p',
-            text: 'Medicare Original paga una buena parte de sus facturas de hospital y atención médica, pero no todo, y no tiene un límite anual de lo que usted paga. Los planes Medigap los venden compañías de seguros privadas y pagan una parte o la totalidad de lo que queda. Como el plan funciona junto con Medicare Original, no hay redes: si un médico u hospital acepta Medicare, su plan Medigap también paga su parte.',
+            text: 'Un plan Medigap paga parte o todo lo que Medicare Original no cubre, para que tenga menos facturas inesperadas. Medicare Original paga una buena parte de sus gastos de hospital y médicos, pero no todo, y no tiene un límite anual de lo que usted paga. Los planes Medigap los venden compañías de seguros privadas y funcionan junto con Medicare Original. No hay redes: si un médico u hospital acepta Medicare, su plan Medigap también paga su parte.',
           },
           {
             type: 'p',
-            text: 'Los planes Medigap están estandarizados y se identifican con letras. Un Plan G de una compañía tiene los mismos beneficios básicos que un Plan G de otra; las diferencias están en el precio, en cómo la compañía fija y aumenta sus tarifas y en el servicio al cliente. Por eso vale la pena comparar compañías.',
+            text: 'En Luisiana, los planes Medigap están estandarizados y se identifican con letras. Un Plan G de una compañía tiene los mismos beneficios que un Plan G de cualquier otra. **El precio es la única diferencia** entre pólizas con la misma letra, por eso conviene comparar compañías.',
           },
         ],
       },
       {
-        id: 'popular-plans',
-        heading: 'Los planes por los que más nos preguntan',
+        id: 'plan-chart',
+        heading: '¿Qué cubre cada plan Medigap?',
         blocks: [
+          {
+            type: 'p',
+            text: 'Esta tabla muestra los planes que se venden a personas nuevas en Medicare. “Sí” significa que el plan paga el 100% de ese beneficio; “No” significa que usted lo paga; un porcentaje significa que el plan paga esa parte; N/A significa que no aplica.',
+          },
+          {
+            type: 'table',
+            caption: 'Beneficios de los planes Medigap (planes estandarizados que se venden en Luisiana)',
+            head: ['Beneficio', 'A', 'B', 'D', 'G', 'K', 'L', 'M', 'N'],
+            rows: [
+              [
+                'Coseguro de la Parte A y gastos de hospital, hasta 365 días adicionales',
+                'Sí',
+                'Sí',
+                'Sí',
+                'Sí',
+                'Sí',
+                'Sí',
+                'Sí',
+                'Sí',
+              ],
+              ['Coseguro o copago de la Parte B', 'Sí', 'Sí', 'Sí', 'Sí', '50%', '75%', 'Sí', 'Sí*'],
+              ['Sangre (primeras 3 pintas)', 'Sí', 'Sí', 'Sí', 'Sí', '50%', '75%', 'Sí', 'Sí'],
+              [
+                'Coseguro o copago de cuidados paliativos (hospicio) de la Parte A',
+                'Sí',
+                'Sí',
+                'Sí',
+                'Sí',
+                '50%',
+                '75%',
+                'Sí',
+                'Sí',
+              ],
+              ['Coseguro de centro de enfermería especializada', 'No', 'No', 'Sí', 'Sí', '50%', '75%', 'Sí', 'Sí'],
+              ['Deducible de la Parte A', 'No', 'Sí', 'Sí', 'Sí', '50%', '75%', '50%', 'Sí'],
+              ['Deducible de la Parte B', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No'],
+              ['Cargos en exceso de la Parte B', 'No', 'No', 'No', 'Sí', 'No', 'No', 'No', 'No'],
+              [
+                'Emergencias en viajes al extranjero (hasta los límites del plan)',
+                'No',
+                'No',
+                '80%',
+                '80%',
+                'No',
+                'No',
+                '80%',
+                '80%',
+              ],
+              ['Límite anual de gastos de su bolsillo', 'N/A', 'N/A', 'N/A', 'N/A', 'Sí', 'Sí', 'N/A', 'N/A'],
+            ],
+          },
           {
             type: 'ul',
             items: [
-              '**Plan G**: cubre casi todos los vacíos de Medicare, excepto el deducible anual de la Parte B. Es el plan más completo disponible para quienes empezaron a tener derecho a Medicare en 2020 o después.',
-              '**Plan N**: primas más bajas a cambio de pequeños copagos en algunas consultas y visitas a la sala de emergencias, además de posibles cargos en exceso de la Parte B.',
-              '**Plan G de deducible alto**: los mismos beneficios del Plan G una vez que usted cubre un deducible anual, normalmente con una prima mucho más baja.',
+              '*El Plan N paga el coseguro de la Parte B, salvo un copago de hasta $20 en algunas consultas y de hasta $50 en visitas a la sala de emergencias cuando no lo internan.',
+              'Los Planes K y L tienen un límite anual de gastos de su bolsillo. Cuando lo alcanza y paga el deducible de la Parte B, el plan paga el 100% de los servicios cubiertos el resto del año.',
+              'Algunas compañías también ofrecen una versión del Plan G con deducible alto. Usted paga una cantidad fija de los costos cubiertos por Medicare antes de que la póliza pague algo, a cambio de una prima más baja.',
+            ],
+          },
+          {
+            type: 'callout',
+            tone: 'info',
+            title: 'Planes C y F',
+            text: 'Los Planes C y F también cubren el deducible de la Parte B, por eso ya no se venden a personas nuevas en Medicare a partir del 1 de enero de 2020. Si usted era elegible para Medicare antes de esa fecha, quizás todavía pueda comprarlos. Si ya tiene uno, puede conservarlo.',
+          },
+        ],
+      },
+      {
+        id: 'plan-g-vs-plan-n',
+        heading: 'Plan G o Plan N: ¿cuál le conviene?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El Plan G cubre más; el Plan N le deja algunos costos más, así que su prima debe ser lo bastante baja para compensarlos. Ambos cubren sus gastos de hospital y la atención de enfermería especializada, y ninguno cubre el deducible anual de la Parte B. Las diferencias están en el consultorio:',
+          },
+          {
+            type: 'ul',
+            items: [
+              '**Copagos:** con el Plan G no paga nada después del deducible de la Parte B. Con el Plan N puede pagar hasta $20 en algunas consultas y hasta $50 en una visita a la sala de emergencias cuando no lo internan.',
+              '**Cargos en exceso:** algunos médicos no aceptan la cantidad aprobada por Medicare como pago completo y pueden cobrar hasta un 15% más. El Plan G paga ese “cargo en exceso”. El Plan N no.',
             ],
           },
           {
             type: 'p',
-            text: 'Los planes C y F ya no se venden a quienes empezaron a tener derecho a Medicare a partir del 1 de enero de 2020. Si usted ya tiene uno, por lo general puede conservarlo.',
+            text: 'El Plan N puede convenirle si en general goza de buena salud y sus médicos aceptan la asignación de Medicare. El Plan G puede ser mejor si va al médico con frecuencia o quiere costos más previsibles. Cotizamos ambos con varias compañías para que vea si la diferencia de prima vale la pena en su caso.',
+          },
+        ],
+      },
+      {
+        id: 'medigap-in-louisiana',
+        heading: 'Medigap en Luisiana: las reglas que debe conocer',
+        blocks: [
+          { type: 'h3', text: '¿Cuándo es el mejor momento para comprar un plan Medigap?' },
+          {
+            type: 'p',
+            text: 'Durante su **período de inscripción abierta de Medigap**: los 6 meses que comienzan el primer mes en que tiene la Parte B de Medicare y 65 años o más. Ocurre una sola vez y no se repite. Durante ese período, una compañía no puede negarse a venderle ninguna póliza que ofrezca, no puede usar evaluación médica y no puede cobrarle más por problemas de salud.',
+          },
+          { type: 'h3', text: '¿Qué pasa si espero?' },
+          {
+            type: 'p',
+            text: 'Fuera de ese período, puede pagar más, tener menos opciones o ser rechazado después de preguntas de salud, a menos que tenga un **derecho de emisión garantizada**. Lo tiene en situaciones como estas:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'Su plan Medicare Advantage deja Medicare o deja de atender su zona, o usted se muda fuera de su área de servicio.',
+              'Se afilió a un plan Medicare Advantage por primera vez cuando pasó a ser elegible para Medicare y quiere volver a Medicare Original dentro del primer año.',
+              'Su cobertura del empleador o del sindicato, que paga después de Medicare, va a terminar.',
+              'Su compañía Medigap quiebra, no cumple las reglas o le engañó.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'En la mayoría de estos casos, presenta la solicitud entre 60 días antes y 63 días después de que termine su cobertura anterior. Guarde las cartas o avisos que muestren cuándo terminó.',
+          },
+          { type: 'h3', text: '¿Puedo cambiar de plan Medigap más adelante?' },
+          {
+            type: 'p',
+            text: 'A veces. Fuera de su período de inscripción abierta y sin un derecho de emisión garantizada, solo puede cambiarse si una compañía acepta venderle una póliza nueva, por lo general después de preguntas de salud. Tiene 30 días para decidir si se queda con la póliza nueva (período de “revisión gratuita”), y una póliza nueva puede hacerle esperar hasta 6 meses antes de cubrir una afección preexistente. Estos son derechos federales; la ley de Luisiana podría darle más, así que lo verificamos antes de que cancele algo.',
+          },
+          { type: 'h3', text: '¿Puedo obtener Medigap en Luisiana si tengo menos de 65 años?' },
+          {
+            type: 'p',
+            text: 'Posiblemente. La ley federal no obliga a las compañías a vender Medigap a menores de 65 años, pero Luisiana es uno de los estados que exigen a las aseguradoras ofrecer al menos un tipo de póliza Medigap a las personas con Medicare menores de 65. Las opciones y los precios pueden ser distintos que para personas de 65 años o más, así que llámenos o consulte el [programa SHIIP del Departamento de Seguros de Luisiana](https://www.ldi.la.gov/consumers/senior-health-shiip) para conocer las reglas actuales.',
+          },
+        ],
+      },
+      {
+        id: 'how-prices-are-set',
+        heading: '¿Cómo se fijan los precios de Medigap?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Cada compañía elige una de tres formas de fijar el precio de sus pólizas, y esa decisión afecta lo que usted paga ahora y en el futuro:',
+          },
+          {
+            type: 'ul',
+            items: [
+              '**Tarifa comunitaria:** por lo general todos pagan la misma prima, sin importar la edad.',
+              '**Según la edad de emisión:** la prima se basa en su edad al comprar la póliza; comprar más joven cuesta menos, y no sube porque usted envejezca.',
+              '**Según la edad alcanzada:** la prima se basa en su edad actual, así que sube a medida que envejece. Puede empezar siendo la más barata y terminar siendo la más cara.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Con cualquier método, las primas pueden subir por la inflación y otros factores, y normalmente aumentan cada año. Algunas compañías ofrecen descuentos, por ejemplo a quienes no fuman o pagan el año completo, y otras venden pólizas Medicare SELECT que pueden costar menos pero pueden exigir que use ciertos proveedores. Le mostramos cómo fija sus precios cada compañía, no solo la prima de este año.',
+          },
+        ],
+      },
+      {
+        id: 'medigap-vs-medicare-advantage',
+        heading: 'Medigap o Medicare Advantage: ¿cuál es la diferencia?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Medigap funciona junto con Medicare Original; Medicare Advantage reemplaza la forma en que recibe Medicare. Con Medigap conserva Medicare Original, puede ver a cualquier proveedor que acepte Medicare y agrega un plan de medicamentos de la Parte D aparte. Un [plan Medicare Advantage](page:service-medicare-advantage) es un plan privado todo en uno, por lo general con red, cobertura de medicamentos y un límite anual de gastos de su bolsillo.',
+          },
+          {
+            type: 'callout',
+            tone: 'warning',
+            title: 'No puede tener ambos',
+            text: 'Es ilegal que alguien le venda una póliza Suplementaria de Medicare mientras usted está en un plan Medicare Advantage, a menos que vaya a regresar a Medicare Original. Si alguien lo intenta, llámenos antes de firmar algo.',
           },
         ],
       },
       {
         id: 'drug-coverage',
-        heading: 'No se olvide de la cobertura de medicamentos',
+        heading: '¿Medigap cubre medicamentos recetados?',
         blocks: [
           {
             type: 'p',
-            text: 'Los planes Medigap que se venden hoy no incluyen cobertura de medicamentos recetados. La mayoría de las personas combinan su plan Suplementario con un [plan de medicamentos de la Parte D](page:service-part-d-prescription-drug-plans) independiente. Si pasa un tiempo sin cobertura acreditable de medicamentos cuando comienza a tener derecho, podría tener que pagar una multa por inscripción tardía más adelante; por eso le ayudamos a organizar ambos al mismo tiempo.',
+            text: 'No. Los planes Medigap que se venden hoy no incluyen cobertura de medicamentos. La mayoría de las personas combina su plan Suplementario con un [plan de medicamentos de la Parte D](page:service-part-d-prescription-drug-plans) independiente. Si se queda sin cobertura de medicamentos acreditable cuando es elegible por primera vez, podría tener que pagar una multa por inscripción tardía, así que le ayudamos a contratar ambos a la vez.',
           },
         ],
       },
       {
-        id: 'timing',
-        heading: 'El momento importa: su Período de Inscripción Abierta de Medigap',
+        id: 'companies-we-compare',
+        heading: 'Compañías de seguro Suplementario de Medicare que comparamos en Luisiana',
         blocks: [
           {
             type: 'p',
-            text: 'El mejor momento para comprar un plan Suplementario es durante su **Período de Inscripción Abierta de Medigap**: los seis meses que comienzan el primer mes en que usted tiene la Parte B de Medicare y 65 años o más. Durante ese período, las compañías deben venderle cualquier plan que ofrezcan en su área, sin rechazarle ni cobrarle más por su estado de salud.',
+            text: `Para planes Medigap comparamos actualmente ${carrierNames('medicare-supplement', 'es')}. Las primas pueden variar mucho entre compañías por la misma letra de plan, así que las ponemos lado a lado, le explicamos cómo fija sus tarifas cada una y le acompañamos en la solicitud. Nuestra ayuda no tiene costo.`,
           },
           {
             type: 'p',
-            text: 'Después de ese período, las compañías pueden hacer preguntas de salud y pueden rechazar su solicitud o cobrarle más, a menos que usted tenga un derecho de emisión garantizada (por ejemplo, al perder cierta cobertura). Si está pensando en pasar de Medicare Advantage a un plan Medigap, hable primero con nosotros para no quedarse sin la cobertura que necesita.',
-          },
-          {
-            type: 'callout',
-            tone: 'warning',
-            title: 'Medigap no es Medicare Advantage',
-            text: 'Es ilegal que alguien le venda una póliza Medicare Suplementario mientras usted está en un plan Medicare Advantage, a menos que esté regresando a Medicare Original. Si alguien lo intenta, llámenos antes de firmar cualquier cosa.',
-          },
-        ],
-      },
-      {
-        id: 'comparing-prices',
-        heading: 'Cómo comparamos precios de Medicare Suplementario en Luisiana',
-        blocks: [
-          {
-            type: 'p',
-            text: `Las primas de Medigap pueden variar mucho entre compañías por exactamente el mismo plan. Comparamos las compañías que representamos (${carrierNames('medicare-supplement', 'es')}), le explicamos cómo cada una ajusta sus precios con la edad y le acompañamos en la solicitud. Nuestra ayuda no tiene ningún cargo.`,
+            text: 'Ayudamos con planes Suplementarios de Medicare en todo el estado, por ejemplo con [ayuda con Medicare en Nueva Orleans](page:city-new-orleans), [agentes de Medicare en Metairie](page:city-metairie), [ayuda con Medicare en Covington, en el Northshore](page:city-covington) y [planes de Medicare en Baton Rouge](page:city-baton-rouge). [Contáctenos](page:contact) para comparar cotizaciones gratis.',
           },
         ],
       },
     ],
     faqs: [
       {
+        q: '¿Qué planes Medigap hay en Luisiana?',
+        a: 'Luisiana usa los planes estándar por letra. Las personas nuevas en Medicare pueden elegir entre los Planes A, B, D, G, K, L, M y N; quienes eran elegibles antes del 1 de enero de 2020 también pueden comprar los Planes C y F. Cada compañía decide qué letras vende, así que comparamos lo que se le ofrece a usted.',
+      },
+      {
+        q: '¿Cómo comparo los planes Suplementarios de Medicare en Luisiana?',
+        a: 'Elija la letra de plan que le conviene y luego compare esa misma letra entre compañías. Los beneficios son idénticos, así que fíjese en la prima, en cómo la compañía ajusta sus tarifas con la edad y en su servicio. Hacemos esta comparación con usted gratis.',
+      },
+      {
+        q: '¿Qué plan Suplementario de Medicare me conviene?',
+        a: 'Depende de cuántas veces va al médico, de su presupuesto y de qué tan previsibles quiere que sean sus costos. Muchas personas eligen entre el Plan G (más cobertura) y el Plan N (algunos copagos y cargos en exceso). Revisamos su situación y le mostramos los números.',
+      },
+      {
+        q: '¿Puedo cambiar de plan Medigap en Luisiana?',
+        a: 'Puede solicitarlo en cualquier momento, pero fuera de su período de inscripción abierta de Medigap o de un derecho de emisión garantizada, la compañía puede hacerle preguntas de salud y rechazarle. Nunca cancele su póliza actual hasta que aprueben la nueva.',
+      },
+      {
         q: '¿El Plan G es igual en todas las compañías?',
-        a: 'Sí: los beneficios de cada plan identificado con letra están estandarizados. Lo que cambia es la prima, cómo suben las tarifas con el tiempo y el servicio de la compañía. Le ayudamos a comparar.',
+        a: 'Sí. Los beneficios de cada letra están estandarizados. Lo que cambia es la prima, cómo suben las tarifas con el tiempo y el servicio de la compañía.',
       },
       {
-        q: '¿Me pueden rechazar para un plan Medicare Suplementario?',
-        a: 'Durante su Período de Inscripción Abierta de Medigap de seis meses, o cuando tiene un derecho de emisión garantizada, no le pueden rechazar por su salud. Fuera de esos momentos, las compañías pueden evaluar su historial médico.',
-      },
-      {
-        q: '¿Un plan Suplementario incluye dental y visión?',
-        a: 'No. Los planes Medigap siguen las reglas de Medicare Original y no cubren la atención dental, de la vista ni de audición de rutina. Puede agregar un [plan dental y de visión](page:service-dental-vision-insurance) por separado.',
+        q: '¿Un plan Suplementario de Medicare incluye dental y visión?',
+        a: 'No. Los planes Medigap siguen las reglas de Medicare Original y no cubren la atención dental, de la vista ni de la audición de rutina. Puede agregar un [plan dental y de visión](page:service-dental-vision-insurance) aparte.',
       },
       {
         q: '¿Puedo usar mi plan Medigap fuera de Luisiana?',
-        a: 'Sí. Puede ver a cualquier proveedor de EE. UU. que acepte Medicare, por lo que Medigap es una buena opción para quienes viajan.',
-      },
-      {
-        q: '¿Necesito un plan de medicamentos aparte?',
-        a: 'Sí, si desea cobertura de recetas, y la mayoría de las personas la necesita. Los planes Medigap actuales no incluyen medicamentos, así que también le ayudaremos a elegir un plan de la Parte D.',
-      },
-      {
-        q: '¿Con qué compañías de Medicare Suplementario trabajan?',
-        a: `Para planes Medicare Suplementario en Luisiana trabajamos con ${carrierNames('medicare-supplement', 'es')}. El precio de un mismo plan cambia de una compañía a otra, así que se los comparamos lado a lado.`,
+        a: 'Sí. Puede ver a cualquier proveedor de EE. UU. que acepte Medicare, lo que hace que Medigap sea una buena opción para quienes viajan.',
       },
     ],
   },

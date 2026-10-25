@@ -44,14 +44,20 @@ describe('content parity', () => {
   });
 });
 
+/** Word-count range per service page; the rest use the default. */
+const serviceWords: Partial<Record<(typeof productKeys)[number], [number, number]>> = {
+  'medicare-supplement': [1800, 2800],
+};
+
 describe('service pages', () => {
   for (const [locale, content] of Object.entries(locales)) {
     for (const key of productKeys) {
-      it(`${locale} ${key}: 600–1,200 words with FAQs`, () => {
+      const [min, max] = serviceWords[key] ?? [600, 1200];
+      it(`${locale} ${key}: ${min}–${max} words with FAQs`, () => {
         const s = content.services[key];
         const words = wordCount([s.h1, s.lede, ...s.whoFor, ...s.covers, ...sectionsText(s.sections), ...faqsText(s.faqs)]);
-        expect(words).toBeGreaterThanOrEqual(600);
-        expect(words).toBeLessThanOrEqual(1200);
+        expect(words).toBeGreaterThanOrEqual(min);
+        expect(words).toBeLessThanOrEqual(max);
         expect(s.faqs.length).toBeGreaterThanOrEqual(3);
       });
     }

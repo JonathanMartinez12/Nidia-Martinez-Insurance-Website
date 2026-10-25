@@ -48,7 +48,7 @@ const servicePages: PageEntry[] = productKeys.map((key: ProductKey) => ({
   metaKey: `services.${key}`,
 }));
 
-export const pages: PageEntry[] = [
+const basePages: PageEntry[] = [
   { id: 'home', kind: 'home', href: { pathname: '/' }, metaKey: 'home' },
   ...servicePages,
   { id: 'aep', kind: 'aep', href: { pathname: '/annual-enrollment-period' }, metaKey: 'aep' },
@@ -72,7 +72,10 @@ export const pages: PageEntry[] = [
     kind: 'guides',
     href: { pathname: '/guides' },
     metaKey: 'guidesHub',
-    lastModified: guides.map((g) => g.modified).sort().at(-1),
+    lastModified: guides
+      .map((g) => g.modified)
+      .sort()
+      .at(-1),
   },
   ...guides.map((g): PageEntry => ({
     id: `guide-${g.key}`,
@@ -87,6 +90,23 @@ export const pages: PageEntry[] = [
   { id: 'terms', kind: 'legal', href: { pathname: '/terms' }, metaKey: 'terms' },
   { id: 'accessibility', kind: 'legal', href: { pathname: '/accessibility' }, metaKey: 'accessibility' },
 ];
+
+/**
+ * Pages whose content changed after `site.contentLastReviewed` (ISO date). Feeds the sitemap
+ * lastmod and the visible "Last reviewed" line, so update it whenever a page's copy changes.
+ */
+const contentUpdated: Record<string, string> = {
+  home: '2026-10-25',
+  aep: '2026-10-25',
+  scam: '2026-10-25',
+  contact: '2026-10-25',
+  faq: '2026-10-25',
+  'agent-nidia-martinez': '2026-10-25',
+  'service-medicare-supplement': '2026-10-25',
+  'service-special-needs-plans': '2026-10-25',
+};
+
+export const pages: PageEntry[] = basePages.map((p) => ({ ...p, lastModified: p.lastModified ?? contentUpdated[p.id] }));
 
 export function getPage(id: string): PageEntry {
   const page = pages.find((p) => p.id === id);

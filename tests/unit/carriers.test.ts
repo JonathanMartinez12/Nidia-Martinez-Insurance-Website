@@ -26,7 +26,9 @@ describe('carriers config', () => {
   });
 
   it('filters by product line and hides unconfirmed carriers', () => {
-    expect(confirmedCarriers('medicare-advantage').every((c) => c.confirmed && c.lines.includes('medicare-advantage'))).toBe(true);
+    expect(confirmedCarriers('medicare-advantage').every((c) => c.confirmed && c.lines.includes('medicare-advantage'))).toBe(
+      true,
+    );
     expect(confirmedCarriers().some((c) => !c.confirmed)).toBe(false);
   });
 });

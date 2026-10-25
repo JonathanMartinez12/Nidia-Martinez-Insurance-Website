@@ -330,18 +330,8 @@ const diabetesHeartSnp: GuideContent = {
               'Usually the plan’s network; some plans cover out-of-network care at a higher cost',
               'Any doctor or hospital in the U.S. that accepts Medicare',
             ],
-            [
-              'Drug coverage',
-              'Always included',
-              'Included in most plans',
-              'Not included; you add a separate Part D plan',
-            ],
-            [
-              'Built around your condition',
-              'Yes: care coordination and a tailored drug list and network',
-              'No',
-              'No',
-            ],
+            ['Drug coverage', 'Always included', 'Included in most plans', 'Not included; you add a separate Part D plan'],
+            ['Built around your condition', 'Yes: care coordination and a tailored drug list and network', 'No', 'No'],
             [
               'Yearly limit on out-of-pocket costs',
               'Yes, for covered services',

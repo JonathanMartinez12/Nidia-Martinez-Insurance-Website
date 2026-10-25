@@ -306,12 +306,7 @@ const diabetesHeartSnp: GuideContent = {
               'Incluida en la mayoría de los planes',
               'No incluida; se agrega un plan de la Parte D aparte',
             ],
-            [
-              'Diseñado para su afección',
-              'Sí: coordinación de la atención, lista de medicamentos y red adaptadas',
-              'No',
-              'No',
-            ],
+            ['Diseñado para su afección', 'Sí: coordinación de la atención, lista de medicamentos y red adaptadas', 'No', 'No'],
             [
               'Límite anual de gastos de su bolsillo',
               'Sí, para los servicios cubiertos',

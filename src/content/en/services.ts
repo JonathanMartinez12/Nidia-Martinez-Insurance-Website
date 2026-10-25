@@ -116,9 +116,28 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
   },
 
+  /*
+   * Sources (verified 2026-10-25):
+   * - Plan chart (A–N benefits, K/L out-of-pocket limits, N copays up to $20 / $50, high-deductible
+   *   option in some states): https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits
+   * - Plans C/F only for people eligible before Jan 1, 2020; D/G instead; Medigap Open Enrollment
+   *   Period rules, pre-existing waiting period, pricing methods (community / issue-age / attained-age),
+   *   Medicare SELECT, Louisiana on the list of states requiring at least one Medigap policy for people
+   *   under 65, MA/MN/WI standardized differently: "Choosing a Medigap Policy",
+   *   https://www.medicare.gov/publications/02110-choosing-a-medigap-policy.pdf
+   * - Price is the only difference between same-letter policies; premiums typically increase each year:
+   *   https://www.medicare.gov/health-drug-plans/medigap/basics/costs
+   * - Guaranteed issue windows (60 days before / 63 days after coverage ends), MA trial right:
+   *   https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap
+   * - Switching: generally only in Open Enrollment or with a guaranteed issue right; insurer may still
+   *   sell with underwriting; 30-day free look; up to 6-month wait:
+   *   https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/change-policies/switch-drop
+   * - Limiting charge up to 15% above the Medicare-approved amount: Medicare & You 2027,
+   *   https://www.medicare.gov/publications/10050-medicare-and-you.pdf
+   */
   'medicare-supplement': {
-    h1: 'Medicare Supplement (Medigap) Plans in New Orleans',
-    lede: "A Medicare Supplement plan — also called Medigap — helps pay the costs Original Medicare leaves behind, like deductibles, copays and the 20% coinsurance for doctor visits. We'll explain the lettered plans, compare prices from the companies we represent, and help you apply.",
+    h1: 'Medicare Supplement (Medigap) Plans in Louisiana',
+    lede: "A Medicare Supplement plan, also called Medigap, helps pay the costs Original Medicare leaves behind, like deductibles and the 20% coinsurance. Here's how the lettered plans compare, the rules that matter in Louisiana, and how we help you choose at no cost.",
     summary:
       'No-cost guidance choosing and applying for Medicare Supplement (Medigap) insurance in Louisiana from licensed, bilingual local agents.',
     whoFor: [
@@ -136,85 +155,212 @@ const services: Record<ProductKey, ServiceContent> = {
     sections: [
       {
         id: 'how-medigap-works',
-        heading: 'How Medicare Supplement plans work',
+        heading: 'How do Medicare Supplement plans work?',
         blocks: [
           {
             type: 'p',
-            text: "Original Medicare pays a large share of your hospital and medical bills, but not all of it — and it has no yearly limit on what you pay. Medigap plans are sold by private insurance companies and pay part or all of what's left. Because the plan works alongside Original Medicare, there are no networks: if a doctor or hospital accepts Medicare, your Medigap plan pays its share too.",
+            text: "A Medigap plan pays some or all of what Original Medicare doesn't, so you have fewer surprise bills. Original Medicare pays a large share of your hospital and medical costs, but not all of it, and it has no yearly limit on what you pay. Medigap plans are sold by private insurance companies and work alongside Original Medicare. There are no networks: if a doctor or hospital accepts Medicare, your Medigap plan pays its share too.",
           },
           {
             type: 'p',
-            text: "Medigap plans are standardized and identified by letters. A Plan G from one company has the same core benefits as a Plan G from another — the differences are the price, how the company sets and raises its rates, and customer service. That's why comparing companies matters.",
+            text: 'In Louisiana, Medigap plans are standardized and named by letter. A Plan G from one company has the same benefits as a Plan G from any other company. **Price is the only difference** between policies with the same letter, so comparing companies matters.',
           },
         ],
       },
       {
-        id: 'popular-plans',
-        heading: 'The plans people ask about most',
+        id: 'plan-chart',
+        heading: 'What does each Medigap plan cover?',
         blocks: [
+          {
+            type: 'p',
+            text: 'This chart shows the plans sold to people new to Medicare. “Yes” means the plan pays 100% of that benefit; “No” means you pay it; a percentage means the plan pays that share; N/A means it doesn’t apply.',
+          },
+          {
+            type: 'table',
+            caption: 'Medigap plan benefits (standardized plans sold in Louisiana)',
+            head: ['Benefit', 'A', 'B', 'D', 'G', 'K', 'L', 'M', 'N'],
+            rows: [
+              [
+                'Part A coinsurance and hospital costs, up to 365 extra days',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+              ],
+              ['Part B coinsurance or copayment', 'Yes', 'Yes', 'Yes', 'Yes', '50%', '75%', 'Yes', 'Yes*'],
+              ['Blood (first 3 pints)', 'Yes', 'Yes', 'Yes', 'Yes', '50%', '75%', 'Yes', 'Yes'],
+              ['Part A hospice coinsurance or copayment', 'Yes', 'Yes', 'Yes', 'Yes', '50%', '75%', 'Yes', 'Yes'],
+              ['Skilled nursing facility coinsurance', 'No', 'No', 'Yes', 'Yes', '50%', '75%', 'Yes', 'Yes'],
+              ['Part A deductible', 'No', 'Yes', 'Yes', 'Yes', '50%', '75%', '50%', 'Yes'],
+              ['Part B deductible', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No'],
+              ['Part B excess charges', 'No', 'No', 'No', 'Yes', 'No', 'No', 'No', 'No'],
+              ['Foreign travel emergency (up to plan limits)', 'No', 'No', '80%', '80%', 'No', 'No', '80%', '80%'],
+              ['Yearly out-of-pocket limit', 'N/A', 'N/A', 'N/A', 'N/A', 'Yes', 'Yes', 'N/A', 'N/A'],
+            ],
+          },
           {
             type: 'ul',
             items: [
-              "**Plan G** — covers nearly all of Medicare's gaps except the yearly Part B deductible. It's the most comprehensive plan available to people who became eligible for Medicare in 2020 or later.",
-              '**Plan N** — lower premiums in exchange for small copays for some office and emergency room visits, plus possible Part B excess charges.',
-              '**High-deductible Plan G** — the same benefits as Plan G after you meet a yearly deductible, usually with a much lower premium.',
+              '*Plan N pays the Part B coinsurance except for a copayment of up to $20 for some office visits and up to $50 for emergency room visits when you aren’t admitted.',
+              'Plans K and L have a yearly out-of-pocket limit. After you reach it and pay the Part B deductible, the plan pays 100% of covered services for the rest of the year.',
+              'Some companies also offer a high-deductible version of Plan G. You pay a set amount of Medicare-covered costs before the policy pays anything, in exchange for a lower premium.',
+            ],
+          },
+          {
+            type: 'callout',
+            tone: 'info',
+            title: 'Plans C and F',
+            text: 'Plans C and F also cover the Part B deductible, so they are no longer sold to people new to Medicare on or after January 1, 2020. If you were eligible for Medicare before that date, you may still be able to buy them. If you already have one, you can keep it.',
+          },
+        ],
+      },
+      {
+        id: 'plan-g-vs-plan-n',
+        heading: 'Plan G vs. Plan N: which is right for you?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Plan G covers more; Plan N leaves you a few more costs, so its premium needs to be low enough to make up for them. Both cover your hospital costs and skilled nursing care, and neither covers the yearly Part B deductible. The differences are in the doctor’s office:',
+          },
+          {
+            type: 'ul',
+            items: [
+              '**Copays:** with Plan G you pay nothing after the Part B deductible. With Plan N you may pay up to $20 for some office visits and up to $50 for an emergency room visit when you aren’t admitted.',
+              '**Excess charges:** some doctors don’t accept Medicare’s approved amount as full payment and can charge up to 15% more. Plan G pays that “excess charge.” Plan N doesn’t.',
             ],
           },
           {
             type: 'p',
-            text: 'Plans C and F are no longer sold to people who became eligible for Medicare on or after January 1, 2020. If you already have one, you can usually keep it.',
+            text: 'Plan N can be a good fit if you are generally healthy and your doctors accept Medicare assignment. Plan G may suit you better if you see doctors often or want the most predictable costs. We price both from several companies so you can see whether the premium difference is worth it for you.',
           },
         ],
       },
       {
-        id: 'drug-coverage',
-        heading: "Don't forget prescription coverage",
+        id: 'medigap-in-louisiana',
+        heading: 'Medigap in Louisiana: the rules to know',
         blocks: [
+          { type: 'h3', text: 'When is the best time to buy a Medigap plan?' },
           {
             type: 'p',
-            text: 'Medigap plans sold today do not include prescription drug coverage. Most people pair their Medicare Supplement with a stand-alone [Part D prescription drug plan](page:service-part-d-prescription-drug-plans). If you go without creditable drug coverage when you are first eligible, you may owe a late enrollment penalty later — so we help you set up both at the same time.',
+            text: 'During your **Medigap Open Enrollment Period**: the 6 months that start the first month you have Medicare Part B and are 65 or older. It happens once and doesn’t repeat. During it, a company can’t refuse to sell you any policy it offers, can’t use medical underwriting, and can’t charge you more because of health problems.',
+          },
+          { type: 'h3', text: 'What happens if I wait?' },
+          {
+            type: 'p',
+            text: 'Outside that window, you may pay more, have fewer choices, or be turned down after health questions, unless you have a **guaranteed issue right**. You have one in situations like these:',
+          },
+          {
+            type: 'ul',
+            items: [
+              'Your Medicare Advantage plan leaves Medicare or stops serving your area, or you move out of its service area.',
+              'You joined a Medicare Advantage plan for the first time when you became eligible for Medicare and want to switch back to Original Medicare within the first year.',
+              'Your employer or union coverage that pays after Medicare is ending.',
+              'Your Medigap company goes bankrupt, breaks the rules or misled you.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'In most of these cases you apply between 60 days before and 63 days after your old coverage ends. Keep any letters or notices that show when it ended.',
+          },
+          { type: 'h3', text: 'Can I switch Medigap plans later?' },
+          {
+            type: 'p',
+            text: 'Sometimes. Outside your Open Enrollment Period and without a guaranteed issue right, you can switch only if a company agrees to sell you a new policy, usually after health questions. You get 30 days to decide whether to keep the new policy (a “free look”), and a new policy may make you wait up to 6 months before covering a pre-existing condition. These are federal rights; Louisiana law may give you more, so we check before you cancel anything.',
+          },
+          { type: 'h3', text: 'Can I get Medigap in Louisiana if I’m under 65?' },
+          {
+            type: 'p',
+            text: 'Possibly. Federal law doesn’t require companies to sell Medigap to people under 65, but Louisiana is one of the states that require insurance companies to offer at least one kind of Medigap policy to people with Medicare under 65. Choices and prices can differ from those for people 65 and older, so call us or the [Louisiana Department of Insurance SHIIP program](https://www.ldi.la.gov/consumers/senior-health-shiip) for the current rules.',
           },
         ],
       },
       {
-        id: 'timing',
-        heading: 'Timing matters: your Medigap Open Enrollment Period',
+        id: 'how-prices-are-set',
+        heading: 'How are Medigap prices set?',
         blocks: [
           {
             type: 'p',
-            text: 'Your best time to buy a Medicare Supplement is during your **Medigap Open Enrollment Period** — the six months that start the first month you have Medicare Part B and are 65 or older. During that window, companies must sell you any plan they offer in your area without turning you down or charging more because of your health.',
+            text: 'Each company chooses one of three ways to price its policies, and that choice affects what you pay now and later:',
+          },
+          {
+            type: 'ul',
+            items: [
+              '**Community-rated:** generally everyone pays the same premium, whatever their age.',
+              '**Issue-age-rated:** the premium is based on your age when you buy, so buying younger costs less, and it doesn’t rise because you get older.',
+              '**Attained-age-rated:** the premium is based on your current age, so it goes up as you get older. It may start out cheapest and become the most expensive.',
+            ],
           },
           {
             type: 'p',
-            text: "After that window, companies may ask health questions and can decline your application or charge more, unless you have a guaranteed issue right (for example, when you lose certain other coverage). If you're thinking about moving from Medicare Advantage to a Medigap plan, talk with us first so you don't give up coverage you need.",
+            text: 'With any method, premiums can still rise because of inflation and other factors, and they typically increase each year. Some companies offer discounts, such as for non-smokers or paying yearly, and some sell Medicare SELECT policies that may cost less but may require you to use certain providers. We show you how each company prices its plan, not just this year’s premium.',
+          },
+        ],
+      },
+      {
+        id: 'medigap-vs-medicare-advantage',
+        heading: 'Medigap vs. Medicare Advantage: what’s the difference?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Medigap works with Original Medicare; Medicare Advantage replaces how you get it. With Medigap you keep Original Medicare, can see any provider that accepts Medicare, and add a separate Part D drug plan. A [Medicare Advantage plan](page:service-medicare-advantage) is an all-in-one private plan, usually with a network, drug coverage and a yearly out-of-pocket limit.',
           },
           {
             type: 'callout',
             tone: 'warning',
-            title: 'Medigap is not Medicare Advantage',
+            title: 'You can’t have both',
             text: "It's illegal for anyone to sell you a Medicare Supplement policy while you're in a Medicare Advantage plan, unless you're switching back to Original Medicare. If someone tries, call us before you sign anything.",
           },
         ],
       },
       {
-        id: 'comparing-prices',
-        heading: 'Comparing Medicare Supplement prices in Louisiana',
+        id: 'drug-coverage',
+        heading: 'Does Medigap cover prescriptions?',
         blocks: [
           {
             type: 'p',
-            text: `Medigap premiums can vary widely between companies for the exact same plan letter. We compare the companies we represent — ${carrierNames('medicare-supplement', 'en')} — explain how each prices its plans as you age, and walk you through the application. There's no fee for our help.`,
+            text: 'No. Medigap plans sold today don’t include drug coverage. Most people pair their Medicare Supplement with a stand-alone [Part D prescription drug plan](page:service-part-d-prescription-drug-plans). If you go without creditable drug coverage when you are first eligible, you may owe a late enrollment penalty later, so we help you set up both at the same time.',
+          },
+        ],
+      },
+      {
+        id: 'companies-we-compare',
+        heading: 'Medicare Supplement companies we compare in Louisiana',
+        blocks: [
+          {
+            type: 'p',
+            text: `For Medigap plans we currently compare ${carrierNames('medicare-supplement', 'en')}. Premiums can differ widely between companies for the same plan letter, so we line them up side by side, explain how each sets its rates, and walk you through the application. There’s no fee for our help.`,
+          },
+          {
+            type: 'p',
+            text: 'We help with Medicare Supplement plans across the state, including [Medicare help in New Orleans](page:city-new-orleans), [Medicare agents in Metairie](page:city-metairie), [Medicare help on the Northshore in Covington](page:city-covington) and [Medicare plans in Baton Rouge](page:city-baton-rouge). [Contact us](page:contact) for a free quote comparison.',
           },
         ],
       },
     ],
     faqs: [
       {
-        q: 'Is Plan G the same with every company?',
-        a: "Yes — the benefits of a lettered plan are standardized. What differs is the premium, how rates change over time, and the company's service. We help you compare.",
+        q: 'What Medigap plans are available in Louisiana?',
+        a: 'Louisiana uses the standard lettered plans. People new to Medicare can choose from Plans A, B, D, G, K, L, M and N; people eligible before January 1, 2020 may also buy Plans C and F. Each company decides which letters it sells, so we compare what is offered to you.',
       },
       {
-        q: 'Can I be turned down for a Medicare Supplement?',
-        a: "During your six-month Medigap Open Enrollment Period, or when you have a guaranteed issue right, you can't be turned down because of your health. Outside those times, companies may use medical underwriting.",
+        q: 'How do I compare Medicare Supplement plans in Louisiana?',
+        a: 'Pick the plan letter that fits you, then compare the same letter across companies. The benefits are identical, so look at the premium, how the company sets its rates as you age, and its service. We do this comparison with you for free.',
+      },
+      {
+        q: 'Which Medicare Supplement plan is right for me?',
+        a: 'It depends on how often you see doctors, your budget and how predictable you want your costs to be. Many people choose between Plan G (more coverage) and Plan N (some copays and excess charges). We walk through your situation and show you the numbers.',
+      },
+      {
+        q: 'Can I switch Medigap plans in Louisiana?',
+        a: 'You can apply any time, but outside your Medigap Open Enrollment Period or a guaranteed issue right, the company can ask health questions and decline you. Never cancel your current policy until the new one is approved.',
+      },
+      {
+        q: 'Is Plan G the same with every company?',
+        a: "Yes. The benefits of a lettered plan are standardized. What differs is the premium, how rates change over time, and the company's service.",
       },
       {
         q: 'Does a Medicare Supplement include dental and vision?',
@@ -223,14 +369,6 @@ const services: Record<ProductKey, ServiceContent> = {
       {
         q: 'Can I use my Medigap plan outside Louisiana?',
         a: 'Yes. You can see any provider in the U.S. that accepts Medicare, which makes Medigap a good fit for people who travel.',
-      },
-      {
-        q: 'Do I need a separate drug plan?',
-        a: "Yes, if you want prescription coverage — and most people do. Medigap plans sold today don't include drug coverage, so we'll help you choose a Part D plan too.",
-      },
-      {
-        q: 'Which Medicare Supplement companies do you work with?',
-        a: `For Medicare Supplement plans in Louisiana we work with ${carrierNames('medicare-supplement', 'en')}. Prices for the same plan letter differ between companies, so we compare them side by side for you.`,
       },
     ],
   },
