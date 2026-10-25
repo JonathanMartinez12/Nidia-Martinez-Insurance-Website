@@ -727,16 +727,17 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
   },
 
+  /* Fuentes: ver 'dental-vision-insurance' en src/content/en/services.ts (Medicare y Usted 2027, verificadas el 2026-10-25). */
   'dental-vision-insurance': {
-    h1: 'Seguro dental y de visión para adultos mayores en Luisiana',
-    lede: 'Medicare Original no cubre las limpiezas dentales de rutina, los empastes, las dentaduras, los exámenes de la vista ni los lentes. Un plan dental y de visión puede ayudarle con esos gastos, ya sea que tenga Medicare Original, un plan Suplementario o sea menor de 65 años.',
+    h1: 'Seguro Dental y de Visión en Metairie y Nueva Orleans',
+    lede: 'Medicare Original no cubre las limpiezas dentales de rutina, los empastes, las dentaduras, los exámenes de la vista para anteojos ni los anteojos. Un plan dental y de visión puede ayudarle con esos costos, ya sea que tenga Medicare Original, un plan Suplementario de Medicare, un plan Medicare Advantage o que tenga menos de 65 años.',
     summary:
-      'Ayuda para comparar seguros dentales y de visión individuales en Luisiana para personas con Medicare Original, un plan Suplementario o menores de 65 años.',
+      'Ayuda para comparar seguros dentales y de visión individuales en Metairie, Nueva Orleans y toda Luisiana para personas con Medicare y menores de 65.',
     whoFor: [
       'Personas con Medicare Original y un plan Suplementario, que no cubren la atención dental ni de la vista de rutina',
-      'Miembros de Medicare Advantage que quieren más cobertura dental de la que incluye su plan',
-      'Adultos menores de 65 años sin beneficios dentales o de visión a través del trabajo',
-      'Quienes prevén necesitar dentaduras, coronas o lentes nuevos',
+      'Afiliados a Medicare Advantage que quieren más cobertura dental de la que incluye su plan',
+      'Adultos menores de 65 sin beneficios dentales ni de visión por su trabajo',
+      'Quienes esperan necesitar dentaduras, coronas o anteojos nuevos',
     ],
     covers: [
       'Atención dental preventiva, como exámenes, limpiezas y radiografías',
@@ -746,41 +747,109 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
     sections: [
       {
-        id: 'why-it-matters',
-        heading: 'Por qué importa la cobertura dental y de visión después de los 65',
+        id: 'does-medicare-cover',
+        heading: '¿Medicare cubre la atención dental y de la vista?',
         blocks: [
           {
             type: 'p',
-            text: 'Tener dientes sanos y buena vista influye en todo, desde la alimentación hasta la seguridad en casa. Sin embargo, Medicare Original por lo general no paga la atención dental de rutina, las dentaduras, los exámenes de la vista para lentes ni los anteojos, y los planes Suplementarios siguen las mismas reglas. Por eso muchas personas jubiladas terminan pagando el precio completo de su bolsillo.',
+            text: 'En su mayoría, no. En la mayoría de los casos, Medicare Original no paga la atención dental de rutina, como limpiezas, empastes, extracciones o dentaduras, ni cubre los exámenes de la vista para anteojos o lentes de contacto con receta. Tampoco cubre los audífonos ni los exámenes para adaptarlos.',
+          },
+          {
+            type: 'p',
+            text: 'Hay algunas excepciones. Medicare Original puede pagar ciertos servicios dentales muy relacionados con otra atención cubierta, como antes de un reemplazo de válvula del corazón o un trasplante de órgano. Cubre un par de anteojos con marco estándar (o un juego de lentes de contacto) después de cada cirugía de cataratas en la que se implanta un lente intraocular, y un examen de detección de glaucoma cada 12 meses para personas de alto riesgo, incluidas las personas con diabetes. Los planes Suplementarios de Medicare (Medigap) por lo general tampoco cubren la atención dental, de la vista ni de la audición de rutina.',
+          },
+        ],
+      },
+      {
+        id: 'why-it-matters',
+        heading: 'Por qué importa la cobertura dental y de la vista después de los 65',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Tener dientes sanos y buena vista afecta todo, desde la alimentación hasta la seguridad en casa. Un diente roto puede dificultar comer, y una receta de anteojos vieja aumenta el riesgo de una caída. Sin cobertura, muchos jubilados en Metairie y Nueva Orleans posponen la atención porque tendrían que pagar el precio completo de su bolsillo.',
+          },
+        ],
+      },
+      {
+        id: 'your-options',
+        heading: 'Sus opciones de cobertura dental y de la vista',
+        blocks: [
+          {
+            type: 'ul',
+            items: [
+              '**Planes dentales y de visión independientes:** se venden aparte de Medicare. Funcionan con Medicare Original, con una póliza Medigap o junto con un plan Medicare Advantage.',
+              '**Beneficios dentales, de visión y de audición dentro de un plan Medicare Advantage:** muchos planes incluyen algunos, pero por lo general son limitados, por ejemplo solo atención preventiva o un máximo dental anual bajo.',
+              '**Cobertura para menores de 65:** planes dentales y de visión individuales para adultos y familias sin beneficios por su trabajo.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Si ya tiene [Medicare Advantage](page:service-medicare-advantage), traiga la Evidencia de Cobertura de su plan y veremos qué paga realmente antes de que compre algo adicional.',
           },
         ],
       },
       {
         id: 'how-plans-work',
-        heading: 'Cómo suelen funcionar los planes dentales',
+        heading: 'Cómo funcionan normalmente los planes dentales',
         blocks: [
           { type: 'p', text: 'Los planes dentales independientes suelen organizar la atención en tres niveles:' },
           {
             type: 'ul',
             items: [
-              '**Preventivo**: limpiezas, exámenes y radiografías, con frecuencia cubiertos en un porcentaje alto desde el principio.',
-              '**Básico**: empastes y extracciones sencillas, a veces después de un período de espera corto.',
-              '**Mayor**: coronas, puentes, tratamientos de conducto y dentaduras, muchas veces con un período de espera más largo y un porcentaje de cobertura menor.',
+              '**Preventiva:** limpiezas, exámenes y radiografías, a menudo cubiertos en un alto porcentaje desde el principio.',
+              '**Básica:** empastes y extracciones sencillas, a veces después de un período de espera corto.',
+              '**Mayor:** coronas, puentes, tratamientos de conducto y dentaduras, a menudo con un período de espera más largo y un porcentaje de cobertura menor.',
             ],
           },
           {
             type: 'p',
-            text: 'La mayoría de los planes también tiene un **máximo anual**: lo más que el plan pagará en un año. Comparamos máximos, períodos de espera y si su dentista está en la red, para que elija un plan acorde con el trabajo que realmente necesita.',
+            text: 'La mayoría de los planes también tienen un **máximo anual**, lo máximo que el plan pagará en un año. Comparamos los máximos, los períodos de espera y si su dentista está en la red, para que elija un plan que se ajuste al trabajo que realmente necesita.',
           },
         ],
       },
       {
         id: 'vision',
-        heading: 'Cobertura de la vista',
+        heading: 'Cómo funciona la cobertura de la vista',
         blocks: [
           {
             type: 'p',
-            text: 'Los planes de visión, o los planes dentales con una cláusula de visión, suelen ayudar con un examen de la vista al año y una asignación para marcos, lentes o lentes de contacto. Medicare sí cubre parte de la atención de los ojos relacionada con afecciones médicas —como la cirugía de cataratas y ciertos exámenes por diabetes o glaucoma—, así que le explicaremos lo que ya está cubierto antes de que compre algo más.',
+            text: 'Los planes de visión, o los planes dentales con una cláusula de visión, normalmente ayudan con un examen de la vista al año y una asignación para marcos, lentes o lentes de contacto. Como Medicare ya cubre parte de la atención médica de los ojos, como la cirugía de cataratas y ciertos exámenes de glaucoma, le explicamos lo que ya tiene antes de que pague por más.',
+          },
+        ],
+      },
+      {
+        id: 'hearing',
+        heading: '¿Y los audífonos?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Medicare Original no cubre los audífonos ni los exámenes para adaptarlos, y por lo general los planes Medigap tampoco. Muchos planes Medicare Advantage incluyen algunos beneficios de audición, como un examen al año o una asignación para audífonos, normalmente con límites. Algunos planes dentales y de visión también agregan descuentos en audición. Si la audición es una prioridad para usted, díganoslo desde el principio para comparar los planes que realmente le ayuden, ya sea que viva en Metairie, Nueva Orleans o cualquier otra parte de Luisiana.',
+          },
+        ],
+      },
+      {
+        id: 'under-65',
+        heading: 'Seguro dental y de visión si tiene menos de 65 años',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Si trabaja por su cuenta, se jubiló antes de tiempo o trabaja en un lugar sin beneficios, un plan dental y de visión individual puede cubrir los chequeos y los anteojos para usted y su familia. Podemos revisarlo junto con su [seguro médico](page:service-health-insurance) para que todo encaje.',
+          },
+        ],
+      },
+      {
+        id: 'how-to-choose',
+        heading: 'Cómo elegir el plan dental adecuado para usted',
+        blocks: [
+          {
+            type: 'ol',
+            items: [
+              '**Empiece por el trabajo que necesita.** Un plan perfecto para limpiezas puede pagar poco por dentaduras o implantes.',
+              '**Revise a su dentista y a su oculista.** La atención dentro de la red suele costar menos.',
+              '**Compare el máximo anual y los períodos de espera,** sobre todo para el trabajo mayor.',
+              '**Sume el costo del año:** la prima más su parte de la atención que espera recibir.',
+              '**Pregunte por la audición:** algunos planes incluyen exámenes de audición o descuentos en audífonos.',
+            ],
           },
         ],
       },
@@ -791,36 +860,26 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'ul',
             items: [
-              '¿Mi dentista o mi oculista está en la red? ¿Qué pasa si me atiendo fuera de la red?',
-              '¿Cuál es el máximo anual y se acumula para el año siguiente lo que no use?',
+              '¿Mi dentista o mi oculista están en la red, y qué pasa si voy fuera de la red?',
+              '¿Cuál es el máximo anual, y el beneficio que no use pasa al año siguiente?',
               '¿Cuánto duran los períodos de espera para empastes, coronas y dentaduras?',
-              '¿Cubre los implantes? Si los cubre, ¿cuánto pagaría yo?',
-              '¿Incluye exámenes de audición o audífonos?',
+              '¿Se cubren los implantes y, si es así, cuánto pagaría?',
+              '¿Se incluyen los exámenes de audición o los audífonos?',
             ],
           },
           {
             type: 'p',
-            text: 'Anotar las respuestas de cada plan una al lado de la otra facilita mucho ver cuál le ahorra dinero de verdad en el tratamiento que necesita.',
-          },
-        ],
-      },
-      {
-        id: 'with-medicare-advantage',
-        heading: 'Si tiene Medicare Advantage',
-        blocks: [
-          {
-            type: 'p',
-            text: 'Muchos [planes Medicare Advantage](page:service-medicare-advantage) incluyen algunos beneficios dentales y de visión, pero la cobertura puede ser limitada: por ejemplo, solo atención preventiva o un máximo dental anual bajo. Si necesita un trabajo dental importante, un plan aparte puede cubrir esa diferencia. Traiga la Evidencia de Cobertura de su plan y la revisamos juntos.',
+            text: 'Anotar las respuestas lado a lado hace mucho más fácil ver qué plan realmente le ahorra dinero para el trabajo que necesita.',
           },
         ],
       },
       {
         id: 'how-we-help',
-        heading: 'Cómo le ayudamos',
+        heading: 'Cómo le ayudamos en Metairie y Nueva Orleans',
         blocks: [
           {
             type: 'p',
-            text: 'Cuéntenos qué tratamiento necesita y con qué dentista u oculista quiere seguir. Compararemos planes, le explicaremos los períodos de espera con palabras sencillas y le ayudaremos a inscribirse.',
+            text: 'Díganos qué trabajo necesita y con qué dentista u oculista quiere seguir. Comparamos planes, le explicamos los períodos de espera con palabras sencillas y le ayudamos a inscribirse, en nuestra oficina de Metairie o por teléfono, en español o en inglés, sin costo por nuestra ayuda. Traiga la tarjeta de su plan actual si tiene una.',
           },
         ],
       },
@@ -837,19 +896,27 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
     faqs: [
       {
+        q: '¿Medicare paga las dentaduras?',
+        a: 'No. En la mayoría de los casos, Medicare Original no cubre las dentaduras ni la atención dental de rutina. Un plan dental independiente o el beneficio dental de algunos planes Medicare Advantage pueden ayudar, a menudo después de un período de espera.',
+      },
+      {
         q: '¿Hay un período de espera para las dentaduras?',
-        a: 'Con frecuencia, sí. Muchos planes tienen períodos de espera para servicios mayores, como dentaduras y coronas, aunque algunos los acortan o los eliminan. Le mostraremos las opciones.',
+        a: 'A menudo, sí. Muchos planes tienen períodos de espera para servicios mayores como dentaduras y coronas, aunque algunos los acortan o eliminan. Le mostramos las opciones.',
       },
       {
         q: '¿Puedo seguir con mi dentista?',
-        a: 'Si su dentista está en la red del plan, normalmente pagará menos. Algunos planes también pagan a dentistas fuera de la red, pero en menor proporción. Lo verificamos antes de que se inscriba.',
+        a: 'Si su dentista está en la red del plan, normalmente pagará menos. Algunos planes también pagan a dentistas fuera de la red, a una tarifa menor. Lo revisamos antes de que se inscriba.',
       },
       {
-        q: '¿Medicare cubre la cirugía de cataratas?',
-        a: 'Sí. La Parte B de Medicare cubre la cirugía de cataratas y un par de anteojos o lentes de contacto después de una cirugía en la que se implanta un lente intraocular. Los exámenes de rutina para lentes no están cubiertos por Medicare Original.',
+        q: '¿Medicare cubre la cirugía de cataratas y los anteojos?',
+        a: 'Medicare cubre la cirugía de cataratas y un par de anteojos con marco estándar, o un juego de lentes de contacto, después de cada cirugía de cataratas en la que se implanta un lente intraocular. Medicare Original no cubre los exámenes de la vista de rutina para anteojos.',
       },
       {
-        q: '¿Puedo comprar un plan dental en cualquier época del año?',
+        q: '¿Cómo elijo el seguro dental adecuado?',
+        a: 'Empiece por el trabajo que espera necesitar, revise que su dentista esté en la red y compare el máximo anual, los períodos de espera y el costo total del año. Hacemos esta comparación con usted gratis.',
+      },
+      {
+        q: '¿Puedo comprar cobertura dental en cualquier época del año?',
         a: 'Los planes dentales y de visión independientes por lo general están disponibles todo el año, no solo durante los períodos de inscripción de Medicare.',
       },
     ],
@@ -884,6 +951,20 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: 'Como el dinero va a su beneficiario y no a una funeraria en particular, su familia tiene flexibilidad: puede pagar los servicios, saldar una última cuenta del hospital o cubrir el viaje para que los familiares puedan estar juntos.',
+          },
+        ],
+      },
+      {
+        id: 'burial-vs-final-expense',
+        heading: 'Seguro de entierro o seguro de gastos finales: ¿cuál es la diferencia?',
+        blocks: [
+          {
+            type: 'p',
+            text: '“Seguro de entierro” y “seguro de gastos finales” por lo general significan lo mismo: una pequeña póliza de vida entera pensada para pagar un funeral, un entierro o una cremación y otras cuentas al final de la vida. Algunas compañías también lo llaman seguro funerario o seguro de vida para personas mayores. El nombre importa menos que los detalles, así que comparamos la cantidad del beneficio, cualquier período de espera y la prima, no la etiqueta.',
+          },
+          {
+            type: 'p',
+            text: 'Lo que sí es diferente es un **plan funerario prepagado**, que usted contrata directamente con una funeraria para servicios específicos. Una póliza de gastos finales paga dinero en efectivo a la persona que usted nombra, quien puede usarlo en cualquier funeraria o para otras cuentas.',
           },
         ],
       },
@@ -963,11 +1044,23 @@ const services: Record<ProductKey, ServiceContent> = {
         q: '¿Qué tan rápido se paga el beneficio?',
         a: 'Con frecuencia los reclamos se pagan poco después de que la compañía recibe el certificado de defunción y el formulario de reclamo, pero los plazos varían según la compañía. Podemos ayudar a su familia con los trámites.',
       },
+      {
+        q: '¿Cómo funciona el seguro de gastos finales?',
+        a: 'Usted paga una prima mensual, y cuando fallece la póliza paga un beneficio en efectivo a la persona que nombró. Esa persona puede usarlo para el funeral, el entierro o la cremación, o para cualquier otra cuenta.',
+      },
+      {
+        q: '¿Hay seguro de gastos finales para personas de la tercera edad?',
+        a: 'Sí. La mayoría de estas pólizas están pensadas para personas de la tercera edad, y muchas se ofrecen sin examen médico. Algunas hacen unas pocas preguntas de salud; otras aceptan a todos con un período de espera antes del beneficio completo. Las edades y las reglas varían según la compañía.',
+      },
+      {
+        q: '¿Cómo obtengo una cotización (presupuesto) de seguro de gastos finales?',
+        a: 'Llámenos o envíenos un mensaje. Le preguntaremos su edad, algunas preguntas de salud y la cantidad que desea, y luego compararemos pólizas de varias compañías y le mostraremos la prima mensual de cada una, sin compromiso.',
+      },
     ],
   },
 
   'life-insurance': {
-    h1: 'Seguro de vida económico para familias de Luisiana',
+    h1: 'Seguro de Vida Económico en Luisiana',
     lede: 'El seguro de vida protege a quienes dependen de usted. Ya sea que quiera reemplazar sus ingresos, terminar de pagar una hipoteca o dejarles algo a sus hijos y nietos, le ayudamos a encontrar una cobertura accesible que se ajuste a su presupuesto.',
     summary:
       'Ayuda para comparar seguros de vida a término y permanentes a buen precio para familias de Luisiana, con agentes bilingües y con licencia en el área de Nueva Orleans.',
@@ -986,7 +1079,7 @@ const services: Record<ProductKey, ServiceContent> = {
     sections: [
       {
         id: 'types',
-        heading: '¿Seguro a término o permanente?',
+        heading: 'Seguro de vida a término o de vida entera',
         blocks: [
           {
             type: 'p',
@@ -995,6 +1088,26 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: 'El **seguro de vida permanente** (vida entera) dura toda su vida y acumula un valor en efectivo contra el que puede pedir préstamos. Las primas son más altas que las de un seguro a término por la misma cobertura, pero por lo general se mantienen fijas. Las pólizas permanentes pequeñas pensadas para los gastos del funeral se llaman [seguro de gastos finales](page:service-final-expense-insurance).',
+          },
+        ],
+      },
+      {
+        id: 'young-families',
+        heading: 'Seguro de vida para familias jóvenes',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Si tiene hijos pequeños o una hipoteca, el seguro de vida a término suele ser la forma más económica de protegerlos. Una póliza que dure hasta que los hijos crezcan o la casa esté pagada puede reemplazar sus ingresos si algo le pasa. Comprarla mientras es joven y está sano normalmente le asegura una prima más baja, y muchas pólizas a término pueden convertirse después en cobertura permanente.',
+          },
+        ],
+      },
+      {
+        id: 'seniors',
+        heading: 'Seguro de vida para personas mayores',
+        blocks: [
+          {
+            type: 'p',
+            text: 'No es demasiado tarde para obtener cobertura a los 60, 70 o incluso 80 años. Algunas personas mayores eligen una póliza de vida entera más pequeña para cubrir los gastos del funeral, a menudo llamada [seguro de gastos finales](page:service-final-expense-insurance). Otras quieren una póliza más grande para dejar dinero a su cónyuge o a sus nietos, o para ayudar con los gastos de la herencia. Las preguntas de salud, los exámenes médicos y las primas varían según la compañía, así que comparamos varias para encontrar una opción económica.',
           },
         ],
       },
@@ -1089,7 +1202,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         q: '¿Puedo obtener un seguro de vida si tengo problemas de salud?',
-        a: 'Muchas veces, sí. Muchas compañías ofrecen cobertura a personas con afecciones como diabetes o presión alta. Buscaremos la mejor opción para su salud y su presupuesto.',
+        a: 'Muchas veces, sí. Muchas compañías ofrecen cobertura a personas con afecciones como diabetes o presión alta. Buscaremos la opción adecuada para su salud y su presupuesto.',
       },
       {
         q: '¿Qué pasa cuando termina mi póliza a término?',
@@ -1098,6 +1211,14 @@ const services: Record<ProductKey, ServiceContent> = {
       {
         q: '¿A quién debo nombrar como beneficiario?',
         a: 'La mayoría de las personas nombra a su cónyuge, a sus hijos o a un fideicomiso. Mantenga actualizados sus beneficiarios después de acontecimientos importantes, como un matrimonio, un divorcio o el nacimiento de un nieto.',
+      },
+      {
+        q: '¿Cómo encuentro un seguro de vida económico en Luisiana?',
+        a: 'Compare varias compañías, elija el tipo y el plazo que realmente necesita y presente su solicitud cuanto antes, porque la edad afecta el precio. Comparamos cotizaciones por usted sin costo.',
+      },
+      {
+        q: '¿Las personas mayores todavía pueden comprar un seguro de vida?',
+        a: 'Sí. Muchas compañías ofrecen pólizas a personas de 60, 70 años o más, incluidas pólizas de vida entera más pequeñas sin examen médico. Las opciones y los precios dependen de su edad y su salud.',
       },
     ],
   },

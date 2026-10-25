@@ -737,11 +737,22 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
   },
 
+  /*
+   * Sources (verified 2026-10-25), Medicare & You 2027,
+   * https://www.medicare.gov/publications/10050-medicare-and-you.pdf :
+   * - Original Medicare doesn't cover most dental care (cleanings, fillings, extractions, dentures),
+   *   except some dental services closely related to certain covered services; doesn't cover eye exams
+   *   for prescription glasses/contacts, hearing aids or exams for fitting them.
+   * - Eyeglasses: one pair (or one set of contacts) after each cataract surgery with an intraocular lens.
+   * - Glaucoma screening every 12 months for people at high risk.
+   * - Medigap generally doesn't cover vision or dental, hearing aids or eyeglasses.
+   * - MA plans may cover extra benefits like vision, hearing and dental; generally limited.
+   */
   'dental-vision-insurance': {
-    h1: 'Dental & Vision Insurance for Seniors in Louisiana',
-    lede: "Original Medicare doesn't cover routine dental cleanings, fillings, dentures, eye exams or glasses. A dental and vision plan can help with those costs, whether you have Original Medicare, a Medicare Supplement, or you're under 65.",
+    h1: 'Dental & Vision Insurance in Metairie & New Orleans',
+    lede: "Original Medicare doesn't cover routine dental cleanings, fillings, dentures, eye exams for glasses or eyeglasses. A dental and vision plan can help with those costs, whether you have Original Medicare, a Medicare Supplement, a Medicare Advantage plan, or you're under 65.",
     summary:
-      'Help comparing individual dental and vision insurance in Louisiana for people on Original Medicare, a Medicare Supplement or under 65.',
+      'Help comparing individual dental and vision insurance in Metairie, New Orleans and across Louisiana for people on Medicare and under 65.',
     whoFor: [
       "People with Original Medicare and a Medicare Supplement, which don't cover routine dental or vision care",
       'Medicare Advantage members who want more dental coverage than their plan includes',
@@ -756,12 +767,44 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
     sections: [
       {
+        id: 'does-medicare-cover',
+        heading: 'Does Medicare cover dental and vision?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Mostly no. In most cases, Original Medicare doesn’t pay for routine dental care like cleanings, fillings, extractions or dentures, and it doesn’t cover eye exams for prescription glasses or contact lenses. It also doesn’t cover hearing aids or the exams to fit them.',
+          },
+          {
+            type: 'p',
+            text: 'There are a few exceptions. Original Medicare may pay for some dental services closely tied to other covered care, such as before a heart valve replacement or an organ transplant. It covers one pair of eyeglasses with standard frames (or one set of contact lenses) after each cataract surgery that implants an intraocular lens, and a glaucoma screening every 12 months for people at high risk, including people with diabetes. Medicare Supplement (Medigap) plans generally don’t cover routine dental, vision or hearing either.',
+          },
+        ],
+      },
+      {
         id: 'why-it-matters',
         heading: 'Why dental and vision coverage matters after 65',
         blocks: [
           {
             type: 'p',
-            text: "Healthy teeth and good eyesight affect everything from nutrition to safety at home, yet Original Medicare generally doesn't pay for routine dental care, dentures, eye exams for glasses, or eyeglasses. Medicare Supplement plans follow the same rules. That leaves many retirees paying the full price out of pocket.",
+            text: 'Healthy teeth and good eyesight affect everything from nutrition to safety at home. A cracked tooth can make eating hard, and an outdated prescription raises the risk of a fall. Without coverage, many retirees in Metairie and New Orleans put off care because they would pay the full price out of pocket.',
+          },
+        ],
+      },
+      {
+        id: 'your-options',
+        heading: 'Your options for dental and vision coverage',
+        blocks: [
+          {
+            type: 'ul',
+            items: [
+              '**Stand-alone dental and vision plans:** sold separately from Medicare. They work with Original Medicare, a Medigap policy, or alongside a Medicare Advantage plan.',
+              '**Dental, vision and hearing benefits inside a Medicare Advantage plan:** many plans include some, but they are generally limited, for example preventive care only or a low yearly dental maximum.',
+              '**Coverage for people under 65:** individual dental and vision plans for adults and families without benefits through work.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'If you already have [Medicare Advantage](page:service-medicare-advantage), bring your plan’s Evidence of Coverage and we’ll see what it really pays before you buy anything extra.',
           },
         ],
       },
@@ -773,24 +816,60 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'ul',
             items: [
-              '**Preventive** — cleanings, exams and X-rays, often covered at a high percentage from the start.',
-              '**Basic** — fillings and simple extractions, sometimes after a short waiting period.',
-              '**Major** — crowns, bridges, root canals and dentures, often with a longer waiting period and a lower coverage percentage.',
+              '**Preventive:** cleanings, exams and X-rays, often covered at a high percentage from the start.',
+              '**Basic:** fillings and simple extractions, sometimes after a short waiting period.',
+              '**Major:** crowns, bridges, root canals and dentures, often with a longer waiting period and a lower coverage percentage.',
             ],
           },
           {
             type: 'p',
-            text: 'Most plans also have an **annual maximum** — the most the plan will pay in a year. We compare maximums, waiting periods and whether your dentist is in network, so you can pick a plan that fits the work you actually need done.',
+            text: 'Most plans also have an **annual maximum**, the most the plan will pay in a year. We compare maximums, waiting periods and whether your dentist is in network, so you can pick a plan that fits the work you actually need done.',
           },
         ],
       },
       {
         id: 'vision',
-        heading: 'Vision coverage',
+        heading: 'How vision coverage works',
         blocks: [
           {
             type: 'p',
-            text: "Vision plans, or dental plans with a vision rider, typically help with a yearly eye exam and an allowance toward frames, lenses or contacts. Medicare does cover some eye care related to medical conditions — like cataract surgery and certain exams for diabetes or glaucoma — so we'll explain what's already covered before you buy more.",
+            text: 'Vision plans, or dental plans with a vision rider, typically help with a yearly eye exam and an allowance toward frames, lenses or contacts. Because Medicare already covers some medical eye care, like cataract surgery and certain glaucoma screenings, we’ll explain what you already have before you pay for more.',
+          },
+        ],
+      },
+      {
+        id: 'hearing',
+        heading: 'What about hearing aids?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Original Medicare doesn’t cover hearing aids or the exams to fit them, and Medigap plans generally don’t either. Many Medicare Advantage plans include some hearing benefits, such as a yearly hearing exam or an allowance toward hearing aids, usually with limits. Some dental and vision plans add hearing discounts as well. If hearing is a priority for you, tell us at the start so we can compare the plans that actually help with it, whether you live in Metairie, New Orleans or anywhere else in Louisiana.',
+          },
+        ],
+      },
+      {
+        id: 'under-65',
+        heading: 'Dental and vision insurance if you’re under 65',
+        blocks: [
+          {
+            type: 'p',
+            text: 'If you’re self-employed, retired early or work somewhere without benefits, an individual dental and vision plan can cover checkups and glasses for you and your family. We can look at it together with your [health insurance](page:service-health-insurance) so the pieces fit.',
+          },
+        ],
+      },
+      {
+        id: 'how-to-choose',
+        heading: 'How to choose the right dental plan for you',
+        blocks: [
+          {
+            type: 'ol',
+            items: [
+              '**Start with the work you need.** A plan that’s perfect for cleanings may pay little toward dentures or implants.',
+              '**Check your dentist and eye doctor.** In-network care usually costs less.',
+              '**Compare the annual maximum and waiting periods,** especially for major work.',
+              '**Add up the cost for a year:** premium plus your share of the care you expect.',
+              '**Ask about hearing:** some plans include hearing exams or discounts on hearing aids.',
+            ],
           },
         ],
       },
@@ -815,22 +894,12 @@ const services: Record<ProductKey, ServiceContent> = {
         ],
       },
       {
-        id: 'with-medicare-advantage',
-        heading: 'If you have Medicare Advantage',
-        blocks: [
-          {
-            type: 'p',
-            text: "Many [Medicare Advantage plans](page:service-medicare-advantage) include some dental and vision benefits, but the coverage can be limited — for example, preventive care only, or a low yearly dental maximum. If you need major dental work, a separate plan can fill the gap. Bring your plan's Evidence of Coverage and we'll look at it together.",
-          },
-        ],
-      },
-      {
         id: 'how-we-help',
-        heading: 'How we help',
+        heading: 'How we help in Metairie and New Orleans',
         blocks: [
           {
             type: 'p',
-            text: "Tell us what you need done and which dentist or eye doctor you want to keep. We'll compare plans, explain waiting periods in plain language, and help you enroll.",
+            text: 'Tell us what you need done and which dentist or eye doctor you want to keep. We’ll compare plans, explain waiting periods in plain language, and help you enroll, at our Metairie office or by phone, in English or Spanish, at no cost for our help. Bring your current plan card if you have one.',
           },
         ],
       },
@@ -847,16 +916,24 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
     faqs: [
       {
+        q: 'Does Medicare pay for dentures?',
+        a: 'No. In most cases Original Medicare doesn’t cover dentures or routine dental care. A stand-alone dental plan or the dental benefit in some Medicare Advantage plans can help, often after a waiting period.',
+      },
+      {
         q: 'Is there a waiting period for dentures?',
-        a: "Often, yes. Many plans have waiting periods for major services such as dentures and crowns, though some plans shorten or waive them. We'll show you the options.",
+        a: 'Often, yes. Many plans have waiting periods for major services such as dentures and crowns, though some plans shorten or waive them. We’ll show you the options.',
       },
       {
         q: 'Can I keep my dentist?',
-        a: "If your dentist is in the plan's network, you'll usually pay less. Some plans also pay for out-of-network dentists at a lower rate. We check before you enroll.",
+        a: 'If your dentist is in the plan’s network, you’ll usually pay less. Some plans also pay for out-of-network dentists at a lower rate. We check before you enroll.',
       },
       {
-        q: 'Does Medicare cover cataract surgery?',
-        a: "Yes. Medicare Part B covers cataract surgery and one pair of eyeglasses or contact lenses after surgery that implants an intraocular lens. Routine eye exams for glasses aren't covered by Original Medicare.",
+        q: 'Does Medicare cover cataract surgery and glasses?',
+        a: 'Medicare covers cataract surgery and one pair of eyeglasses with standard frames, or one set of contact lenses, after each cataract surgery that implants an intraocular lens. Routine eye exams for glasses aren’t covered by Original Medicare.',
+      },
+      {
+        q: 'How do I choose the right dental insurance?',
+        a: 'Start with the work you expect to need, check that your dentist is in network, and compare the annual maximum, waiting periods and total yearly cost. We do this comparison with you for free.',
       },
       {
         q: 'Can I buy dental coverage any time of year?',
@@ -866,7 +943,7 @@ const services: Record<ProductKey, ServiceContent> = {
   },
 
   'final-expense-insurance': {
-    h1: 'Final Expense Insurance in Louisiana',
+    h1: 'Final Expense & Burial Insurance in Louisiana',
     lede: "Final expense insurance is a small whole life policy designed to help your family pay for your funeral, burial or cremation and other final bills. It's peace of mind that your loved ones won't be left with the cost.",
     summary:
       'Final expense (burial) life insurance for Louisiana families, with friendly bilingual guidance from licensed local agents.',
@@ -894,6 +971,20 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: 'Because the money goes to your beneficiary, not to a particular funeral home, your family has flexibility — they can pay for services, settle a final hospital bill, or cover travel so relatives can be together.',
+          },
+        ],
+      },
+      {
+        id: 'burial-vs-final-expense',
+        heading: 'Burial insurance vs final expense insurance',
+        blocks: [
+          {
+            type: 'p',
+            text: '“Burial insurance” and “final expense insurance” usually mean the same thing: a small whole life policy meant to pay for a funeral, burial or cremation and other end-of-life bills. Some companies also call it funeral insurance or senior life insurance. The name matters less than the details, so we compare the benefit amount, any waiting period and the premium, not the label.',
+          },
+          {
+            type: 'p',
+            text: 'What is different is a **prepaid funeral plan**, which you arrange directly with one funeral home for specific services. A final expense policy pays cash to the person you name, who can use it at any funeral home or for other bills.',
           },
         ],
       },
@@ -973,11 +1064,23 @@ const services: Record<ProductKey, ServiceContent> = {
         q: 'How quickly is the benefit paid?',
         a: 'Claims are often paid soon after the company receives the death certificate and claim form, but timing varies by company. We can help your family with the paperwork.',
       },
+      {
+        q: 'How does burial insurance work?',
+        a: 'You pay a monthly premium, and when you pass away the policy pays a cash benefit to the person you named. They can use it for the funeral, burial or cremation, or any other bills.',
+      },
+      {
+        q: 'Who qualifies for final expense insurance?',
+        a: 'Most policies are designed for older adults, and many are available without a medical exam. Some ask a few health questions; others accept everyone with a waiting period before the full benefit applies. Ages and rules vary by company.',
+      },
+      {
+        q: 'How do I get a final expense insurance quote?',
+        a: 'Call us or send a message. We’ll ask your age, a few health questions and the amount you’d like, then compare policies from several companies and show you the monthly premium for each, with no obligation.',
+      },
     ],
   },
 
   'life-insurance': {
-    h1: 'Low-Cost Life Insurance for Louisiana Families',
+    h1: 'Low-Cost Life Insurance in Louisiana',
     lede: "Life insurance protects the people who depend on you. Whether you want to replace income, pay off a mortgage, or leave something for your children and grandchildren, we'll help you find affordable coverage that fits your budget.",
     summary:
       'Help comparing affordable term and whole life insurance for Louisiana families, from licensed bilingual agents in Greater New Orleans.',
@@ -996,7 +1099,7 @@ const services: Record<ProductKey, ServiceContent> = {
     sections: [
       {
         id: 'types',
-        heading: 'Term or whole life?',
+        heading: 'Term vs. whole life insurance',
         blocks: [
           {
             type: 'p',
@@ -1005,6 +1108,26 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: '**Whole life insurance** lasts your entire life and builds cash value you can borrow against. Premiums are higher than term for the same amount of coverage, but they generally stay level. Smaller whole life policies designed for funeral costs are called [final expense insurance](page:service-final-expense-insurance).',
+          },
+        ],
+      },
+      {
+        id: 'young-families',
+        heading: 'Life insurance for young families',
+        blocks: [
+          {
+            type: 'p',
+            text: 'If you have young children or a mortgage, term life insurance is often the most affordable way to protect them. A policy that lasts until the kids are grown or the house is paid off can replace your income if something happens to you. Buying while you’re young and healthy usually locks in a lower premium, and many term policies can later be converted to permanent coverage.',
+          },
+        ],
+      },
+      {
+        id: 'seniors',
+        heading: 'Life insurance for seniors',
+        blocks: [
+          {
+            type: 'p',
+            text: 'It’s not too late to get coverage in your 60s, 70s or even 80s. Some seniors choose a smaller whole life policy to cover funeral costs, often called [final expense insurance](page:service-final-expense-insurance). Others want a larger policy to leave money to a spouse or grandchildren, or to help with estate costs. Health questions, medical exams and premiums vary by company, so we compare several to find an affordable option.',
           },
         ],
       },
@@ -1099,7 +1222,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         q: 'Can I get life insurance if I have health problems?',
-        a: "Often, yes. Many companies offer coverage to people with conditions like diabetes or high blood pressure. We'll look for the best fit for your health and budget.",
+        a: "Often, yes. Many companies offer coverage to people with conditions like diabetes or high blood pressure. We'll look for the right fit for your health and budget.",
       },
       {
         q: 'What happens when my term policy ends?',
@@ -1108,6 +1231,14 @@ const services: Record<ProductKey, ServiceContent> = {
       {
         q: 'Who should be my beneficiary?',
         a: 'Most people name a spouse, children or a trust. Keep your beneficiaries up to date after major life events like a marriage, divorce or the birth of a grandchild.',
+      },
+      {
+        q: 'How can I find affordable life insurance in Louisiana?',
+        a: 'Compare several companies, choose the type and term you actually need, and apply sooner rather than later, since age affects price. We compare quotes for you at no cost.',
+      },
+      {
+        q: 'Can seniors still buy life insurance?',
+        a: 'Yes. Many companies offer policies to people in their 60s, 70s and beyond, including smaller whole life policies without a medical exam. Options and prices depend on your age and health.',
       },
     ],
   },

@@ -57,6 +57,7 @@ describe('content parity', () => {
 const serviceWords: Partial<Record<(typeof productKeys)[number], [number, number]>> = {
   'medicare-supplement': [1800, 2800],
   'medicare-advantage': [1800, 2800],
+  'dental-vision-insurance': [1200, 2200],
 };
 
 describe('service pages', () => {
