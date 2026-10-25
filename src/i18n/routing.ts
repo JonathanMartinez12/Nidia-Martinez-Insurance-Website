@@ -43,6 +43,11 @@ export const routing = defineRouting({
     '/about/[agent]': { en: '/about/[agent]', es: '/sobre-nosotros/[agent]' },
     '/service-area': { en: '/service-area', es: '/area-de-servicio' },
     '/service-area/[city]': { en: '/service-area/[city]', es: '/area-de-servicio/[city]' },
+    '/guides': { en: '/guides', es: '/guias' },
+    '/guides/medicare-office-near-me-new-orleans': {
+      en: '/guides/medicare-office-near-me-new-orleans',
+      es: '/guias/oficina-de-medicare-cerca-de-mi',
+    },
     '/faq': { en: '/faq', es: '/preguntas-frecuentes' },
     '/contact': { en: '/contact', es: '/contacto' },
     '/privacy-policy': { en: '/privacy-policy', es: '/politica-de-privacidad' },

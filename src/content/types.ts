@@ -9,13 +9,19 @@
  */
 import type { ProductKey } from '@/config/products';
 import type { CitySlug } from '@/config/cities';
+import type { GuideKey } from '@/config/guides';
 
 export type Block =
   | { type: 'p'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
   | { type: 'h3'; text: string }
-  | { type: 'callout'; tone: 'info' | 'warning'; title: string; text: string };
+  | { type: 'callout'; tone: 'info' | 'warning'; title: string; text: string }
+  /**
+   * Data table. `head` labels the columns; the first cell of each row is its row header.
+   * Cells take inline formatting.
+   */
+  | { type: 'table'; caption: string; head: string[]; rows: string[][] };
 
 export type Section = { id: string; heading: string; blocks: Block[] };
 
@@ -46,6 +52,12 @@ export type GuideContent = {
   lede: string;
   sections: Section[];
   faqs: Faq[];
+};
+
+export type GuidesHubContent = {
+  h1: string;
+  lede: string;
+  sections: Section[];
 };
 
 export type AgentContent = {
@@ -98,6 +110,8 @@ export type SiteContent = {
   cities: Record<CitySlug, CityContent>;
   aep: GuideContent;
   scam: GuideContent;
+  guides: Record<GuideKey, GuideContent>;
+  guidesHub: GuidesHubContent;
   about: AboutContent;
   agents: Record<string, AgentContent>;
   serviceArea: AreaHubContent;

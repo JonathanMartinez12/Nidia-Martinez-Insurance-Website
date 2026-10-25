@@ -4,6 +4,8 @@ import es from '@/content/es';
 import { pages } from '@/config/pages';
 import { productKeys } from '@/config/products';
 import { cityPages } from '@/config/cities';
+import { guides } from '@/config/guides';
+import { agents } from '@/config/site';
 import type { Block, SiteContent } from '@/content/types';
 import { faqsText, sectionsText, similarity, wordCount } from './helpers';
 
@@ -77,6 +79,56 @@ describe('city pages', () => {
         }
       }
     });
+  }
+});
+
+/** Content modules keyed by the page id they render on. */
+function contentByPage(content: SiteContent): Record<string, unknown> {
+  return {
+    home: content.home,
+    ...Object.fromEntries(productKeys.map((k) => [`service-${k}`, content.services[k]])),
+    aep: content.aep,
+    scam: content.scam,
+    about: content.about,
+    ...Object.fromEntries(agents.map((a) => [`agent-${a.slug}`, content.agents[a.slug]])),
+    'service-area': content.serviceArea,
+    ...Object.fromEntries(cityPages.map((c) => [`city-${c.slug}`, content.cities[c.slug]])),
+    guides: content.guidesHub,
+    ...Object.fromEntries(guides.map((g) => [`guide-${g.key}`, content.guides[g.key]])),
+    faq: content.faq,
+    contact: content.contact,
+  };
+}
+
+/** Distinct other pages whose body copy links to `target` with a `page:` link. */
+function inboundSources(content: SiteContent, target: string): string[] {
+  return Object.entries(contentByPage(content))
+    .filter(([id, body]) => id !== target && JSON.stringify(body).includes(`](page:${target})`))
+    .map(([id]) => id);
+}
+
+/** Word-count range (h1 + lede + sections + FAQs) per guide. */
+const guideWords: Record<string, [number, number]> = {
+  'medicare-office': [1000, 1400],
+};
+
+describe('guides', () => {
+  for (const [locale, content] of Object.entries(locales)) {
+    for (const g of guides) {
+      it(`${locale} ${g.key}: word count in range, ≥3 FAQs`, () => {
+        const c = content.guides[g.key];
+        const words = wordCount([c.h1, c.lede, ...sectionsText(c.sections), ...faqsText(c.faqs)]);
+        const [min, max] = guideWords[g.key]!;
+        expect(words).toBeGreaterThanOrEqual(min);
+        expect(words).toBeLessThanOrEqual(max);
+        expect(c.faqs.length).toBeGreaterThanOrEqual(3);
+      });
+
+      it(`${locale} ${g.key}: ≥3 contextual inbound links`, () => {
+        const sources = inboundSources(content, `guide-${g.key}`);
+        expect(sources.length, sources.join(', ')).toBeGreaterThanOrEqual(3);
+      });
+    }
   }
 });
 

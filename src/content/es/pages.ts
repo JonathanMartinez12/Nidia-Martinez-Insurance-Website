@@ -175,7 +175,7 @@ export const scam: GuideContent = {
           type: 'callout',
           tone: 'warning',
           title: 'Nuestro consejo para todos nuestros clientes',
-          text: 'Desconfíe de las llamadas, mensajes de texto o correos sobre Medicare que usted no haya pedido. Nunca dé información personal por teléfono a alguien que no conoce. No se inscriba por teléfono con un desconocido: mejor llámenos a nosotros.',
+          text: 'Desconfíe de las llamadas, mensajes de texto o correos sobre Medicare que usted no haya pedido. Nunca dé información personal por teléfono a alguien que no conoce. No se inscriba por teléfono con un desconocido: mejor llámenos a nosotros. ¿No sabe a quién llamar? Vea [dónde recibir ayuda real con Medicare cerca de usted](page:guide-medicare-office).',
         },
       ],
     },
@@ -614,7 +614,7 @@ export const home: HomeContent = {
     },
     {
       q: '¿Trabajan para Medicare?',
-      a: 'No. Martinez Insurance Solutions es una agencia de seguros privada con licencia. No somos Medicare ni ninguna agencia del gobierno. Para hablar con Medicare, llame al 1-800-MEDICARE o visite [Medicare.gov](https://es.medicare.gov). Nosotros le ayudamos a comparar e inscribirse en planes privados, como Medicare Advantage, Medicare Suplementario y la Parte D.',
+      a: 'No. Martinez Insurance Solutions es una agencia de seguros privada con licencia. No somos Medicare ni ninguna agencia del gobierno. Para hablar con Medicare, llame al 1-800-MEDICARE o visite [Medicare.gov](https://es.medicare.gov). Nosotros le ayudamos a comparar e inscribirse en planes privados, como Medicare Advantage, Medicare Suplementario y la Parte D. Vea [dónde recibir ayuda de Medicare cerca de usted](page:guide-medicare-office).',
     },
     {
       q: '¿Puedo reunirme en persona con un agente de Medicare cerca de mí?',
@@ -661,6 +661,16 @@ export const contact: ContactPageContent = {
             'Sus médicos, especialistas y farmacia de preferencia',
             'Su Aviso Anual de Cambios, si lo recibió',
           ],
+        },
+      ],
+    },
+    {
+      id: 'medicare-office',
+      heading: '¿Busca una oficina de Medicare?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Somos una agencia de seguros privada con licencia, no Medicare ni el Seguro Social. Para inscribirse en la Parte A y la Parte B, reponer su tarjeta de Medicare o preguntar por un reclamo, lea nuestra guía: [¿Hay una oficina de Medicare cerca de mí en Nueva Orleans?](page:guide-medicare-office)',
         },
       ],
     },

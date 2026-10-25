@@ -175,7 +175,7 @@ export const scam: GuideContent = {
           type: 'callout',
           tone: 'warning',
           title: 'Our advice to every client',
-          text: "Be cautious of unsolicited calls, texts or emails about Medicare. Never give personal information over the phone to someone you don't know. Don't enroll over the phone with a stranger — call us instead.",
+          text: "Be cautious of unsolicited calls, texts or emails about Medicare. Never give personal information over the phone to someone you don't know. Don't enroll over the phone with a stranger — call us instead. Not sure who to call? See [where to get real Medicare help near you](page:guide-medicare-office).",
         },
       ],
     },
@@ -614,7 +614,7 @@ export const home: HomeContent = {
     },
     {
       q: 'Do you work for Medicare?',
-      a: "No. Martinez Insurance Solutions is a licensed private insurance agency. We are not Medicare or any government agency. For Medicare itself, call 1-800-MEDICARE or visit [Medicare.gov](https://www.medicare.gov). We help you compare and enroll in private plans, like Medicare Advantage, Medicare Supplement and Part D.",
+      a: "No. Martinez Insurance Solutions is a licensed private insurance agency. We are not Medicare or any government agency. For Medicare itself, call 1-800-MEDICARE or visit [Medicare.gov](https://www.medicare.gov). We help you compare and enroll in private plans, like Medicare Advantage, Medicare Supplement and Part D. See [where to get help from Medicare near you](page:guide-medicare-office).",
     },
     {
       q: 'Can I meet with a Medicare agent near me in person?',
@@ -661,6 +661,16 @@ export const contact: ContactPageContent = {
             'Your doctors, specialists and preferred pharmacy',
             'Your Annual Notice of Change, if you received one',
           ],
+        },
+      ],
+    },
+    {
+      id: 'medicare-office',
+      heading: 'Looking for a Medicare office?',
+      blocks: [
+        {
+          type: 'p',
+          text: "We are a licensed private insurance agency, not Medicare or Social Security. To sign up for Part A and Part B, replace a Medicare card or ask about a claim, read our guide: [Is there a Medicare office near me in New Orleans?](page:guide-medicare-office)",
         },
       ],
     },

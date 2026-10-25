@@ -53,6 +53,21 @@ const ALLOWED: Record<string, { required: string[]; allowed: string[] }> = {
     required: ['name', 'provider'],
     allowed: ['name', 'serviceType', 'description', 'url', 'provider', 'areaServed', 'audience'],
   },
+  Article: {
+    required: ['headline', 'author', 'publisher', 'datePublished', 'dateModified'],
+    allowed: [
+      'headline',
+      'description',
+      'url',
+      'mainEntityOfPage',
+      'image',
+      'datePublished',
+      'dateModified',
+      'author',
+      'publisher',
+      'inLanguage',
+    ],
+  },
   FAQPage: { required: ['mainEntity'], allowed: ['mainEntity', 'name', 'url', 'inLanguage'] },
   Question: { required: ['name', 'acceptedAnswer'], allowed: ['name', 'acceptedAnswer', 'text'] },
   Answer: { required: ['text'], allowed: ['text'] },
@@ -76,7 +91,7 @@ const ALLOWED: Record<string, { required: string[]; allowed: string[] }> = {
   },
 };
 
-const URL_PROPS = new Set(['url', 'item', 'logo', 'image', '@id', 'sameAs']);
+const URL_PROPS = new Set(['url', 'item', 'logo', 'image', '@id', 'sameAs', 'mainEntityOfPage']);
 
 export function validateJsonLd(data: unknown): string[] {
   const errors: string[] = [];

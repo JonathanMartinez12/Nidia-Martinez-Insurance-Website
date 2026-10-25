@@ -4,10 +4,11 @@ import { getTranslations } from 'next-intl/server';
 import { getContent } from '@/content';
 import { agents } from '@/config/site';
 import { getPage } from '@/config/pages';
+import { legacyGuideDates } from '@/config/guides';
 import { pageLocale, type LocaleParams } from '@/lib/page';
-import { pageMetadata } from '@/lib/seo';
+import { metaValues, pageMetadata } from '@/lib/seo';
 import { telHref } from '@/lib/phone';
-import { localizedUrl } from '@/lib/urls';
+import { localizedPath, localizedUrl } from '@/lib/urls';
 import { GuidePage } from '@/components/pages/GuidePage';
 import { PrintButton } from '@/components/ui/PrintButton';
 
@@ -19,6 +20,8 @@ export default async function ScamPage({ params }: LocaleParams) {
   const locale = await pageLocale(params);
   const t = await getTranslations({ locale, namespace: 'ScamPage' });
   const th = await getTranslations({ locale, namespace: 'Header' });
+  const tg = await getTranslations({ locale, namespace: 'Guides' });
+  const tm = await getTranslations({ locale, namespace: 'Meta' });
   const content = getContent(locale).scam;
   const url = localizedUrl(locale, getPage('scam').href);
   const mailto = `mailto:?subject=${encodeURIComponent(t('shareSubject'))}&body=${encodeURIComponent(`${t('shareBody')}\n\n${url}`)}`;
@@ -29,6 +32,8 @@ export default async function ScamPage({ params }: LocaleParams) {
       pageId="scam"
       content={content}
       crumbName={th('scam')}
+      parentCrumb={{ name: tg('hub'), path: localizedPath(locale, getPage('guides').href) }}
+      article={{ ...legacyGuideDates.scam, description: tm('scam.description', metaValues()) }}
       eyebrow={t('eyebrow')}
       faqHeading={t('faqHeading')}
       intro={

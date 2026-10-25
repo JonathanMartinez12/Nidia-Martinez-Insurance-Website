@@ -10,6 +10,8 @@ export function blockText(b: Block): string[] {
       return b.items;
     case 'callout':
       return [b.title, b.text];
+    case 'table':
+      return [b.caption, ...b.head, ...b.rows.flat()];
   }
 }
 

@@ -125,6 +125,16 @@
     "notFound": {
       "title": "Page Not Found | Martinez Insurance Solutions",
       "description": "We couldn't find that page. Call {phone} or use the links on this page to find Medicare help."
+    },
+    "guidesHub": {
+      "title": "Medicare Guides for Louisiana | Martinez Insurance Solutions",
+      "description": "Plain-language Medicare guides for Louisiana: where to get help near you, plans for diabetes and heart conditions, and what to do when you turn 65."
+    },
+    "guides": {
+      "medicare-office": {
+        "title": "Medicare Office Near Me in New Orleans? Where to Get Help | Martinez Insurance Solutions",
+        "description": "Medicare doesn't have walk-in offices. Here's where New Orleans and Metairie residents get help: Social Security, 1-800-MEDICARE, SHIIP and local agents."
+      }
     }
   },
   "Common": {
@@ -173,6 +183,7 @@
     "medicarePlans": "Medicare plans",
     "otherCoverage": "More coverage",
     "resources": "Resources",
+    "guides": "Medicare Guides",
     "aep": "Annual Enrollment",
     "scam": "Scam Protection",
     "faq": "Medicare FAQ",
@@ -486,5 +497,13 @@
     "johnDesk": "John Martinez at his desk in the Martinez Insurance Solutions office",
     "office": "The Martinez Insurance Solutions office in Metairie, with chairs ready for clients",
     "caption": "In our Metairie office"
+  },
+  "Guides": {
+    "hub": "Guides",
+    "eyebrow": "Medicare guide",
+    "faqHeading": "Common questions",
+    "reviewedBy": "Reviewed by <link>{name}</link>, Licensed Insurance Agent",
+    "updated": "Updated {date}",
+    "readGuide": "Read the guide"
   }
 }

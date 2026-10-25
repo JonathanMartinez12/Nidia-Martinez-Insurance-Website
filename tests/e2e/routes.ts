@@ -45,8 +45,10 @@ export const abs = (path: string) => (path === '/' ? BASE : `${BASE}${path}`);
 export const expectedTypes: Record<PageKind, string[]> = {
   home: ['InsuranceAgency', 'WebSite', 'FAQPage'],
   service: ['InsuranceAgency', 'Service', 'FAQPage', 'BreadcrumbList'],
-  aep: ['InsuranceAgency', 'FAQPage', 'BreadcrumbList'],
-  scam: ['InsuranceAgency', 'FAQPage', 'BreadcrumbList'],
+  aep: ['InsuranceAgency', 'Article', 'FAQPage', 'BreadcrumbList'],
+  scam: ['InsuranceAgency', 'Article', 'FAQPage', 'BreadcrumbList'],
+  guides: ['InsuranceAgency', 'BreadcrumbList'],
+  guide: ['InsuranceAgency', 'Article', 'FAQPage', 'BreadcrumbList'],
   about: ['InsuranceAgency', 'Person', 'BreadcrumbList'],
   agent: ['InsuranceAgency', 'Person', 'BreadcrumbList'],
   'service-area': ['InsuranceAgency', 'BreadcrumbList'],

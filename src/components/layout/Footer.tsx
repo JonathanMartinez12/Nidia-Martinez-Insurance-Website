@@ -122,6 +122,11 @@ export async function Footer({ locale }: { locale: AppLocale }) {
               <h2 className={heading}>{t('resourcesHeading')}</h2>
               <ul className="mt-3 space-y-1">
                 <li>
+                  <Link href="/guides" className={link}>
+                    {th('guides')}
+                  </Link>
+                </li>
+                <li>
                   <Link href="/annual-enrollment-period" className={link}>
                     {th('aep')}
                   </Link>

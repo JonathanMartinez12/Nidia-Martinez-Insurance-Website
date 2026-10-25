@@ -37,6 +37,7 @@ export async function Header({ locale, alternatePath }: { locale: AppLocale; alt
   };
 
   const resources = [
+    { href: '/guides' as const, label: t('guides') },
     { href: '/annual-enrollment-period' as const, label: t('aep') },
     { href: '/medicare-scam-protection' as const, label: t('scam') },
     { href: '/faq' as const, label: t('faq') },

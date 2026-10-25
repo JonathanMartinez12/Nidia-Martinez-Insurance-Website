@@ -5,6 +5,7 @@
 import { agents } from './site';
 import { cityPages } from './cities';
 import { productKeys, type ProductKey } from './products';
+import { guides } from './guides';
 import type { AppPathname } from '@/i18n/routing';
 
 export type StaticPathname = Exclude<AppPathname, '/about/[agent]' | '/service-area/[city]'>;
@@ -15,7 +16,19 @@ export type AppHref =
   | { pathname: '/service-area/[city]'; params: { city: string } };
 
 export type PageKind =
-  'home' | 'service' | 'aep' | 'scam' | 'about' | 'agent' | 'service-area' | 'city' | 'faq' | 'contact' | 'legal';
+  | 'home'
+  | 'service'
+  | 'aep'
+  | 'scam'
+  | 'about'
+  | 'agent'
+  | 'service-area'
+  | 'city'
+  | 'guides'
+  | 'guide'
+  | 'faq'
+  | 'contact'
+  | 'legal';
 
 export type PageEntry = {
   /** Stable id, also the OG image key. */
@@ -24,6 +37,8 @@ export type PageEntry = {
   href: AppHref;
   /** Key under `Meta` in the message files. */
   metaKey: string;
+  /** ISO date the page's content last changed (sitemap lastmod); defaults to `site.contentLastReviewed`. */
+  lastModified?: string;
 };
 
 const servicePages: PageEntry[] = productKeys.map((key: ProductKey) => ({
@@ -51,6 +66,20 @@ export const pages: PageEntry[] = [
     kind: 'city',
     href: { pathname: '/service-area/[city]', params: { city: c.slug } },
     metaKey: `cities.${c.slug}`,
+  })),
+  {
+    id: 'guides',
+    kind: 'guides',
+    href: { pathname: '/guides' },
+    metaKey: 'guidesHub',
+    lastModified: guides.map((g) => g.modified).sort().at(-1),
+  },
+  ...guides.map((g): PageEntry => ({
+    id: `guide-${g.key}`,
+    kind: 'guide',
+    href: { pathname: g.pathname },
+    metaKey: `guides.${g.key}`,
+    lastModified: g.modified,
   })),
   { id: 'faq', kind: 'faq', href: { pathname: '/faq' }, metaKey: 'faq' },
   { id: 'contact', kind: 'contact', href: { pathname: '/contact' }, metaKey: 'contact' },

@@ -3,9 +3,12 @@ import { Phone } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { getContent } from '@/content';
 import { site } from '@/config/site';
+import { getPage } from '@/config/pages';
+import { legacyGuideDates } from '@/config/guides';
 import { getEnrollmentStatus } from '@/lib/enrollment';
 import { pageLocale, type LocaleParams } from '@/lib/page';
-import { pageMetadata } from '@/lib/seo';
+import { metaValues, pageMetadata } from '@/lib/seo';
+import { localizedPath } from '@/lib/urls';
 import { telHref } from '@/lib/phone';
 import { btn } from '@/components/ui/styles';
 import { GuidePage } from '@/components/pages/GuidePage';
@@ -22,6 +25,8 @@ export default async function AepPage({ params }: LocaleParams) {
   const locale = await pageLocale(params);
   const t = await getTranslations({ locale, namespace: 'AepPage' });
   const th = await getTranslations({ locale, namespace: 'Header' });
+  const tg = await getTranslations({ locale, namespace: 'Guides' });
+  const tm = await getTranslations({ locale, namespace: 'Meta' });
   const tc = await getTranslations({ locale, namespace: 'Common' });
   const status = getEnrollmentStatus();
   const content = getContent(locale).aep;
@@ -38,6 +43,8 @@ export default async function AepPage({ params }: LocaleParams) {
       pageId="aep"
       content={content}
       crumbName={th('aep')}
+      parentCrumb={{ name: tg('hub'), path: localizedPath(locale, getPage('guides').href) }}
+      article={{ ...legacyGuideDates.aep, description: tm('aep.description', metaValues()) }}
       eyebrow={t('eyebrow')}
       faqHeading={t('faqHeading')}
       beforeCta={<CarrierStrip locale={locale} variant="band" />}

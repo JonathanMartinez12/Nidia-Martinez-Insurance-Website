@@ -87,3 +87,23 @@ test('titles and descriptions are unique across the whole site', async ({ reques
     descriptions.set(description, r.path);
   }
 });
+
+test.describe('Guides: reviewed-by byline matches Article schema', () => {
+  for (const r of routes.filter((x) => x.kind === 'guide' || x.kind === 'aep' || x.kind === 'scam')) {
+    test(`${r.locale} ${r.path}`, async ({ page }) => {
+      await page.goto(r.path);
+      const byline = page.getByTestId('reviewed-by');
+      await expect(byline).toContainText('Nidia Martinez');
+      const profile = r.locale === 'en' ? '/about/nidia-martinez' : '/es/sobre-nosotros/nidia-martinez';
+      await expect(byline.locator('a')).toHaveAttribute('href', profile);
+      const modified = await byline.locator('time').getAttribute('datetime');
+
+      const blocks = await page.locator('script[type="application/ld+json"]').allTextContents();
+      const article = blocks.map((b) => JSON.parse(b) as Record<string, unknown>).find((d) => d['@type'] === 'Article');
+      expect(article, 'Article JSON-LD').toBeTruthy();
+      expect(article!.dateModified).toBe(modified);
+      expect((article!.author as { '@id': string })['@id']).toBe(`${abs(profile)}#person`);
+      expect((article!.publisher as { '@id': string })['@id']).toMatch(/\/#agency$/);
+    });
+  }
+});

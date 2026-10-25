@@ -125,6 +125,16 @@
     "notFound": {
       "title": "Página no encontrada | Martinez Insurance Solutions",
       "description": "No encontramos esa página. Llame al {phone} o use los enlaces de esta página para encontrar ayuda con Medicare."
+    },
+    "guidesHub": {
+      "title": "Guías de Medicare para Luisiana | Martinez Insurance Solutions",
+      "description": "Guías de Medicare en palabras sencillas para Luisiana: dónde recibir ayuda cerca de usted, planes para diabetes y el corazón, y qué hacer al cumplir 65."
+    },
+    "guides": {
+      "medicare-office": {
+        "title": "¿Oficina de Medicare cerca de mí? Dónde recibir ayuda | Martinez Insurance Solutions",
+        "description": "Medicare no tiene oficinas sin cita. Dónde recibir ayuda en Nueva Orleans y Metairie: Seguro Social, 1-800-MEDICARE, SHIIP y agentes locales."
+      }
     }
   },
   "Common": {
@@ -173,6 +183,7 @@
     "medicarePlans": "Planes de Medicare",
     "otherCoverage": "Otras coberturas",
     "resources": "Recursos",
+    "guides": "Guías de Medicare",
     "aep": "Inscripción Anual",
     "scam": "Protección contra fraudes",
     "faq": "Preguntas sobre Medicare",
@@ -486,5 +497,13 @@
     "johnDesk": "John Martinez en su escritorio de la oficina de Martinez Insurance Solutions",
     "office": "La oficina de Martinez Insurance Solutions en Metairie, con sillas listas para recibir a los clientes",
     "caption": "En nuestra oficina de Metairie"
+  },
+  "Guides": {
+    "hub": "Guías",
+    "eyebrow": "Guía de Medicare",
+    "faqHeading": "Preguntas frecuentes",
+    "reviewedBy": "Revisado por <link>{name}</link>, agente de seguros con licencia",
+    "updated": "Actualizado el {date}",
+    "readGuide": "Leer la guía"
   }
 }

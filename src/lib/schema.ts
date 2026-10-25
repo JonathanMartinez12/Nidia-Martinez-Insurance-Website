@@ -5,7 +5,7 @@
  * Rules: never emit Review/AggregateRating unless real reviews exist in config; omit
  * address/hours while they are TODO; FAQ schema only mirrors FAQs visible on the page.
  */
-import type { BreadcrumbList, FAQPage, InsuranceAgency, Person, Service, WebSite, WithContext } from 'schema-dts';
+import type { Article, BreadcrumbList, FAQPage, InsuranceAgency, Person, Service, WebSite, WithContext } from 'schema-dts';
 import { agents, getSiteUrl, site, type Agent } from '@/config/site';
 import type { AppLocale } from '@/i18n/routing';
 import { absoluteUrl, hreflangCode } from './urls';
@@ -122,6 +122,43 @@ export function serviceSchema(opts: {
     url: opts.url,
     provider: { '@type': 'InsuranceAgency', '@id': agencyId(), name: site.name },
     areaServed: louisiana,
+  };
+}
+
+/**
+ * Article for long-form guides: written/reviewed by an agent (Person @id from their profile
+ * page), published by the agency. Dates are ISO `YYYY-MM-DD`.
+ */
+export function articleSchema(opts: {
+  locale: AppLocale;
+  headline: string;
+  description: string;
+  url: string;
+  /** Absolute URL of the page's social image. */
+  image: string;
+  datePublished: string;
+  dateModified: string;
+  author: Agent;
+  authorProfileUrl: string;
+}): WithContext<Article> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: opts.headline,
+    description: opts.description,
+    url: opts.url,
+    mainEntityOfPage: opts.url,
+    image: opts.image,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    inLanguage: hreflangCode[opts.locale],
+    author: {
+      '@type': 'Person',
+      '@id': personId(opts.author, opts.authorProfileUrl),
+      name: opts.author.name,
+      url: opts.authorProfileUrl,
+    },
+    publisher: { '@type': 'InsuranceAgency', '@id': agencyId(), name: site.name },
   };
 }
 
