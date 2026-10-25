@@ -97,6 +97,8 @@ export type AreaHubContent = {
 export type HomeContent = {
   /** "Why work with a local Medicare agent?" section. */
   why: Section;
+  /** "Spanish-speaking Medicare agents near you" section. */
+  spanish: Section;
   faqs: Faq[];
 };
 

@@ -584,6 +584,25 @@ export const faq: FaqPageContent = {
 };
 
 export const home: HomeContent = {
+  spanish: {
+    id: 'spanish-speaking-agents',
+    heading: 'Agentes de Medicare que hablan español, cerca de usted',
+    blocks: [
+      {
+        type: 'ul',
+        items: [
+          '**En persona en Metairie:** siéntese con nosotros en nuestra oficina de Veterans Boulevard, con cita previa.',
+          '**Por teléfono desde cualquier parte de Luisiana:** revisamos sus opciones por teléfono, viva donde viva.',
+          '**Completamente en español:** Nidia y John hablan español, así que cada conversación puede ser en el idioma que usted prefiera.',
+          '**Su familia es bienvenida:** sus hijos o quien le cuida siempre pueden acompañarle.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Todas nuestras guías están en español: [¿hay una oficina de Medicare cerca de mí?](page:guide-medicare-office), [planes de Medicare para diabetes y enfermedades del corazón](page:guide-diabetes-heart-snp) y [cumplir 65 en Luisiana](page:guide-turning-65). Vea [todas nuestras guías de Medicare](page:guides).',
+      },
+    ],
+  },
   why: {
     id: 'why-local-agent',
     heading: '¿Por qué trabajar con un agente de Medicare local?',
@@ -629,6 +648,18 @@ export const home: HomeContent = {
       q: '¿Es el gobierno o Medicare quien me llama?',
       a: 'No, y Medicare no le llamará sin que usted lo pida para solicitarle su número. Somos agentes con licencia, no el gobierno. Aprenda a [evitar fraudes de Medicare](page:scam).',
     },
+    {
+      q: '¿Hay agentes de seguros de Medicare cerca de mí que hablen español?',
+      a: 'Sí. Nuestros dos agentes con licencia hablan español. Puede reunirse con nosotros en persona en Metairie o por teléfono desde cualquier parte de Luisiana, y toda su cita puede ser en español.',
+    },
+    {
+      q: '¿Son agentes de Medicare Advantage y de suplementos de Medicare?',
+      a: 'Sí. Somos agentes de Medicare Advantage y agentes de suplementos de Medicare, y también le ayudamos con planes de medicamentos de la Parte D. Comparamos planes de varias compañías para que vea sus opciones lado a lado, cerca de usted.',
+    },
+    {
+      q: '¿Qué es un corredor de seguros de Medicare?',
+      a: 'Un corredor de seguros, o agente independiente, tiene licencia para vender planes de más de una compañía de seguros. Eso nos permite comparar varias compañías para usted en lugar de ofrecerle solo una, sin costo para usted.',
+    },
   ],
 };
 
@@ -636,6 +667,21 @@ export const contact: ContactPageContent = {
   h1: 'Contáctenos para una consulta gratis sobre Medicare',
   lede: 'Llámenos o envíenos un mensaje breve. Buscaremos un momento para conversar —en persona o por teléfono, en español o en inglés—, sin costo para usted.',
   sections: [
+    {
+      id: 'spanish-speaking-agents',
+      heading: 'Agentes de Medicare que hablan español, cerca de usted',
+      blocks: [
+        {
+          type: 'ul',
+          items: [
+            '**En persona en Metairie:** visítenos en nuestra oficina de Veterans Boulevard, con cita previa.',
+            '**Por teléfono desde cualquier parte de Luisiana:** desde Baton Rouge hasta Slidell, podemos hacer toda su revisión por teléfono.',
+            '**Completamente en español:** nuestros dos agentes hablan español con fluidez, desde la primera llamada hasta la inscripción y cada pregunta después.',
+            '**Su familia es bienvenida:** traiga a su hijo, hija o a quien le cuida, en persona o en la llamada.',
+          ],
+        },
+      ],
+    },
     {
       id: 'what-happens-next',
       heading: 'Qué sucede después de comunicarse con nosotros',

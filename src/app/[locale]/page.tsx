@@ -46,6 +46,7 @@ export default async function HomePage({ params }: LocaleParams) {
       <ScamWarning locale={locale} />
       <HowItWorks locale={locale} />
       <OfficeSection locale={locale} />
+      <WhyLocalAgent section={home.spanish} locale={locale} />
       <section aria-labelledby="faq-teaser" className="py-16 sm:py-20 lg:py-24">
         <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.6fr]">
           <div>

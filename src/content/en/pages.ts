@@ -584,6 +584,25 @@ export const faq: FaqPageContent = {
 };
 
 export const home: HomeContent = {
+  spanish: {
+    id: 'spanish-speaking-agents',
+    heading: 'Spanish-speaking Medicare agents near you',
+    blocks: [
+      {
+        type: 'ul',
+        items: [
+          '**In person in Metairie:** sit down with us at our office on Veterans Boulevard, by appointment.',
+          '**By phone anywhere in Louisiana:** we review your options over the phone, wherever you live.',
+          '**Entirely in Spanish:** Nidia and John both speak Spanish, so every conversation can be in the language you prefer.',
+          '**Family welcome:** children and caregivers are always welcome to join.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Every guide on our site is also in Spanish: [is there a Medicare office near me?](page:guide-medicare-office), [Medicare plans for diabetes and heart disease](page:guide-diabetes-heart-snp) and [turning 65 in Louisiana](page:guide-turning-65). See [all our Medicare guides](page:guides).',
+      },
+    ],
+  },
   why: {
     id: 'why-local-agent',
     heading: 'Why work with a local Medicare agent?',
@@ -629,6 +648,18 @@ export const home: HomeContent = {
       q: 'Is this the government or Medicare calling?',
       a: "No — and Medicare won't call you uninvited to ask for your number. We're licensed agents, not the government. Learn how to [avoid Medicare scams](page:scam).",
     },
+    {
+      q: 'Are there Spanish-speaking Medicare agents near me?',
+      a: 'Yes. Both of our licensed agents speak Spanish. You can meet with us in person in Metairie or by phone anywhere in Louisiana, and your whole appointment can be in Spanish.',
+    },
+    {
+      q: 'Do you help with both Medicare Advantage and Medicare Supplement plans?',
+      a: 'Yes. We are Medicare Advantage agents and Medicare Supplement agents, and we also help with Part D drug plans. We compare plans from several companies, so you can see your options side by side.',
+    },
+    {
+      q: 'What is a Medicare insurance broker?',
+      a: 'A broker, or independent agent, is licensed to sell plans from more than one insurance company. That lets us compare several companies for you instead of offering just one, at no cost to you.',
+    },
   ],
 };
 
@@ -636,6 +667,21 @@ export const contact: ContactPageContent = {
   h1: 'Contact Us for a Free Medicare Consultation',
   lede: "Call us or send a short message. We'll set up a time to talk — in person or by phone, in English or Spanish — at no cost to you.",
   sections: [
+    {
+      id: 'spanish-speaking-agents',
+      heading: 'Spanish-speaking Medicare agents near you',
+      blocks: [
+        {
+          type: 'ul',
+          items: [
+            '**In person in Metairie:** meet us at our office on Veterans Boulevard, by appointment.',
+            '**By phone anywhere in Louisiana:** from Baton Rouge to Slidell, we can do your whole review over the phone.',
+            '**Entirely in Spanish:** both of our agents are fluent, from the first call to enrollment and every question after.',
+            '**Family welcome:** bring a son, daughter or caregiver, in person or on the call.',
+          ],
+        },
+      ],
+    },
     {
       id: 'what-happens-next',
       heading: 'What happens after you reach out',
