@@ -604,7 +604,7 @@ export const home: HomeContent = {
       },
       {
         type: 'p',
-        text: 'We help people across Greater New Orleans. Read more about [Medicare Advantage plans in New Orleans](page:city-new-orleans) and [Medicare help in Metairie](page:city-metairie), or see [every area we serve](page:service-area).',
+        text: 'We help people across Greater New Orleans. Read more about [Medicare Advantage plans in New Orleans](page:city-new-orleans) and [Medicare help in Metairie](page:city-metairie), or see [every area we serve](page:service-area). Turning 65 soon? Start with our [turning-65 Medicare checklist](page:guide-turning-65).',
       },
     ],
   },

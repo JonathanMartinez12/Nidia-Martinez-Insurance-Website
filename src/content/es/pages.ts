@@ -604,7 +604,7 @@ export const home: HomeContent = {
       },
       {
         type: 'p',
-        text: 'Ayudamos a personas en toda el área de Nueva Orleans, cerca de usted. Lea sobre los [planes Medicare Advantage en Nueva Orleans](page:city-new-orleans) y la [ayuda con Medicare en Metairie](page:city-metairie), o vea [todas las zonas que atendemos](page:service-area).',
+        text: 'Ayudamos a personas en toda el área de Nueva Orleans, cerca de usted. Lea sobre los [planes Medicare Advantage en Nueva Orleans](page:city-new-orleans) y la [ayuda con Medicare en Metairie](page:city-metairie), o vea [todas las zonas que atendemos](page:service-area). ¿Va a cumplir 65? Empiece con nuestra [lista de pasos de Medicare al cumplir 65](page:guide-turning-65).',
       },
     ],
   },

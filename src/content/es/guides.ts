@@ -45,7 +45,7 @@ const medicareOffice: GuideContent = {
         },
         {
           type: 'p',
-          text: 'Hay oficinas del Seguro Social que atienden el área de Nueva Orleans, pero sus direcciones y horarios pueden cambiar. Antes de ir, busque la oficina que corresponde a su código postal con el [localizador de oficinas](https://www.ssa.gov/locator) del Seguro Social. Si desea una cita, Medicare sugiere comunicarse con el Seguro Social unos 3 meses antes de cumplir 65 años.',
+          text: 'Hay oficinas del Seguro Social que atienden el área de Nueva Orleans, pero sus direcciones y horarios pueden cambiar. Antes de ir, busque la oficina que corresponde a su código postal con el [localizador de oficinas](https://www.ssa.gov/locator) del Seguro Social. Si desea una cita, Medicare sugiere comunicarse con el Seguro Social unos 3 meses antes de cumplir 65 años. Nuestra [lista de pasos de Medicare al cumplir 65](page:guide-turning-65) repasa cada plazo.',
         },
         { type: 'h3', text: 'Qué trámites hace el Seguro Social' },
         {
@@ -460,9 +460,205 @@ const diabetesHeartSnp: GuideContent = {
   ],
 };
 
+/* Fuentes: ver turning65 en src/content/en/guides.ts (Medicare.gov, verificadas el 2026-10-25). */
+const turning65: GuideContent = {
+  h1: 'Cumplir 65 en Luisiana: su lista de pasos para Medicare',
+  lede: 'Cumplir 65 trae plazos que es fácil pasar por alto. Aquí le explicamos cuándo inscribirse, cómo evitar multas de por vida, cómo elegir su cobertura y dónde recibir ayuda gratis cerca de usted en Metairie y Nueva Orleans.',
+  sections: [
+    {
+      id: 'when-to-sign-up',
+      heading: '¿Cuándo puedo inscribirme en Medicare al cumplir 65?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Durante su **Período de Inscripción Inicial**, un plazo de 7 meses que empieza 3 meses antes del mes en que cumple 65, incluye el mes de su cumpleaños y termina 3 meses después. Por ejemplo, si cumple 65 el 2 de junio, su plazo va de marzo a septiembre. Si su cumpleaños es el día 1 del mes, el plazo empieza y termina un mes antes.',
+        },
+        {
+          type: 'p',
+          text: 'Si se inscribe en los primeros 3 meses, su cobertura normalmente empieza el primer día del mes de su cumpleaños. Si se inscribe en el mes de su cumpleaños o después, la cobertura empieza el primer día del mes siguiente a su inscripción, así que inscribirse temprano evita quedarse sin cobertura.',
+        },
+      ],
+    },
+    {
+      id: 'automatic-enrollment',
+      heading: '¿Me inscribirán en Medicare automáticamente?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Sí, si ya recibe beneficios del Seguro Social o de la Junta de Retiro Ferroviario. Tendrá la Parte A y la Parte B a partir del mes en que cumple 65, y su tarjeta de Medicare roja, blanca y azul llegará por correo unos 3 meses antes de su cumpleaños. En ese caso, la Parte A normalmente no tiene prima.',
+        },
+        {
+          type: 'p',
+          text: 'La mayoría de las personas conserva la Parte B. Si tiene otra cobertura y todavía no quiere la Parte B, debe avisar al Seguro Social antes de la fecha de inicio que aparece en su tarjeta; si no hace nada, la conserva y la prima se descuenta de su beneficio. Si todavía no recibe beneficios, tiene que inscribirse usted mismo.',
+        },
+      ],
+    },
+    {
+      id: 'how-to-sign-up',
+      heading: '¿Cómo me inscribo en la Parte A y la Parte B en Luisiana?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'A través del Seguro Social. La forma más rápida es en línea, en [SSA.gov/medicare/sign-up](https://www.ssa.gov/medicare/sign-up). También puede llamar al Seguro Social al 1-800-772-1213 (TTY 1-800-325-0778) o comunicarse con su oficina local del Seguro Social. Si quiere una cita, llame unos 3 meses antes de cumplir 65.',
+        },
+        {
+          type: 'p',
+          text: 'Medicare no tiene oficinas locales sin cita. Nuestra guía para [encontrar una oficina de Medicare cerca de usted en Nueva Orleans](page:guide-medicare-office) explica quién hace qué.',
+        },
+      ],
+    },
+    {
+      id: 'still-working',
+      heading: '¿Qué pasa si sigo trabajando a los 65?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Si usted o su cónyuge tienen cobertura médica por un **trabajo actual**, quizás pueda esperar para inscribirse en la Parte B sin multa. Puede inscribirse en cualquier momento mientras tenga esa cobertura, o durante los 8 meses después de que termine el empleo o la cobertura, lo que ocurra primero. COBRA y la cobertura de jubilados no son cobertura de un trabajo actual, así que no cuente con ellas para retrasar la Parte B.',
+        },
+        {
+          type: 'ul',
+          items: [
+            '**Pregunte a su empleador** si su plan paga antes o después de Medicare y si su cobertura de medicamentos es “acreditable”.',
+            '**¿Tiene una Cuenta de Ahorros para la Salud (HSA)?** No puede aportar a una HSA una vez que tiene Medicare. La Parte A sin prima puede empezar hasta 6 meses antes de que se inscriba, así que planifique bien su último aporte.',
+            '**¿Tiene un plan del Mercado de Seguros?** Inscríbase en Medicare cuando sea elegible por primera vez y cancele su plan del Mercado para que no se superpongan. Cuando es elegible para la Parte A sin prima, ya no puede seguir recibiendo ayuda para pagar las primas del Mercado.',
+          ],
+        },
+        {
+          type: 'p',
+          text: '¿Tiene menos de 65 y busca cobertura? Vea nuestra página de [seguro médico para menores de 65](page:service-health-insurance).',
+        },
+      ],
+    },
+    {
+      id: 'avoid-penalties',
+      heading: '¿Cómo evito las multas por inscripción tardía en Medicare?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Inscríbase a tiempo y mantenga una cobertura de medicamentos acreditable. Las multas duran mientras tenga la cobertura:',
+        },
+        {
+          type: 'ul',
+          items: [
+            '**Parte B:** su prima mensual puede subir un 10% por cada 12 meses completos en que pudo tener la Parte B y no se inscribió, a menos que haya calificado para un Período de Inscripción Especial.',
+            '**Parte D:** si pasa 63 días seguidos o más después de su Período de Inscripción Inicial sin cobertura de medicamentos de Medicare ni otra cobertura de medicamentos acreditable, se agrega una multa a su prima de medicamentos. Equivale al 1% de la prima base nacional del beneficiario por cada mes completo sin cobertura, y por lo general la paga mientras tenga cobertura de medicamentos. Quienes reciben la Ayuda Adicional no la pagan.',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Si se le pasa su Período de Inscripción Inicial y no califica para un Período de Inscripción Especial, puede inscribirse en la Parte B durante el Período de Inscripción General, del 1 de enero al 31 de marzo, pero quizás pague una multa, y esta aumenta cuanto más espere. Aunque hoy no tome medicamentos, un [plan de medicamentos de la Parte D](page:service-part-d-prescription-drug-plans) de bajo costo puede protegerle de la multa de la Parte D.',
+        },
+      ],
+    },
+    {
+      id: 'medigap-open-enrollment',
+      heading: '¿Cuándo debo comprar una póliza Medigap?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Durante su **período de inscripción abierta de Medigap** de 6 meses, que empieza el primer mes en que tiene la Parte B y 65 años o más. Ocurre una sola vez. Durante ese período, las compañías deben venderle cualquier póliza Medigap que ofrezcan y no pueden cobrarle más por su salud. Después, quizás pague más o le rechacen. Lea sobre los [planes Suplementarios de Medicare (Medigap) en Luisiana](page:service-medicare-supplement).',
+        },
+      ],
+    },
+    {
+      id: 'choose-your-coverage',
+      heading: '¿Me conviene Medicare Advantage o Medicare Original con Medigap?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Depende de sus médicos, su presupuesto y cuánto viaja. Así se comparan los dos caminos principales:',
+        },
+        {
+          type: 'table',
+          caption: 'Medicare Advantage frente a Medicare Original con Medigap',
+          head: ['Qué comparar', 'Medicare Advantage (Parte C)', 'Medicare Original + Medigap + Parte D'],
+          rows: [
+            [
+              'Médicos y hospitales',
+              'Por lo general, la red del plan; algunos planes cubren atención fuera de la red a un costo mayor',
+              'Cualquier médico u hospital en EE. UU. que acepte Medicare',
+            ],
+            ['Referidos', 'Pueden necesitarse para ver a un especialista', 'Por lo general no se necesitan'],
+            ['Cobertura de medicamentos', 'Incluida en la mayoría de los planes', 'A través de un plan de la Parte D aparte'],
+            [
+              'Límite anual de gastos de su bolsillo',
+              'Sí, para los servicios cubiertos',
+              'Medicare Original no tiene límite; Medigap paga parte o toda su parte',
+            ],
+            [
+              'Beneficios adicionales',
+              'La mayoría de los planes ofrecen algunos, como visión, audición o dental',
+              'No incluidos; se pueden agregar aparte',
+            ],
+            [
+              'Lo que paga cada mes',
+              'Prima de la Parte B, más cualquier prima del plan',
+              'Prima de la Parte B, más las primas de Medigap y de la Parte D',
+            ],
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Compare los [planes Medicare Advantage en Luisiana](page:service-medicare-advantage), o pídanos cotizar ambos caminos con sus médicos y medicamentos reales.',
+        },
+      ],
+    },
+    {
+      id: 'checklist',
+      heading: 'Su lista de pasos de Medicare al cumplir 65',
+      blocks: [
+        {
+          type: 'ol',
+          items: [
+            '**4 a 6 meses antes de su cumpleaños:** haga una lista de sus médicos, sus medicamentos (con dosis) y su farmacia. Pregunte a su empleador cómo funciona su cobertura con Medicare.',
+            '**3 meses antes:** empieza su Período de Inscripción Inicial. Inscríbase en la Parte A y la Parte B en SSA.gov si no le inscriben automáticamente. Esté pendiente de su tarjeta de Medicare en el correo.',
+            '**2 a 3 meses antes:** compare Medicare Advantage con Medicare Original más Medigap y la Parte D. Asegúrese de que su cobertura de medicamentos empiece cuando empiece Medicare.',
+            '**El mes anterior:** inscríbase en su plan para que la cobertura empiece junto con Medicare. Cancele cualquier plan del Mercado y deje de aportar a su HSA a tiempo.',
+            '**El mes de su cumpleaños:** lleve sus tarjetas nuevas. Si eligió Medicare Original, su período de inscripción abierta de Medigap de 6 meses ya está corriendo.',
+            '**Cada otoño después:** lea su Aviso Anual de Cambios y revise su plan entre el 15 de octubre y el 7 de diciembre.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'local-help',
+      heading: 'Ayuda al cumplir 65 cerca de usted, en Metairie y Nueva Orleans',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Nos reunimos con personas que cumplen 65 en nuestra oficina de Metairie, o les ayudamos por teléfono desde cualquier parte de Luisiana, en español o en inglés, sin costo. Le ayudamos con los plazos, comparamos planes lado a lado y le inscribimos cuando esté listo. Conozca nuestra ayuda en [Metairie](page:city-metairie) y [Nueva Orleans](page:city-new-orleans), o [contáctenos](page:contact) para coordinar una cita.',
+        },
+        {
+          type: 'p',
+          text: '¿Prefiere una asesoría gratuita e imparcial? El programa SHIIP de Luisiana responde preguntas sobre Medicare al 1-800-259-5300.',
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: '¿Dónde recibo ayuda con Medicare cerca de mí al cumplir 65?',
+      a: 'El Seguro Social se encarga de la inscripción en la Parte A y la Parte B, y el programa SHIIP de Luisiana (1-800-259-5300) ofrece asesoría gratuita. Para comparar e inscribirse en planes con un agente local con licencia, puede reunirse con nosotros en Metairie o hablar por teléfono. Nuestra ayuda es gratis.',
+    },
+    {
+      q: '¿Tengo que inscribirme en Medicare a los 65 si tengo seguro por mi trabajo?',
+      a: 'No siempre. Si la cobertura viene de su trabajo actual o del de su cónyuge, quizás pueda retrasar la Parte B sin multa. Consulte primero con su empleador, y recuerde que COBRA y la cobertura de jubilados no cuentan.',
+    },
+    {
+      q: '¿Medicare es gratis al cumplir 65?',
+      a: 'La Parte A no tiene prima para la mayoría de las personas. La Parte B tiene una prima mensual, y cualquier plan Medicare Advantage, Medigap o de la Parte D puede agregar su propia prima y costos.',
+    },
+    {
+      q: '¿Qué pasa si se me pasa mi Período de Inscripción Inicial?',
+      a: 'A menos que califique para un Período de Inscripción Especial, puede inscribirse en la Parte B del 1 de enero al 31 de marzo, pero su cobertura puede retrasarse y quizás pague una multa por inscripción tardía mientras tenga la Parte B.',
+    },
+  ],
+};
+
 export const guides: Record<GuideKey, GuideContent> = {
   'medicare-office': medicareOffice,
   'diabetes-heart-snp': diabetesHeartSnp,
+  'turning-65': turning65,
 };
 
 export const guidesHub: GuidesHubContent = {

@@ -103,6 +103,7 @@ function inboundSources(content: SiteContent, target: string): string[] {
 const guideWords: Record<string, [number, number]> = {
   'medicare-office': [1000, 1400],
   'diabetes-heart-snp': [1800, 2200],
+  'turning-65': [1400, 2200],
 };
 
 /** City word floors (h1 + lede + sections + FAQs); the priority pages go deeper. */

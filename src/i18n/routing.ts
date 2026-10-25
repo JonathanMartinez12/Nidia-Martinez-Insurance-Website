@@ -52,6 +52,10 @@ export const routing = defineRouting({
       en: '/guides/diabetes-heart-special-needs-plans',
       es: '/guias/planes-necesidades-especiales-diabetes-corazon',
     },
+    '/guides/turning-65-medicare-louisiana': {
+      en: '/guides/turning-65-medicare-louisiana',
+      es: '/guias/cumplir-65-medicare-luisiana',
+    },
     '/faq': { en: '/faq', es: '/preguntas-frecuentes' },
     '/contact': { en: '/contact', es: '/contacto' },
     '/privacy-policy': { en: '/privacy-policy', es: '/politica-de-privacidad' },

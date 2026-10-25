@@ -17,6 +17,12 @@ export const guides = [
     published: '2026-10-25',
     modified: '2026-10-25',
   },
+  {
+    key: 'turning-65',
+    pathname: '/guides/turning-65-medicare-louisiana',
+    published: '2026-10-25',
+    modified: '2026-10-25',
+  },
 ] as const;
 
 export type GuideKey = (typeof guides)[number]['key'];

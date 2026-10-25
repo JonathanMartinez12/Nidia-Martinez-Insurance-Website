@@ -53,7 +53,7 @@ const medicareOffice: GuideContent = {
         },
         {
           type: 'p',
-          text: "Social Security offices serve the Greater New Orleans area, but addresses and hours can change. Look up the office for your ZIP code with Social Security's [office locator](https://www.ssa.gov/locator) before you go. If you'd like an appointment, Medicare suggests contacting Social Security about 3 months before you turn 65.",
+          text: "Social Security offices serve the Greater New Orleans area, but addresses and hours can change. Look up the office for your ZIP code with Social Security's [office locator](https://www.ssa.gov/locator) before you go. If you'd like an appointment, Medicare suggests contacting Social Security about 3 months before you turn 65. Our [turning-65 Medicare checklist](page:guide-turning-65) walks through every deadline.",
         },
         { type: 'h3', text: 'What Social Security handles' },
         {
@@ -485,9 +485,210 @@ const diabetesHeartSnp: GuideContent = {
   ],
 };
 
+/*
+ * Sources (verified 2026-10-25):
+ * - 7-month Initial Enrollment Period, 1st-of-month birthdays, coverage start dates, automatic
+ *   enrollment and card 3 months before 65, keeping/declining Part B, Part B penalty (10% per full
+ *   12 months), employment-based SEP (any time while covered / 8 months after), delay start up to 3
+ *   months, Marketplace coverage should end when Medicare starts, HSA contributions, Part D penalty
+ *   (63+ days without creditable coverage; 1% of the national base beneficiary premium per month;
+ *   none with Extra Help), Medigap Open Enrollment, MA vs Original Medicare at a glance:
+ *   Medicare & You 2027, https://www.medicare.gov/publications/10050-medicare-and-you.pdf
+ * - General Enrollment Period Jan 1–Mar 31; penalty grows the longer you wait:
+ *   https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start
+ * - Sign up through Social Security (online / phone / local office):
+ *   https://www.medicare.gov/basics/get-started-with-medicare/sign-up/how-do-i-sign-up-for-medicare
+ */
+const turning65: GuideContent = {
+  h1: 'Turning 65 in Louisiana: Your Medicare Checklist',
+  lede: 'Turning 65 comes with deadlines that are easy to miss. Here is when to sign up, how to avoid lifelong penalties, how to choose your coverage, and where to get free help near you in Metairie and New Orleans.',
+  sections: [
+    {
+      id: 'when-to-sign-up',
+      heading: 'When can I sign up for Medicare when I turn 65?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'During your **Initial Enrollment Period**, a 7-month window that starts 3 months before the month you turn 65, includes your birthday month, and ends 3 months after it. For example, if you turn 65 on June 2, your window runs from March through September. If your birthday falls on the 1st of the month, the window starts and ends one month earlier.',
+        },
+        {
+          type: 'p',
+          text: 'Sign up in the first 3 months and your coverage usually starts the first day of your birthday month. Sign up during your birthday month or later, and coverage starts the first day of the month after you sign up, so signing up early avoids a gap.',
+        },
+      ],
+    },
+    {
+      id: 'automatic-enrollment',
+      heading: 'Will I be enrolled in Medicare automatically?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Yes, if you already get Social Security or Railroad Retirement Board benefits. You will get Part A and Part B starting the month you turn 65, and your red, white and blue Medicare card arrives in the mail about 3 months before your birthday. In that case Part A is usually premium-free.',
+        },
+        {
+          type: 'p',
+          text: 'Most people keep Part B. If you have other coverage and don’t want Part B yet, you must tell Social Security before the start date on your card; if you do nothing, you keep it and the premium comes out of your benefit. If you are not getting benefits yet, you need to sign up yourself.',
+        },
+      ],
+    },
+    {
+      id: 'how-to-sign-up',
+      heading: 'How do I sign up for Part A and Part B in Louisiana?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Through Social Security. The fastest way is online at [SSA.gov/medicare/sign-up](https://www.ssa.gov/medicare/sign-up). You can also call Social Security at 1-800-772-1213 (TTY 1-800-325-0778) or contact your local Social Security office. If you’d like an appointment, call about 3 months before you turn 65.',
+        },
+        {
+          type: 'p',
+          text: 'Medicare doesn’t have local walk-in offices. Our guide to [finding a Medicare office near you in New Orleans](page:guide-medicare-office) explains who does what.',
+        },
+      ],
+    },
+    {
+      id: 'still-working',
+      heading: 'What if I’m still working at 65?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'If you or your spouse have health coverage from a **current job**, you may be able to wait to sign up for Part B without a penalty. You can sign up any time while you still have that coverage, or during the 8 months after the job or the coverage ends, whichever happens first. COBRA and retiree coverage are not coverage from current work, so don’t count on them to delay Part B.',
+        },
+        {
+          type: 'ul',
+          items: [
+            '**Ask your employer** whether your plan pays before or after Medicare and whether its drug coverage is “creditable.”',
+            '**Have a Health Savings Account?** You can’t contribute to an HSA once you have Medicare. Premium-free Part A can start up to 6 months before you sign up, so plan your last contribution carefully.',
+            '**On a Marketplace plan?** Sign up for Medicare when you’re first eligible and end your Marketplace plan so the two don’t overlap. Once you’re eligible for premium-free Part A, you can’t keep getting help paying Marketplace premiums.',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Under 65 and still shopping for coverage? See our page on [health insurance for people under 65](page:service-health-insurance).',
+        },
+      ],
+    },
+    {
+      id: 'avoid-penalties',
+      heading: 'How do I avoid Medicare late enrollment penalties?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Sign up on time, and keep creditable drug coverage. The penalties last for as long as you have the coverage:',
+        },
+        {
+          type: 'ul',
+          items: [
+            '**Part B:** your monthly premium may go up 10% for each full 12 months you could have had Part B but didn’t sign up, unless you qualified for a Special Enrollment Period.',
+            '**Part D:** if you go 63 days or more in a row after your Initial Enrollment Period without Medicare drug coverage or other creditable drug coverage, a penalty is added to your drug premium. It equals 1% of the national base beneficiary premium for each full month you went without, and you generally pay it for as long as you have drug coverage. People who get Extra Help don’t pay it.',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'If you miss your Initial Enrollment Period and don’t qualify for a Special Enrollment Period, you can sign up for Part B during the General Enrollment Period, January 1 to March 31, but you may pay a penalty, and it grows the longer you wait. Even if you take no medicines today, a low-cost [Part D drug plan](page:service-part-d-prescription-drug-plans) can protect you from the Part D penalty.',
+        },
+      ],
+    },
+    {
+      id: 'medigap-open-enrollment',
+      heading: 'When should I buy a Medigap policy?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'During your 6-month **Medigap Open Enrollment Period**, which starts the first month you have Part B and are 65 or older. It happens only once. During it, insurance companies must sell you any Medigap policy they offer and can’t charge you more because of your health. Afterward, you may pay more or be turned down. Read about [Medicare Supplement (Medigap) plans in Louisiana](page:service-medicare-supplement).',
+        },
+      ],
+    },
+    {
+      id: 'choose-your-coverage',
+      heading: 'Should I choose Medicare Advantage or Original Medicare with Medigap?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'It depends on your doctors, your budget and how much you travel. Here is how the two main paths compare:',
+        },
+        {
+          type: 'table',
+          caption: 'Medicare Advantage vs. Original Medicare with Medigap',
+          head: ['What to compare', 'Medicare Advantage (Part C)', 'Original Medicare + Medigap + Part D'],
+          rows: [
+            [
+              'Doctors and hospitals',
+              'Usually the plan’s network; some plans cover out-of-network care at a higher cost',
+              'Any doctor or hospital in the U.S. that accepts Medicare',
+            ],
+            ['Referrals', 'May be needed to see a specialist', 'Generally not needed'],
+            ['Drug coverage', 'Included in most plans', 'Through a separate Part D plan'],
+            [
+              'Yearly limit on out-of-pocket costs',
+              'Yes, for covered services',
+              'No limit in Original Medicare; Medigap pays some or all of your share',
+            ],
+            ['Extra benefits', 'Most plans offer some, like vision, hearing or dental', 'Not included; can be added separately'],
+            ['What you pay monthly', 'Part B premium, plus any plan premium', 'Part B premium, plus Medigap and Part D premiums'],
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Compare [Medicare Advantage plans in Louisiana](page:service-medicare-advantage), or ask us to price both paths with your real doctors and medicines.',
+        },
+      ],
+    },
+    {
+      id: 'checklist',
+      heading: 'Your turning-65 Medicare checklist',
+      blocks: [
+        {
+          type: 'ol',
+          items: [
+            '**4–6 months before your birthday:** list your doctors, medicines (with doses) and pharmacy. Ask your employer how its coverage works with Medicare.',
+            '**3 months before:** your Initial Enrollment Period opens. Sign up for Part A and Part B at SSA.gov if you aren’t enrolled automatically. Watch the mail for your Medicare card.',
+            '**2–3 months before:** compare Medicare Advantage with Original Medicare plus Medigap and Part D. Make sure your drug coverage starts when Medicare does.',
+            '**The month before:** enroll in your plan so coverage starts with your Medicare. End any Marketplace plan and stop HSA contributions on time.',
+            '**Your birthday month:** carry your new cards. If you chose Original Medicare, your 6-month Medigap Open Enrollment Period is running.',
+            '**Every fall after:** read your Annual Notice of Change and review your plan between October 15 and December 7.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'local-help',
+      heading: 'Get turning-65 help near you in Metairie and New Orleans',
+      blocks: [
+        {
+          type: 'p',
+          text: 'We sit down with people turning 65 at our office in Metairie, or help by phone anywhere in Louisiana, in English or Spanish, at no cost. We help you with the timing, compare plans side by side, and enroll you when you’re ready. Learn about our help in [Metairie](page:city-metairie) and [New Orleans](page:city-new-orleans), or [contact us](page:contact) to set up a time.',
+        },
+        {
+          type: 'p',
+          text: 'Prefer free, unbiased counseling? Louisiana’s SHIIP program answers Medicare questions at 1-800-259-5300.',
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: 'Where can I get help with Medicare when I turn 65 near me?',
+      a: 'Social Security handles signing up for Part A and Part B, and Louisiana’s SHIIP program (1-800-259-5300) offers free counseling. To compare and enroll in plans with a local licensed agent, you can meet with us in Metairie or talk by phone. Our help is free.',
+    },
+    {
+      q: 'Do I have to sign up for Medicare at 65 if I have insurance through work?',
+      a: 'Not always. If the coverage comes from your or your spouse’s current job, you may be able to delay Part B without a penalty. Check with your employer first, and remember COBRA and retiree coverage don’t count.',
+    },
+    {
+      q: 'Is Medicare free when I turn 65?',
+      a: 'Part A is premium-free for most people. Part B has a monthly premium, and any Medicare Advantage, Medigap or Part D plan may add its own premium and costs.',
+    },
+    {
+      q: 'What happens if I miss my Initial Enrollment Period?',
+      a: 'Unless you qualify for a Special Enrollment Period, you can sign up for Part B from January 1 to March 31, but coverage may be delayed and you may pay a late enrollment penalty for as long as you have Part B.',
+    },
+  ],
+};
+
 export const guides: Record<GuideKey, GuideContent> = {
   'medicare-office': medicareOffice,
   'diabetes-heart-snp': diabetesHeartSnp,
+  'turning-65': turning65,
 };
 
 export const guidesHub: GuidesHubContent = {

@@ -157,7 +157,7 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'ul',
             items: [
-              '**When you first get Medicare:** during your Initial Enrollment Period around your 65th birthday.',
+              '**When you first get Medicare:** during your Initial Enrollment Period around your 65th birthday. See our [turning-65 Medicare checklist](page:guide-turning-65).',
               '**October 15 – December 7:** the [Annual Enrollment Period](page:aep). Join, switch or drop a plan for coverage starting January 1.',
               '**January 1 – March 31:** if you are already in a Medicare Advantage plan, you can switch to another one or return to Original Medicare, once.',
               '**Special Enrollment Periods:** events like moving or losing other coverage can let you change plans at other times. If a plan with a 5-star rating is offered in your area, you can switch to it once during the year, and people with a qualifying chronic condition can join a C-SNP that serves it at any time.',
@@ -366,7 +366,7 @@ const services: Record<ProductKey, ServiceContent> = {
           { type: 'h3', text: 'When is the best time to buy a Medigap plan?' },
           {
             type: 'p',
-            text: 'During your **Medigap Open Enrollment Period**: the 6 months that start the first month you have Medicare Part B and are 65 or older. It happens once and doesn’t repeat. During it, a company can’t refuse to sell you any policy it offers, can’t use medical underwriting, and can’t charge you more because of health problems.',
+            text: 'During your **Medigap Open Enrollment Period**: the 6 months that start the first month you have Medicare Part B and are 65 or older. It happens once and doesn’t repeat (our [turning-65 checklist](page:guide-turning-65) shows how it fits with your other deadlines). During it, a company can’t refuse to sell you any policy it offers, can’t use medical underwriting, and can’t charge you more because of health problems.',
           },
           { type: 'h3', text: 'What happens if I wait?' },
           {
@@ -584,7 +584,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: 'We help people compare Part D plans and pharmacies all over Louisiana, in person in Metairie or by phone. Read more about [drug plan help in Kenner](page:city-kenner), [drug plan help in Chalmette](page:city-chalmette), [drug plan help in Slidell](page:city-slidell) and [drug plan help in Baton Rouge](page:city-baton-rouge).',
+            text: 'We help people compare Part D plans and pharmacies all over Louisiana, in person in Metairie or by phone. Turning 65? Our [turning-65 Medicare checklist](page:guide-turning-65) explains how to avoid the Part D penalty. Read more about [drug plan help in Kenner](page:city-kenner), [drug plan help in Chalmette](page:city-chalmette), [drug plan help in Slidell](page:city-slidell) and [drug plan help in Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },
@@ -1332,7 +1332,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: 'We help people under 65 across Louisiana find health coverage, in person in Metairie or by phone. Read more about [health insurance help in New Orleans](page:city-new-orleans), [health insurance help in Metairie](page:city-metairie), [health insurance help in Kenner](page:city-kenner) and [health insurance help in Baton Rouge](page:city-baton-rouge).',
+            text: 'We help people under 65 across Louisiana find health coverage, in person in Metairie or by phone. Getting close to 65? Our [turning-65 Medicare checklist](page:guide-turning-65) shows how to move from your current plan to Medicare. Read more about [health insurance help in New Orleans](page:city-new-orleans), [health insurance help in Metairie](page:city-metairie), [health insurance help in Kenner](page:city-kenner) and [health insurance help in Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },

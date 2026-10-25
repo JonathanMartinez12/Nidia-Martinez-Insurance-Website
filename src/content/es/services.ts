@@ -145,7 +145,7 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'ul',
             items: [
-              '**Cuando recibe Medicare por primera vez:** durante su Período de Inscripción Inicial, alrededor de su cumpleaños 65.',
+              '**Cuando recibe Medicare por primera vez:** durante su Período de Inscripción Inicial, alrededor de su cumpleaños 65. Vea nuestra [lista de pasos de Medicare al cumplir 65](page:guide-turning-65).',
               '**Del 15 de octubre al 7 de diciembre:** el [Período de Inscripción Anual](page:aep). Afíliese, cambie o deje un plan, con cobertura a partir del 1 de enero.',
               '**Del 1 de enero al 31 de marzo:** si ya está en un plan Medicare Advantage, puede cambiarse a otro o regresar a Medicare Original, una sola vez.',
               '**Períodos de Inscripción Especial:** situaciones como una mudanza o la pérdida de otra cobertura pueden permitirle cambiar de plan en otros momentos. Si en su zona se ofrece un plan con calificación de 5 estrellas, puede cambiarse a él una vez durante el año, y las personas con una afección crónica que califica pueden afiliarse en cualquier momento a un C-SNP que la atienda.',
@@ -356,7 +356,7 @@ const services: Record<ProductKey, ServiceContent> = {
           { type: 'h3', text: '¿Cuándo es el mejor momento para comprar un plan Medigap?' },
           {
             type: 'p',
-            text: 'Durante su **período de inscripción abierta de Medigap**: los 6 meses que comienzan el primer mes en que tiene la Parte B de Medicare y 65 años o más. Ocurre una sola vez y no se repite. Durante ese período, una compañía no puede negarse a venderle ninguna póliza que ofrezca, no puede usar evaluación médica y no puede cobrarle más por problemas de salud.',
+            text: 'Durante su **período de inscripción abierta de Medigap**: los 6 meses que comienzan el primer mes en que tiene la Parte B de Medicare y 65 años o más. Ocurre una sola vez y no se repite (nuestra [lista de pasos al cumplir 65](page:guide-turning-65) muestra cómo encaja con sus otros plazos). Durante ese período, una compañía no puede negarse a venderle ninguna póliza que ofrezca, no puede usar evaluación médica y no puede cobrarle más por problemas de salud.',
           },
           { type: 'h3', text: '¿Qué pasa si espero?' },
           {
@@ -574,7 +574,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: 'Ayudamos a comparar planes de la Parte D y farmacias en toda Luisiana, en persona en Metairie o por teléfono. Lea más sobre [ayuda con planes de medicamentos en Kenner](page:city-kenner), [ayuda con planes de medicamentos en Chalmette](page:city-chalmette), [ayuda con planes de medicamentos en Slidell](page:city-slidell) y [ayuda con planes de medicamentos en Baton Rouge](page:city-baton-rouge).',
+            text: 'Ayudamos a comparar planes de la Parte D y farmacias en toda Luisiana, en persona en Metairie o por teléfono. ¿Va a cumplir 65? Nuestra [lista de pasos de Medicare al cumplir 65](page:guide-turning-65) explica cómo evitar la multa de la Parte D. Lea más sobre [ayuda con planes de medicamentos en Kenner](page:city-kenner), [ayuda con planes de medicamentos en Chalmette](page:city-chalmette), [ayuda con planes de medicamentos en Slidell](page:city-slidell) y [ayuda con planes de medicamentos en Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },
@@ -1322,7 +1322,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: 'Ayudamos a personas menores de 65 en toda Luisiana a encontrar cobertura médica, en persona en Metairie o por teléfono. Lea más sobre [ayuda con seguro médico en Nueva Orleans](page:city-new-orleans), [ayuda con seguro médico en Metairie](page:city-metairie), [ayuda con seguro médico en Kenner](page:city-kenner) y [ayuda con seguro médico en Baton Rouge](page:city-baton-rouge).',
+            text: 'Ayudamos a personas menores de 65 en toda Luisiana a encontrar cobertura médica, en persona en Metairie o por teléfono. ¿Se acerca a los 65? Nuestra [lista de pasos de Medicare al cumplir 65](page:guide-turning-65) explica cómo pasar de su plan actual a Medicare. Lea más sobre [ayuda con seguro médico en Nueva Orleans](page:city-new-orleans), [ayuda con seguro médico en Metairie](page:city-metairie), [ayuda con seguro médico en Kenner](page:city-kenner) y [ayuda con seguro médico en Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },
