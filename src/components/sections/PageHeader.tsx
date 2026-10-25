@@ -11,6 +11,7 @@ export function PageHeader({
   crumbs,
   eyebrow,
   title,
+  subtitle,
   lede,
   children,
 }: {
@@ -18,6 +19,8 @@ export function PageHeader({
   crumbs: Crumb[];
   eyebrow?: string;
   title: string;
+  /** Line right under the H1 (not a heading). */
+  subtitle?: string;
   lede?: string;
   children?: ReactNode;
 }) {
@@ -40,6 +43,7 @@ export function PageHeader({
         <h1 className={`${eyebrow ? 'mt-2' : 'mt-8'} max-w-4xl text-[2.25rem] font-semibold sm:text-5xl lg:text-[3.4rem]`}>
           {title}
         </h1>
+        {subtitle ? <p className="mt-3 font-serif text-2xl font-semibold text-navy-800 sm:text-[1.7rem]">{subtitle}</p> : null}
         {lede ? <p className="mt-5 max-w-3xl text-lg sm:text-xl">{lede}</p> : null}
         {children}
       </div>

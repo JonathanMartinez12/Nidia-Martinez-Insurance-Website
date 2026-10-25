@@ -3,71 +3,179 @@ import type { ServiceContent } from '../types';
 import { carrierNames } from '../carrier-names';
 
 const services: Record<ProductKey, ServiceContent> = {
+  /*
+   * Sources (verified 2026-10-25), Medicare & You 2027,
+   * https://www.medicare.gov/publications/10050-medicare-and-you.pdf :
+   * - MA = "Part C"; Medicare-approved private companies; still have Medicare; plan card; most include
+   *   Part D; networks/service area; yearly out-of-pocket limit; prior authorization; referrals;
+   *   plan types HMO / PPO / PFFS / MSA / SNP; Part B premium plus any plan premium; most plans offer
+   *   extra benefits; Plan Finder shows whether your providers are in network; 1–5 star ratings and the
+   *   5-star SEP; Oct 15–Dec 7 and Jan 1–Mar 31 (one switch) periods; compare plans from October 1;
+   *   what MA covers (hospice / transplant / trials stay with Original Medicare), limited extra benefits,
+   *   provider network changes during the year and plan obligations.
+   * - Insurers decide where plans are offered: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options/SNP
+   * Health systems are named only as examples people ask about; no network participation is claimed.
+   */
   'medicare-advantage': {
-    h1: 'Medicare Advantage Plans in New Orleans & Louisiana',
-    lede: 'Medicare Advantage (Part C) plans bundle your hospital and medical coverage — and usually your prescription drugs — into one plan from a private insurance company approved by Medicare. We help you compare plans side by side and choose one that works with your doctors, your medicines and your budget.',
+    h1: 'Medicare Advantage Plans in Louisiana',
+    lede: 'Medicare Advantage, also called Part C, bundles your hospital, medical and usually drug coverage into one plan from a Medicare-approved private company. We help people across Louisiana compare plans for {planYear} and choose one that fits their doctors, medicines and budget.',
     summary:
       'Personal, no-cost help comparing and enrolling in Medicare Advantage (Part C) plans in Louisiana, from licensed, bilingual local agents.',
     whoFor: [
       'People with Medicare Part A and Part B who want one plan instead of several',
-      'Anyone who wants predictable copays and a yearly limit on out-of-pocket costs',
-      'People who value extra benefits some plans include, such as dental, vision or hearing coverage',
+      'Anyone who wants a yearly limit on out-of-pocket costs for covered services',
+      'People who value extra benefits many plans include, such as dental, vision or hearing coverage',
       "Those comfortable using a plan's network of doctors and hospitals",
     ],
     covers: [
       'Everything Original Medicare Part A (hospital) and Part B (medical) covers',
       'Prescription drug coverage in most plans (often called MAPD plans)',
-      'A yearly out-of-pocket maximum for covered in-network services',
+      'A yearly out-of-pocket limit for covered Part A and Part B services',
       'Extra benefits that vary by plan, such as routine dental, vision, hearing and fitness programs',
     ],
     sections: [
       {
-        id: 'how-it-works',
-        heading: 'How Medicare Advantage works',
+        id: 'what-is-medicare-advantage',
+        heading: 'What is a Medicare Advantage (Part C) plan?',
         blocks: [
           {
             type: 'p',
-            text: 'When you join a Medicare Advantage plan, you still have Medicare. You keep paying your Part B premium (unless someone else, such as Medicaid, pays it for you), and the private plan takes over paying your claims. Each plan sets its own copays, deductibles and network, so two plans that look alike on paper can work very differently in real life.',
+            text: 'A Medicare Advantage plan is another way to get your Medicare Part A and Part B coverage, through a Medicare-approved private insurance company instead of Original Medicare. You still have Medicare, but your plan pays your claims and you use the plan’s card when you get care.',
           },
           {
             type: 'p',
-            text: "Most plans in Greater New Orleans are **HMOs** or **PPOs**. An HMO usually asks you to use doctors in its network and may require a referral to see a specialist. A PPO lets you see out-of-network providers, typically at a higher cost. Some plans charge a $0 monthly premium, but you'll still pay copays when you use care — so the premium is only one part of the picture.",
+            text: 'Most Medicare Advantage plans include Medicare drug coverage (Part D). Every plan sets a yearly limit on what you pay out of pocket for covered Part A and Part B services. In return, you may need to use doctors in the plan’s network, get a referral to see a specialist, or get approval (prior authorization) before the plan covers certain services or drugs. You keep paying your Part B premium, and you may also pay a premium to the plan.',
           },
         ],
       },
       {
-        id: 'what-we-compare',
-        heading: 'What we compare for you',
+        id: 'what-it-covers',
+        heading: 'What do Medicare Advantage plans cover?',
         blocks: [
           {
             type: 'p',
-            text: 'The best plan for your neighbor may not be the best plan for you. When we sit down together, we look at:',
+            text: 'Almost all the medically necessary services and supplies Original Medicare covers. If you are in a Medicare Advantage plan, Original Medicare still pays for hospice care, kidney transplant costs and some costs of clinical research studies.',
+          },
+          {
+            type: 'p',
+            text: "Many plans also include extras that Original Medicare doesn't, such as vision, hearing and dental care, gym memberships, rides to doctor visits or certain over-the-counter items. These benefits are generally limited, so we check exactly what each plan covers before you join.",
+          },
+        ],
+      },
+      {
+        id: 'costs',
+        heading: 'How much does a Medicare Advantage plan cost?',
+        blocks: [
+          {
+            type: 'p',
+            text: "It varies by plan. You pay your Part B premium, any premium the plan charges, and copays, coinsurance or deductibles when you get care, up to the plan's yearly out-of-pocket limit. Each plan sets its own costs and rules, and they can change every year.",
+          },
+          {
+            type: 'p',
+            text: 'That is why we compare total yearly cost: the premium plus what you would expect to pay for your usual doctor visits, specialists and prescriptions. A plan with a low premium can cost more over a year than one with a higher premium, depending on the care you use.',
+          },
+        ],
+      },
+      {
+        id: 'part-c-plans-in-louisiana',
+        heading: 'Medicare Part C plans in Louisiana',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Medicare Part C plans and Medicare Advantage plans are the same thing. In Louisiana, as everywhere, they come in a few types:',
           },
           {
             type: 'ul',
             items: [
-              "**Your doctors and hospitals** — we check that the physicians and facilities you rely on are in the plan's network.",
-              "**Your prescriptions** — we look up each medicine on the plan's drug list (formulary), including its tier and estimated cost.",
-              '**Your total costs** — premium, deductibles, copays and the out-of-pocket maximum, not just the monthly price.',
-              '**Your pharmacy** — preferred pharmacies can lower your drug copays.',
-              "**Extra benefits you'll actually use** — dental, vision, hearing aids or over-the-counter allowances, when a plan offers them.",
+              '**HMO (Health Maintenance Organization):** you generally use doctors and hospitals in the plan’s network, except in an emergency, and may need referrals.',
+              '**PPO (Preferred Provider Organization):** you can see out-of-network providers, usually at a higher cost.',
+              '**Special Needs Plans (SNPs):** limited to people with certain chronic conditions, people with both Medicare and Medicaid, or people who need nursing-home-level care. See our guide to [Medicare plans for diabetes and heart disease](page:guide-diabetes-heart-snp).',
+              '**Other types**, such as Private Fee-for-Service and Medical Savings Account plans, exist but may not be offered where you live.',
             ],
+          },
+          { type: 'h3', text: 'Plans vary by parish' },
+          {
+            type: 'p',
+            text: 'Insurance companies decide where they offer each plan, and every plan has a service area. The plans available in Orleans or Jefferson Parish can differ from those in St. Tammany or East Baton Rouge, and they can change from year to year. We look up the plans offered at your address for the year you are choosing.',
+          },
+          { type: 'h3', text: 'Louisiana hospitals and doctors' },
+          {
+            type: 'p',
+            text: 'People often ask whether a plan works with health systems such as Ochsner Health, LCMC Health or Our Lady of the Lake. Network participation is different for every plan and can change each year, so we check your specific doctors, specialists and hospitals before you enroll, not just the health system’s name.',
+          },
+          { type: 'h3', text: 'Medicare Advantage companies we compare' },
+          {
+            type: 'p',
+            text: `In Louisiana we currently compare Medicare Advantage plans from ${carrierNames('medicare-advantage', 'en')}. Not every company offers plans in every parish, and we only recommend a plan that fits your situation.`,
+          },
+        ],
+      },
+      {
+        id: 'how-to-choose',
+        heading: 'How to choose the right Medicare Advantage plan in Louisiana',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The right plan is the one that covers your doctors and medicines at the lowest total cost for the way you use care. Work through this checklist, or let us do it with you:',
+          },
+          {
+            type: 'ol',
+            items: [
+              "**Doctors and hospitals.** Are your primary care doctor, specialists and preferred hospital in the plan's network? Do you need referrals?",
+              "**Prescriptions.** Is each of your medicines on the plan's drug list, and at what tier? Do any need prior authorization? Is your pharmacy preferred?",
+              '**Total yearly costs.** Add up the premium, deductibles, copays and the yearly out-of-pocket limit, not just the monthly price.',
+              '**Travel.** Do you spend time out of state or away from home? Check what the plan covers outside its service area.',
+              "**Extra benefits.** Many plans offer benefits Original Medicare doesn't cover, like vision, hearing and dental. Count only the ones you will use.",
+              '**Star ratings.** Medicare rates plans from 1 to 5 stars on quality and performance. Ratings are one useful signal alongside your own needs.',
+              '**Referrals and approvals.** Ask which services need a referral or prior authorization, especially for specialists and treatments you already use regularly.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'You can add your providers in the [Medicare Plan Finder](https://www.medicare.gov/plan-compare) to see which plans include them, or call us to do the comparison side by side.',
+          },
+        ],
+      },
+      {
+        id: 'plans-for-next-year',
+        heading: 'Louisiana Medicare Advantage plans for {planYear}',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Plans can change their premiums, copays, networks and drug lists every year, so the plan that fit you this year may not fit next year. Starting October 1 you can compare next year’s plans, and your current plan must tell you about any changes before the new plan year starts, in an Annual Notice of Change that explains what will be different.',
+          },
+          {
+            type: 'p',
+            text: "If you're happy after reading your notice, you don't need to do anything: your plan renews automatically. If something changed that worries you, such as a doctor leaving the network or a drug moving to a higher tier, call us for a review before December 7.",
           },
         ],
       },
       {
         id: 'when-to-enroll',
-        heading: 'When you can join or switch',
+        heading: 'When can I join or switch Medicare Advantage plans?',
+        blocks: [
+          {
+            type: 'ul',
+            items: [
+              '**When you first get Medicare:** during your Initial Enrollment Period around your 65th birthday.',
+              '**October 15 – December 7:** the [Annual Enrollment Period](page:aep). Join, switch or drop a plan for coverage starting January 1.',
+              '**January 1 – March 31:** if you are already in a Medicare Advantage plan, you can switch to another one or return to Original Medicare, once.',
+              '**Special Enrollment Periods:** events like moving or losing other coverage can let you change plans at other times. If a plan with a 5-star rating is offered in your area, you can switch to it once during the year, and people with a qualifying chronic condition can join a C-SNP that serves it at any time.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'network-changes',
+        heading: "What if my doctor leaves the plan's network?",
         blocks: [
           {
             type: 'p',
-            text: "You can join a Medicare Advantage plan when you first become eligible for Medicare (your Initial Enrollment Period), and each fall during the [Annual Enrollment Period](page:aep), October 15 to December 7. If you're already in a Medicare Advantage plan, the Medicare Advantage Open Enrollment Period from January 1 to March 31 lets you make one change. Certain life events — like moving, losing other coverage or qualifying for Extra Help — may give you a Special Enrollment Period.",
+            text: "Doctors can join or leave a plan's network at any time during the year, and you generally can't change plans mid-year because of it. The plan must still give you access to qualified doctors and specialists, help you choose a new provider, help you continue care that's already in progress, and tell you about any enrollment options you have.",
           },
           {
-            type: 'callout',
-            tone: 'info',
-            title: 'Happy with your plan?',
-            text: "Plans can change their costs, networks and drug lists every year. If you're happy after reading your Annual Notice of Change, you don't need to do anything — your plan renews automatically. If something changed that worries you, call us for a review.",
+            type: 'p',
+            text: "You'll get a notice if your primary care or behavioral health provider is leaving and you've seen them in the past three years. If that happens, call us and we'll help you sort out your options.",
           },
         ],
       },
@@ -77,41 +185,53 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: "This is one of the most common questions people ask. Medicare Advantage often has lower monthly premiums and may include extra benefits, but you pay copays as you use care and generally stay within a network. A [Medicare Supplement](page:service-medicare-supplement) plan works alongside Original Medicare, lets you see any provider that accepts Medicare, and usually has a higher monthly premium but fewer bills when you get care. There's no single right answer — it depends on your health, your doctors and how you like to budget.",
+            text: 'It depends on your health, your doctors and how you like to budget. With Medicare Advantage you pay copays as you use care and generally stay within a network, with a yearly limit on your costs. A [Medicare Supplement (Medigap) plan](page:service-medicare-supplement) works alongside Original Medicare: you pay its monthly premium plus a separate Part D plan, and in return you have fewer bills when you get care and can see any provider in the U.S. that accepts Medicare.',
           },
         ],
       },
       {
-        id: 'how-we-help',
-        heading: 'How we help, at no cost to you',
+        id: 'near-you',
+        heading: 'Medicare Advantage help near you',
         blocks: [
           {
             type: 'p',
-            text: "We're licensed agents based in Greater New Orleans, and we're paid by the insurance companies — never by you. The plan premium is the same whether you enroll with us or on your own. What you get with us is a real person who explains your options in plain English or Spanish, helps with enrollment, and stays available when you have questions about a bill or need to change plans.",
+            text: 'We meet with people at our office on Veterans Boulevard in Metairie and help by phone anywhere in the state, in English or Spanish. Read more about [Medicare Advantage plans in New Orleans](page:city-new-orleans), [Medicare Advantage plans in Metairie](page:city-metairie), [Medicare help in Kenner](page:city-kenner) and [Medicare Advantage plans in Baton Rouge](page:city-baton-rouge).',
+          },
+          {
+            type: 'p',
+            text: "We're licensed agents, paid by the insurance companies, never by you. The plan premium is the same whether you enroll with us or on your own. What you get with us is a real person who explains your options in plain English or Spanish, helps you enroll, and stays available when you have questions about a bill or need to change plans.",
           },
         ],
       },
     ],
     faqs: [
       {
+        q: 'What is the best Medicare Advantage plan in Louisiana?',
+        a: "There isn't one best plan for everyone. The right plan for you covers your doctors and medicines at the lowest total yearly cost for how you use care. Use the checklist on this page, or let us compare the plans in your parish for you.",
+      },
+      {
+        q: 'What Medicare Advantage plans are available in Louisiana for {planYear}?',
+        a: 'It depends on your parish. Each company decides where it offers plans, and plans change every year. Starting October 1 you can compare next year’s plans, and you can enroll from October 15 to December 7 for coverage starting January 1. We look up every plan we offer at your address.',
+      },
+      {
+        q: 'Is Medicare Advantage the same as Part C?',
+        a: 'Yes. Medicare Advantage plans are also called Medicare Part C. They are Medicare-approved plans from private companies that replace how you get your Part A and Part B coverage.',
+      },
+      {
         q: 'Do I still pay my Part B premium with a Medicare Advantage plan?',
-        a: "Yes. With almost every Medicare Advantage plan you continue paying your Part B premium, plus any premium the plan charges. Some plans include a Part B premium reduction, sometimes called a “giveback.” We'll point those out if they fit your needs.",
+        a: 'Yes. You keep paying your monthly Part B premium, and you may also pay a premium to the plan. We help you estimate your total yearly costs, not just the premium.',
       },
       {
         q: 'Can I keep my doctor?',
-        a: "Often, yes — but it depends on the plan. Before you enroll, we check whether your doctors and preferred hospitals are in the plan's network so there are no surprises.",
-      },
-      {
-        q: 'Are $0 premium plans really $0?',
-        a: "The monthly plan premium can be $0, but you'll still have copays or coinsurance when you get care, and you'll keep paying your Part B premium. We help you estimate your total yearly costs, not just the premium.",
+        a: "It depends on the plan. Before you enroll, we check whether your doctors and preferred hospitals are in the plan's network so there are no surprises.",
       },
       {
         q: 'Which Medicare Advantage companies do you work with?',
-        a: `For Medicare Advantage in Louisiana we work with ${carrierNames('medicare-advantage', 'en')}. You can see them under “Carriers we work with” on this page. Plan availability varies by parish, and we only recommend a plan that fits your situation.`,
+        a: `For Medicare Advantage in Louisiana we work with ${carrierNames('medicare-advantage', 'en')}. Plan availability varies by parish, and we only recommend a plan that fits your situation.`,
       },
       {
         q: 'What if I travel or spend time out of state?',
-        a: "Many HMO plans cover only emergency and urgent care outside the plan's service area. If you travel often, a PPO or a Medicare Supplement may be a better fit. Let's talk through your plans.",
+        a: "Many plans cover only emergency and urgent care outside the plan's service area. If you travel often, ask about a PPO or a Medicare Supplement. Let's talk through your plans.",
       },
     ],
   },

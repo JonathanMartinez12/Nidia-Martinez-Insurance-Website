@@ -102,6 +102,7 @@ const contentUpdated: Record<string, string> = {
   contact: '2026-10-25',
   faq: '2026-10-25',
   'agent-nidia-martinez': '2026-10-25',
+  'service-medicare-advantage': '2026-10-25',
   'service-medicare-supplement': '2026-10-25',
   'service-special-needs-plans': '2026-10-25',
 };

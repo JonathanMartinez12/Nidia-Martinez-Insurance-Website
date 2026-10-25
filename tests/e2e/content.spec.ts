@@ -12,6 +12,7 @@ test.describe('content QA', () => {
       if (r.kind !== 'legal') expect(wordCount(main), 'visible words in <main>').toBeGreaterThanOrEqual(400);
       const body = await page.locator('body').innerText();
       expect(body).not.toMatch(/\bTODO\b/);
+      expect(body, 'unfilled content token').not.toMatch(/\{\w+\}/);
       expect(body).not.toMatch(/\bundefined\b|\bnull\b|NaN|\[object Object\]/);
       expect(body).not.toMatch(/\*\*|\]\(page:/); // unrendered rich text
       expect(body).not.toMatch(/\{[a-zA-Z]+\}/); // unformatted ICU placeholders

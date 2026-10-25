@@ -47,6 +47,7 @@ describe('content parity', () => {
 /** Word-count range per service page; the rest use the default. */
 const serviceWords: Partial<Record<(typeof productKeys)[number], [number, number]>> = {
   'medicare-supplement': [1800, 2800],
+  'medicare-advantage': [1800, 2800],
 };
 
 describe('service pages', () => {

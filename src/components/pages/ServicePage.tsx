@@ -6,6 +6,7 @@ import { site } from '@/config/site';
 import { getPage } from '@/config/pages';
 import { getContent } from '@/content';
 import { telHref } from '@/lib/phone';
+import { planYear } from '@/lib/enrollment';
 import { localizedUrl } from '@/lib/urls';
 import { faqSchema, serviceSchema } from '@/lib/schema';
 import { btn, card } from '@/components/ui/styles';
@@ -42,6 +43,7 @@ export async function ServicePage({ locale, product }: { locale: AppLocale; prod
         crumbs={[{ name, path: new URL(url).pathname }]}
         eyebrow={isMedicare ? th('medicarePlans') : th('otherCoverage')}
         title={content.h1}
+        subtitle={product === 'medicare-advantage' ? t('maSubtitle', { year: planYear() }) : undefined}
         lede={content.lede}
       >
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">

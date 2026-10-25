@@ -3,71 +3,167 @@ import type { ServiceContent } from '../types';
 import { carrierNames } from '../carrier-names';
 
 const services: Record<ProductKey, ServiceContent> = {
+  /* Fuentes: ver 'medicare-advantage' en src/content/en/services.ts (Medicare.gov, verificadas el 2026-10-25). */
   'medicare-advantage': {
-    h1: 'Planes Medicare Advantage en Nueva Orleans y Luisiana',
-    lede: 'Los planes Medicare Advantage (Parte C) reúnen en un solo plan su cobertura de hospital y atención médica —y, por lo general, sus medicamentos—, a través de una compañía privada aprobada por Medicare. Le ayudamos a comparar planes lado a lado y a elegir uno que funcione con sus médicos, sus medicinas y su presupuesto.',
+    h1: 'Planes Medicare Advantage en Luisiana',
+    lede: 'Medicare Advantage, también llamado Parte C, reúne su cobertura de hospital, médica y por lo general de medicamentos en un solo plan de una compañía privada aprobada por Medicare. Ayudamos a personas en toda Luisiana a comparar planes para {planYear} y a elegir uno que funcione con sus médicos, sus medicamentos y su presupuesto.',
     summary:
       'Ayuda personal y sin costo para comparar e inscribirse en planes Medicare Advantage (Parte C) en Luisiana, con agentes locales bilingües y con licencia.',
     whoFor: [
-      'Personas con Medicare Parte A y Parte B que prefieren un solo plan en lugar de varios',
-      'Quienes desean copagos previsibles y un límite anual de gastos de su bolsillo',
-      'Personas que valoran los beneficios adicionales que incluyen algunos planes, como cobertura dental, de la vista o de audición',
-      'Quienes se sienten cómodos usando la red de médicos y hospitales del plan',
+      'Personas con la Parte A y la Parte B de Medicare que prefieren un solo plan en lugar de varios',
+      'Quienes desean un límite anual de gastos de su bolsillo por los servicios cubiertos',
+      'Personas que valoran los beneficios adicionales que incluyen muchos planes, como dental, visión o audición',
+      'Quienes se sienten cómodos usando la red de médicos y hospitales de un plan',
     ],
     covers: [
-      'Todo lo que cubre Medicare Original en la Parte A (hospital) y la Parte B (atención médica)',
-      'Cobertura de medicamentos recetados en la mayoría de los planes (conocidos como planes MAPD)',
-      'Un máximo anual de gastos de bolsillo para servicios cubiertos dentro de la red',
-      'Beneficios adicionales que varían según el plan, como atención dental, de la vista, de audición y programas de ejercicio',
+      'Todo lo que cubren la Parte A (hospital) y la Parte B (médica) de Medicare Original',
+      'Cobertura de medicamentos recetados en la mayoría de los planes (llamados planes MAPD)',
+      'Un límite anual de gastos de su bolsillo por los servicios cubiertos de la Parte A y la Parte B',
+      'Beneficios adicionales que varían según el plan, como dental, visión, audición y programas de ejercicio',
     ],
     sections: [
       {
-        id: 'how-it-works',
-        heading: 'Cómo funciona Medicare Advantage',
+        id: 'what-is-medicare-advantage',
+        heading: '¿Qué es un plan Medicare Advantage (Parte C)?',
         blocks: [
           {
             type: 'p',
-            text: 'Al inscribirse en un plan Medicare Advantage, usted sigue teniendo Medicare. Continúa pagando la prima de la Parte B (a menos que otro programa, como Medicaid, la pague por usted) y el plan privado se encarga de pagar sus reclamos. Cada plan fija sus propios copagos, deducibles y red de proveedores, así que dos planes que se parecen en el papel pueden funcionar de manera muy distinta en la vida real.',
+            text: 'Un plan Medicare Advantage es otra forma de recibir su cobertura de la Parte A y la Parte B de Medicare, a través de una compañía de seguros privada aprobada por Medicare en lugar de Medicare Original. Usted sigue teniendo Medicare, pero su plan paga sus reclamos y usted usa la tarjeta del plan cuando recibe atención.',
           },
           {
             type: 'p',
-            text: 'La mayoría de los planes del área de Nueva Orleans son **HMO** o **PPO**. Un HMO normalmente le pide usar médicos de su red y puede requerir un referido para ver a un especialista. Un PPO le permite consultar proveedores fuera de la red, por lo general a un costo mayor. Algunos planes tienen una prima mensual de $0, pero usted igual paga copagos cuando recibe atención; la prima es solo una parte del panorama.',
+            text: 'La mayoría de los planes Medicare Advantage incluyen cobertura de medicamentos de Medicare (Parte D). Todos los planes fijan un límite anual de lo que usted paga de su bolsillo por los servicios cubiertos de la Parte A y la Parte B. A cambio, puede que tenga que usar médicos de la red del plan, pedir un referido para ver a un especialista o conseguir una aprobación (autorización previa) antes de que el plan cubra ciertos servicios o medicamentos. Usted sigue pagando su prima de la Parte B y es posible que también pague una prima al plan.',
           },
         ],
       },
       {
-        id: 'what-we-compare',
-        heading: 'Lo que comparamos por usted',
+        id: 'what-it-covers',
+        heading: '¿Qué cubren los planes Medicare Advantage?',
         blocks: [
           {
             type: 'p',
-            text: 'El mejor plan para su vecino no siempre es el mejor para usted. Cuando nos sentamos a conversar, revisamos:',
+            text: 'Casi todos los servicios y suministros médicamente necesarios que cubre Medicare Original. Si usted está en un plan Medicare Advantage, Medicare Original sigue pagando los cuidados paliativos (hospicio), los costos de un trasplante de riñón y algunos costos de estudios de investigación clínica.',
+          },
+          {
+            type: 'p',
+            text: 'Muchos planes también incluyen beneficios que Medicare Original no cubre, como atención de la vista, la audición y dental, membresías de gimnasio, transporte a citas médicas o ciertos productos de venta libre. Por lo general estos beneficios son limitados, así que revisamos exactamente qué cubre cada plan antes de que se afilie.',
+          },
+        ],
+      },
+      {
+        id: 'costs',
+        heading: '¿Cuánto cuesta un plan Medicare Advantage?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Depende del plan. Usted paga su prima de la Parte B, cualquier prima que cobre el plan, y copagos, coseguros o deducibles cuando recibe atención, hasta el límite anual de gastos de su bolsillo del plan. Cada plan fija sus propios costos y reglas, y pueden cambiar cada año.',
+          },
+          {
+            type: 'p',
+            text: 'Por eso comparamos el costo total del año: la prima más lo que esperaría pagar por sus consultas habituales, especialistas y medicamentos. Un plan con una prima baja puede costar más en el año que uno con una prima más alta, según la atención que usted use.',
+          },
+        ],
+      },
+      {
+        id: 'part-c-plans-in-louisiana',
+        heading: 'Planes de la Parte C de Medicare en Luisiana',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Los planes de la Parte C de Medicare y los planes Medicare Advantage son lo mismo. En Luisiana, como en todo el país, hay varios tipos:',
           },
           {
             type: 'ul',
             items: [
-              '**Sus médicos y hospitales**: confirmamos que los médicos y centros en los que usted confía estén en la red del plan.',
-              '**Sus recetas**: buscamos cada medicamento en la lista de medicamentos cubiertos (formulario), con su nivel y su costo aproximado.',
-              '**Sus costos totales**: prima, deducibles, copagos y el máximo de gastos de bolsillo, no solo el precio mensual.',
-              '**Su farmacia**: las farmacias preferidas pueden bajar sus copagos de medicamentos.',
-              '**Los beneficios adicionales que de verdad usará**: dental, visión, audífonos o asignaciones para productos de venta libre, cuando el plan los ofrece.',
+              '**HMO (Organización para el Mantenimiento de la Salud):** por lo general usa médicos y hospitales de la red del plan, salvo en emergencias, y puede necesitar referidos.',
+              '**PPO (Organización de Proveedores Preferidos):** puede ver a proveedores fuera de la red, normalmente a un costo mayor.',
+              '**Planes de Necesidades Especiales (SNP):** limitados a personas con ciertas afecciones crónicas, personas con Medicare y Medicaid, o personas que necesitan el nivel de atención de un hogar de ancianos. Vea nuestra guía de [planes de Medicare para diabetes y enfermedades del corazón](page:guide-diabetes-heart-snp).',
+              '**Otros tipos**, como los planes Privados de Pago por Servicio y los de Cuenta de Ahorros Médicos, existen pero puede que no se ofrezcan donde usted vive.',
             ],
+          },
+          { type: 'h3', text: 'Los planes varían según la parroquia' },
+          {
+            type: 'p',
+            text: 'Las compañías de seguros deciden dónde ofrecen cada plan, y cada plan tiene un área de servicio. Los planes disponibles en las parroquias de Orleans o Jefferson pueden ser distintos de los de St. Tammany o East Baton Rouge, y pueden cambiar de un año a otro. Buscamos los planes que se ofrecen en su dirección para el año que está eligiendo.',
+          },
+          { type: 'h3', text: 'Hospitales y médicos de Luisiana' },
+          {
+            type: 'p',
+            text: 'Mucha gente pregunta si un plan funciona con sistemas de salud como Ochsner Health, LCMC Health u Our Lady of the Lake. La participación en la red es distinta en cada plan y puede cambiar cada año, así que antes de que se inscriba revisamos a sus médicos, especialistas y hospitales específicos, no solo el nombre del sistema de salud.',
+          },
+          { type: 'h3', text: 'Compañías de Medicare Advantage que comparamos' },
+          {
+            type: 'p',
+            text: `En Luisiana comparamos actualmente planes Medicare Advantage de ${carrierNames('medicare-advantage', 'es')}. No todas las compañías ofrecen planes en todas las parroquias, y solo le recomendamos un plan que se ajuste a su situación.`,
+          },
+        ],
+      },
+      {
+        id: 'how-to-choose',
+        heading: 'Cómo elegir el plan Medicare Advantage adecuado en Luisiana',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El plan adecuado es el que cubre a sus médicos y sus medicamentos al menor costo total para la forma en que usted usa la atención médica. Revise esta lista, o déjenos hacerlo con usted:',
+          },
+          {
+            type: 'ol',
+            items: [
+              '**Médicos y hospitales.** ¿Están en la red del plan su médico de cabecera, sus especialistas y su hospital preferido? ¿Necesita referidos?',
+              '**Medicamentos.** ¿Está cada uno de sus medicamentos en la lista del plan, y en qué nivel? ¿Alguno requiere autorización previa? ¿Su farmacia es preferida?',
+              '**Costo total del año.** Sume la prima, los deducibles, los copagos y el límite anual de gastos de su bolsillo, no solo el precio mensual.',
+              '**Viajes.** ¿Pasa tiempo fuera del estado o lejos de casa? Revise qué cubre el plan fuera de su área de servicio.',
+              '**Beneficios adicionales.** Muchos planes ofrecen beneficios que Medicare Original no cubre, como visión, audición y dental. Tome en cuenta solo los que de verdad usará.',
+              '**Calificaciones por estrellas.** Medicare califica los planes de 1 a 5 estrellas según su calidad y desempeño. Las calificaciones son una señal útil junto con sus propias necesidades.',
+              '**Referidos y aprobaciones.** Pregunte qué servicios requieren un referido o autorización previa, sobre todo para los especialistas y tratamientos que ya usa con regularidad.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Puede agregar a sus proveedores en el [buscador de planes de Medicare](https://www.medicare.gov/plan-compare) para ver qué planes los incluyen, o llamarnos para hacer la comparación lado a lado.',
+          },
+        ],
+      },
+      {
+        id: 'plans-for-next-year',
+        heading: 'Planes Medicare Advantage en Luisiana para {planYear}',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Los planes pueden cambiar sus primas, copagos, redes y listas de medicamentos cada año, así que el plan que le funcionó este año puede no funcionarle el próximo. A partir del 1 de octubre puede comparar los planes del año siguiente, y su plan actual debe informarle de cualquier cambio antes de que empiece el nuevo año del plan, en un Aviso Anual de Cambios que explica qué será diferente.',
+          },
+          {
+            type: 'p',
+            text: 'Si después de leer su aviso está conforme, no tiene que hacer nada: su plan se renueva automáticamente. Si algo cambió y le preocupa, como un médico que sale de la red o un medicamento que pasa a un nivel más alto, llámenos para una revisión antes del 7 de diciembre.',
           },
         ],
       },
       {
         id: 'when-to-enroll',
-        heading: 'Cuándo puede inscribirse o cambiarse',
+        heading: '¿Cuándo puedo afiliarme o cambiar de plan Medicare Advantage?',
+        blocks: [
+          {
+            type: 'ul',
+            items: [
+              '**Cuando recibe Medicare por primera vez:** durante su Período de Inscripción Inicial, alrededor de su cumpleaños 65.',
+              '**Del 15 de octubre al 7 de diciembre:** el [Período de Inscripción Anual](page:aep). Afíliese, cambie o deje un plan, con cobertura a partir del 1 de enero.',
+              '**Del 1 de enero al 31 de marzo:** si ya está en un plan Medicare Advantage, puede cambiarse a otro o regresar a Medicare Original, una sola vez.',
+              '**Períodos de Inscripción Especial:** situaciones como una mudanza o la pérdida de otra cobertura pueden permitirle cambiar de plan en otros momentos. Si en su zona se ofrece un plan con calificación de 5 estrellas, puede cambiarse a él una vez durante el año, y las personas con una afección crónica que califica pueden afiliarse en cualquier momento a un C-SNP que la atienda.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'network-changes',
+        heading: '¿Qué pasa si mi médico sale de la red del plan?',
         blocks: [
           {
             type: 'p',
-            text: 'Puede inscribirse en un plan Medicare Advantage cuando comienza a ser elegible para Medicare (su Período de Inscripción Inicial) y cada otoño durante el [Período de Inscripción Anual](page:aep), del 15 de octubre al 7 de diciembre. Si ya tiene un plan Medicare Advantage, el Período de Inscripción Abierta de Medicare Advantage, del 1 de enero al 31 de marzo, le permite hacer un cambio. Ciertos acontecimientos —como mudarse, perder otra cobertura o calificar para la Ayuda Adicional— pueden darle un Período de Inscripción Especial.',
+            text: 'Los médicos pueden entrar o salir de la red de un plan en cualquier momento del año, y por lo general eso no le permite cambiar de plan a mitad de año. Aun así, el plan debe darle acceso a médicos y especialistas calificados, ayudarle a elegir un nuevo proveedor, ayudarle a continuar la atención que ya está recibiendo e informarle sobre las opciones de inscripción que tenga.',
           },
           {
-            type: 'callout',
-            tone: 'info',
-            title: '¿Le gusta su plan actual?',
-            text: 'Los planes pueden cambiar sus costos, redes y listas de medicamentos cada año. Si después de leer su Aviso Anual de Cambios usted sigue conforme, no tiene que hacer nada: su plan se renueva automáticamente. Si algo cambió y le preocupa, llámenos para revisarlo.',
+            type: 'p',
+            text: 'Recibirá un aviso si su médico de cabecera o su proveedor de salud mental va a salir de la red y usted lo ha visto en los últimos tres años. Si eso pasa, llámenos y le ayudamos a revisar sus opciones.',
           },
         ],
       },
@@ -77,41 +173,53 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: 'Es una de las preguntas más comunes. Medicare Advantage suele tener primas mensuales más bajas y puede incluir beneficios adicionales, pero usted paga copagos a medida que recibe atención y, en general, se mantiene dentro de una red. Un plan [Medicare Suplementario](page:service-medicare-supplement) funciona junto con Medicare Original, le permite ver a cualquier proveedor que acepte Medicare y, aunque su prima mensual suele ser más alta, deja menos cuentas por pagar al recibir atención. No hay una sola respuesta correcta: depende de su salud, de sus médicos y de cómo prefiere manejar su presupuesto.',
+            text: 'Depende de su salud, de sus médicos y de cómo prefiere manejar su presupuesto. Con Medicare Advantage paga copagos a medida que usa la atención y por lo general se mantiene dentro de una red, con un límite anual de costos. Un [plan Suplementario de Medicare (Medigap)](page:service-medicare-supplement) funciona junto con Medicare Original: paga su prima mensual más un plan de la Parte D aparte, y a cambio tiene menos facturas cuando recibe atención y puede ver a cualquier proveedor de EE. UU. que acepte Medicare.',
           },
         ],
       },
       {
-        id: 'how-we-help',
-        heading: 'Cómo le ayudamos, sin costo para usted',
+        id: 'near-you',
+        heading: 'Ayuda con Medicare Advantage cerca de usted',
         blocks: [
           {
             type: 'p',
-            text: 'Somos agentes con licencia en el área de Nueva Orleans y nos pagan las compañías de seguros, nunca usted. La prima del plan es la misma si se inscribe con nosotros o por su cuenta. Con nosotros cuenta con una persona real que le explica sus opciones en español o en inglés, le ayuda con la inscripción y sigue disponible cuando tenga dudas sobre una factura o necesite cambiar de plan.',
+            text: 'Atendemos a las personas en nuestra oficina de Veterans Boulevard, en Metairie, y por teléfono desde cualquier parte del estado, en español o en inglés. Lea más sobre los [planes Medicare Advantage en Nueva Orleans](page:city-new-orleans), los [planes Medicare Advantage en Metairie](page:city-metairie), la [ayuda con Medicare en Kenner](page:city-kenner) y los [planes Medicare Advantage en Baton Rouge](page:city-baton-rouge).',
+          },
+          {
+            type: 'p',
+            text: 'Somos agentes con licencia; nos pagan las compañías de seguros, nunca usted. La prima del plan es la misma si se inscribe con nosotros o por su cuenta. Lo que recibe con nosotros es una persona real que le explica sus opciones en español o en inglés, le ayuda a inscribirse y sigue disponible cuando tiene preguntas sobre una factura o necesita cambiar de plan.',
           },
         ],
       },
     ],
     faqs: [
       {
+        q: '¿Cuál es el mejor plan Medicare Advantage en Luisiana?',
+        a: 'No hay un plan que sea el mejor para todos. El plan adecuado para usted cubre a sus médicos y sus medicamentos al menor costo total del año según la atención que usa. Use la lista de esta página, o permítanos comparar por usted los planes de su parroquia.',
+      },
+      {
+        q: '¿Qué planes Medicare Advantage hay en Luisiana para {planYear}?',
+        a: 'Depende de su parroquia. Cada compañía decide dónde ofrece sus planes, y los planes cambian cada año. A partir del 1 de octubre puede comparar los planes del año siguiente, y puede inscribirse del 15 de octubre al 7 de diciembre para tener cobertura desde el 1 de enero. Buscamos en su dirección cada plan que ofrecemos.',
+      },
+      {
+        q: '¿Medicare Advantage es lo mismo que la Parte C?',
+        a: 'Sí. Los planes Medicare Advantage también se llaman Parte C de Medicare. Son planes de compañías privadas aprobados por Medicare que reemplazan la forma en que recibe su cobertura de la Parte A y la Parte B.',
+      },
+      {
         q: '¿Sigo pagando la prima de la Parte B con un plan Medicare Advantage?',
-        a: 'Sí. Con casi todos los planes Medicare Advantage usted sigue pagando la prima de la Parte B, además de la prima que cobre el plan, si la hay. Algunos planes incluyen una reducción de la prima de la Parte B; se los señalaremos si le convienen.',
+        a: 'Sí. Sigue pagando su prima mensual de la Parte B, y es posible que también pague una prima al plan. Le ayudamos a calcular su costo total del año, no solo la prima.',
       },
       {
         q: '¿Puedo conservar a mi médico?',
-        a: 'Muchas veces, sí, pero depende del plan. Antes de que se inscriba, verificamos que sus médicos y hospitales preferidos estén en la red del plan para evitar sorpresas.',
-      },
-      {
-        q: '¿Los planes con prima de $0 de verdad cuestan $0?',
-        a: 'La prima mensual del plan puede ser de $0, pero igual tendrá copagos o coseguro cuando reciba atención, y seguirá pagando la prima de la Parte B. Le ayudamos a calcular su costo total del año, no solo la prima.',
+        a: 'Depende del plan. Antes de que se inscriba, verificamos que sus médicos y sus hospitales preferidos estén en la red del plan para evitar sorpresas.',
       },
       {
         q: '¿Con qué compañías de Medicare Advantage trabajan?',
-        a: `Para Medicare Advantage en Luisiana trabajamos con ${carrierNames('medicare-advantage', 'es')}. Puede verlas en la sección “Compañías con las que trabajamos” de esta página. La disponibilidad de planes varía según la parroquia, y solo le recomendamos un plan que se ajuste a su situación.`,
+        a: `Para Medicare Advantage en Luisiana trabajamos con ${carrierNames('medicare-advantage', 'es')}. La disponibilidad de los planes varía según la parroquia, y solo le recomendamos un plan que se ajuste a su situación.`,
       },
       {
         q: '¿Qué pasa si viajo o paso temporadas fuera del estado?',
-        a: 'Muchos planes HMO solo cubren atención de emergencia y de urgencia fuera de su área de servicio. Si viaja con frecuencia, un PPO o un plan Medicare Suplementario podría convenirle más. Hablemos de sus planes.',
+        a: 'Muchos planes cubren solo la atención de emergencia y urgencia fuera del área de servicio del plan. Si viaja con frecuencia, pregunte por un plan PPO o un plan Suplementario de Medicare. Conversemos sobre sus planes.',
       },
     ],
   },

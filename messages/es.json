@@ -7,7 +7,7 @@
     "services": {
       "medicare-advantage": {
         "title": "Planes Medicare Advantage en Luisiana ({planYear}) | Martinez Insurance Solutions",
-        "description": "Compare planes Medicare Advantage de Humana, Peoples Health, UnitedHealthcare y Devoted Health con un agente local con más de {years} años de experiencia."
+        "description": "Compare planes Medicare Advantage (Parte C) en Luisiana de Humana, Peoples Health, UnitedHealthcare y más con un agente local. Más de {years} años. Sin costo."
       },
       "medicare-supplement": {
         "title": "Planes Suplementarios de Medicare (Medigap) en Luisiana | Martinez Insurance Solutions",
@@ -341,7 +341,8 @@
     "compactFormBody": "Déjenos su nombre y teléfono, y un agente con licencia le devolverá la llamada. Sin costo ni compromiso.",
     "aepLink": "Período de Inscripción Anual: fechas y qué hacer",
     "contactLink": "Comuníquese con un agente local",
-    "moreHelp": "Más ayuda"
+    "moreHelp": "Más ayuda",
+    "maSubtitle": "Planes Medicare Advantage (Parte C) para {year}"
   },
   "About": {
     "teamHeading": "Conozca a sus agentes",

@@ -7,7 +7,7 @@
     "services": {
       "medicare-advantage": {
         "title": "Medicare Advantage Plans in Louisiana ({planYear}) | Martinez Insurance Solutions",
-        "description": "Compare Humana, Peoples Health, UnitedHealthcare and Devoted Health Medicare Advantage plans with a local agent. Over {years} years of experience. No cost."
+        "description": "Compare Medicare Advantage (Part C) plans in Louisiana from Humana, Peoples Health, UnitedHealthcare and more with a local agent. Over {years} years. No cost."
       },
       "medicare-supplement": {
         "title": "Medicare Supplement (Medigap) Plans in Louisiana | Martinez Insurance Solutions",
@@ -341,7 +341,8 @@
     "compactFormBody": "Leave your name and number and a licensed agent will call you back. There's no cost and no obligation.",
     "aepLink": "Annual Enrollment Period: dates and what to do",
     "contactLink": "Contact a local agent",
-    "moreHelp": "More help"
+    "moreHelp": "More help",
+    "maSubtitle": "Medicare Advantage (Part C) plans for {year}"
   },
   "About": {
     "teamHeading": "Meet your agents",
