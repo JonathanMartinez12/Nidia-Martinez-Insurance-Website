@@ -105,6 +105,20 @@ const contentUpdated: Record<string, string> = {
   'service-medicare-advantage': '2026-10-25',
   'service-medicare-supplement': '2026-10-25',
   'service-special-needs-plans': '2026-10-25',
+  'city-new-orleans': '2026-10-25',
+  'city-metairie': '2026-10-25',
+  'city-kenner': '2026-10-25',
+  'city-gretna': '2026-10-25',
+  'city-chalmette': '2026-10-25',
+  'city-slidell': '2026-10-25',
+  'city-covington': '2026-10-25',
+  'city-baton-rouge': '2026-10-25',
+  'service-part-d-prescription-drug-plans': '2026-10-25',
+  'service-hospital-indemnity-insurance': '2026-10-25',
+  'service-dental-vision-insurance': '2026-10-25',
+  'service-final-expense-insurance': '2026-10-25',
+  'service-life-insurance': '2026-10-25',
+  'service-health-insurance': '2026-10-25',
 };
 
 export const pages: PageEntry[] = basePages.map((p) => ({ ...p, lastModified: p.lastModified ?? contentUpdated[p.id] }));

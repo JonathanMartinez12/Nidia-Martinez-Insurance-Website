@@ -39,6 +39,15 @@ describe('content parity', () => {
     }
   });
 
+  it('section ids are unique within each page', () => {
+    for (const [locale, content] of Object.entries(locales)) {
+      for (const [page, body] of Object.entries(contentByPage(content))) {
+        const ids = [...JSON.stringify(body).matchAll(/"id":"([^"]+)"/g)].map((m) => m[1]);
+        expect(new Set(ids).size, `${locale} ${page}: ${ids.join(', ')}`).toBe(ids.length);
+      }
+    }
+  });
+
   it('contains no TODO text', () => {
     for (const content of Object.values(locales)) expect(JSON.stringify(content)).not.toMatch(/\bTODO\b/);
   });
@@ -62,30 +71,6 @@ describe('service pages', () => {
         expect(s.faqs.length).toBeGreaterThanOrEqual(3);
       });
     }
-  }
-});
-
-describe('city pages', () => {
-  for (const [locale, content] of Object.entries(locales)) {
-    it(`${locale}: every city page is at least 300 words of its own`, () => {
-      for (const c of cityPages) {
-        const city = content.cities[c.slug];
-        expect(wordCount([city.lede, ...sectionsText(city.sections)]), c.slug).toBeGreaterThanOrEqual(250);
-      }
-    });
-
-    it(`${locale}: no two city pages are more than 40% similar`, () => {
-      const texts = cityPages.map((c) => {
-        const city = content.cities[c.slug];
-        return { slug: c.slug, text: [city.h1, city.lede, ...sectionsText(city.sections)].join(' ') };
-      });
-      for (let i = 0; i < texts.length; i++) {
-        for (let j = i + 1; j < texts.length; j++) {
-          const sim = similarity(texts[i]!.text, texts[j]!.text);
-          expect(sim, `${texts[i]!.slug} vs ${texts[j]!.slug}`).toBeLessThan(0.4);
-        }
-      }
-    });
   }
 });
 
@@ -119,6 +104,46 @@ const guideWords: Record<string, [number, number]> = {
   'medicare-office': [1000, 1400],
   'diabetes-heart-snp': [1800, 2200],
 };
+
+/** City word floors (h1 + lede + sections + FAQs); the priority pages go deeper. */
+const cityMinWords: Partial<Record<(typeof cityPages)[number]['slug'], number>> = {
+  'new-orleans': 1000,
+  metairie: 1000,
+};
+
+describe('city pages', () => {
+  for (const [locale, content] of Object.entries(locales)) {
+    const cityText = (slug: (typeof cityPages)[number]['slug']) => {
+      const city = content.cities[slug];
+      return [city.h1, city.lede, ...sectionsText(city.sections), ...faqsText(city.faqs)];
+    };
+
+    for (const c of cityPages) {
+      it(`${locale} ${c.slug}: word floor, FAQ with an in-person question, Medicare Advantage in the H1`, () => {
+        const city = content.cities[c.slug];
+        expect(wordCount(cityText(c.slug))).toBeGreaterThanOrEqual(cityMinWords[c.slug] ?? 800);
+        expect(city.faqs.length).toBeGreaterThanOrEqual(3);
+        expect(city.faqs.length).toBeLessThanOrEqual(4);
+        expect(city.h1).toMatch(/Medicare Advantage/);
+      });
+
+      it(`${locale} ${c.slug}: ≥4 contextual inbound links`, () => {
+        const sources = inboundSources(content, `city-${c.slug}`);
+        expect(sources.length, sources.join(', ')).toBeGreaterThanOrEqual(4);
+      });
+    }
+
+    it(`${locale}: no two city pages are more than 30% similar`, () => {
+      const texts = cityPages.map((c) => ({ slug: c.slug, text: cityText(c.slug).join(' ') }));
+      for (let i = 0; i < texts.length; i++) {
+        for (let j = i + 1; j < texts.length; j++) {
+          const sim = similarity(texts[i]!.text, texts[j]!.text);
+          expect(sim, `${texts[i]!.slug} vs ${texts[j]!.slug}`).toBeLessThan(0.3);
+        }
+      }
+    });
+  }
+});
 
 describe('guides', () => {
   for (const [locale, content] of Object.entries(locales)) {

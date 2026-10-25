@@ -369,7 +369,8 @@
     "nearbyHeading": "Nearby areas we serve",
     "parish": "Parish",
     "servicesHeading": "How we can help in {city}",
-    "exploreCity": "Medicare help in {city}"
+    "exploreCity": "Medicare help in {city}",
+    "faqHeading": "Medicare questions in {city}"
   },
   "Faq": {
     "categoriesNav": "Question categories"

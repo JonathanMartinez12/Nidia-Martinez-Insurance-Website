@@ -568,6 +568,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Ayuda cerca de usted',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Ayudamos a comparar planes de la Parte D y farmacias en toda Luisiana, en persona en Metairie o por teléfono. Lea más sobre [ayuda con planes de medicamentos en Kenner](page:city-kenner), [ayuda con planes de medicamentos en Chalmette](page:city-chalmette), [ayuda con planes de medicamentos en Slidell](page:city-slidell) y [ayuda con planes de medicamentos en Baton Rouge](page:city-baton-rouge).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -683,6 +693,16 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: 'Le preguntaremos sobre su diagnóstico y sus medicamentos, revisaremos qué C-SNP atienden su parroquia, confirmaremos que sus médicos estén en la red y compararemos los costos con un [plan Medicare Advantage](page:service-medicare-advantage) regular. Si un C-SNP no es lo más conveniente para usted, se lo diremos con franqueza.',
+          },
+        ],
+      },
+      {
+        id: 'help-near-you',
+        heading: 'Ayuda cerca de usted',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Los Planes de Necesidades Especiales varían de una parroquia a otra, así que revisamos lo que se ofrece en su dirección, viva donde viva en Luisiana. Lea más sobre [planes de Medicare en Nueva Orleans](page:city-new-orleans), [planes de Medicare en Gretna y el West Bank](page:city-gretna), [planes de Medicare en Chalmette](page:city-chalmette) y [planes de Medicare en Covington y Mandeville](page:city-covington).',
           },
         ],
       },
@@ -804,6 +824,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Ayuda cerca de usted',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Comparamos opciones dentales y de visión para personas de toda Luisiana, en persona en Metairie o por teléfono. Lea más sobre [ayuda con coberturas en Nueva Orleans](page:city-new-orleans), [ayuda con coberturas en Metairie](page:city-metairie), [ayuda con coberturas en Gretna y el West Bank](page:city-gretna) y [ayuda con coberturas en Covington y Mandeville](page:city-covington).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -902,6 +932,16 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: 'John Martinez se dedica a los seguros de gastos finales y de vida para familias de toda el área de Nueva Orleans. John se reúne con usted en persona o por teléfono y se asegura de que entienda cada parte de la póliza antes de firmar. Si su familia necesita más protección, puede combinarla con un [seguro de vida económico](page:service-life-insurance).',
+          },
+        ],
+      },
+      {
+        id: 'help-near-you',
+        heading: 'Ayuda cerca de usted',
+        blocks: [
+          {
+            type: 'p',
+            text: 'John ayuda a familias de toda Luisiana con seguros de gastos finales, en persona en Metairie o por teléfono. Lea más sobre [ayuda con seguros en Metairie](page:city-metairie), [ayuda con seguros en Kenner](page:city-kenner), [ayuda con seguros en Chalmette](page:city-chalmette) y [ayuda con seguros en Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },
@@ -1031,6 +1071,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Ayuda cerca de usted',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Ayudamos a familias de toda Luisiana a comparar seguros de vida, en persona en Metairie o por teléfono. Lea más sobre [ayuda con seguros en Metairie](page:city-metairie), [ayuda con seguros en Slidell](page:city-slidell), [ayuda con seguros en Covington y Mandeville](page:city-covington) y [ayuda con seguros en Baton Rouge](page:city-baton-rouge).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -1144,6 +1194,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Ayuda cerca de usted',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Ayudamos a familias de toda Luisiana a agregar una cobertura de indemnización hospitalaria, en persona en Metairie o por teléfono. Lea más sobre [ayuda con seguros en Kenner](page:city-kenner), [ayuda con seguros en Gretna y el West Bank](page:city-gretna), [ayuda con seguros en Chalmette](page:city-chalmette) y [ayuda con seguros en Slidell](page:city-slidell).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -1253,6 +1313,16 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: 'Escucharemos lo que más le importa, le explicaremos sus opciones con palabras sencillas y le ayudaremos a inscribirse. Si en su hogar una persona tiene Medicare y otra no, podemos ayudar a toda la familia en una sola conversación.',
+          },
+        ],
+      },
+      {
+        id: 'help-near-you',
+        heading: 'Ayuda cerca de usted',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Ayudamos a personas menores de 65 en toda Luisiana a encontrar cobertura médica, en persona en Metairie o por teléfono. Lea más sobre [ayuda con seguro médico en Nueva Orleans](page:city-new-orleans), [ayuda con seguro médico en Metairie](page:city-metairie), [ayuda con seguro médico en Kenner](page:city-kenner) y [ayuda con seguro médico en Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },

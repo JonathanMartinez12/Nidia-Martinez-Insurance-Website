@@ -369,7 +369,8 @@
     "nearbyHeading": "Áreas cercanas que atendemos",
     "parish": "Parroquia",
     "servicesHeading": "Cómo podemos ayudarle en {city}",
-    "exploreCity": "Ayuda con Medicare en {city}"
+    "exploreCity": "Ayuda con Medicare en {city}",
+    "faqHeading": "Preguntas sobre Medicare en {city}"
   },
   "Faq": {
     "categoriesNav": "Categorías de preguntas"

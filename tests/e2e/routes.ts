@@ -52,7 +52,7 @@ export const expectedTypes: Record<PageKind, string[]> = {
   about: ['InsuranceAgency', 'Person', 'BreadcrumbList'],
   agent: ['InsuranceAgency', 'Person', 'BreadcrumbList'],
   'service-area': ['InsuranceAgency', 'BreadcrumbList'],
-  city: ['InsuranceAgency', 'BreadcrumbList'],
+  city: ['InsuranceAgency', 'FAQPage', 'BreadcrumbList'],
   faq: ['InsuranceAgency', 'FAQPage', 'BreadcrumbList'],
   contact: ['InsuranceAgency', 'BreadcrumbList'],
   legal: ['InsuranceAgency', 'BreadcrumbList'],

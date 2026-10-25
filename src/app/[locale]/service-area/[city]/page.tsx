@@ -9,10 +9,15 @@ import { site } from '@/config/site';
 import { cityPages, getCity } from '@/config/cities';
 import { getPage } from '@/config/pages';
 import { pageMetadata } from '@/lib/seo';
+import { faqSchema } from '@/lib/schema';
 import { localizedPath } from '@/lib/urls';
 import { telHref } from '@/lib/phone';
 import { btn } from '@/components/ui/styles';
 import { Sections } from '@/components/ui/Blocks';
+import { JsonLd } from '@/components/ui/JsonLd';
+import { stripRichText } from '@/components/ui/RichText';
+import { FaqList } from '@/components/sections/FaqList';
+import { AepCallout } from '@/components/sections/AepCallout';
 import { PageHeader } from '@/components/sections/PageHeader';
 import { ProductCard } from '@/components/sections/ProductsGrid';
 import { FinalCta } from '@/components/sections/FinalCta';
@@ -22,6 +27,8 @@ import { CarrierStrip } from '@/components/sections/CarrierStrip';
 type Params = { params: Promise<{ locale: string; city: string }> };
 
 export const dynamicParams = false;
+// Re-render daily so the Annual Enrollment callout switches on/off by date.
+export const revalidate = 86400;
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) => cityPages.map((c) => ({ locale, city: c.slug })));
@@ -74,8 +81,18 @@ export default async function CityPage({ params }: Params) {
       </PageHeader>
 
       <div className="container-page grid gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-16 lg:py-16">
-        <article className="prose-page min-w-0" data-content="city-body">
-          <Sections sections={content.sections} locale={locale} />
+        <article className="min-w-0" data-content="city-body">
+          <div className="prose-page">
+            <Sections sections={content.sections} locale={locale} />
+          </div>
+          <section aria-labelledby="city-faq" className="pt-14">
+            <h2 id="city-faq" className="text-3xl font-semibold sm:text-4xl">
+              {t('faqHeading', { city: name })}
+            </h2>
+            <div className="mt-6">
+              <FaqList faqs={content.faqs} locale={locale} />
+            </div>
+          </section>
         </article>
         <aside aria-label={t('nearbyHeading')} className="lg:sticky lg:top-28 lg:self-start">
           <div className="rounded-[var(--radius-card)] border border-line bg-white p-6 shadow-[var(--shadow-card)]">
@@ -105,8 +122,10 @@ export default async function CityPage({ params }: Params) {
         </ul>
       </section>
 
+      <AepCallout locale={locale} />
       <CarrierStrip locale={locale} variant="band" />
       <FinalCta locale={locale} />
+      <JsonLd data={faqSchema(content.faqs.map((f) => ({ q: f.q, a: stripRichText(f.a) })))} />
     </PageShell>
   );
 }

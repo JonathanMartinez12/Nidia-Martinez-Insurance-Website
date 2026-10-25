@@ -578,6 +578,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Help near you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'We help people compare Part D plans and pharmacies all over Louisiana, in person in Metairie or by phone. Read more about [drug plan help in Kenner](page:city-kenner), [drug plan help in Chalmette](page:city-chalmette), [drug plan help in Slidell](page:city-slidell) and [drug plan help in Baton Rouge](page:city-baton-rouge).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -693,6 +703,16 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: "We'll ask about your diagnosis and medicines, check which C-SNPs serve your parish, confirm your doctors are in network, and compare the costs with a regular [Medicare Advantage plan](page:service-medicare-advantage). If a C-SNP isn't the best fit for you, we'll say so.",
+          },
+        ],
+      },
+      {
+        id: 'help-near-you',
+        heading: 'Help near you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Special Needs Plans differ from parish to parish, so we check what is offered at your address, wherever you live in Louisiana. Read more about [Medicare plans in New Orleans](page:city-new-orleans), [Medicare plans in Gretna and the West Bank](page:city-gretna), [Medicare plans in Chalmette](page:city-chalmette) and [Medicare plans in Covington and Mandeville](page:city-covington).',
           },
         ],
       },
@@ -814,6 +834,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Help near you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'We compare dental and vision options for people all over Louisiana, in person in Metairie or by phone. Read more about [coverage help in New Orleans](page:city-new-orleans), [coverage help in Metairie](page:city-metairie), [coverage help in Gretna and the West Bank](page:city-gretna) and [coverage help in Covington and Mandeville](page:city-covington).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -912,6 +942,16 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: 'John Martinez focuses on final expense and life insurance for families across Greater New Orleans. John will meet with you in person or by phone and make sure you understand every part of the policy before you sign. Pair it with [low-cost life insurance](page:service-life-insurance) if your family needs more protection.',
+          },
+        ],
+      },
+      {
+        id: 'help-near-you',
+        heading: 'Help near you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'John helps families across Louisiana with final expense coverage, in person in Metairie or by phone. Read more about [insurance help in Metairie](page:city-metairie), [insurance help in Kenner](page:city-kenner), [insurance help in Chalmette](page:city-chalmette) and [insurance help in Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },
@@ -1041,6 +1081,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Help near you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'We help families across Louisiana compare life insurance, in person in Metairie or by phone. Read more about [insurance help in Metairie](page:city-metairie), [insurance help in Slidell](page:city-slidell), [insurance help in Covington and Mandeville](page:city-covington) and [insurance help in Baton Rouge](page:city-baton-rouge).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -1154,6 +1204,16 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      {
+        id: 'help-near-you',
+        heading: 'Help near you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'We help families across Louisiana add hospital indemnity coverage, in person in Metairie or by phone. Read more about [insurance help in Kenner](page:city-kenner), [insurance help in Gretna and the West Bank](page:city-gretna), [insurance help in Chalmette](page:city-chalmette) and [insurance help in Slidell](page:city-slidell).',
+          },
+        ],
+      },
     ],
     faqs: [
       {
@@ -1263,6 +1323,16 @@ const services: Record<ProductKey, ServiceContent> = {
           {
             type: 'p',
             text: "We'll listen to what matters most to you, explain your options in plain language, and help you enroll. If one person in your household has Medicare and another doesn't, we can help the whole family in one conversation.",
+          },
+        ],
+      },
+      {
+        id: 'help-near-you',
+        heading: 'Help near you',
+        blocks: [
+          {
+            type: 'p',
+            text: 'We help people under 65 across Louisiana find health coverage, in person in Metairie or by phone. Read more about [health insurance help in New Orleans](page:city-new-orleans), [health insurance help in Metairie](page:city-metairie), [health insurance help in Kenner](page:city-kenner) and [health insurance help in Baton Rouge](page:city-baton-rouge).',
           },
         ],
       },

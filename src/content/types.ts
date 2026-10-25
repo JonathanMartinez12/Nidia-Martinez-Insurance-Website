@@ -43,6 +43,7 @@ export type CityContent = {
   lede: string;
   sections: Section[];
   nearby: string[];
+  faqs: Faq[];
   /** Products to feature for this city (order matters). */
   featured: ProductKey[];
 };
