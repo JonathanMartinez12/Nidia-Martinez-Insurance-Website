@@ -19,7 +19,7 @@
       },
       "special-needs-plans": {
         "title": "Medicare Special Needs Plans (SNP) in Louisiana | Martinez Insurance Solutions",
-        "description": "Chronic Condition Special Needs Plans (C-SNPs) for diabetes and heart conditions may offer extra benefits. See if you qualify, at no cost to you."
+        "description": "Medicare Special Needs Plans in Louisiana for people with diabetes, heart failure and other chronic conditions, or Medicare and Medicaid. Free local help."
       },
       "dental-vision-insurance": {
         "title": "Dental & Vision Insurance in Metairie & New Orleans | Martinez Insurance Solutions",
@@ -134,6 +134,10 @@
       "medicare-office": {
         "title": "Medicare Office Near Me in New Orleans? Where to Get Help | Martinez Insurance Solutions",
         "description": "Medicare doesn't have walk-in offices. Here's where New Orleans and Metairie residents get help: Social Security, 1-800-MEDICARE, SHIIP and local agents."
+      },
+      "diabetes-heart-snp": {
+        "title": "Medicare Plans for Diabetes & Heart Disease (C-SNP) | Martinez Insurance Solutions",
+        "description": "Who qualifies for a Medicare C-SNP for diabetes, heart failure or heart disease in Louisiana, when you can enroll and how to choose. Free local help."
       }
     }
   },

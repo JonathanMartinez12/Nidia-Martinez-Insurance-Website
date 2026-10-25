@@ -19,7 +19,7 @@
       },
       "special-needs-plans": {
         "title": "Planes de Necesidades Especiales (SNP) en Luisiana | Martinez Insurance Solutions",
-        "description": "Los planes C-SNP para personas con diabetes o enfermedades del corazón pueden ofrecer beneficios adicionales. Averigüe si califica, sin costo."
+        "description": "Planes de Necesidades Especiales de Medicare en Luisiana para personas con diabetes, insuficiencia cardíaca y otras afecciones, o con Medicare y Medicaid."
       },
       "dental-vision-insurance": {
         "title": "Seguro Dental y de Visión en Metairie y Nueva Orleans | Martinez Insurance Solutions",
@@ -134,6 +134,10 @@
       "medicare-office": {
         "title": "¿Oficina de Medicare cerca de mí? Dónde recibir ayuda | Martinez Insurance Solutions",
         "description": "Medicare no tiene oficinas sin cita. Dónde recibir ayuda en Nueva Orleans y Metairie: Seguro Social, 1-800-MEDICARE, SHIIP y agentes locales."
+      },
+      "diabetes-heart-snp": {
+        "title": "Planes de Medicare para diabetes y el corazón (C-SNP) | Martinez Insurance Solutions",
+        "description": "Quién califica para un plan C-SNP de Medicare para diabetes o enfermedades del corazón en Luisiana, cuándo inscribirse y cómo elegir. Ayuda local gratis."
       }
     }
   },

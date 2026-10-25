@@ -342,7 +342,7 @@ const services: Record<ProductKey, ServiceContent> = {
   },
 
   'special-needs-plans': {
-    h1: 'Planes de Medicare para diabetes y enfermedades del corazón (C-SNP)',
+    h1: 'Planes de Necesidades Especiales (SNP) de Medicare en Luisiana',
     lede: 'Si le han diagnosticado una enfermedad crónica del corazón o diabetes, podría calificar para un Plan para Necesidades Especiales por Afecciones Crónicas: un tipo de plan Medicare Advantage diseñado en torno a su cuidado, muchas veces con beneficios adicionales. Le ayudamos a saber si califica.',
     summary:
       'Ayuda para encontrar e inscribirse en Planes para Necesidades Especiales por Afecciones Crónicas (C-SNP) de Medicare para personas con diabetes o enfermedades del corazón en Luisiana.',
@@ -359,6 +359,16 @@ const services: Record<ProductKey, ServiceContent> = {
       'Beneficios adicionales que varían según el plan, como coordinación de la atención o beneficios suplementarios',
     ],
     sections: [
+      {
+        id: 'diabetes-heart-guide',
+        heading: '¿Tiene diabetes o una enfermedad del corazón?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Si tiene diabetes, insuficiencia cardíaca crónica o un trastorno cardiovascular, un C-SNP puede ser una opción, y puede afiliarse en cualquier época del año mientras tenga una afección que califica. Nuestra guía de [planes de Medicare para diabetes y enfermedades del corazón](page:guide-diabetes-heart-snp) explica quién califica, cómo confirman los planes su afección y qué preguntar antes de inscribirse.',
+          },
+        ],
+      },
       {
         id: 'what-is-a-csnp',
         heading: '¿Qué es un Plan para Necesidades Especiales por Afecciones Crónicas?',

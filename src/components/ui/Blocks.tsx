@@ -31,44 +31,46 @@ export function Blocks({ blocks, locale }: { blocks: Block[]; locale: AppLocale 
           }
           case 'table':
             return (
-              <div
-                key={i}
-                role="region"
-                aria-label={block.caption}
-                tabIndex={0}
-                className="overflow-x-auto rounded-2xl border border-line bg-white"
-              >
-                <table className="w-full min-w-[34rem] border-collapse text-left text-[1.05rem]">
-                  <caption className="px-4 pt-4 pb-2 text-left font-serif text-xl font-semibold text-navy-900">
-                    {block.caption}
-                  </caption>
-                  <thead>
-                    <tr className="bg-navy-50">
-                      {block.head.map((h, j) => (
-                        <th key={j} scope="col" className="border-b-2 border-navy-100 px-4 py-3 font-bold text-navy-900">
-                          {h}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {block.rows.map((row, r) => (
-                      <tr key={r} className="border-b border-line last:border-b-0">
-                        {row.map((cell, c) =>
-                          c === 0 ? (
-                            <th key={c} scope="row" className="px-4 py-3 align-top font-bold text-navy-900">
-                              <RichText text={cell} locale={locale} />
-                            </th>
-                          ) : (
-                            <td key={c} className="px-4 py-3 align-top">
-                              <RichText text={cell} locale={locale} />
-                            </td>
-                          ),
-                        )}
+              <div key={i}>
+                <p aria-hidden className="font-serif text-xl font-semibold text-navy-900">
+                  {block.caption}
+                </p>
+                <div
+                  role="region"
+                  aria-label={block.caption}
+                  tabIndex={0}
+                  className="mt-3 overflow-x-auto rounded-2xl border border-line bg-white"
+                >
+                  <table className="w-full min-w-[34rem] border-collapse text-left text-[1.05rem]">
+                    <caption className="sr-only">{block.caption}</caption>
+                    <thead>
+                      <tr className="bg-navy-50">
+                        {block.head.map((h, j) => (
+                          <th key={j} scope="col" className="border-b-2 border-navy-100 px-4 py-3 font-bold text-navy-900">
+                            {h}
+                          </th>
+                        ))}
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row, r) => (
+                        <tr key={r} className="border-b border-line last:border-b-0">
+                          {row.map((cell, c) =>
+                            c === 0 ? (
+                              <th key={c} scope="row" className="px-4 py-3 align-top font-bold text-navy-900">
+                                <RichText text={cell} locale={locale} />
+                              </th>
+                            ) : (
+                              <td key={c} className="px-4 py-3 align-top">
+                                <RichText text={cell} locale={locale} />
+                              </td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             );
           case 'callout': {

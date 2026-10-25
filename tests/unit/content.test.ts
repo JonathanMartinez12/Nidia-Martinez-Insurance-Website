@@ -110,6 +110,7 @@ function inboundSources(content: SiteContent, target: string): string[] {
 /** Word-count range (h1 + lede + sections + FAQs) per guide. */
 const guideWords: Record<string, [number, number]> = {
   'medicare-office': [1000, 1400],
+  'diabetes-heart-snp': [1800, 2200],
 };
 
 describe('guides', () => {

@@ -11,6 +11,12 @@ export const guides = [
     published: '2026-10-25',
     modified: '2026-10-25',
   },
+  {
+    key: 'diabetes-heart-snp',
+    pathname: '/guides/diabetes-heart-special-needs-plans',
+    published: '2026-10-25',
+    modified: '2026-10-25',
+  },
 ] as const;
 
 export type GuideKey = (typeof guides)[number]['key'];

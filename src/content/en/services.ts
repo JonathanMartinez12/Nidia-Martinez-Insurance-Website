@@ -342,7 +342,7 @@ const services: Record<ProductKey, ServiceContent> = {
   },
 
   'special-needs-plans': {
-    h1: 'Medicare Plans for Diabetes & Heart Conditions (C-SNPs)',
+    h1: 'Medicare Special Needs Plans (SNPs) in Louisiana',
     lede: "If you've been diagnosed with a chronic heart condition or diabetes, you may qualify for a Chronic Condition Special Needs Plan — a type of Medicare Advantage plan designed around your care, often with enhanced benefits. We'll help you find out if you qualify.",
     summary:
       'Help finding and enrolling in Medicare Chronic Condition Special Needs Plans (C-SNPs) for people with diabetes or heart conditions in Louisiana.',
@@ -359,6 +359,16 @@ const services: Record<ProductKey, ServiceContent> = {
       'Enhanced benefits that vary by plan, such as care coordination or extra supplemental benefits',
     ],
     sections: [
+      {
+        id: 'diabetes-heart-guide',
+        heading: 'Have diabetes or a heart condition?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'If you have diabetes, chronic heart failure or a cardiovascular disorder, a Chronic Condition SNP (C-SNP) may be an option, and you can join one any time of year while you have a qualifying condition. Our guide to [Medicare plans for diabetes and heart disease](page:guide-diabetes-heart-snp) explains who qualifies, how plans confirm your condition and what to ask before you enroll.',
+          },
+        ],
+      },
       {
         id: 'what-is-a-csnp',
         heading: 'What is a Chronic Condition Special Needs Plan?',

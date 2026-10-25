@@ -70,7 +70,7 @@ export const aep: GuideContent = {
       blocks: [
         {
           type: 'p',
-          text: 'Si le diagnosticaron una enfermedad crónica del corazón o diabetes, podría calificar para un [Plan para Necesidades Especiales por Afecciones Crónicas](page:service-special-needs-plans) con beneficios adicionales. El Período de Inscripción Anual es un buen momento para averiguarlo. Los cambios en sus medicamentos también son una razón para revisar de nuevo su [cobertura de la Parte D](page:service-part-d-prescription-drug-plans).',
+          text: 'Si le diagnosticaron una enfermedad crónica del corazón o diabetes, podría calificar para un [Plan para Necesidades Especiales por Afecciones Crónicas](page:service-special-needs-plans) con beneficios adicionales. El Período de Inscripción Anual es un buen momento para averiguarlo, y nuestra guía de [planes de Medicare para diabetes y enfermedades del corazón](page:guide-diabetes-heart-snp) explica quién califica. Los cambios en sus medicamentos también son una razón para revisar de nuevo su [cobertura de la Parte D](page:service-part-d-prescription-drug-plans).',
         },
       ],
     },
@@ -341,6 +341,7 @@ export const agents: Record<string, AgentContent> = {
               '¿Mis médicos y mi hospital están en la red del plan?',
               '¿Cuánto me costarán mis recetas el próximo año?',
               '¿Es momento de cambiar de plan o me conviene quedarme donde estoy?',
+              '¿Califico para un [plan de Medicare para diabetes o enfermedades del corazón](page:guide-diabetes-heart-snp)?',
             ],
           },
           {
@@ -517,7 +518,7 @@ export const faq: FaqPageContent = {
         },
         {
           q: '¿Qué es un Plan para Necesidades Especiales?',
-          a: 'Es un plan Medicare Advantage para personas con necesidades específicas, como diabetes o enfermedades crónicas del corazón, o para quienes tienen Medicare y Medicaid a la vez. Pueden ofrecer beneficios adicionales. [Lea sobre los Planes para Necesidades Especiales](page:service-special-needs-plans).',
+          a: 'Es un plan Medicare Advantage para personas con necesidades específicas, como diabetes o enfermedades crónicas del corazón, o para quienes tienen Medicare y Medicaid a la vez. Pueden ofrecer beneficios adicionales. [Lea sobre los Planes para Necesidades Especiales](page:service-special-needs-plans) o nuestra guía de [planes C-SNP para diabetes y el corazón](page:guide-diabetes-heart-snp).',
         },
         {
           q: '¿Necesito un plan de la Parte D si tengo un plan Medicare Suplementario?',

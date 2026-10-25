@@ -175,8 +175,299 @@ const medicareOffice: GuideContent = {
   ],
 };
 
+/* Fuentes: ver diabetesHeartSnp en src/content/en/guides.ts (CMS y Medicare.gov, verificadas el 2026-10-25). */
+const diabetesHeartSnp: GuideContent = {
+  h1: 'Planes de Medicare para diabetes y enfermedades del corazón: guía de los C-SNP en Luisiana',
+  lede: 'Si tiene diabetes, insuficiencia cardíaca u otra enfermedad del corazón, un Plan de Necesidades Especiales para Afecciones Crónicas puede ser una opción. Aquí le explicamos quién califica, cuándo puede inscribirse y qué preguntar primero.',
+  sections: [
+    {
+      id: 'what-is-a-csnp',
+      heading: '¿Qué es un Plan de Necesidades Especiales para Afecciones Crónicas (C-SNP)?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Un C-SNP es un tipo de plan Medicare Advantage al que solo pueden afiliarse personas con ciertas afecciones crónicas graves o incapacitantes, como la diabetes o la insuficiencia cardíaca crónica. Como los afiliados comparten una afección, el plan adapta sus beneficios, médicos y lista de medicamentos a esa afección e incluye coordinación de la atención.',
+        },
+        {
+          type: 'p',
+          text: 'Como todo plan Medicare Advantage, un C-SNP cubre todos sus beneficios de la Parte A (hospital) y la Parte B (médica) de Medicare. Los C-SNP son planes HMO o PPO, y **todo Plan de Necesidades Especiales debe incluir cobertura de medicamentos de Medicare (Parte D)**, así que no necesita comprar un plan de medicamentos aparte.',
+        },
+        {
+          type: 'p',
+          text: 'Los C-SNP son uno de tres tipos de Planes de Necesidades Especiales. Los otros dos atienden a personas que tienen Medicare y Medicaid (D-SNP) y a personas que necesitan el nivel de atención de un hogar de ancianos (I-SNP). Lea nuestra información general sobre los [Planes de Necesidades Especiales de Medicare en Luisiana](page:service-special-needs-plans).',
+        },
+      ],
+    },
+    {
+      id: 'type-2-diabetes',
+      heading: '¿Pueden afiliarse a un C-SNP las personas con diabetes tipo 2?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Sí, si en su zona se ofrece un C-SNP para la diabetes. La diabetes mellitus está en la lista de afecciones crónicas que Medicare (CMS) permite atender a estos planes, y ese término médico incluye la diabetes tipo 2. También necesita tener la Parte A y la Parte B de Medicare y vivir en el área de servicio del plan.',
+        },
+        { type: 'h3', text: '¿Y la diabetes tipo 1?' },
+        {
+          type: 'p',
+          text: 'La diabetes tipo 1 también es diabetes mellitus, así que se aplican las mismas reglas. Sin importar el tipo de diabetes, el plan debe confirmar su diagnóstico antes de que su afiliación quede firme, por lo general consultando con su médico.',
+        },
+      ],
+    },
+    {
+      id: 'who-qualifies',
+      heading: 'Información sobre quién califica para un plan de necesidades especiales para la diabetes',
+      blocks: [
+        { type: 'p', text: 'Puede afiliarse a un C-SNP para la diabetes si se cumple todo lo siguiente:' },
+        {
+          type: 'ul',
+          items: [
+            'Tiene la Parte A y la Parte B de Medicare.',
+            'Vive en el área de servicio del plan.',
+            'Tiene la afección que atiende el plan, y el plan la confirma.',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Solo puede permanecer en un C-SNP mientras siga teniendo la afección del plan. Nunca está obligado a afiliarse a un Plan de Necesidades Especiales; es una opción más, junto con un [plan Medicare Advantage](page:service-medicare-advantage) regular o Medicare Original con una [póliza Suplementaria de Medicare (Medigap)](page:service-medicare-supplement).',
+        },
+      ],
+    },
+    {
+      id: 'diabetes-and-heart-disease',
+      heading: '¿Hay un plan de Medicare para la diabetes y las enfermedades del corazón a la vez?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Sí. Algunos C-SNP atienden un grupo de afecciones relacionadas en lugar de una sola. CMS permite que los planes se organicen alrededor de estos grupos de afecciones que suelen presentarse juntas:',
+        },
+        {
+          type: 'ul',
+          items: [
+            'Diabetes e insuficiencia cardíaca crónica',
+            'Insuficiencia cardíaca crónica y trastornos cardiovasculares',
+            'Diabetes y trastornos cardiovasculares',
+            'Diabetes, insuficiencia cardíaca crónica y trastornos cardiovasculares',
+            'Derrame cerebral (accidente cerebrovascular) y trastornos cardiovasculares',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'En un plan organizado según uno de estos grupos de CMS, **basta con tener una de las afecciones del grupo para calificar**. Algunos planes crean su propia combinación y exigen que los afiliados tengan todas las afecciones de esa combinación, así que lea siempre las reglas de elegibilidad del plan o pídanos que las revisemos.',
+        },
+        { type: 'h3', text: '¿Qué enfermedades del corazón cuentan?' },
+        {
+          type: 'p',
+          text: 'En la lista de CMS, la insuficiencia cardíaca crónica es una afección por sí sola. Los “trastornos cardiovasculares” se limitan a las arritmias cardíacas, la enfermedad de las arterias coronarias, la enfermedad vascular periférica y el trastorno tromboembólico venoso crónico. Si tiene insuficiencia cardíaca, puede convenirle un C-SNP que la atienda o uno de los grupos anteriores que la incluya.',
+        },
+      ],
+    },
+    {
+      id: 'benefits',
+      heading: '¿Qué beneficios puede incluir un plan de Medicare para necesidades especiales?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Todo C-SNP incluye su cobertura de la Parte A, la Parte B y la Parte D, además de coordinación de la atención. Fuera de eso, los beneficios varían según el plan y cambian de un año a otro. Medicare explica que un SNP puede cubrir servicios adicionales para el grupo que atiende; por ejemplo, si usted tiene insuficiencia cardíaca congestiva y necesita hospitalizarse, un SNP podría cubrir días adicionales en el hospital.',
+        },
+        {
+          type: 'p',
+          text: 'Como cada plan fija sus propios beneficios, comparamos con usted, punto por punto, los planes que realmente se ofrecen en su parroquia, en lugar de prometerle algún beneficio en particular.',
+        },
+      ],
+    },
+    {
+      id: 'csnp-vs-medicare-advantage',
+      heading: '¿En qué se diferencia un C-SNP de un plan Medicare Advantage regular?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Un C-SNP cubre todo lo que cubre un plan Medicare Advantage regular, pero solo pueden afiliarse personas con la afección del plan, siempre incluye cobertura de medicamentos y sus beneficios, proveedores y lista de medicamentos están adaptados a esa afección. Así se comparan las tres opciones principales:',
+        },
+        {
+          type: 'table',
+          caption: 'C-SNP frente a Medicare Advantage regular y Medicare Original con Medigap',
+          head: ['Qué comparar', 'C-SNP', 'Medicare Advantage regular', 'Medicare Original + Medigap'],
+          rows: [
+            [
+              'Quién puede afiliarse',
+              'Personas con la Parte A y la B en el área de servicio que tienen la afección que atiende el plan',
+              'Personas con la Parte A y la B en el área de servicio',
+              'Personas con la Parte A y la B; es más fácil obtener Medigap durante su período de inscripción abierta de Medigap',
+            ],
+            [
+              'Médicos y hospitales',
+              'Por lo general, la red del plan; algunos planes cubren atención fuera de la red a un costo mayor',
+              'Por lo general, la red del plan; algunos planes cubren atención fuera de la red a un costo mayor',
+              'Cualquier médico u hospital en EE. UU. que acepte Medicare',
+            ],
+            [
+              'Cobertura de medicamentos',
+              'Siempre incluida',
+              'Incluida en la mayoría de los planes',
+              'No incluida; se agrega un plan de la Parte D aparte',
+            ],
+            [
+              'Diseñado para su afección',
+              'Sí: coordinación de la atención, lista de medicamentos y red adaptadas',
+              'No',
+              'No',
+            ],
+            [
+              'Límite anual de gastos de su bolsillo',
+              'Sí, para los servicios cubiertos',
+              'Sí, para los servicios cubiertos',
+              'Medicare Original no tiene límite; Medigap ayuda a pagar su parte',
+            ],
+            [
+              'Cuándo puede afiliarse',
+              'En cualquier momento mientras tenga la afección que califica, además de los períodos regulares',
+              'En los períodos regulares, como del 15 de octubre al 7 de diciembre de cada año',
+              'Medigap: lo mejor es durante su período de inscripción abierta de Medigap de 6 meses',
+            ],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'when-to-enroll',
+      heading: '¿Cuándo puedo inscribirme en un C-SNP para la diabetes?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'En cualquier época del año. Si tiene una afección que califica, un Período de Inscripción Especial le permite afiliarse a un C-SNP que la atienda cuando usted esté listo. Esa oportunidad dura mientras tenga la afección y termina cuando se inscribe en el C-SNP. También puede afiliarse en los períodos regulares, como cuando recibe Medicare por primera vez o durante el [Período de Inscripción Anual](page:aep), del 15 de octubre al 7 de diciembre.',
+        },
+        { type: 'h3', text: '¿Qué pasa si el plan determina que no califico?' },
+        {
+          type: 'p',
+          text: 'Si después de su inscripción el plan no logra confirmar su afección con su proveedor, se lo notificará. Entonces tendrá un Período de Inscripción Especial para afiliarse a otro plan Medicare Advantage. Comienza el mes en que el plan le notifica y termina dos meses calendario después de ese mes.',
+        },
+        { type: 'h3', text: '¿Y si mi afección cambia más adelante?' },
+        {
+          type: 'p',
+          text: 'Si ya no tiene una afección que atiende el plan, puede cambiarse a otro tipo de plan Medicare Advantage o a un plan de medicamentos de Medicare. Su oportunidad comienza el mes en que pierde su condición de necesidad especial y termina cuando se afilia a otro plan, o 3 meses calendario después de que entre en vigor su cancelación involuntaria, lo que ocurra primero.',
+        },
+      ],
+    },
+    {
+      id: 'leaving-a-csnp',
+      heading: '¿Puedo salirme de un C-SNP más adelante?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Sí, durante los períodos de inscripción regulares. Una vez que se afilia a un C-SNP con su Período de Inscripción Especial, esa oportunidad en particular para hacer cambios termina, así que normalmente usaría uno de estos períodos:',
+        },
+        {
+          type: 'ul',
+          items: [
+            '**Del 15 de octubre al 7 de diciembre:** cámbiese a otro plan Medicare Advantage o regrese a Medicare Original, con cobertura a partir del 1 de enero.',
+            '**Del 1 de enero al 31 de marzo:** si está en cualquier plan Medicare Advantage, incluido un C-SNP, cámbiese a otro plan Medicare Advantage, o déjelo, regrese a Medicare Original y afíliese a un plan de medicamentos de Medicare aparte.',
+          ],
+        },
+        {
+          type: 'callout',
+          tone: 'info',
+          title: '¿Piensa en Medigap más adelante?',
+          text: 'El mejor momento para comprar una póliza Medigap es su período de inscripción abierta de Medigap de 6 meses. Cuando termina, sus opciones pueden ser limitadas y la póliza puede costar más, a menos que tenga un derecho especial para comprarla. Hable con nosotros antes de dejar un plan Medicare Advantage.',
+        },
+      ],
+    },
+    {
+      id: 'prove-your-condition',
+      heading: '¿Cómo compruebo mi afección?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'El plan está obligado a confirmar que usted tiene la afección que califica, y es el plan quien hace la verificación. Muchos C-SNP comienzan con un breve cuestionario cuando usted presenta la solicitud (CMS lo llama evaluación de calificación previa a la inscripción) y después verifican las respuestas con su médico u otro proveedor una vez que usted se inscribe.',
+        },
+        { type: 'p', text: 'Usted puede facilitar el proceso:' },
+        {
+          type: 'ul',
+          items: [
+            'Tenga a la mano el nombre y el teléfono del médico que trata su diabetes o su enfermedad del corazón.',
+            'Avísele al consultorio de su médico que el plan podría comunicarse con ellos.',
+            'Mantenga una lista actualizada de sus medicamentos y dosis.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'keep-your-doctors',
+      heading: '¿Puedo seguir con mis proveedores en un plan de necesidades especiales?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Solo si están en la red del plan, o si el plan cubre atención fuera de la red. Algunos SNP exigen que use proveedores de la red, salvo en emergencias, atención urgente fuera del área o diálisis fuera del área; otros cubren atención fuera de la red, por lo general a un costo mayor.',
+        },
+        {
+          type: 'p',
+          text: 'Antes de que se inscriba, revisamos a su médico de cabecera, a su endocrinólogo o cardiólogo y el hospital que prefiere. Los sistemas de salud de Luisiana participan en planes distintos, y las redes pueden cambiar cada año, así que las confirmamos para el año del plan que está eligiendo.',
+        },
+      ],
+    },
+    {
+      id: 'availability',
+      heading: '¿Hay planes C-SNP disponibles en mi parroquia?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Depende de dónde viva y del año. Las compañías de seguros deciden dónde ofrecen Planes de Necesidades Especiales, así que la disponibilidad varía de una parroquia a otra y puede cambiar cada año. Nosotros revisamos los planes que se ofrecen en su dirección.',
+        },
+        {
+          type: 'p',
+          text: 'También puede buscar por su cuenta con el [buscador de planes de Medicare](https://www.medicare.gov/plan-compare) y filtrar los resultados por “Special Needs Plans (SNP)”. Ayudamos a personas con [planes Medicare Advantage en Nueva Orleans](page:city-new-orleans), [Metairie](page:city-metairie), [Baton Rouge](page:city-baton-rouge) y toda Luisiana.',
+        },
+      ],
+    },
+    {
+      id: 'questions-to-ask',
+      heading: '¿Qué debo preguntar antes de inscribirme en un C-SNP?',
+      blocks: [
+        { type: 'p', text: 'Pregunte por sus médicos, sus medicamentos y sus costos totales antes de firmar algo:' },
+        {
+          type: 'ul',
+          items: [
+            '**Médicos:** ¿Están en la red mi médico de cabecera, mis especialistas y mi hospital? ¿Necesito referidos?',
+            '**Medicamentos:** ¿Están todos mis medicamentos en la lista del plan, incluidos la insulina y los suministros para la diabetes? ¿Alguno requiere aprobación previa?',
+            '**Costos anuales totales:** ¿Cuánto son la prima, los copagos y el límite anual de gastos de mi bolsillo?',
+            '**Coordinación de la atención:** ¿Quién es mi coordinador de atención y cómo me comunico con esa persona?',
+            '**Elegibilidad:** ¿Qué afección o grupo atiende el plan y cómo confirmará la mía?',
+            '**Viajes:** ¿Qué se cubre si necesito atención fuera del área de servicio?',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Respondemos estas preguntas con usted sin costo, en persona en Metairie o por teléfono, en español o en inglés. [Contáctenos](page:contact) para ver si un C-SNP le conviene. Si no le conviene, se lo diremos.',
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: '¿Pueden afiliarse a un C-SNP las personas con diabetes tipo 1?',
+      a: 'Sí, si en su zona se ofrece un C-SNP para la diabetes. La diabetes tipo 1 y la tipo 2 son diabetes mellitus, que está en la lista de afecciones que califican de CMS. El plan confirma su diagnóstico.',
+    },
+    {
+      q: '¿Tengo que esperar al Período de Inscripción Anual para afiliarme a un C-SNP?',
+      a: 'No. Si tiene una afección que califica, un Período de Inscripción Especial le permite afiliarse en cualquier época del año a un C-SNP que la atienda. Termina cuando se inscribe.',
+    },
+    {
+      q: '¿Necesito tener diabetes y una enfermedad del corazón para afiliarme?',
+      a: 'Por lo general, no. En los planes organizados según un grupo de afecciones de CMS, como diabetes e insuficiencia cardíaca crónica, basta con una afección del grupo. Los planes con su propia combinación pueden exigirlas todas.',
+    },
+    {
+      q: '¿Un C-SNP incluye cobertura de medicamentos recetados?',
+      a: 'Sí. Todo Plan de Necesidades Especiales debe incluir cobertura de medicamentos de Medicare (Parte D).',
+    },
+    {
+      q: '¿Cuesta algo recibir ayuda para elegir un C-SNP?',
+      a: 'No. Nuestra ayuda es gratis. Nos pagan las compañías de seguros, y su prima es la misma si se inscribe con nosotros o por su cuenta.',
+    },
+  ],
+};
+
 export const guides: Record<GuideKey, GuideContent> = {
   'medicare-office': medicareOffice,
+  'diabetes-heart-snp': diabetesHeartSnp,
 };
 
 export const guidesHub: GuidesHubContent = {

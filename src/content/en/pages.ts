@@ -70,7 +70,7 @@ export const aep: GuideContent = {
       blocks: [
         {
           type: 'p',
-          text: "If you've been diagnosed with a chronic heart condition or diabetes, you may qualify for a [Chronic Condition Special Needs Plan](page:service-special-needs-plans) with enhanced benefits. The Annual Enrollment Period is a good time to find out. Changes in your medicines are also a reason to recheck your [Part D coverage](page:service-part-d-prescription-drug-plans).",
+          text: "If you've been diagnosed with a chronic heart condition or diabetes, you may qualify for a [Chronic Condition Special Needs Plan](page:service-special-needs-plans) with enhanced benefits. The Annual Enrollment Period is a good time to find out, and our guide to [Medicare plans for diabetes and heart disease](page:guide-diabetes-heart-snp) explains who qualifies. Changes in your medicines are also a reason to recheck your [Part D coverage](page:service-part-d-prescription-drug-plans).",
         },
       ],
     },
@@ -341,6 +341,7 @@ export const agents: Record<string, AgentContent> = {
               'Are my doctors and hospital in the plan’s network?',
               'What will my prescriptions cost next year?',
               'Is it time to switch plans, or should I stay where I am?',
+              'Do I qualify for a [Medicare plan for diabetes or heart disease](page:guide-diabetes-heart-snp)?',
             ],
           },
           {
@@ -517,7 +518,7 @@ export const faq: FaqPageContent = {
         },
         {
           q: 'What is a Special Needs Plan?',
-          a: 'A Medicare Advantage plan for people with specific needs, such as diabetes or chronic heart conditions, or for people with both Medicare and Medicaid. These plans may offer enhanced benefits. [Read about Special Needs Plans](page:service-special-needs-plans).',
+          a: 'A Medicare Advantage plan for people with specific needs, such as diabetes or chronic heart conditions, or for people with both Medicare and Medicaid. These plans may offer enhanced benefits. [Read about Special Needs Plans](page:service-special-needs-plans) or our guide to [C-SNPs for diabetes and heart disease](page:guide-diabetes-heart-snp).',
         },
         {
           q: 'Do I need a Part D plan if I have a Medicare Supplement?',

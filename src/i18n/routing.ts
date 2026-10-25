@@ -48,6 +48,10 @@ export const routing = defineRouting({
       en: '/guides/medicare-office-near-me-new-orleans',
       es: '/guias/oficina-de-medicare-cerca-de-mi',
     },
+    '/guides/diabetes-heart-special-needs-plans': {
+      en: '/guides/diabetes-heart-special-needs-plans',
+      es: '/guias/planes-necesidades-especiales-diabetes-corazon',
+    },
     '/faq': { en: '/faq', es: '/preguntas-frecuentes' },
     '/contact': { en: '/contact', es: '/contacto' },
     '/privacy-policy': { en: '/privacy-policy', es: '/politica-de-privacidad' },
