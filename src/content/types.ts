@@ -82,6 +82,8 @@ export type AreaHubContent = {
 };
 
 export type HomeContent = {
+  /** "Why work with a local Medicare agent?" section. */
+  why: Section;
   faqs: Faq[];
 };
 

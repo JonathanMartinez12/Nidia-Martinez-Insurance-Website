@@ -14,7 +14,8 @@ test.describe('SEO: every route × locale', () => {
       // Title & description
       const title = await page.title();
       expect(title.length).toBeGreaterThan(0);
-      expect(title.length, title).toBeLessThanOrEqual(60);
+      expect(title.length, title).toBeLessThanOrEqual(90);
+      expect(title, 'brand suffix').toMatch(/ \| Martinez Insurance Solutions$/);
       const description = (await page.locator('meta[name="description"]').getAttribute('content')) ?? '';
       expect(description.length).toBeGreaterThan(0);
       expect(description.length, description).toBeLessThanOrEqual(155);

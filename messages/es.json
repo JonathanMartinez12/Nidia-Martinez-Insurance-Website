@@ -1,53 +1,53 @@
 {
   "Meta": {
     "home": {
-      "title": "Asesores de Medicare en Nueva Orleans | Martinez Insurance",
-      "description": "Agentes de Medicare locales y con licencia en Nueva Orleans, con más de {years} años de experiencia. Ayuda en persona y sin costo. Hablamos español."
+      "title": "Agentes de Medicare en Metairie y Nueva Orleans | Martinez Insurance Solutions",
+      "description": "Agentes de Medicare con licencia en Metairie. Revisión gratis en persona o por teléfono: comparamos Humana, UnitedHealthcare y más. Hablamos español."
     },
     "services": {
       "medicare-advantage": {
-        "title": "Planes Medicare Advantage en Luisiana | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Luisiana ({planYear}) | Martinez Insurance Solutions",
         "description": "Compare planes Medicare Advantage de Humana, Peoples Health, UnitedHealthcare y Devoted Health con un agente local con más de {years} años de experiencia."
       },
       "medicare-supplement": {
-        "title": "Medicare Suplementario en Luisiana | Martinez Insurance",
+        "title": "Planes Suplementarios de Medicare (Medigap) en Luisiana | Martinez Insurance Solutions",
         "description": "Planes Medigap de AARP Medicare Supplement, Humana y Blue Cross Louisiana, explicados por nuestro equipo local, con más de {years} años de experiencia."
       },
       "part-d-prescription-drug-plans": {
-        "title": "Planes de Medicamentos Parte D | Martinez Insurance",
+        "title": "Planes de Medicamentos Parte D en Luisiana | Martinez Insurance Solutions",
         "description": "Encuentre un plan de la Parte D que cubra sus medicinas en la farmacia que usted usa. Ayuda sin costo de agentes bilingües en Nueva Orleans."
       },
       "special-needs-plans": {
-        "title": "Medicare para Diabetes y Corazón | Martinez Insurance",
+        "title": "Planes de Necesidades Especiales (SNP) en Luisiana | Martinez Insurance Solutions",
         "description": "Los planes C-SNP para personas con diabetes o enfermedades del corazón pueden ofrecer beneficios adicionales. Averigüe si califica, sin costo."
       },
       "dental-vision-insurance": {
-        "title": "Seguro Dental y de Visión para Mayores | Martinez Insurance",
+        "title": "Seguro Dental y de Visión en Metairie y Nueva Orleans | Martinez Insurance Solutions",
         "description": "Medicare Original no cubre la atención dental ni de la vista de rutina. Compare planes dentales y de visión con un agente bilingüe en Nueva Orleans."
       },
       "final-expense-insurance": {
-        "title": "Seguro de Gastos Finales en Luisiana | Martinez Insurance",
+        "title": "Seguro de Gastos Finales en Luisiana | Martinez Insurance Solutions",
         "description": "El seguro de gastos finales ayuda a cubrir el funeral para que su familia no tenga que pagarlo. Atención amable y bilingüe en el área de Nueva Orleans."
       },
       "life-insurance": {
-        "title": "Seguro de Vida Económico en Luisiana | Martinez Insurance",
+        "title": "Seguro de Vida Económico en Luisiana | Martinez Insurance Solutions",
         "description": "Seguro de vida a término y permanente a buen precio para familias de Luisiana. Un agente local con licencia compara opciones con usted en español."
       },
       "hospital-indemnity-insurance": {
-        "title": "Seguro de Indemnización Hospitalaria | Martinez Insurance",
+        "title": "Seguro de Indemnización Hospitalaria en Luisiana | Martinez Insurance Solutions",
         "description": "Estos planes le pagan dinero en efectivo por estadías cubiertas en el hospital, lo que ayuda con los copagos de Medicare Advantage. Asesoría sin costo."
       },
       "health-insurance": {
-        "title": "Seguro de Salud para Menores de 65 | Martinez Insurance",
+        "title": "Seguro Médico en Metairie y Nueva Orleans | Martinez Insurance Solutions",
         "description": "¿Aún no tiene Medicare? Reciba ayuda para encontrar seguro médico individual y familiar en Luisiana con agentes bilingües y con licencia."
       }
     },
     "aep": {
-      "title": "Inscripción de Medicare: 15 oct–7 dic | Martinez Insurance",
+      "title": "Inscripción Anual de Medicare {aepYear}: 15 oct–7 dic | Martinez Insurance Solutions",
       "description": "El Período de Inscripción Anual de Medicare va del 15 de octubre al 7 de diciembre. Entienda su Aviso Anual de Cambios y pida una revisión gratis."
     },
     "scam": {
-      "title": "Cómo Evitar Fraudes de Medicare | Martinez Insurance",
+      "title": "Cómo Evitar Fraudes de Medicare | Martinez Insurance Solutions",
       "description": "Las llamadas y mensajes fraudulentos sobre Medicare son comunes. Conozca las señales de alerta, lo que Medicare nunca le pedirá y cómo denunciarlo."
     },
     "about": {
@@ -56,58 +56,58 @@
     },
     "agents": {
       "nidia-martinez": {
-        "title": "Nidia Martinez, Agente de Medicare | Martinez Insurance",
+        "title": "Nidia Martinez, Agente de Medicare en Metairie | Martinez Insurance Solutions",
         "description": "Nidia Martinez es agente de Medicare bilingüe y con licencia, con más de {years} años de experiencia en planes Medicare Advantage y Medicare Suplementario."
       },
       "john-martinez": {
-        "title": "John Martinez, Agente de Seguros | Martinez Insurance",
+        "title": "John Martinez, Agente de Seguros con Licencia | Martinez Insurance Solutions",
         "description": "John Martinez ayuda a familias de Luisiana con seguros de gastos finales, vida, indemnización hospitalaria, dental, visión y salud. Hablamos español."
       }
     },
     "serviceArea": {
-      "title": "Ayuda con Medicare en toda Luisiana | Martinez Insurance",
+      "title": "Agentes de Medicare en toda Luisiana | Martinez Insurance Solutions",
       "description": "Ayudamos con Medicare en toda Luisiana, con citas en persona en el área metropolitana de Nueva Orleans, la orilla norte del lago y Baton Rouge."
     },
     "cities": {
       "new-orleans": {
-        "title": "Agente de Medicare en Nueva Orleans | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Nueva Orleans, LA | Martinez Insurance Solutions",
         "description": "Agente de Medicare local y bilingüe para los vecindarios de Nueva Orleans. Compare planes Medicare Advantage, Suplementario y Parte D, sin costo."
       },
       "metairie": {
-        "title": "Agente de Medicare en Metairie, LA | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Metairie, LA | Martinez Insurance Solutions",
         "description": "¿Busca un agente de Medicare en Metairie? Reciba ayuda en persona y sin costo para comparar planes que acepten a sus médicos de la parroquia Jefferson."
       },
       "kenner": {
-        "title": "Agente de Medicare en Kenner, LA | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Kenner, LA | Martinez Insurance Solutions",
         "description": "Ayuda con Medicare en español en Kenner. Comparamos planes Medicare Advantage, Medigap y de medicamentos con usted, sin ningún costo."
       },
       "gretna": {
-        "title": "Agente de Medicare, Gretna y West Bank | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Gretna y West Bank | Martinez Insurance Solutions",
         "description": "Ayuda con Medicare para Gretna, Marrero, Harvey y el West Bank. Compare planes con un agente local que revisa sus médicos y su farmacia."
       },
       "chalmette": {
-        "title": "Agente de Medicare en Chalmette, LA | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Chalmette, LA | Martinez Insurance Solutions",
         "description": "Orientación sobre Medicare sin costo para Chalmette y la parroquia St. Bernard. Revise su plan cada otoño, evite fraudes y resuelva sus dudas."
       },
       "slidell": {
-        "title": "Agente de Medicare en Slidell, LA | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Slidell, LA | Martinez Insurance Solutions",
         "description": "Ayuda con Medicare para Slidell y el este de la parroquia St. Tammany. Compare planes Medicare Advantage y Suplementario con un agente bilingüe."
       },
       "covington": {
-        "title": "Agente Medicare, Covington y Mandeville | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Covington y Mandeville | Martinez Insurance Solutions",
         "description": "Ayuda con Medicare en la orilla norte para Covington, Mandeville y el oeste de St. Tammany. Revisiones personales con un agente, sin costo."
       },
       "baton-rouge": {
-        "title": "Agente de Medicare en Baton Rouge, LA | Martinez Insurance",
+        "title": "Planes Medicare Advantage en Baton Rouge, LA | Martinez Insurance Solutions",
         "description": "Orientación sobre Medicare para Baton Rouge con agentes bilingües y con licencia. Compare planes Medicare Advantage, Medigap y Parte D."
       }
     },
     "faq": {
-      "title": "Preguntas Frecuentes sobre Medicare | Martinez Insurance",
+      "title": "Preguntas Frecuentes sobre Medicare | Martinez Insurance Solutions",
       "description": "Respuestas claras sobre la inscripción en Medicare, Medicare Advantage vs. Medigap, la Parte D, costos, fraudes y cómo trabajar con un agente local."
     },
     "contact": {
-      "title": "Consulta Gratis de Medicare | Martinez Insurance Solutions",
+      "title": "Consulta Gratis de Medicare en Metairie | Martinez Insurance Solutions",
       "description": "Llame al {phone} o envíenos un mensaje para una consulta sin costo sobre Medicare en el área de Nueva Orleans o en toda Luisiana."
     },
     "privacy": {
@@ -119,7 +119,7 @@
       "description": "Los términos que aplican al usar el sitio web de Martinez Insurance Solutions, incluida información importante sobre el contenido educativo."
     },
     "accessibility": {
-      "title": "Declaración de Accesibilidad | Martinez Insurance",
+      "title": "Declaración de Accesibilidad | Martinez Insurance Solutions",
       "description": "Nuestro compromiso con un sitio accesible para todos, incluidas las personas que usan lectores de pantalla, teclado o letra más grande."
     },
     "notFound": {
@@ -253,8 +253,8 @@
     }
   },
   "Home": {
-    "h1": "Asesores de Medicare en Nueva Orleans, Luisiana",
-    "lede": "Ayuda personal y en persona para elegir el plan de Medicare adecuado, de un matrimonio de agentes locales que estará a su lado año tras año.",
+    "h1": "Agentes de Medicare locales en Metairie y Nueva Orleans",
+    "lede": "Agentes y corredores de seguros de Medicare independientes y con licencia en Metairie. Comparamos planes de varias compañías y le ayudamos a elegir, en persona o por teléfono, sin costo para usted.",
     "reassurance": "Sin costo para usted. Sin presiones. Hablamos español.",
     "teamLabel": "Su equipo local",
     "teamCaption": "Nidia y John Martinez · Agentes con licencia · Un matrimonio a su servicio",

@@ -1,5 +1,6 @@
 import { site } from '@/config/site';
 import { combinedYears, headlineYears } from '@/lib/experience';
+import { getEnrollmentStatus, planYear } from '@/lib/enrollment';
 import { createTranslator } from 'next-intl';
 import { describe, expect, it } from 'vitest';
 import en from '@messages/en.json';
@@ -8,7 +9,14 @@ import { pages } from '@/config/pages';
 import { flattenKeys } from './helpers';
 
 // Same values the site renders (see metaValues in src/lib/seo.ts).
-const values = { years: headlineYears() ?? 0, combinedYears: combinedYears() ?? 0, phone: site.primaryPhone.display };
+const values = {
+  years: headlineYears() ?? 0,
+  combinedYears: combinedYears() ?? 0,
+  phone: site.primaryPhone.display,
+  aepYear: getEnrollmentStatus().aepYear,
+  planYear: planYear(),
+};
+const BRAND = ' | Martinez Insurance Solutions';
 const catalogs = { en, es } as const;
 
 const icuArgs = (s: string) => new Set([...s.matchAll(/\{(\w+)/g)].map((m) => m[1]));
@@ -43,11 +51,12 @@ describe('page metadata', () => {
   for (const locale of ['en', 'es'] as const) {
     const t = createTranslator({ locale, messages: catalogs[locale], namespace: 'Meta' });
     for (const page of pages) {
-      it(`${locale} ${page.id}: title ≤ 60, description ≤ 155, unique`, () => {
+      it(`${locale} ${page.id}: branded title ≤ 90, description ≤ 155, unique`, () => {
         const title = t(`${page.metaKey}.title` as 'home.title', values);
         const description = t(`${page.metaKey}.description` as 'home.description', values);
-        expect(title.length, title).toBeLessThanOrEqual(60);
-        expect(title.length).toBeGreaterThan(10);
+        expect(title.length, title).toBeLessThanOrEqual(90);
+        expect(title.endsWith(BRAND), title).toBe(true);
+        expect(title.length - BRAND.length, title).toBeGreaterThan(10);
         expect(description.length, description).toBeLessThanOrEqual(155);
         expect(description.length).toBeGreaterThan(50);
         expect(titles.has(title), `duplicate title "${title}" (also ${titles.get(title)})`).toBe(false);
@@ -58,10 +67,10 @@ describe('page metadata', () => {
     }
   }
 
-  it('mentions the configured years of experience on Home, About, Medicare Advantage and Medicare Supplement', () => {
+  it('mentions the configured years of experience on About, Medicare Advantage and Medicare Supplement', () => {
     for (const locale of ['en', 'es'] as const) {
       const t = createTranslator({ locale, messages: catalogs[locale], namespace: 'Meta' });
-      for (const key of ['home', 'about', 'services.medicare-advantage', 'services.medicare-supplement']) {
+      for (const key of ['about', 'services.medicare-advantage', 'services.medicare-supplement']) {
         expect(t(`${key}.description` as 'home.description', values)).toContain(String(values.years));
       }
     }

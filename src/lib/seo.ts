@@ -5,6 +5,7 @@ import { getPage } from '@/config/pages';
 import type { AppLocale } from '@/i18n/routing';
 import { absoluteUrl, languageAlternates, localizedUrl, ogLocale, otherLocale } from './urls';
 import { headlineYears, combinedYears } from './experience';
+import { getEnrollmentStatus, planYear } from './enrollment';
 
 /** Values available to every `Meta.*` message (ICU placeholders). */
 export function metaValues(extra: Record<string, string | number> = {}) {
@@ -12,6 +13,8 @@ export function metaValues(extra: Record<string, string | number> = {}) {
     years: headlineYears() ?? 0,
     combinedYears: combinedYears() ?? 0,
     phone: site.primaryPhone.display,
+    aepYear: getEnrollmentStatus().aepYear,
+    planYear: planYear(),
     ...extra,
   };
 }

@@ -583,18 +583,46 @@ export const faq: FaqPageContent = {
 };
 
 export const home: HomeContent = {
+  why: {
+    id: 'why-local-agent',
+    heading: 'Why work with a local Medicare agent?',
+    blocks: [
+      {
+        type: 'p',
+        text: "A local Medicare agent gives you one person to call who knows the plans, the doctors and the hospitals around you, and our help costs you nothing. As independent, licensed agents (some people say Medicare brokers), we work with several insurance companies instead of just one, so we can show you options side by side and help you pick the plan that fits you.",
+      },
+      {
+        type: 'ul',
+        items: [
+          '**Free to you.** Insurance companies pay us. Your premium is the same whether you enroll with us or on your own.',
+          '**More than one company.** We compare plans from several carriers, so you are not limited to a single company’s plans.',
+          '**Face to face in Metairie.** Sit down with us at our office on Veterans Boulevard, or talk by phone from anywhere in Louisiana.',
+          '**Help all year.** We answer questions about bills, cards and doctors, and we review your plan with you every fall.',
+          '**English or Spanish.** Every conversation can be fully in Spanish. Family members are always welcome.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'We help people across Greater New Orleans. Read more about [Medicare Advantage plans in New Orleans](page:city-new-orleans) and [Medicare help in Metairie](page:city-metairie), or see [every area we serve](page:service-area).',
+      },
+    ],
+  },
   faqs: [
     {
-      q: 'How much does it cost to work with you?',
-      a: 'Nothing. Insurance companies pay us, and your premium is the same whether you enroll with us or on your own.',
+      q: 'Is a Medicare broker or agent free?',
+      a: 'Yes. Working with us is free. Insurance companies pay us a commission when you enroll, and your premium is the same whether you enroll with us or on your own.',
+    },
+    {
+      q: 'Do you work for Medicare?',
+      a: "No. Martinez Insurance Solutions is a licensed private insurance agency. We are not Medicare or any government agency. For Medicare itself, call 1-800-MEDICARE or visit [Medicare.gov](https://www.medicare.gov). We help you compare and enroll in private plans, like Medicare Advantage, Medicare Supplement and Part D.",
+    },
+    {
+      q: 'Can I meet with a Medicare agent near me in person?',
+      a: 'Yes. You can meet with us in person at our office in Metairie, by appointment. If coming in is hard, we can help by phone anywhere in Louisiana. [Contact us](page:contact) to set up a time.',
     },
     {
       q: "If I'm happy with my plan, do I need to change it?",
       a: "No. If you're satisfied after reading your Annual Notice of Change, your plan renews automatically. If the changes concern you, schedule a review with us.",
-    },
-    {
-      q: 'Do you meet in person?',
-      a: "Yes. We offer personal, in-person help in Greater New Orleans, and we're happy to help by phone anywhere in Louisiana.",
     },
     {
       q: 'Is this the government or Medicare calling?',

@@ -41,3 +41,12 @@ export function getEnrollmentStatus(now: Date = new Date()): EnrollmentStatus {
   const aepYear = md > 1207 ? year + 1 : year;
   return { phase, aepYear, coverageYear: aepYear + 1 };
 }
+
+/**
+ * The plan year people are shopping for: from October 1 (when next year's plans are
+ * published, ahead of the Oct 15 AEP) it's next year, otherwise the current year.
+ */
+export function planYear(now: Date = new Date()): number {
+  const { year, month } = centralDateParts(now);
+  return month >= 10 ? year + 1 : year;
+}

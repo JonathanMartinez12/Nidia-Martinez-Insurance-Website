@@ -583,18 +583,46 @@ export const faq: FaqPageContent = {
 };
 
 export const home: HomeContent = {
+  why: {
+    id: 'why-local-agent',
+    heading: '¿Por qué trabajar con un agente de Medicare local?',
+    blocks: [
+      {
+        type: 'p',
+        text: 'Un agente de Medicare local le da una sola persona a quien llamar, que conoce los planes, los médicos y los hospitales de su zona, y nuestra ayuda no le cuesta nada. Como agentes independientes y con licencia (también llamados corredores de seguros de Medicare), trabajamos con varias compañías de seguros, no solo con una. Así podemos mostrarle opciones lado a lado y ayudarle a elegir el plan que le conviene.',
+      },
+      {
+        type: 'ul',
+        items: [
+          '**Gratis para usted.** Nos pagan las compañías de seguros. Su prima es la misma si se inscribe con nosotros o por su cuenta.',
+          '**Más de una compañía.** Somos agentes de Medicare Advantage y agentes de suplementos de Medicare: comparamos planes de varias aseguradoras.',
+          '**En persona en Metairie.** Visítenos en nuestra oficina de Veterans Boulevard, o hable con nosotros por teléfono desde cualquier parte de Luisiana.',
+          '**Ayuda todo el año.** Respondemos sus preguntas sobre facturas, tarjetas y médicos, y revisamos su plan con usted cada otoño.',
+          '**Todo en español.** Toda la conversación puede ser en español. Su familia siempre es bienvenida.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Ayudamos a personas en toda el área de Nueva Orleans, cerca de usted. Lea sobre los [planes Medicare Advantage en Nueva Orleans](page:city-new-orleans) y la [ayuda con Medicare en Metairie](page:city-metairie), o vea [todas las zonas que atendemos](page:service-area).',
+      },
+    ],
+  },
   faqs: [
     {
-      q: '¿Cuánto cuesta trabajar con ustedes?',
-      a: 'Nada. Nos pagan las compañías de seguros, y su prima es la misma si se inscribe con nosotros o por su cuenta.',
+      q: '¿Cuánto cuesta trabajar con un agente de Medicare?',
+      a: 'Nada. Trabajar con nosotros es gratis. Las compañías de seguros nos pagan una comisión cuando usted se inscribe, y su prima es la misma si se inscribe con nosotros o por su cuenta.',
+    },
+    {
+      q: '¿Trabajan para Medicare?',
+      a: 'No. Martinez Insurance Solutions es una agencia de seguros privada con licencia. No somos Medicare ni ninguna agencia del gobierno. Para hablar con Medicare, llame al 1-800-MEDICARE o visite [Medicare.gov](https://es.medicare.gov). Nosotros le ayudamos a comparar e inscribirse en planes privados, como Medicare Advantage, Medicare Suplementario y la Parte D.',
+    },
+    {
+      q: '¿Puedo reunirme en persona con un agente de Medicare cerca de mí?',
+      a: 'Sí. Puede reunirse con nosotros en persona en nuestra oficina de Metairie, con cita previa. Si se le hace difícil venir, le ayudamos por teléfono desde cualquier parte de Luisiana. [Contáctenos](page:contact) para coordinar un horario.',
     },
     {
       q: 'Si mi plan me gusta, ¿tengo que cambiarlo?',
       a: 'No. Si después de leer su Aviso Anual de Cambios su plan le sigue conviniendo, se renueva automáticamente. Si los cambios le preocupan, programe una revisión con nosotros.',
-    },
-    {
-      q: '¿Se reúnen en persona?',
-      a: 'Sí. Ofrecemos ayuda personal y en persona en el área de Nueva Orleans, y con gusto le ayudamos por teléfono desde cualquier parte de Luisiana.',
     },
     {
       q: '¿Es el gobierno o Medicare quien me llama?',

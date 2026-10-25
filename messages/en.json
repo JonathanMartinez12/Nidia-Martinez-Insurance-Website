@@ -1,49 +1,49 @@
 {
   "Meta": {
     "home": {
-      "title": "New Orleans Medicare Advisor | Martinez Insurance Solutions",
-      "description": "Local, licensed Medicare advisors in New Orleans with over {years} years of experience. No-cost, in-person help choosing a plan. Hablamos español."
+      "title": "Medicare Agents in Metairie & New Orleans | Martinez Insurance Solutions",
+      "description": "Licensed Medicare agents in Metairie. Free plan reviews in person or by phone, comparing Humana, UnitedHealthcare, Peoples Health & more. Hablamos español."
     },
     "services": {
       "medicare-advantage": {
-        "title": "Medicare Advantage Plans in Louisiana | Martinez Insurance",
+        "title": "Medicare Advantage Plans in Louisiana ({planYear}) | Martinez Insurance Solutions",
         "description": "Compare Humana, Peoples Health, UnitedHealthcare and Devoted Health Medicare Advantage plans with a local agent. Over {years} years of experience. No cost."
       },
       "medicare-supplement": {
-        "title": "Medicare Supplement Plans in Louisiana | Martinez Insurance",
+        "title": "Medicare Supplement (Medigap) Plans in Louisiana | Martinez Insurance Solutions",
         "description": "Medigap plans from AARP Medicare Supplement, Humana and Blue Cross Louisiana, explained by a local advisor with over {years} years of experience. No-cost help."
       },
       "part-d-prescription-drug-plans": {
-        "title": "Medicare Part D Drug Plans in Louisiana | Martinez Insurance",
+        "title": "Medicare Part D Drug Plans in Louisiana | Martinez Insurance Solutions",
         "description": "Find a Part D prescription drug plan that covers your medicines at the pharmacy you use. No-cost help from bilingual Medicare agents in New Orleans."
       },
       "special-needs-plans": {
-        "title": "Medicare Plans for Diabetes & Heart | Martinez Insurance",
+        "title": "Medicare Special Needs Plans (SNP) in Louisiana | Martinez Insurance Solutions",
         "description": "Chronic Condition Special Needs Plans (C-SNPs) for diabetes and heart conditions may offer extra benefits. See if you qualify, at no cost to you."
       },
       "dental-vision-insurance": {
-        "title": "Dental & Vision Insurance for Seniors | Martinez Insurance",
+        "title": "Dental & Vision Insurance in Metairie & New Orleans | Martinez Insurance Solutions",
         "description": "Original Medicare doesn't cover routine dental or vision care. Compare dental and vision plans with a local, bilingual agent in Greater New Orleans."
       },
       "final-expense-insurance": {
-        "title": "Final Expense Insurance in Louisiana | Martinez Insurance",
+        "title": "Final Expense & Burial Insurance in Louisiana | Martinez Insurance Solutions",
         "description": "Final expense (burial) insurance helps cover funeral costs so your family isn't left with the bill. Friendly, bilingual help in Greater New Orleans."
       },
       "life-insurance": {
-        "title": "Low-Cost Life Insurance in Louisiana | Martinez Insurance",
+        "title": "Low-Cost Life Insurance in Louisiana | Martinez Insurance Solutions",
         "description": "Affordable term and whole life insurance for Louisiana families. A licensed local agent compares options with you in plain English or Spanish."
       },
       "hospital-indemnity-insurance": {
-        "title": "Hospital Indemnity Insurance in LA | Martinez Insurance",
+        "title": "Hospital Indemnity Insurance in Louisiana | Martinez Insurance Solutions",
         "description": "Hospital indemnity plans pay you cash for covered hospital stays, which can help with Medicare Advantage copays. Local, no-cost guidance."
       },
       "health-insurance": {
-        "title": "Health Insurance Under 65 in Louisiana | Martinez Insurance",
+        "title": "Health Insurance Agency in Metairie (Under 65) | Martinez Insurance Solutions",
         "description": "Not on Medicare yet? Get help finding individual and family health insurance in Louisiana from licensed, bilingual agents in Greater New Orleans."
       }
     },
     "aep": {
-      "title": "Medicare Enrollment: Oct 15–Dec 7 | Martinez Insurance",
+      "title": "Medicare Annual Enrollment {aepYear}: Oct 15–Dec 7 | Martinez Insurance Solutions",
       "description": "The Medicare Annual Enrollment Period runs October 15 to December 7. Learn what your Annual Notice of Change means and book a free plan review."
     },
     "scam": {
@@ -56,58 +56,58 @@
     },
     "agents": {
       "nidia-martinez": {
-        "title": "Nidia Martinez, Medicare Agent | Martinez Insurance",
+        "title": "Nidia Martinez, Medicare Agent in Metairie | Martinez Insurance Solutions",
         "description": "Nidia Martinez is a licensed, bilingual Medicare agent with over {years} years of experience in Medicare Advantage and Medicare Supplement plans."
       },
       "john-martinez": {
-        "title": "John Martinez, Licensed Insurance Agent | Martinez Insurance",
+        "title": "John Martinez, Licensed Insurance Agent | Martinez Insurance Solutions",
         "description": "John Martinez helps Louisiana families with final expense, life, hospital indemnity, dental, vision and health insurance. Hablamos español."
       }
     },
     "serviceArea": {
-      "title": "Medicare Help in Louisiana | Martinez Insurance Solutions",
+      "title": "Medicare Agents Serving Louisiana | Martinez Insurance Solutions",
       "description": "We help people across Louisiana with Medicare, with in-person appointments throughout Greater New Orleans, the Northshore and Baton Rouge."
     },
     "cities": {
       "new-orleans": {
-        "title": "New Orleans Medicare Agent | Martinez Insurance Solutions",
+        "title": "Medicare Advantage Plans in New Orleans, LA | Martinez Insurance Solutions",
         "description": "A local, bilingual Medicare agent for New Orleans neighborhoods. Compare Medicare Advantage, Supplement and Part D plans in person, at no cost."
       },
       "metairie": {
-        "title": "Medicare Agent in Metairie | Martinez Insurance Solutions",
+        "title": "Medicare Advantage Plans in Metairie, LA | Martinez Insurance Solutions",
         "description": "Looking for a Medicare agent in Metairie? Get no-cost, in-person help comparing plans that work with your Jefferson Parish doctors. Se habla español."
       },
       "kenner": {
-        "title": "Medicare Agent in Kenner, LA | Martinez Insurance Solutions",
+        "title": "Medicare Advantage Plans in Kenner, LA | Martinez Insurance Solutions",
         "description": "Bilingual Medicare help in Kenner. We compare Medicare Advantage, Medigap and drug plans with you in English or Spanish, at no cost to you."
       },
       "gretna": {
-        "title": "Medicare Agent in Gretna & West Bank | Martinez Insurance",
+        "title": "Medicare Advantage Plans in Gretna & the West Bank | Martinez Insurance Solutions",
         "description": "Medicare help for Gretna, Marrero, Harvey and the West Bank. Compare plans with a licensed local agent who checks your doctors and pharmacy."
       },
       "chalmette": {
-        "title": "Medicare Agent in Chalmette | Martinez Insurance Solutions",
+        "title": "Medicare Advantage Plans in Chalmette, LA | Martinez Insurance Solutions",
         "description": "No-cost Medicare guidance for Chalmette and St. Bernard Parish. Review your plan each fall, avoid scams and get answers from a local agent."
       },
       "slidell": {
-        "title": "Medicare Agent in Slidell, LA | Martinez Insurance Solutions",
+        "title": "Medicare Advantage Plans in Slidell, LA | Martinez Insurance Solutions",
         "description": "Medicare help for Slidell and eastern St. Tammany Parish. Compare Medicare Advantage and Supplement plans with a licensed, bilingual agent."
       },
       "covington": {
-        "title": "Medicare Agent, Covington & Mandeville | Martinez Insurance",
+        "title": "Medicare Advantage Plans in Covington & Mandeville | Martinez Insurance Solutions",
         "description": "Northshore Medicare help for Covington, Mandeville and western St. Tammany. Personal plan reviews with a licensed agent at no cost to you."
       },
       "baton-rouge": {
-        "title": "Medicare Agent in Baton Rouge, LA | Martinez Insurance",
+        "title": "Medicare Advantage Plans in Baton Rouge, LA | Martinez Insurance Solutions",
         "description": "Medicare guidance for Baton Rouge from licensed, bilingual agents. Compare Medicare Advantage, Medigap and Part D plans by phone or in person."
       }
     },
     "faq": {
-      "title": "Medicare Questions Answered (FAQ) | Martinez Insurance",
+      "title": "Medicare Questions Answered (FAQ) | Martinez Insurance Solutions",
       "description": "Plain-English answers about Medicare enrollment, Medicare Advantage vs. Medigap, Part D, costs, scams and working with a local Louisiana agent."
     },
     "contact": {
-      "title": "Free Medicare Consultation | Martinez Insurance Solutions",
+      "title": "Free Medicare Consultation in Metairie | Martinez Insurance Solutions",
       "description": "Call {phone} or send a message to schedule a no-cost Medicare consultation in Greater New Orleans or anywhere in Louisiana. Hablamos español."
     },
     "privacy": {
@@ -253,8 +253,8 @@
     }
   },
   "Home": {
-    "h1": "Medicare Advisor in New Orleans, Louisiana",
-    "lede": "Personal, in-person help choosing the right Medicare plan — from a local husband-and-wife team who will be here for you year after year.",
+    "h1": "Local Medicare Agents in Metairie & New Orleans",
+    "lede": "Independent, licensed Medicare agents and brokers in Metairie. We compare plans from several insurance companies and help you choose, in person or by phone, at no cost to you.",
     "reassurance": "No cost to you. No pressure. Se habla español.",
     "teamLabel": "Your local team",
     "teamCaption": "Nidia & John Martinez · Licensed agents · Husband-and-wife team",

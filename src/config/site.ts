@@ -204,6 +204,8 @@ export const site = {
    */
   url: 'https://www.martinezinsurancesolutions.com',
   shortName: 'Martinez Insurance',
+  /** Other names people search for (WebSite / InsuranceAgency `alternateName`). */
+  alternateNames: ['Martinez Insurance', 'Martinez Seguros'],
   /** Business email used in schema and the footer. */
   email: 'martinezinsurancesolutions@outlook.com',
   /** The primary business line (header, sticky call bar, schema). John's cell. */
