@@ -23,7 +23,7 @@ npm run dev                  # http://localhost:3000  (Spanish at /es)
 
 | Variable | Required | Purpose |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | yes (prod) | Canonical origin, e.g. `https://www.example.com` (falls back to Vercel's production URL) |
+| `NEXT_PUBLIC_SITE_URL` | no | Canonical origin for local runs, tests and previews. **Vercel production ignores it** and always uses `site.url` in `src/config/site.ts` (`https://www.martinezinsurancesolutions.com`) |
 | `RESEND_API_KEY` | yes (prod) | Resend API key for lead emails |
 | `CONTACT_TO_EMAILS` | yes | Comma-separated list — **every** lead goes to all of them |
 | `CONTACT_FROM_EMAIL` | yes (prod) | Sender on a Resend-verified domain |
@@ -32,7 +32,7 @@ npm run dev                  # http://localhost:3000  (Spanish at /es)
 | `FORM_MIN_SUBMIT_MS`, `FORM_RATE_LIMIT` | no | Spam-check tuning (defaults 3000 ms, 5 per 10 min per IP) |
 
 If email sending fails (or isn't configured), the form shows the phone number and the
-error is logged server-side — a lead is never silently lost.
+whole lead is written to the server log as `[lead-fallback] {…}` (Vercel → Logs) — a lead is never lost.
 
 ## Where things live
 
@@ -135,7 +135,7 @@ paste a URL into the [Rich Results Test](https://search.google.com/test/rich-res
 1. Import the GitHub repo in Vercel (framework: Next.js; defaults are fine).
 2. Add the environment variables above for **Production** (and Preview if you want the form
    to work there).
-3. Deploy, then add the custom domain and set `NEXT_PUBLIC_SITE_URL` to it; redeploy.
+3. Deploy, then add the custom domain. If the canonical domain ever changes, update `site.url` in `src/config/site.ts`.
 4. Work through [`LAUNCH_CHECKLIST.md`](./LAUNCH_CHECKLIST.md).
 
 Rate limiting is in-memory per server instance — fine for a small site; swap in a shared

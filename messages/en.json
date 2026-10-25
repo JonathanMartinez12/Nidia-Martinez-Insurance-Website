@@ -108,7 +108,7 @@
     },
     "contact": {
       "title": "Free Medicare Consultation | Martinez Insurance Solutions",
-      "description": "Call (504) 313-2317 or send a message to schedule a no-cost Medicare consultation in Greater New Orleans or anywhere in Louisiana. Hablamos español."
+      "description": "Call {phone} or send a message to schedule a no-cost Medicare consultation in Greater New Orleans or anywhere in Louisiana. Hablamos español."
     },
     "privacy": {
       "title": "Privacy Policy | Martinez Insurance Solutions",
@@ -124,7 +124,7 @@
     },
     "notFound": {
       "title": "Page Not Found | Martinez Insurance Solutions",
-      "description": "We couldn't find that page. Call (504) 313-2317 or use the links on this page to find Medicare help."
+      "description": "We couldn't find that page. Call {phone} or use the links on this page to find Medicare help."
     }
   },
   "Common": {
@@ -260,7 +260,7 @@
     "teamCaption": "Nidia & John Martinez · Licensed agents · Husband-and-wife team",
     "trustHeading": "Why families trust us",
     "trust": {
-      "years": "{years} years of experience",
+      "years": "Over {years} years of experience",
       "licensed": "Licensed agents",
       "noCost": "No cost to you",
       "local": "Local to New Orleans",
@@ -371,7 +371,7 @@
   "ContactForm": {
     "name": "Your name",
     "phone": "Phone number",
-    "phoneHint": "Example: (504) 555-0123",
+    "phoneHint": "Include your area code (10 digits)",
     "email": "Email",
     "emailHint": "Optional — for a copy of your request",
     "language": "Preferred language",
@@ -408,7 +408,7 @@
       "nameRequired": "Please enter your name.",
       "nameTooLong": "Please shorten your name to 100 characters or fewer.",
       "phoneRequired": "Please enter a phone number so we can reach you.",
-      "phoneInvalid": "Please enter a 10-digit U.S. phone number, like (504) 555-0123.",
+      "phoneInvalid": "Please enter a 10-digit U.S. phone number, including the area code.",
       "emailInvalid": "Please enter a valid email address, like name@example.com.",
       "emailRequiredForMethod": "Please add your email address, or choose phone call or text.",
       "languageInvalid": "Please choose a language.",

@@ -1,3 +1,4 @@
+import { site } from '@/config/site';
 import { combinedYears, headlineYears } from '@/lib/experience';
 import { createTranslator } from 'next-intl';
 import { describe, expect, it } from 'vitest';
@@ -7,7 +8,7 @@ import { pages } from '@/config/pages';
 import { flattenKeys } from './helpers';
 
 // Same values the site renders (see metaValues in src/lib/seo.ts).
-const values = { years: headlineYears() ?? 0, combinedYears: combinedYears() ?? 0 };
+const values = { years: headlineYears() ?? 0, combinedYears: combinedYears() ?? 0, phone: site.primaryPhone.display };
 const catalogs = { en, es } as const;
 
 const icuArgs = (s: string) => new Set([...s.matchAll(/\{(\w+)/g)].map((m) => m[1]));

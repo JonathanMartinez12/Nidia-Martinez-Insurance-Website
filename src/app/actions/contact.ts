@@ -21,6 +21,14 @@ export type ContactState =
 const log = (event: string, data: Record<string, unknown> = {}) =>
   console.info(JSON.stringify({ scope: 'contact-form', event, ...data }));
 
+/**
+ * Last line of defence: if the lead email can't be sent, write the whole lead to the server log
+ * (Vercel → Logs, search "[lead-fallback]") so nobody who asked for help is lost.
+ */
+function leadFallback(reason: string, data: Record<string, unknown>) {
+  console.error(`[lead-fallback] ${JSON.stringify({ reason, receivedAt: new Date().toISOString(), ...data })}`);
+}
+
 export async function submitContact(_prev: ContactState, formData: FormData): Promise<ContactState> {
   const rawLocale = formData.get('locale');
   const locale: AppLocale = hasLocale(routing.locales, rawLocale) ? rawLocale : routing.defaultLocale;
@@ -71,6 +79,7 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   const to = recipients();
   if (to.length === 0) {
     console.error('[contact] CONTACT_TO_EMAILS is empty — lead could not be delivered', { name: lead.name });
+    leadFallback('CONTACT_TO_EMAILS is empty', { lead, locale, pageUrl: formData.get('pageUrl') });
     return { status: 'error', message: t('failureBody', { phone }) };
   }
   const owner = leadOwner(lead.interests);
@@ -100,6 +109,7 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   const sent = await sendEmail(message);
   if (!sent.ok) {
     console.error('[contact] Lead email failed', { error: sent.error, owner });
+    leadFallback(`email failed: ${sent.error}`, { lead, owner, locale, pageUrl });
     return { status: 'error', message: t('failureBody', { phone }) };
   }
   log('lead_sent', { owner, interests: lead.interests, language: lead.language });

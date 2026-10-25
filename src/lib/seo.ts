@@ -11,6 +11,7 @@ export function metaValues(extra: Record<string, string | number> = {}) {
   return {
     years: headlineYears() ?? 0,
     combinedYears: combinedYears() ?? 0,
+    phone: site.primaryPhone.display,
     ...extra,
   };
 }

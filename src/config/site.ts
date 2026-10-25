@@ -198,6 +198,11 @@ export const carriers: Carrier[] = [
 
 export const site = {
   name: 'Martinez Insurance Solutions',
+  /**
+   * Canonical origin (no trailing slash). Vercel serves www and 308-redirects the apex to it, so
+   * every canonical, hreflang, sitemap and schema URL must use www.
+   */
+  url: 'https://www.martinezinsurancesolutions.com',
   shortName: 'Martinez Insurance',
   /** Business email used in schema and the footer. */
   email: 'martinezinsurancesolutions@outlook.com',
@@ -271,12 +276,14 @@ export function confirmedCarriers(line?: CarrierLine): Carrier[] {
 
 /**
  * Canonical origin of the site (no trailing slash).
- * Priority: NEXT_PUBLIC_SITE_URL → Vercel production URL → localhost.
+ * - Vercel production: always `site.url`, so a missing or wrong env var can never put the
+ *   wrong host into canonicals, the sitemap, robots.txt or JSON-LD (VERCEL_ENV is set at build).
+ * - Elsewhere: NEXT_PUBLIC_SITE_URL (local runs and tests use http://localhost:3100), else `site.url`.
+ *   Preview deployments therefore canonicalize to production too.
  */
 export function getSiteUrl(): string {
+  if (process.env.VERCEL_ENV === 'production') return site.url;
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/+$/, '');
-  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  if (vercel) return `https://${vercel.replace(/\/+$/, '')}`;
-  return 'http://localhost:3000';
+  return site.url;
 }

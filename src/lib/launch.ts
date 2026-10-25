@@ -12,9 +12,6 @@ export function openTodos(): LaunchItem[] {
       message: 'TPMO disclaimer "Y" (number of plans/products offered in the service area) — set site.compliance.plansOffered',
     });
   }
-  if (!process.env.NEXT_PUBLIC_SITE_URL && !process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    items.push({ id: 'env.NEXT_PUBLIC_SITE_URL', blocker: false, message: 'Production domain — set NEXT_PUBLIC_SITE_URL' });
-  }
   for (const a of agents) {
     if (a.yearsExperience === null)
       items.push({ id: `${a.slug}.yearsExperience`, blocker: false, message: `${a.name}: years of experience` });

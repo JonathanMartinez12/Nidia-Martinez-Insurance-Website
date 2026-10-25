@@ -127,6 +127,21 @@ test.describe('carrier strip', () => {
   }
 });
 
+test.describe('business facts', () => {
+  test('no example phone number and consistent experience wording (EN + ES)', async ({ page }) => {
+    for (const [path, over, bare] of [
+      ['/', 'Over 20', /(?<!Over )\b20 years of experience/],
+      ['/es', 'Más de 20', /(?<!Más de )\b20 años de experiencia/],
+    ] as const) {
+      await page.goto(path);
+      const text = await page.locator('body').innerText();
+      expect(text).not.toContain('555-0123');
+      expect(text).toContain(over);
+      expect(text, `${path}: experience shown without "over"`).not.toMatch(bare);
+    }
+  });
+});
+
 test.describe('404', () => {
   test('English 404 is helpful and bilingual', async ({ page }) => {
     const res = await page.goto('/this-page-does-not-exist');

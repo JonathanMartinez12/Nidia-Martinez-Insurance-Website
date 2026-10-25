@@ -108,7 +108,7 @@
     },
     "contact": {
       "title": "Consulta Gratis de Medicare | Martinez Insurance Solutions",
-      "description": "Llame al (504) 313-2317 o envíenos un mensaje para una consulta sin costo sobre Medicare en el área de Nueva Orleans o en toda Luisiana."
+      "description": "Llame al {phone} o envíenos un mensaje para una consulta sin costo sobre Medicare en el área de Nueva Orleans o en toda Luisiana."
     },
     "privacy": {
       "title": "Política de Privacidad | Martinez Insurance Solutions",
@@ -124,7 +124,7 @@
     },
     "notFound": {
       "title": "Página no encontrada | Martinez Insurance Solutions",
-      "description": "No encontramos esa página. Llame al (504) 313-2317 o use los enlaces de esta página para encontrar ayuda con Medicare."
+      "description": "No encontramos esa página. Llame al {phone} o use los enlaces de esta página para encontrar ayuda con Medicare."
     }
   },
   "Common": {
@@ -260,7 +260,7 @@
     "teamCaption": "Nidia y John Martinez · Agentes con licencia · Un matrimonio a su servicio",
     "trustHeading": "Por qué las familias confían en nosotros",
     "trust": {
-      "years": "{years} años de experiencia",
+      "years": "Más de {years} años de experiencia",
       "licensed": "Agentes con licencia",
       "noCost": "Sin costo para usted",
       "local": "De aquí, de Nueva Orleans",
@@ -371,7 +371,7 @@
   "ContactForm": {
     "name": "Su nombre",
     "phone": "Número de teléfono",
-    "phoneHint": "Ejemplo: (504) 555-0123",
+    "phoneHint": "Incluya el código de área (10 dígitos)",
     "email": "Correo electrónico",
     "emailHint": "Opcional: para enviarle una copia de su solicitud",
     "language": "Idioma de preferencia",
@@ -408,7 +408,7 @@
       "nameRequired": "Por favor, escriba su nombre.",
       "nameTooLong": "Por favor, use 100 caracteres o menos para su nombre.",
       "phoneRequired": "Por favor, escriba un número de teléfono para poder comunicarnos con usted.",
-      "phoneInvalid": "Escriba un número de EE. UU. de 10 dígitos, por ejemplo (504) 555-0123.",
+      "phoneInvalid": "Escriba un número de EE. UU. de 10 dígitos, incluido el código de área.",
       "emailInvalid": "Escriba un correo electrónico válido, por ejemplo nombre@ejemplo.com.",
       "emailRequiredForMethod": "Agregue su correo electrónico o elija llamada o mensaje de texto.",
       "languageInvalid": "Por favor, elija un idioma.",
