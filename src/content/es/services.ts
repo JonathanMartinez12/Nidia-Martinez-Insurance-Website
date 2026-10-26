@@ -1346,59 +1346,108 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
   },
 
+  /* Fuentes: ver 'health-insurance' en src/content/en/services.ts (HealthCare.gov y Medicare.gov, verificadas el 2026-10-25). */
   'health-insurance': {
-    h1: 'Seguro de salud para residentes de Luisiana menores de 65',
-    lede: '¿Todavía no tiene Medicare? Ya sea que trabaje por cuenta propia, esté entre empleos, se haya jubilado antes de tiempo o esté ayudando a su familia, le ayudamos a entender sus opciones de seguro de salud en Luisiana y a elegir una cobertura que se ajuste a sus médicos y a su presupuesto.',
+    h1: 'Seguro Médico en Metairie y Nueva Orleans para menores de 65',
+    lede: '¿Todavía no tiene Medicare? Ya sea que trabaje por su cuenta, esté entre empleos, se jubile antes de tiempo o necesite cubrir a su familia, nuestra agencia local le ayuda a entender sus opciones de seguro médico en Luisiana y a elegir una cobertura que funcione con sus médicos y su presupuesto.',
     summary:
-      'Orientación sobre seguros de salud individuales y familiares para residentes de Luisiana menores de 65 años, incluidas opciones del Mercado de Seguros (ACA), con agentes locales bilingües.',
+      'Orientación sobre seguro médico individual y familiar para residentes de Luisiana menores de 65, incluidos los planes del Mercado de Seguros (ACA), con una agencia local bilingüe en Metairie.',
     whoFor: [
-      'Personas que trabajan por cuenta propia y dueños de pequeños negocios',
-      'Quienes se jubilaron antes de tener derecho a Medicare',
-      'Familias que no tienen cobertura a través del trabajo',
-      'Personas que pierden la cobertura del empleador por un cambio de empleo',
+      'Personas que trabajan por su cuenta y dueños de pequeños negocios',
+      'Jubilados que todavía no son elegibles para Medicare',
+      'Familias que no tienen cobertura por el trabajo',
+      'Personas que pierden la cobertura del empleador por un cambio de trabajo',
     ],
     covers: [
       'Consultas médicas, atención hospitalaria y servicios de emergencia',
       'Medicamentos recetados',
-      'Atención preventiva, como pruebas de detección y vacunas, muchas veces sin costo',
+      'Atención preventiva, como exámenes de detección y vacunas',
       'Salud mental, maternidad y los demás beneficios de salud esenciales que exigen los planes que cumplen con la ACA',
     ],
     sections: [
       {
         id: 'options',
-        heading: 'Sus opciones antes de Medicare',
+        heading: 'Sus opciones de seguro médico antes de Medicare',
         blocks: [
           {
             type: 'p',
-            text: 'La mayoría de las personas menores de 65 años que no reciben seguro a través de un empleador compran un plan individual o familiar. En Luisiana, eso muchas veces significa un plan del Mercado de Seguros Médicos creado por la Ley de Cuidado de Salud a Bajo Precio (ACA), donde los planes se agrupan en niveles metálicos como Bronce, Plata y Oro según cómo se reparten los costos entre usted y el plan.',
+            text: 'La mayoría de las personas menores de 65 que no tienen seguro por un empleador compran un plan individual o familiar. En Luisiana, eso a menudo significa un plan del Mercado de Seguros Médicos creado por la Ley de Cuidado de Salud a Bajo Precio (ACA). Según sus ingresos, quizás califique en cambio para cobertura gratuita o de bajo costo a través de Medicaid, o para sus hijos a través de CHIP.',
           },
+        ],
+      },
+      {
+        id: 'marketplace-basics',
+        heading: '¿Cómo funciona el Mercado de Seguros (ACA)?',
+        blocks: [
           {
             type: 'p',
-            text: 'Según los ingresos de su hogar, podría calificar para un crédito tributario para la prima que reduce su pago mensual, y algunos planes Plata incluyen ahorros adicionales en deducibles y copagos.',
+            text: 'Los planes del Mercado se agrupan en cuatro categorías, a menudo llamadas niveles de metal: Bronce, Plata, Oro y Platino. Se diferencian en cómo se reparten los costos entre usted y el plan. Un plan Bronce suele tener una prima más baja y costos más altos cuando recibe atención; un plan Oro o Platino es lo contrario.',
+          },
+          {
+            type: 'ul',
+            items: [
+              '**Créditos tributarios para la prima:** según los ingresos y el tamaño de su hogar, quizás califique para un crédito tributario que baja su prima mensual.',
+              '**Ahorros adicionales con los planes Plata:** si califica para reducciones de costos compartidos, puede ahorrar en deducibles, copagos y coseguros, pero solo si elige un plan Plata.',
+              '**Las mismas reglas para todos:** los planes que cumplen con la ACA cubren los beneficios de salud esenciales, y no pueden rechazarle por una afección preexistente.',
+            ],
           },
         ],
       },
       {
         id: 'when-to-enroll',
-        heading: 'Cuándo puede inscribirse',
+        heading: '¿Cuándo es la inscripción abierta de seguro médico?',
         blocks: [
           {
             type: 'p',
-            text: 'Los planes del Mercado tienen cada año un Período de Inscripción Abierta que comienza el 1 de noviembre. Fuera de ese período, por lo general necesita un acontecimiento que le dé derecho —como perder otra cobertura, mudarse, casarse o tener un bebé— para obtener un Período de Inscripción Especial. Esos períodos especiales suelen durar 60 días, así que conviene actuar pronto después de un cambio.',
+            text: 'La inscripción abierta del Mercado empieza el **1 de noviembre** de cada año. Inscríbase a más tardar el **15 de diciembre** para tener cobertura desde el 1 de enero. La inscripción abierta termina el **15 de enero**; si se inscribe entre el 16 de diciembre y el 15 de enero, la cobertura empieza el 1 de febrero.',
+          },
+          {
+            type: 'p',
+            text: 'Fuera de la inscripción abierta, por lo general necesita un Período de Inscripción Especial. Puede calificar si, en los últimos 60 días, alguien de su hogar perdió una cobertura que califica, se mudó, se casó o tuvo un bebé, entre otros cambios de vida. Lo mejor es llamarnos pronto después de un cambio para que no se le pase el plazo.',
+          },
+        ],
+      },
+      {
+        id: 'medicaid-chip',
+        heading: '¿Podría calificar para Medicaid o CHIP?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Medicaid es un programa federal y estatal que ofrece cobertura médica gratuita o de bajo costo a algunas personas con ingresos bajos, como familias, niños, mujeres embarazadas, personas mayores y personas con discapacidades. CHIP cubre a niños y mujeres embarazadas en familias que ganan demasiado para calificar para Medicaid. Puede solicitar cualquiera de los dos en cualquier época del año, no solo durante la inscripción abierta. Si alguien de su hogar podría calificar, le explicamos cómo encaja con el resto de la cobertura de su familia.',
+          },
+        ],
+      },
+      {
+        id: 'self-employed',
+        heading: 'Seguro médico para quienes trabajan por su cuenta y dueños de pequeños negocios',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Si trabaja por su cuenta, tiene un pequeño negocio o se gana la vida manejando, limpiando, construyendo o cocinando, un plan individual del Mercado puede ser su opción principal. Su crédito tributario para la prima se basa en los ingresos del hogar que espera tener en el año, así que le ayudamos a calcularlos con cuidado. Si sus ingresos o su hogar cambian durante el año, actualice su solicitud del Mercado para que sus ahorros sigan siendo correctos.',
+          },
+        ],
+      },
+      {
+        id: 'employer-gaps',
+        heading: '¿Va a perder el seguro médico del trabajo?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Un cambio de trabajo, un despido o una reducción de horas puede dejarle sin cobertura. COBRA le permite mantener el plan de grupo de su empleador por un tiempo limitado, pero por lo general paga la prima completa. Perder la cobertura del trabajo también puede abrir un Período de Inscripción Especial para un plan del Mercado, y si elige COBRA, tiene otros 60 días para inscribirse en un plan del Mercado cuando termine su cobertura de COBRA. Comparamos ambas opciones para que vea cuál le cuesta menos a su familia.',
           },
         ],
       },
       {
         id: 'plan-types',
-        heading: 'Los tipos de plan',
+        heading: '¿HMO, EPO o PPO?',
         blocks: [
           {
             type: 'p',
-            text: 'Los planes individuales tienen distintos tipos de red. Los **HMO** y los **EPO** por lo general solo cubren la atención con proveedores de la red, salvo en emergencias, mientras que los **PPO** también pagan una parte de la atención fuera de la red. Un plan con prima más baja muchas veces tiene un deducible más alto, así que revisamos lo que probablemente gastará en todo un año, no solo el precio mensual.',
+            text: 'Los planes individuales tienen distintos tipos de red. Un **HMO** por lo general limita la cobertura a los médicos que trabajan para el plan o tienen contrato con él, y normalmente no cubre la atención fuera de la red salvo en emergencias. Un **EPO** también cubre solo los servicios dentro de la red, salvo en emergencias. Un **PPO** paga más si usa proveedores de la red, pero aun así paga algo por la atención fuera de la red.',
           },
           {
             type: 'p',
-            text: 'Si toma recetas con regularidad o ve a especialistas, esos detalles pueden cambiar cuál plan le conviene más. Los revisamos en cada plan que comparamos.',
+            text: 'Un plan con una prima más baja suele tener un deducible más alto, así que miramos lo que probablemente gastará en todo el año, no solo el precio mensual. Si toma recetas con regularidad o ve especialistas, esos detalles pueden cambiar qué plan le conviene más.',
           },
         ],
       },
@@ -1412,28 +1461,33 @@ const services: Record<ProductKey, ServiceContent> = {
               'Si sus médicos y hospitales están en la red',
               'Sus recetas y cómo las cubre cada plan',
               'La prima después de cualquier crédito tributario al que tenga derecho',
-              'Deducibles, copagos y el máximo de gastos de bolsillo',
+              'Los deducibles, los copagos y el máximo de gastos de su bolsillo',
+              'Si a su familia le conviene un [plan dental y de visión](page:service-dental-vision-insurance) aparte',
             ],
           },
         ],
       },
       {
         id: 'turning-65',
-        heading: '¿Cumple 65 años pronto?',
+        heading: 'El paso a Medicare a los 65',
         blocks: [
           {
             type: 'p',
-            text: 'Su Período de Inscripción Inicial en Medicare comienza tres meses antes del mes en que cumple 65 años. Si tiene un plan individual, planifique con cuidado el paso a Medicare para no quedarse sin cobertura ni seguir pagando por un seguro que ya no necesita. Le acompañamos en toda la transición: desde elegir entre [Medicare Advantage](page:service-medicare-advantage) y un plan [Medicare Suplementario](page:service-medicare-supplement) hasta escoger un plan de medicamentos.',
+            text: 'Su Período de Inscripción Inicial de Medicare empieza tres meses antes del mes en que cumple 65. Si tiene un plan del Mercado, inscríbase en Medicare cuando sea elegible por primera vez y cancele su plan del Mercado para que no se superpongan; cuando es elegible para la Parte A sin prima, ya no puede seguir recibiendo ayuda para pagar las primas del Mercado. Nuestra [lista de pasos de Medicare al cumplir 65](page:guide-turning-65) le guía en cada paso.',
+          },
+          {
+            type: 'p',
+            text: 'Cuando llegue el momento, le ayudamos a elegir entre [Medicare Advantage](page:service-medicare-advantage) y un [plan Suplementario de Medicare](page:service-medicare-supplement), y a escoger un plan de medicamentos, para que no se quede sin cobertura.',
           },
         ],
       },
       {
         id: 'how-we-help',
-        heading: 'Cómo le ayudamos',
+        heading: 'Una agencia de seguro médico local que le conoce',
         blocks: [
           {
             type: 'p',
-            text: 'Escucharemos lo que más le importa, le explicaremos sus opciones con palabras sencillas y le ayudaremos a inscribirse. Si en su hogar una persona tiene Medicare y otra no, podemos ayudar a toda la familia en una sola conversación.',
+            text: 'Somos una agencia familiar y con licencia en Metairie. Escuchamos lo que más le importa, le explicamos sus opciones de seguro médico en español o en inglés, con palabras sencillas, y le ayudamos a inscribirse. Si una persona de su hogar tiene Medicare y otra no, podemos ayudar a toda la familia en una sola conversación, y tendrá a las mismas personas a quienes llamar cuando llegue una factura o una renovación.',
           },
         ],
       },
@@ -1450,20 +1504,24 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
     faqs: [
       {
-        q: '¿Puedo comprar un seguro de salud fuera de la Inscripción Abierta?',
-        a: 'Por lo general, solo si tiene un acontecimiento que le dé derecho, como perder la cobertura del trabajo, mudarse o un cambio en el tamaño de su hogar. Podemos ayudarle a verificar si califica para un Período de Inscripción Especial.',
+        q: '¿Ayudan con seguro médico si no tengo Medicare?',
+        a: 'Sí. Ayudamos a personas y familias menores de 65 a comparar seguros médicos, incluidos los planes del Mercado, y también ayudamos a los familiares que ya tienen Medicare.',
+      },
+      {
+        q: '¿Puedo comprar seguro médico fuera de la inscripción abierta?',
+        a: 'Por lo general solo si tuvo un cambio de vida que califica en los últimos 60 días, como perder la cobertura del trabajo, mudarse, casarse o tener un bebé. Le ayudamos a revisar si califica para un Período de Inscripción Especial.',
       },
       {
         q: '¿Calificaré para primas más bajas?',
-        a: 'Depende de los ingresos y del tamaño de su hogar. Muchas personas califican para un crédito tributario para la prima. Le ayudaremos a calcular cuánto podría ahorrar.',
+        a: 'Depende de los ingresos y el tamaño de su hogar. Muchas personas califican para un crédito tributario para la prima. Le ayudamos a calcular sus ahorros.',
       },
       {
-        q: 'Tengo menos de 65 años y tengo Medicare por una discapacidad. ¿Pueden ayudarme?',
-        a: 'Sí. Usted también tiene opciones de Medicare, como planes Medicare Advantage y de la Parte D. Las opciones de Medicare Suplementario para menores de 65 pueden ser más limitadas, así que conversemos sobre su situación.',
+        q: 'Tengo menos de 65 y tengo Medicare por una discapacidad. ¿Me pueden ayudar?',
+        a: 'Sí. Usted también tiene opciones de Medicare, como planes Medicare Advantage y de la Parte D. Las opciones de planes Suplementarios de Medicare para menores de 65 pueden ser más limitadas, así que conversemos sobre su situación.',
       },
       {
-        q: '¿Cobran por ayudar con el seguro de salud?',
-        a: 'No. Nuestra ayuda no tiene ningún cargo; nos pagan las compañías de seguros.',
+        q: '¿Cobran por ayudar con el seguro médico?',
+        a: 'No. Nuestra ayuda no tiene costo; nos pagan las compañías de seguros.',
       },
     ],
   },

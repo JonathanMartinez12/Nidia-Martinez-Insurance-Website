@@ -1366,11 +1366,26 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
   },
 
+  /*
+   * Sources (verified 2026-10-25):
+   * - Open Enrollment Nov 1 / Dec 15 / Jan 1 / Jan 15 / Feb 1:
+   *   https://www.healthcare.gov/quick-guide/dates-and-deadlines/
+   * - Special Enrollment Period within 60 days of a life event; COBRA basics and 60 days after it ends:
+   *   https://www.healthcare.gov/coverage-outside-open-enrollment/special-enrollment-period/
+   * - 4 metal categories; cost-sharing reductions only with a Silver plan:
+   *   https://www.healthcare.gov/lower-costs/save-on-out-of-pocket-costs/
+   * - HMO / EPO / PPO definitions: https://www.healthcare.gov/choose-a-plan/plan-types/
+   * - Medicaid / CHIP definitions, apply any time, update your application when things change:
+   *   https://www.healthcare.gov/quick-guide/dates-and-deadlines/
+   * - End Marketplace coverage when Medicare starts; no Marketplace premium help once eligible for
+   *   premium-free Part A: Medicare & You 2027, https://www.medicare.gov/publications/10050-medicare-and-you.pdf
+   * Short-term health insurance is intentionally not mentioned (not offered per config; see report TODO).
+   */
   'health-insurance': {
-    h1: 'Health Insurance for Louisianans Under 65',
-    lede: "Not on Medicare yet? Whether you're self-employed, between jobs, retiring early or helping your family, we'll help you understand your health insurance options in Louisiana and choose coverage that fits your doctors and your budget.",
+    h1: 'Health Insurance Agency in Metairie & New Orleans for People Under 65',
+    lede: "Not on Medicare yet? Whether you're self-employed, between jobs, retiring early or covering your family, our local agency helps you understand your health insurance options in Louisiana and choose coverage that fits your doctors and your budget.",
     summary:
-      'Guidance on individual and family health insurance for Louisiana residents under 65, including Marketplace (ACA) options, from bilingual local agents.',
+      'Guidance on individual and family health insurance for Louisiana residents under 65, including Marketplace (ACA) options, from a bilingual local agency in Metairie.',
     whoFor: [
       'Self-employed people and small-business owners',
       "Early retirees who aren't yet eligible for Medicare",
@@ -1380,45 +1395,93 @@ const services: Record<ProductKey, ServiceContent> = {
     covers: [
       'Doctor visits, hospital care and emergency services',
       'Prescription drugs',
-      'Preventive care such as screenings and vaccines, often at no cost',
+      'Preventive care such as screenings and vaccines',
       'Mental health, maternity and the other essential health benefits required on ACA-compliant plans',
     ],
     sections: [
       {
         id: 'options',
-        heading: 'Your options before Medicare',
+        heading: 'Your health insurance options before Medicare',
         blocks: [
           {
             type: 'p',
-            text: "Most people under 65 who don't get insurance through an employer buy an individual or family plan. In Louisiana, that often means a plan through the Health Insurance Marketplace created by the Affordable Care Act, where plans are grouped into metal levels such as Bronze, Silver and Gold based on how you and the plan share costs.",
+            text: "Most people under 65 who don't get insurance through an employer buy an individual or family plan. In Louisiana, that often means a plan through the Health Insurance Marketplace created by the Affordable Care Act. Depending on your income, you may instead qualify for free or low-cost coverage through Medicaid, or for your children through CHIP.",
           },
+        ],
+      },
+      {
+        id: 'marketplace-basics',
+        heading: 'How does the ACA Marketplace work?',
+        blocks: [
           {
             type: 'p',
-            text: 'Depending on your household income, you may qualify for a premium tax credit that lowers your monthly payment, and some Silver plans come with extra savings on deductibles and copays.',
+            text: 'Marketplace plans are grouped into four categories, often called metal levels: Bronze, Silver, Gold and Platinum. They differ in how you and the plan share costs. A Bronze plan usually has a lower premium and higher costs when you get care; a Gold or Platinum plan is the reverse.',
+          },
+          {
+            type: 'ul',
+            items: [
+              '**Premium tax credits:** depending on your household income and size, you may qualify for a tax credit that lowers your monthly premium.',
+              '**Extra savings with Silver plans:** if you qualify for cost-sharing reductions, you can save on deductibles, copays and coinsurance, but only if you choose a Silver plan.',
+              '**Same rules for everyone:** ACA-compliant plans cover essential health benefits, and you can’t be turned down because of a pre-existing condition.',
+            ],
           },
         ],
       },
       {
         id: 'when-to-enroll',
-        heading: 'When you can enroll',
+        heading: 'When is Open Enrollment for health insurance?',
         blocks: [
           {
             type: 'p',
-            text: "Marketplace plans have an Open Enrollment Period each year that begins November 1. Outside that window, you generally need a qualifying life event — such as losing other coverage, moving, getting married or having a baby — to get a Special Enrollment Period. Special Enrollment windows are usually 60 days, so it's best to act soon after a change.",
+            text: 'Marketplace Open Enrollment starts **November 1** each year. Enroll by **December 15** for coverage that starts January 1. Open Enrollment ends **January 15**; if you enroll between December 16 and January 15, coverage starts February 1.',
+          },
+          {
+            type: 'p',
+            text: 'Outside Open Enrollment, you generally need a Special Enrollment Period. You may qualify if, in the past 60 days, someone in your household lost qualifying coverage, moved, got married or had a baby, among other life events. It’s best to call us soon after a change so you don’t miss the window.',
+          },
+        ],
+      },
+      {
+        id: 'medicaid-chip',
+        heading: 'Could you qualify for Medicaid or CHIP?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Medicaid is a joint federal and state program that provides free or low-cost health coverage to some people with low incomes, including families, children, pregnant women, older adults and people with disabilities. CHIP covers children and pregnant women in families that earn too much to qualify for Medicaid. You can apply for either one at any time of year, not just during Open Enrollment. If someone in your household may qualify, we’ll explain how it fits with the rest of your family’s coverage.',
+          },
+        ],
+      },
+      {
+        id: 'self-employed',
+        heading: 'Health insurance for the self-employed and small-business owners',
+        blocks: [
+          {
+            type: 'p',
+            text: 'If you work for yourself, run a small business or drive, clean, build or cook for a living, an individual Marketplace plan may be your main option. Your premium tax credit is based on the household income you expect for the year, so we help you estimate it carefully. If your income or household changes during the year, update your Marketplace application so your savings stay accurate.',
+          },
+        ],
+      },
+      {
+        id: 'employer-gaps',
+        heading: 'Losing health coverage from work?',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A job change, layoff or reduced hours can leave you without coverage. COBRA lets you keep your employer’s group plan for a limited time, but you usually pay the full premium. Losing job-based coverage can also open a Special Enrollment Period for a Marketplace plan, and if you choose COBRA, you get another 60 days to enroll in a Marketplace plan when your COBRA coverage ends. We compare both so you can see which costs less for your family, and we watch the deadlines so nobody in your household goes uninsured.',
           },
         ],
       },
       {
         id: 'plan-types',
-        heading: 'Understanding plan types',
+        heading: 'HMO, EPO or PPO?',
         blocks: [
           {
             type: 'p',
-            text: "Individual plans come with different network types. **HMOs** and **EPOs** usually cover care only from in-network providers, except in emergencies, while **PPOs** also pay something toward out-of-network care. A plan with a lower premium often has a higher deductible, so we look at what you're likely to spend over a full year — not just the monthly price.",
+            text: "Individual plans come with different network types. An **HMO** usually limits coverage to doctors who work for or contract with the plan and generally won't cover out-of-network care except in an emergency. An **EPO** also covers only in-network services, except in an emergency. A **PPO** pays more if you use in-network providers but still pays something toward out-of-network care.",
           },
           {
             type: 'p',
-            text: "If you take regular prescriptions or see specialists, those details can change which plan is the better deal. We'll check them for every plan we compare.",
+            text: "A plan with a lower premium often has a higher deductible, so we look at what you're likely to spend over a full year, not just the monthly price. If you take regular prescriptions or see specialists, those details can change which plan is the better deal for you.",
           },
         ],
       },
@@ -1433,27 +1496,32 @@ const services: Record<ProductKey, ServiceContent> = {
               'Your prescriptions and how each plan covers them',
               'The premium after any tax credit you qualify for',
               'Deductibles, copays and the out-of-pocket maximum',
+              'Whether a separate [dental and vision plan](page:service-dental-vision-insurance) makes sense for your family',
             ],
           },
         ],
       },
       {
         id: 'turning-65',
-        heading: 'Turning 65 soon?',
+        heading: 'Bridging to Medicare at 65',
         blocks: [
           {
             type: 'p',
-            text: "Your Initial Enrollment Period for Medicare starts three months before the month you turn 65. If you have an individual plan, plan the switch to Medicare carefully so there's no gap and you don't keep paying for coverage you no longer need. We help with the whole transition — from choosing between [Medicare Advantage](page:service-medicare-advantage) and a [Medicare Supplement](page:service-medicare-supplement) to picking a drug plan.",
+            text: 'Your Medicare Initial Enrollment Period starts three months before the month you turn 65. If you have a Marketplace plan, sign up for Medicare when you’re first eligible and end your Marketplace plan so the two don’t overlap; once you’re eligible for premium-free Part A, you can’t keep getting help paying Marketplace premiums. Our [turning-65 Medicare checklist](page:guide-turning-65) walks through every step.',
+          },
+          {
+            type: 'p',
+            text: 'When the time comes, we help you choose between [Medicare Advantage](page:service-medicare-advantage) and a [Medicare Supplement](page:service-medicare-supplement), and pick a drug plan, so there’s no gap in coverage.',
           },
         ],
       },
       {
         id: 'how-we-help',
-        heading: 'How we help',
+        heading: 'A local health insurance agency that knows you',
         blocks: [
           {
             type: 'p',
-            text: "We'll listen to what matters most to you, explain your options in plain language, and help you enroll. If one person in your household has Medicare and another doesn't, we can help the whole family in one conversation.",
+            text: "We're a licensed, family-run agency in Metairie. We listen to what matters most to you, explain your options in plain English or Spanish, and help you enroll. If one person in your household has Medicare and another doesn't, we can help the whole family in one conversation, and you'll have the same people to call when a bill or renewal comes up.",
           },
         ],
       },
@@ -1470,8 +1538,12 @@ const services: Record<ProductKey, ServiceContent> = {
     ],
     faqs: [
       {
+        q: 'Do you help people under 65?',
+        a: 'Yes. We help individuals and families under 65 compare health insurance, including Marketplace plans, and we also help family members who already have Medicare.',
+      },
+      {
         q: 'Can I buy health insurance outside Open Enrollment?',
-        a: 'Usually only if you have a qualifying life event, such as losing job-based coverage, moving or a change in household size. We can help you check whether you qualify for a Special Enrollment Period.',
+        a: 'Usually only if you have a qualifying life event in the past 60 days, such as losing job-based coverage, moving, getting married or having a baby. We can help you check whether you qualify for a Special Enrollment Period.',
       },
       {
         q: 'Will I qualify for lower premiums?',
