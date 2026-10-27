@@ -27,6 +27,27 @@ for (const viewport of [
   });
 }
 
+test.describe('axe: mobile lead sheet open', () => {
+  test.use({ viewport: { width: 390, height: 844 } });
+  for (const path of ['/', '/es']) {
+    test(path, async ({ page }) => {
+      await page.goto(path);
+      await page.getByTestId('open-lead-sheet').click();
+      await page.getByTestId('lead-sheet').locator('[aria-expanded]').first().click();
+      const results = await new AxeBuilder({ page }).withTags(TAGS).analyze();
+      expect(
+        results.violations.map(
+          (v) =>
+            `${v.id}: ${v.nodes
+              .map((n) => n.target.join(' '))
+              .slice(0, 3)
+              .join(' | ')}`,
+        ),
+      ).toEqual([]);
+    });
+  }
+});
+
 test.describe('keyboard', () => {
   test('skip link, header controls and language toggle work with the keyboard', async ({ page }) => {
     await page.goto('/');
@@ -80,19 +101,25 @@ test.describe('keyboard', () => {
       );
       await page.keyboard.press('Tab');
     }
+    // Open the optional section so its controls are in the Tab order too.
     const ids = [
       'contact-name',
       'contact-phone',
-      'contact-email',
-      'contact-language-0',
-      'contact-contactMethod-0',
+      'contact-details-toggle',
       'contact-interests-0',
-      'contact-interests-8',
-      'contact-bestTime',
-      'contact-message',
-      'contact-consent',
+      'contact-bestTime-0',
+      'contact-email',
       'BUTTON',
     ];
+    await page.locator('#contact-details-toggle').click();
+    await page.locator('#contact-name').focus();
+    order.length = 0;
+    for (let i = 0; i < 25; i++) {
+      order.push(
+        await page.evaluate(() => (document.activeElement as HTMLElement).id || (document.activeElement as HTMLElement).tagName),
+      );
+      await page.keyboard.press('Tab');
+    }
     let last = -1;
     for (const id of ids) {
       const idx = order.indexOf(id);

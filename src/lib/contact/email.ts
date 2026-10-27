@@ -3,6 +3,7 @@ import { absoluteUrl } from '@/lib/urls';
 import { formatUsPhone } from '@/lib/phone';
 import type { ContactLead } from './schema';
 import type { LeadOwner } from './routing';
+import type { ConsentRecord } from './consent';
 
 export type EmailMessage = {
   to: string[];
@@ -35,50 +36,51 @@ ${esc(site.name)} · ${esc(site.primaryPhone.display)} · ${esc(site.email)}
 }
 
 export type LeadLabels = {
+  /** English names of the selected "What can we help with?" chips. */
   interests: string[];
+  /** Language of the page the lead used, e.g. "Spanish (Español)". */
   language: string;
-  contactMethod: string;
   bestTime: string | null;
-  consentText: string;
 };
 
 export type LeadMeta = {
-  submittedAt: string;
   pageUrl: string | null;
   ip: string;
   userAgent: string | null;
 };
 
-export function leadSubject(lead: ContactLead, owner: LeadOwner, labels: Pick<LeadLabels, 'interests'>): string {
-  const interests = labels.interests.length > 0 ? labels.interests.join(', ') : 'General question';
-  return `[For: ${owner}] New lead: ${lead.name} — ${interests}`;
+export function leadSubject(lead: ContactLead, labels: Pick<LeadLabels, 'interests'>): string {
+  const interests = labels.interests.length > 0 ? labels.interests.join(', ') : 'General';
+  return `New lead: ${lead.name} — ${interests}`;
 }
 
 export function leadEmail(opts: {
   lead: ContactLead;
   owner: LeadOwner;
   labels: LeadLabels;
+  consent: ConsentRecord;
   meta: LeadMeta;
   to: string[];
 }): EmailMessage {
-  const { lead, owner, labels, meta } = opts;
+  const { lead, owner, labels, consent, meta } = opts;
   const phone = formatUsPhone(lead.phone);
   const rows: Array<[string, string]> = [
     ['For', owner],
     ['Name', lead.name],
     ['Phone', phone],
-    ['Email', lead.email ?? '—'],
-    ['Preferred language', labels.language],
-    ['Preferred contact', labels.contactMethod],
-    ['Best time to call', labels.bestTime ?? '—'],
     ['Interested in', labels.interests.join(', ') || '—'],
-    ['Message', lead.message ?? '—'],
+    ['Best time to call', labels.bestTime ?? '—'],
+    ['Email', lead.email ?? '—'],
+    ['Language', labels.language],
+    ['Page', meta.pageUrl ?? '—'],
   ];
   const consentRows: Array<[string, string]> = [
-    ['Consent given', 'Yes — checkbox ticked by the lead (unchecked by default)'],
-    ['Consent text shown', labels.consentText],
-    ['Submitted at', meta.submittedAt],
-    ['Page', meta.pageUrl ?? '—'],
+    ['Disclosure shown', consent.text],
+    ['Disclosure version', consent.version],
+    ['How consent was given', consent.method],
+    ['Timestamp (UTC)', consent.timestamp],
+    ['Page URL', consent.pageUrl ?? '—'],
+    ['Locale', consent.locale],
     ['IP address', meta.ip],
     ['User agent', meta.userAgent ?? '—'],
   ];
@@ -95,7 +97,7 @@ export function leadEmail(opts: {
 <h1 style="margin:0 0 18px;font-size:24px;color:${navy};">${esc(lead.name)}</h1>
 <p style="margin:0 0 22px;"><a href="tel:+1${lead.phone}" style="display:inline-block;background:${red};color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:bold;">Call ${esc(phone)}</a></p>
 ${table(rows)}
-<h2 style="margin:8px 0 8px;font-size:16px;color:${navy};">Consent record (TCPA)</h2>
+<h2 style="margin:8px 0 8px;font-size:16px;color:${navy};">Consent record (call/text)</h2>
 ${table(consentRows)}
 <p style="margin:0;color:#4a5578;font-size:13px;">Reminder: never request a Medicare number, SSN or health details by email.</p>`;
 
@@ -104,13 +106,13 @@ ${table(consentRows)}
     '',
     ...rows.map(([k, v]) => `${k}: ${v}`),
     '',
-    'CONSENT RECORD (TCPA)',
+    'CONSENT RECORD (CALL/TEXT)',
     ...consentRows.map(([k, v]) => `${k}: ${v}`),
   ].join('\n');
 
   return {
     to: opts.to,
-    subject: leadSubject(lead, owner, labels),
+    subject: leadSubject(lead, labels),
     html: shell('New lead', body),
     text,
     replyTo: lead.email,

@@ -1,24 +1,24 @@
-import { agents } from '@/config/site';
-import type { ProductKey } from '@/config/products';
+import type { LeadTopic } from './schema';
 
 export type LeadOwner = 'John' | 'Nidia' | 'Both';
 
+const OWNER: Record<LeadTopic, LeadOwner> = {
+  'medicare-advantage': 'Nidia',
+  'medicare-supplement': 'Nidia',
+  'turning-65': 'Nidia',
+  'final-expense-life': 'John',
+  other: 'Both',
+};
+
 /**
- * Who a lead is "For:" in the email subject.
- *  - every selected product is one of John's specialties  → John
- *  - every selected product is one of Nidia's specialties → Nidia (Medicare Advantage / Supplement)
- *  - anything else (mixed, Part D, C-SNP, nothing selected) → Both
+ * Who the lead is "For" (shown in the email body).
+ *  - only Medicare Advantage / Supplement / Turning 65 → Nidia
+ *  - only Final Expense / Life → John
+ *  - anything else (mixed, Other, nothing selected) → Both
  */
-export function leadOwner(interests: readonly ProductKey[]): LeadOwner {
-  if (interests.length === 0) return 'Both';
-  const owners = new Set<string>();
-  for (const interest of interests) {
-    const owner = agents.find((a) => a.specialties.includes(interest));
-    owners.add(owner ? owner.givenName : 'Both');
-  }
-  if (owners.size !== 1) return 'Both';
-  const only = [...owners][0];
-  return only === 'John' || only === 'Nidia' ? only : 'Both';
+export function leadOwner(interests: readonly LeadTopic[]): LeadOwner {
+  const owners = new Set(interests.map((i) => OWNER[i]));
+  return owners.size === 1 ? [...owners][0]! : 'Both';
 }
 
 /** Recipients from CONTACT_TO_EMAILS (comma-separated). */

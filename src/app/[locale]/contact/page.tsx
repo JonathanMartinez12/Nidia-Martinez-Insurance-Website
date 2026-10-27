@@ -7,8 +7,10 @@ import { getContent } from '@/content';
 import { agents, site } from '@/config/site';
 import { getPage } from '@/config/pages';
 import { pageLocale, type LocaleParams } from '@/lib/page';
-import { pageMetadata } from '@/lib/seo';
-import { localizedPath } from '@/lib/urls';
+import { metaValues, pageMetadata } from '@/lib/seo';
+import { contactPageSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/ui/JsonLd';
+import { localizedPath, localizedUrl } from '@/lib/urls';
 import { telHref } from '@/lib/phone';
 import { card } from '@/components/ui/styles';
 import { Photo } from '@/components/ui/Photo';
@@ -29,6 +31,7 @@ export default async function ContactPage({ params }: LocaleParams) {
   const tc = await getTranslations({ locale, namespace: 'Common' });
   const tf = await getTranslations({ locale, namespace: 'Footer' });
   const tp = await getTranslations({ locale, namespace: 'Photos' });
+  const tm = await getTranslations({ locale, namespace: 'Meta' });
   const { contact } = getContent(locale);
 
   return (
@@ -155,6 +158,14 @@ export default async function ContactPage({ params }: LocaleParams) {
           <Sections sections={contact.sections} locale={locale} />
         </div>
       </div>
+      <JsonLd
+        data={contactPageSchema({
+          locale,
+          name: contact.h1,
+          description: tm('contact.description', metaValues()),
+          url: localizedUrl(locale, getPage('contact').href),
+        })}
+      />
     </PageShell>
   );
 }

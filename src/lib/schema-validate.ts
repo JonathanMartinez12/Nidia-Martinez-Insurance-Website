@@ -68,6 +68,10 @@ const ALLOWED: Record<string, { required: string[]; allowed: string[] }> = {
       'inLanguage',
     ],
   },
+  ContactPage: {
+    required: ['name', 'url'],
+    allowed: ['name', 'description', 'url', 'inLanguage', 'about', 'mainEntity'],
+  },
   FAQPage: { required: ['mainEntity'], allowed: ['mainEntity', 'name', 'url', 'inLanguage'] },
   Question: { required: ['name', 'acceptedAnswer'], allowed: ['name', 'acceptedAnswer', 'text'] },
   Answer: { required: ['text'], allowed: ['text'] },

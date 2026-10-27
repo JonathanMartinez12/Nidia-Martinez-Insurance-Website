@@ -1,7 +1,8 @@
 /** Minimum time (ms) a human needs to fill the form. Bots submit instantly. */
 export function minSubmitMs(): number {
   const fromEnv = Number(process.env.FORM_MIN_SUBMIT_MS);
-  return Number.isFinite(fromEnv) && fromEnv >= 0 ? fromEnv : 3000;
+  // Short on purpose: with autofill, a real person can send name + phone in a couple of seconds.
+  return Number.isFinite(fromEnv) && fromEnv >= 0 ? fromEnv : 1500;
 }
 
 /** The honeypot field is visually hidden; any value means a bot filled it. */

@@ -54,7 +54,7 @@ export const expectedTypes: Record<PageKind, string[]> = {
   'service-area': ['InsuranceAgency', 'BreadcrumbList'],
   city: ['InsuranceAgency', 'FAQPage', 'BreadcrumbList'],
   faq: ['InsuranceAgency', 'FAQPage', 'BreadcrumbList'],
-  contact: ['InsuranceAgency', 'BreadcrumbList'],
+  contact: ['InsuranceAgency', 'ContactPage', 'BreadcrumbList'],
   legal: ['InsuranceAgency', 'BreadcrumbList'],
 };
 

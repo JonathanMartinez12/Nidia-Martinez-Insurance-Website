@@ -29,7 +29,7 @@ npm run dev                  # http://localhost:3000  (Spanish at /es)
 | `CONTACT_FROM_EMAIL` | yes (prod) | Sender on a Resend-verified domain |
 | `NEXT_PUBLIC_GA_ID` | no | GA4 ID. If unset, no analytics loads |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY` | no | Cloudflare Turnstile on the form (both required to enable) |
-| `FORM_MIN_SUBMIT_MS`, `FORM_RATE_LIMIT` | no | Spam-check tuning (defaults 3000 ms, 5 per 10 min per IP) |
+| `FORM_MIN_SUBMIT_MS`, `FORM_RATE_LIMIT` | no | Spam-check tuning (defaults 1500 ms, 5 per 10 min per IP) |
 
 If email sending fails (or isn't configured), the form shows the phone number and the
 whole lead is written to the server log as `[lead-fallback] {…}` (Vercel → Logs) — a lead is never lost.

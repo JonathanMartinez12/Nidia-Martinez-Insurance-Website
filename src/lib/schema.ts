@@ -5,7 +5,17 @@
  * Rules: never emit Review/AggregateRating unless real reviews exist in config; omit
  * address/hours while they are TODO; FAQ schema only mirrors FAQs visible on the page.
  */
-import type { Article, BreadcrumbList, FAQPage, InsuranceAgency, Person, Service, WebSite, WithContext } from 'schema-dts';
+import type {
+  Article,
+  BreadcrumbList,
+  ContactPage,
+  FAQPage,
+  InsuranceAgency,
+  Person,
+  Service,
+  WebSite,
+  WithContext,
+} from 'schema-dts';
 import { agents, getSiteUrl, site, type Agent } from '@/config/site';
 import type { AppLocale } from '@/i18n/routing';
 import { absoluteUrl, hreflangCode } from './urls';
@@ -159,6 +169,31 @@ export function articleSchema(opts: {
       url: opts.authorProfileUrl,
     },
     publisher: { '@type': 'InsuranceAgency', '@id': agencyId(), name: site.name },
+  };
+}
+
+/** /contact: a ContactPage about the agency, with the call/text line people reach us on. */
+export function contactPageSchema(opts: {
+  locale: AppLocale;
+  name: string;
+  description: string;
+  url: string;
+}): WithContext<ContactPage> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    inLanguage: hreflangCode[opts.locale],
+    about: { '@type': 'InsuranceAgency', '@id': agencyId(), name: site.name },
+    mainEntity: {
+      '@type': 'ContactPoint',
+      telephone: site.primaryPhone.e164,
+      contactType: 'sales',
+      areaServed: 'US-LA',
+      availableLanguage: ['English', 'Spanish'],
+    },
   };
 }
 
