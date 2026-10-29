@@ -1,6 +1,7 @@
 'use client';
 
 import { useSyncExternalStore } from 'react';
+import { track } from '@/lib/analytics';
 
 type Size = 'normal' | 'large';
 const KEY = 'text-size';
@@ -15,6 +16,8 @@ const getSnapshot = (): Size => (document.documentElement.dataset.textSize === '
 const getServerSnapshot = (): Size => 'normal';
 
 function setSize(size: Size) {
+  const current: Size = document.documentElement.dataset.textSize === 'large' ? 'large' : 'normal';
+  if (current !== size) track('text_size_toggle', { size: size === 'large' ? 'large' : 'standard' });
   document.documentElement.dataset.textSize = size;
   try {
     localStorage.setItem(KEY, size);

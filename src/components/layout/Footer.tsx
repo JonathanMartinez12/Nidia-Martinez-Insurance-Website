@@ -36,13 +36,17 @@ export async function Footer({ locale }: { locale: AppLocale }) {
             <address className="mt-3 space-y-1 not-italic">
               <p className="font-serif text-xl font-semibold">{site.name}</p>
               <p>
-                <a href={telHref(site.primaryPhone.e164)} className={`${link} gap-2 text-lg font-bold`}>
+                <a
+                  href={telHref(site.primaryPhone.e164)}
+                  data-call-location="footer"
+                  className={`${link} gap-2 text-lg font-bold`}
+                >
                   <Phone aria-hidden className="h-5 w-5" />
                   {site.primaryPhone.display}
                 </a>
               </p>
               <p>
-                <a href={`mailto:${site.email}`} className={`${link} gap-2 break-all`}>
+                <a href={`mailto:${site.email}`} data-call-location="footer" className={`${link} gap-2 break-all`}>
                   <Mail aria-hidden className="h-5 w-5 shrink-0" />
                   {site.email}
                 </a>
@@ -83,7 +87,12 @@ export async function Footer({ locale }: { locale: AppLocale }) {
                     {a.name}
                   </Link>
                   <br />
-                  <a href={telHref(a.phone.e164)} className={link}>
+                  <a
+                    href={telHref(a.phone.e164)}
+                    data-call-location="footer"
+                    data-phone-owner={a.givenName.toLowerCase()}
+                    className={link}
+                  >
                     {a.phoneLabel === 'cell' ? tc('cell') : tc('direct')}: {a.phone.display}
                   </a>
                 </li>
@@ -147,7 +156,7 @@ export async function Footer({ locale }: { locale: AppLocale }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className={link}>
+                  <Link href="/contact" data-cta="footer" className={link}>
                     {th('contact')}
                   </Link>
                 </li>

@@ -43,7 +43,7 @@ export async function RelatedServices({ locale, product }: { locale: AppLocale; 
           </Link>
         </li>
         <li>
-          <Link href="/contact" className={item}>
+          <Link href="/contact" data-cta="related_services" className={item}>
             <MessageSquare aria-hidden className="h-6 w-6 shrink-0 text-red-600" />
             <span className="flex-1">{ts('contactLink')}</span>
           </Link>

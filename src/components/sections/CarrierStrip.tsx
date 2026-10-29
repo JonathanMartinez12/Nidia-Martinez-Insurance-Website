@@ -67,7 +67,7 @@ export async function CarrierStrip({
 
   if (variant === 'band') {
     return (
-      <section aria-labelledby="carriers-heading" className="border-y border-line bg-navy-50/60 py-14 sm:py-16">
+      <section aria-labelledby="carriers-heading" data-carriers className="border-y border-line bg-navy-50/60 py-14 sm:py-16">
         <div className="container-page">{content}</div>
       </section>
     );
@@ -75,6 +75,7 @@ export async function CarrierStrip({
   return (
     <section
       aria-labelledby="carriers-heading"
+      data-carriers
       className="rounded-[var(--radius-card)] border border-line bg-white p-6 shadow-[var(--shadow-card)] sm:p-8"
     >
       {content}

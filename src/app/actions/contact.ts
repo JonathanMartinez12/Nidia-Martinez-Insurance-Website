@@ -16,8 +16,8 @@ import { sendEmail } from '@/lib/contact/transport';
 export type ContactState =
   | { status: 'idle' }
   | { status: 'invalid'; errors: Partial<Record<ContactField, string>> }
-  | { status: 'success'; name: string }
-  | { status: 'error'; message: string };
+  | { status: 'success'; name: string; blocked?: true }
+  | { status: 'error'; message: string; kind: 'server' | 'spam_blocked' };
 
 const log = (event: string, data: Record<string, unknown> = {}) =>
   console.info(JSON.stringify({ scope: 'contact-form', event, ...data }));
@@ -48,7 +48,7 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   // 1. Honeypot: people never see this field. Pretend success so bots learn nothing.
   if (isHoneypotTripped(formData.get('website'))) {
     log('rejected_honeypot', { ip });
-    return { status: 'success', name: typedName };
+    return { status: 'success', name: typedName, blocked: true };
   }
 
   // 2. Validate first, so a person who submits too quickly still sees helpful errors.
@@ -73,17 +73,17 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   if (isTooFast(formData.get('startedAt'))) {
     log('rejected_too_fast', { ip });
     leadFallback('rejected as too fast (probably a bot)', { lead, locale, consent });
-    return { status: 'success', name: lead.name };
+    return { status: 'success', name: lead.name, blocked: true };
   }
 
   // 4. Rate limit per IP, then optional Cloudflare Turnstile.
   if (!rateLimit(ip).ok) {
     log('rate_limited', { ip });
-    return { status: 'error', message: t('rateLimited', { phone }) };
+    return { status: 'error', message: t('rateLimited', { phone }), kind: 'spam_blocked' };
   }
   if (!(await verifyTurnstile(formData.get('cf-turnstile-response'), ip))) {
     log('rejected_turnstile', { ip });
-    return { status: 'error', message: t('failureBody', { phone }) };
+    return { status: 'error', message: t('failureBody', { phone }), kind: 'spam_blocked' };
   }
 
   // 5. Email the team (every address in CONTACT_TO_EMAILS).
@@ -91,7 +91,7 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   if (to.length === 0) {
     console.error('[contact] CONTACT_TO_EMAILS is empty — lead could not be delivered', { name: lead.name });
     leadFallback('CONTACT_TO_EMAILS is empty', { lead, locale, consent });
-    return { status: 'error', message: t('failureBody', { phone }) };
+    return { status: 'error', message: t('failureBody', { phone }), kind: 'server' };
   }
   const owner = leadOwner(lead.interests);
   const message = leadEmail({
@@ -111,7 +111,7 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   if (!sent.ok) {
     console.error('[contact] Lead email failed', { error: sent.error, owner });
     leadFallback(`email failed: ${sent.error}`, { lead, owner, locale, consent });
-    return { status: 'error', message: t('failureBody', { phone }) };
+    return { status: 'error', message: t('failureBody', { phone }), kind: 'server' };
   }
   log('lead_sent', { owner, interests: lead.interests, locale });
 

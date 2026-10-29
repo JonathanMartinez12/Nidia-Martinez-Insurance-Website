@@ -72,11 +72,11 @@ export default async function AepPage({ params }: LocaleParams) {
         <div className="on-dark mt-6 rounded-[var(--radius-card)] bg-navy-800 p-6 text-white">
           <p className="font-serif text-2xl font-semibold">{t('reviewHeading')}</p>
           <p className="mt-2 text-navy-50">{t('reviewBody')}</p>
-          <a href={telHref(site.primaryPhone.e164)} className={`${btn.primary} mt-5 w-full`}>
+          <a href={telHref(site.primaryPhone.e164)} data-call-location="guide_cta" className={`${btn.primary} mt-5 w-full`}>
             <Phone aria-hidden className="h-5 w-5" />
             {site.primaryPhone.display}
           </a>
-          <a href="#free-consultation" className={`${btn.ghostOnDark} mt-3 w-full`}>
+          <a href="#free-consultation" data-cta="guide_cta" className={`${btn.ghostOnDark} mt-3 w-full`}>
             {tc('bookFreeConsultation')}
           </a>
         </div>

@@ -70,11 +70,11 @@ export default async function CityPage({ params }: Params) {
         lede={content.lede}
       >
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href={telHref(site.primaryPhone.e164)} className={btn.primary}>
+          <a href={telHref(site.primaryPhone.e164)} data-call-location="city_cta" className={btn.primary}>
             <Phone aria-hidden className="h-5 w-5" />
             {tc('callPhone', { phone: site.primaryPhone.display })}
           </a>
-          <a href="#free-consultation" className={btn.secondary}>
+          <a href="#free-consultation" data-cta="city_cta" className={btn.secondary}>
             {tc('freeConsultation')}
           </a>
         </div>

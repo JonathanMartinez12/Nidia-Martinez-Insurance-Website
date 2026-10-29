@@ -43,11 +43,11 @@ export async function OfficeSection({ locale }: { locale: AppLocale }) {
             <p className="mt-3 text-muted">{t('officeAppointment', { phone: site.primaryPhone.display })}</p>
           ) : null}
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a href={telHref(site.primaryPhone.e164)} className={`${btn.primary} text-lg`}>
+            <a href={telHref(site.primaryPhone.e164)} data-call-location="inline" className={`${btn.primary} text-lg`}>
               <Phone aria-hidden className="h-5 w-5" />
               {tc('callPhone', { phone: site.primaryPhone.display })}
             </a>
-            <a href={maps} className={`${btn.secondary} text-lg`}>
+            <a href={maps} data-call-location="inline" className={`${btn.secondary} text-lg`}>
               <Navigation aria-hidden className="h-5 w-5" />
               {t('officeDirections')}
             </a>

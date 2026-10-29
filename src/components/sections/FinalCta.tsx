@@ -46,6 +46,7 @@ export async function FinalCta({
           <p className="mt-4 max-w-lg text-lg text-navy-50">{body ?? t('ctaBody')}</p>
           <a
             href={telHref(site.primaryPhone.e164)}
+            data-call-location="cta"
             className="mt-8 inline-flex min-h-14 items-center gap-3 rounded-xl bg-red-600 px-6 text-xl font-bold text-white no-underline hover:bg-red-700"
           >
             <Phone aria-hidden className="h-6 w-6" />

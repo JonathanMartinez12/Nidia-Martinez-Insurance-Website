@@ -22,6 +22,8 @@ const serverEnv = {
   ...process.env,
   PORT: String(PORT),
   NEXT_PUBLIC_SITE_URL: BASE,
+  // GA4 is built in with a dummy ID so e2e and Lighthouse measure the real tag without touching the live property.
+  NEXT_PUBLIC_GA_ID: process.env.E2E_GA_ID ?? 'G-TEST000000',
   EMAIL_TRANSPORT: 'mock',
   EMAIL_OUTBOX_DIR: '.e2e-outbox',
   CONTACT_TO_EMAILS: 'nidiamartinez576@outlook.com,martj5493@gmail.com',

@@ -38,11 +38,11 @@ export async function Hero({ locale }: { locale: AppLocale }) {
           </h1>
           <p className="mt-5 max-w-xl text-lg text-ink sm:text-xl">{t('lede')}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={telHref(site.primaryPhone.e164)} className={`${btn.primary} text-lg`}>
+            <a href={telHref(site.primaryPhone.e164)} data-call-location="hero" className={`${btn.primary} text-lg`}>
               <Phone aria-hidden className="h-5 w-5" />
               {tc('callPhone', { phone: site.primaryPhone.display })}
             </a>
-            <Link href="/contact" className={`${btn.secondary} text-lg`}>
+            <Link href="/contact" data-cta="hero" className={`${btn.secondary} text-lg`}>
               {tc('freeConsultation')}
             </Link>
           </div>
@@ -52,6 +52,8 @@ export async function Hero({ locale }: { locale: AppLocale }) {
               <p key={a.slug} className="mt-3">
                 <a
                   href={telHref(a.phone.e164)}
+                  data-call-location="hero"
+                  data-phone-owner={a.givenName.toLowerCase()}
                   className="inline-flex min-h-12 items-center gap-2 text-lg font-bold text-navy-800 underline underline-offset-4 hover:text-navy-900"
                 >
                   <Phone aria-hidden className="h-5 w-5 shrink-0 text-red-600" />

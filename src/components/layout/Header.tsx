@@ -123,6 +123,7 @@ export async function Header({ locale, alternatePath }: { locale: AppLocale; alt
           <div className="flex items-center gap-1.5 sm:gap-2 xl:ml-auto">
             <a
               href={telHref(site.primaryPhone.e164)}
+              data-call-location="header"
               className="tap inline-flex items-center gap-2 rounded-xl bg-navy-700 px-2 font-bold whitespace-nowrap text-white no-underline hover:bg-navy-800 sm:px-4"
             >
               <Phone aria-hidden className="hidden h-5 w-5 shrink-0 sm:block" />
@@ -130,7 +131,7 @@ export async function Header({ locale, alternatePath }: { locale: AppLocale; alt
               <span className="text-[0.9rem] sm:text-base">{site.primaryPhone.display}</span>
             </a>
             <div className="hidden lg:block">
-              <Link href="/contact" className={`${btn.primary} whitespace-nowrap`}>
+              <Link href="/contact" data-cta="header" className={`${btn.primary} whitespace-nowrap`}>
                 {tc('freeConsultation')}
               </Link>
             </div>
@@ -158,11 +159,11 @@ export async function Header({ locale, alternatePath }: { locale: AppLocale; alt
                       ))}
                     </ul>
                     <div className="mt-5 grid gap-3 px-3">
-                      <a href={telHref(site.primaryPhone.e164)} className={btn.primary}>
+                      <a href={telHref(site.primaryPhone.e164)} data-call-location="header" className={btn.primary}>
                         <Phone aria-hidden className="h-5 w-5" />
                         {tc('callPhone', { phone: site.primaryPhone.display })}
                       </a>
-                      <Link href="/contact" className={btn.secondary}>
+                      <Link href="/contact" data-cta="header_menu" className={btn.secondary}>
                         {tc('bookFreeConsultation')}
                       </Link>
                     </div>

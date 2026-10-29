@@ -36,7 +36,7 @@ export default async function NotFound() {
         <h1 className="mt-3 max-w-3xl text-4xl font-semibold sm:text-5xl">{t('heading')}</h1>
         <p className="mt-5 max-w-2xl text-lg">{t('body')}</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href={telHref(site.primaryPhone.e164)} className={btn.primary}>
+          <a href={telHref(site.primaryPhone.e164)} data-call-location="other" className={btn.primary}>
             <Phone aria-hidden className="h-5 w-5" />
             {tc('callPhone', { phone: site.primaryPhone.display })}
           </a>

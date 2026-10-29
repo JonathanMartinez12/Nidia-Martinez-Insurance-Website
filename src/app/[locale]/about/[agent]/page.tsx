@@ -71,11 +71,20 @@ export default async function AgentPage({ params }: Params) {
           />
           <div className={`${card} mt-6 p-6`}>
             <h2 className="text-2xl font-semibold">{t('contactHeading', { name: agent.givenName })}</h2>
-            <a href={telHref(agent.phone.e164)} className={`${btn.primary} mt-4 w-full`}>
+            <a
+              href={telHref(agent.phone.e164)}
+              data-call-location="agent_card"
+              data-phone-owner={agent.givenName.toLowerCase()}
+              className={`${btn.primary} mt-4 w-full`}
+            >
               <Phone aria-hidden className="h-5 w-5" />
               {t('callAgent', { name: agent.givenName })}: {agent.phone.display}
             </a>
-            <a href={`mailto:${agent.email}`} className="mt-3 flex min-h-12 items-center gap-2 font-semibold break-all">
+            <a
+              href={`mailto:${agent.email}`}
+              data-call-location="agent_card"
+              className="mt-3 flex min-h-12 items-center gap-2 font-semibold break-all"
+            >
               <Mail aria-hidden className="h-5 w-5 shrink-0 text-red-600" />
               {agent.email}
             </a>

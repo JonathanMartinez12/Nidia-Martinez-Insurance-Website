@@ -53,12 +53,18 @@ export async function AgentCard({
         </p>
         <div className="mt-4 space-y-1">
           <p className="text-sm font-bold tracking-wide text-muted uppercase">{ta('directContact')}</p>
-          <a href={telHref(agent.phone.e164)} className="flex min-h-12 items-center gap-2 font-bold no-underline hover:underline">
+          <a
+            href={telHref(agent.phone.e164)}
+            data-call-location="agent_card"
+            data-phone-owner={agent.givenName.toLowerCase()}
+            className="flex min-h-12 items-center gap-2 font-bold no-underline hover:underline"
+          >
             <Phone aria-hidden className="h-5 w-5 text-red-600" />
             {agent.phoneLabel === 'cell' ? t('cell') : t('direct')}: {agent.phone.display}
           </a>
           <a
             href={`mailto:${agent.email}`}
+            data-call-location="agent_card"
             className="flex min-h-12 items-center gap-2 font-semibold break-all no-underline hover:underline"
           >
             <Mail aria-hidden className="h-5 w-5 shrink-0 text-red-600" />

@@ -50,6 +50,8 @@ export type ContactFormProps = {
 };
 
 const initial: ContactState = { status: 'idle' };
+const FORM_LOCATION = { full: 'contact_page', compact: 'inline', sheet: 'sticky_sheet' } as const;
+const CALLBACK_LOCATION = { full: 'contact_page', compact: 'inline', sheet: 'sticky_bar' } as const;
 const FIELD_ORDER: ContactField[] = ['name', 'phone', 'interests', 'bestTime', 'email'];
 
 const chip =
@@ -72,6 +74,7 @@ export function ContactForm({
   const summaryRef = useRef<HTMLDivElement>(null);
   const resultRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
+  const bestTimeRef = useRef<string | null>(null);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [interests, setInterests] = useState<LeadTopic[]>(defaultInterests);
 
@@ -95,19 +98,30 @@ export function ContactForm({
     startTransition(() => formAction(fd));
   };
 
+  const formLocation = FORM_LOCATION[variant];
+
+  // Analytics: never sends what was typed — only which chips were picked and where the form is.
   useEffect(() => {
-    if (state.status === 'success')
-      track('generate_lead', { form_variant: variant, language: locale, interests: interests.join(',') || 'general' });
-    // Only when a new success arrives.
+    if (state.status === 'success' && state.blocked)
+      track('form_error', { form_location: formLocation, error_type: 'spam_blocked' });
+    else if (state.status === 'success')
+      track('generate_lead', {
+        form_location: formLocation,
+        interests: interests.length > 0 ? [...interests].sort().join(',') : 'none',
+        best_time: bestTimeRef.current ?? undefined,
+        lead_language: locale,
+      });
+    if (state.status === 'invalid') track('form_error', { form_location: formLocation, error_type: 'validation' });
+    if (state.status === 'error') track('form_error', { form_location: formLocation, error_type: state.kind });
+    // Only when a new result arrives.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
   const onFirstFocus = () => {
     if (started.current) return;
     started.current = true;
-    track('form_start', { form_variant: variant, language: locale });
+    track('form_start', { form_location: formLocation });
   };
-  const callClick = () => track('click_to_call', { location: `form_${variant}` });
 
   const id = (f: string) => `${idPrefix}-${f}`;
   const errors = state.status === 'invalid' ? state.errors : {};
@@ -131,7 +145,7 @@ export function ContactForm({
   const tel = (
     <a
       href={`tel:${phone.e164}`}
-      onClick={callClick}
+      data-call-location={CALLBACK_LOCATION[variant]}
       className="inline-flex min-h-12 items-center gap-2 font-bold whitespace-nowrap text-navy-800 underline underline-offset-4"
     >
       <Phone aria-hidden className="h-5 w-5" />
@@ -155,7 +169,7 @@ export function ContactForm({
         <p className="mt-4 text-lg">{labels.successBackup}</p>
         <a
           href={`tel:${phone.e164}`}
-          onClick={callClick}
+          data-call-location="form_success"
           className="mt-3 inline-flex min-h-14 items-center gap-2 rounded-xl bg-red-600 px-6 text-lg font-bold text-white no-underline hover:bg-red-700"
         >
           <Phone aria-hidden className="h-5 w-5" />
@@ -273,7 +287,10 @@ export function ContactForm({
           id={id('details-toggle')}
           aria-expanded={showDetails}
           aria-controls={id('details')}
-          onClick={() => setDetailsOpen(!showDetails)}
+          onClick={() => {
+            if (!showDetails) track('form_details_expand', { form_location: formLocation });
+            setDetailsOpen(!showDetails);
+          }}
           className="flex min-h-[52px] w-full items-center justify-between gap-3 rounded-xl px-4 text-left text-lg font-bold text-navy-800"
         >
           {labels.details}
@@ -309,7 +326,14 @@ export function ContactForm({
             <div className="mt-3 flex flex-wrap gap-2">
               {bestTimes.map((time, i) => (
                 <label key={time} htmlFor={id(`bestTime-${i}`)} className={chip}>
-                  <input id={id(`bestTime-${i}`)} type="radio" name="bestTime" value={time} className="sr-only" />
+                  <input
+                    id={id(`bestTime-${i}`)}
+                    type="radio"
+                    name="bestTime"
+                    value={time}
+                    onChange={() => (bestTimeRef.current = time)}
+                    className="sr-only"
+                  />
                   {labels.bestTimes[time]}
                 </label>
               ))}

@@ -47,11 +47,11 @@ export async function ServicePage({ locale, product }: { locale: AppLocale; prod
         lede={content.lede}
       >
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href={telHref(site.primaryPhone.e164)} className={btn.primary}>
+          <a href={telHref(site.primaryPhone.e164)} data-call-location="hero" className={btn.primary}>
             <Phone aria-hidden className="h-5 w-5" />
             {tc('callPhone', { phone: site.primaryPhone.display })}
           </a>
-          <Link href="/contact" className={btn.secondary}>
+          <Link href="/contact" data-cta="hero" className={btn.secondary}>
             {tc('freeConsultation')}
           </Link>
         </div>
@@ -122,11 +122,11 @@ export async function ServicePage({ locale, product }: { locale: AppLocale; prod
           <div className="on-dark rounded-[var(--radius-card)] bg-navy-800 p-6 text-white shadow-[var(--shadow-lift)]">
             <p className="font-serif text-2xl font-semibold">{t('compactFormHeading', { product: name })}</p>
             <p className="mt-2 text-navy-50">{t('compactFormBody')}</p>
-            <a href={telHref(site.primaryPhone.e164)} className={`${btn.primary} mt-5 w-full`}>
+            <a href={telHref(site.primaryPhone.e164)} data-call-location="inline" className={`${btn.primary} mt-5 w-full`}>
               <Phone aria-hidden className="h-5 w-5" />
               {site.primaryPhone.display}
             </a>
-            <a href="#free-consultation" className={`${btn.ghostOnDark} mt-3 w-full`}>
+            <a href="#free-consultation" data-cta="sidebar" className={`${btn.ghostOnDark} mt-3 w-full`}>
               {tc('bookFreeConsultation')}
             </a>
             <p className="mt-4 text-center font-semibold text-navy-100" lang="es">

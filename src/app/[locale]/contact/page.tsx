@@ -77,6 +77,8 @@ export default async function ContactPage({ params }: LocaleParams) {
                   </Link>
                   <a
                     href={telHref(a.phone.e164)}
+                    data-call-location="contact_page"
+                    data-phone-owner={a.givenName.toLowerCase()}
                     className="mt-1 flex min-h-12 items-center gap-2 text-lg font-bold text-white no-underline hover:underline"
                   >
                     <Phone aria-hidden className="h-5 w-5" />
@@ -84,6 +86,7 @@ export default async function ContactPage({ params }: LocaleParams) {
                   </a>
                   <a
                     href={`mailto:${a.email}`}
+                    data-call-location="contact_page"
                     className="flex min-h-12 items-center gap-2 break-all text-navy-50 no-underline hover:underline"
                   >
                     <Mail aria-hidden className="h-5 w-5 shrink-0" />
@@ -142,7 +145,11 @@ export default async function ContactPage({ params }: LocaleParams) {
               <Mail aria-hidden className="h-6 w-6 text-red-600" />
               {t('emailHeading')}
             </h2>
-            <a href={`mailto:${site.email}`} className="mt-2 flex min-h-12 items-center font-semibold break-all">
+            <a
+              href={`mailto:${site.email}`}
+              data-call-location="contact_page"
+              className="mt-2 flex min-h-12 items-center font-semibold break-all"
+            >
               {site.email}
             </a>
           </section>

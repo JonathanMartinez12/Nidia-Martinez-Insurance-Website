@@ -75,6 +75,8 @@ export default async function ScamPage({ params }: LocaleParams) {
               <li key={a.slug}>
                 <a
                   href={telHref(a.phone.e164)}
+                  data-call-location="guide_cta"
+                  data-phone-owner={a.givenName.toLowerCase()}
                   className="flex min-h-12 items-center gap-2 rounded-xl bg-white px-4 font-bold text-navy-900 no-underline shadow-sm hover:bg-navy-50"
                 >
                   <Phone aria-hidden className="h-5 w-5 text-red-600" />

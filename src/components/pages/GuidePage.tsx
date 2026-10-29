@@ -96,6 +96,7 @@ export async function GuidePage({
         <div className="lg:sticky lg:top-28 lg:self-start">
           <nav
             aria-label={tc('onThisPage')}
+            data-toc
             className="rounded-[var(--radius-card)] border border-line bg-white p-5 shadow-[var(--shadow-card)]"
           >
             <p className="text-sm font-bold tracking-wide text-muted uppercase">{tc('onThisPage')}</p>

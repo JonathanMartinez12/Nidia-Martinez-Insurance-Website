@@ -35,7 +35,7 @@ export async function AepCallout({ locale, now = new Date() }: { locale: AppLoca
             </div>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col">
-            <Link href="/contact" className={btn.primary}>
+            <Link href="/contact" data-cta="aep_callout" className={btn.primary}>
               {t('book')}
             </Link>
             <Link href="/annual-enrollment-period" className={btn.ghostOnDark}>
