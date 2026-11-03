@@ -21,7 +21,7 @@ The website code is done. It sends every event below as soon as the ID is set in
    - In Chrome, open DevTools → **Network**, filter `gtag`, and reload. There should be **exactly one** `gtag/js?id=G-WZ214QR591` request.
    - Or open the Console and type `dataLayer`. You should see `config`, `G-WZ214QR591`.
 
-> Browsers that send **Global Privacy Control** (Brave, DuckDuckGo, Firefox with GPC turned on) never load GA. That's on purpose. Test in regular Chrome or Safari.
+> GA only loads for real visitors on www.martinezinsurancesolutions.com: never on localhost or Vercel preview URLs, never for Lighthouse/PageSpeed, headless browsers or bots, and never when the browser sends **Global Privacy Control** (Brave, DuckDuckGo, Firefox with GPC on). Test in regular Chrome or Safari.
 
 ---
 
@@ -217,7 +217,7 @@ Also useful:
 ## What the site sends (reference)
 
 - **Every event:**
-  - `page_type` (home, service, city, service_area, guide, guides_hub, about, agent, contact, faq, aep, scam, legal, not_found)
+  - `page_type` (home, service, city, service_area, guide, guides_hub, about, agent, contact, faq, aep, scam, legal, landing, not_found)
   - `locale`
   - `page_path`
   - `service` and `city` where relevant
