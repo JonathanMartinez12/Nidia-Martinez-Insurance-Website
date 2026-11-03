@@ -1,0 +1,45 @@
+# After every successful Vercel production deploy, submit new/changed sitemap URLs to IndexNow
+# (Bing, Copilot, ChatGPT search). The previous sitemap snapshot is kept as an artifact of the
+# last successful run; see scripts/indexnow.mjs.
+name: IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: github.event_name == 'workflow_dispatch' || (github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Restore previous sitemap snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prev=$(gh run list -R "$GITHUB_REPOSITORY" -w indexnow.yml -s success -L 1 --json databaseId -q '.[0].databaseId')
+          if [ -n "$prev" ]; then gh run download "$prev" -R "$GITHUB_REPOSITORY" -n indexnow-sitemap -D .indexnow || echo "No snapshot"; fi
+      - name: Wait for the production alias to serve the new deploy
+        if: github.event_name == 'deployment_status'
+        run: sleep 30
+      - name: Submit changed URLs
+        run: node scripts/indexnow.mjs --state .indexnow/sitemap.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: indexnow-sitemap
+          path: .indexnow/sitemap.json
+          retention-days: 90

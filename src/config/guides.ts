@@ -23,6 +23,12 @@ export const guides = [
     published: '2026-10-25',
     modified: '2026-10-25',
   },
+  {
+    key: 'ma-oep',
+    pathname: '/guides/medicare-advantage-open-enrollment',
+    published: '2026-11-03',
+    modified: '2026-11-03',
+  },
 ] as const;
 
 export type GuideKey = (typeof guides)[number]['key'];

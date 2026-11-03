@@ -31,6 +31,7 @@ export type PageType =
   | 'aep'
   | 'scam'
   | 'legal'
+  | 'landing'
   | 'not_found';
 
 export type PageContext = {

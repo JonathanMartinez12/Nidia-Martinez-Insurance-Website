@@ -7,6 +7,13 @@ const fs = require('node:fs');
 
 const urls = fs.existsSync('.lighthouseci/urls.json') ? JSON.parse(fs.readFileSync('.lighthouseci/urls.json', 'utf8')) : [];
 
+const LANDING = '(medicare-help-metairie|ayuda-medicare-metairie)';
+const quality = {
+  'categories:performance': ['error', { minScore: 0.95, aggregationMethod: 'median-run' }],
+  'categories:accessibility': ['error', { minScore: 1 }],
+  'categories:best-practices': ['error', { minScore: 1 }],
+};
+
 module.exports = {
   ci: {
     collect: {
@@ -20,12 +27,11 @@ module.exports = {
       },
     },
     assert: {
-      assertions: {
-        'categories:performance': ['error', { minScore: 0.95, aggregationMethod: 'median-run' }],
-        'categories:accessibility': ['error', { minScore: 1 }],
-        'categories:best-practices': ['error', { minScore: 1 }],
-        'categories:seo': ['error', { minScore: 1 }],
-      },
+      assertMatrix: [
+        { matchingUrlPattern: `^(?!.*${LANDING}).*$`, assertions: { ...quality, 'categories:seo': ['error', { minScore: 1 }] } },
+        // Ad landing pages are noindex on purpose, so Lighthouse's "is crawlable" SEO audit can't pass.
+        { matchingUrlPattern: LANDING, assertions: quality },
+      ],
     },
     upload: { target: 'filesystem', outputDir: '.lighthouseci/reports' },
   },

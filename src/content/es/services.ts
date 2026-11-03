@@ -147,7 +147,7 @@ const services: Record<ProductKey, ServiceContent> = {
             items: [
               '**Cuando recibe Medicare por primera vez:** durante su Período de Inscripción Inicial, alrededor de su cumpleaños 65. Vea nuestra [lista de pasos de Medicare al cumplir 65](page:guide-turning-65).',
               '**Del 15 de octubre al 7 de diciembre:** el [Período de Inscripción Anual](page:aep). Afíliese, cambie o deje un plan, con cobertura a partir del 1 de enero.',
-              '**Del 1 de enero al 31 de marzo:** si ya está en un plan Medicare Advantage, puede cambiarse a otro o regresar a Medicare Original, una sola vez.',
+              '**Del 1 de enero al 31 de marzo:** si ya está en un plan Medicare Advantage, puede cambiarse a otro o regresar a Medicare Original, una sola vez. Lea nuestra [guía del Período de Inscripción Abierta de Medicare Advantage](page:guide-ma-oep).',
               '**Períodos de Inscripción Especial:** situaciones como una mudanza o la pérdida de otra cobertura pueden permitirle cambiar de plan en otros momentos. Si en su zona se ofrece un plan con calificación de 5 estrellas, puede cambiarse a él una vez durante el año, y las personas con una afección crónica que califica pueden afiliarse en cualquier momento a un C-SNP que la atienda.',
             ],
           },

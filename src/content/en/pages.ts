@@ -82,7 +82,7 @@ export const aep: GuideContent = {
           type: 'ul',
           items: [
             '**Initial Enrollment Period:** the seven months around your 65th birthday — the three months before, your birthday month and the three months after.',
-            "**Medicare Advantage Open Enrollment Period (January 1 – March 31):** if you're in a Medicare Advantage plan, you can switch to another Medicare Advantage plan or go back to Original Medicare, one time.",
+            "**Medicare Advantage Open Enrollment Period (January 1 – March 31):** if you're in a Medicare Advantage plan, you can switch to another Medicare Advantage plan or go back to Original Medicare, one time. See [how the January – March switch works](page:guide-ma-oep).",
             '**Special Enrollment Periods:** certain events, such as moving, losing other coverage or qualifying for Extra Help, let you make changes at other times of the year.',
           ],
         },
@@ -643,6 +643,10 @@ export const home: HomeContent = {
     {
       q: "If I'm happy with my plan, do I need to change it?",
       a: "No. If you're satisfied after reading your Annual Notice of Change, your plan renews automatically. If the changes concern you, schedule a review with us.",
+    },
+    {
+      q: 'Can I change my Medicare Advantage plan after January 1?',
+      a: 'Yes, once. If you are in a Medicare Advantage plan, you can switch to another one or return to Original Medicare between January 1 and March 31. See [how the Medicare Advantage Open Enrollment Period works](page:guide-ma-oep).',
     },
     {
       q: 'Is this the government or Medicare calling?',

@@ -1,8 +1,9 @@
 import { expect, test, type Page } from '@playwright/test';
 
 /**
- * GA4: the e2e build uses a dummy ID (G-TEST000000, see scripts/verify.ts). The gtag library is
- * stubbed and hits are blocked, so these tests read the events straight from window.dataLayer.
+ * GA4: the e2e build uses a dummy ID (G-TEST000000, see scripts/verify.ts) and test mode, which each
+ * test opts in to with window.__misGaTest. The gtag library is stubbed and hits are blocked, so
+ * these tests read the events straight from window.dataLayer.
  */
 const GA_ID = process.env.E2E_GA_ID ?? 'G-TEST000000';
 const PII = /@|(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/;
@@ -16,6 +17,10 @@ async function setup(page: Page) {
     return route.fulfill({ status: 200, contentType: 'text/javascript', body: '/* gtag stub */' });
   });
   await page.route(/google-analytics\.com|analytics\.google\.com/, (route) => route.fulfill({ status: 204, body: '' }));
+  // Opt in to GA on localhost (see isRealVisit in src/components/Analytics.tsx).
+  await page.addInitScript(() => {
+    (window as unknown as { __misGaTest: boolean }).__misGaTest = true;
+  });
   // Keep the page in place when a test clicks a link (our listener runs first, in the capture phase).
   await page.addInitScript(() => {
     window.addEventListener('click', (e) => {
@@ -272,3 +277,27 @@ for (const lang of [
     });
   });
 }
+
+test.describe('GA4 ad landing page', () => {
+  test('page_type landing, UTM kept on page_location, call tracked', async ({ page }) => {
+    await setup(page);
+    await page.goto('/medicare-help-metairie?utm_source=google&utm_medium=cpc&utm_campaign=metairie');
+    const pv = await waitForEvent(page, 'page_view', { page_type: 'landing', city: 'metairie', locale: 'en' });
+    expect(String(pv.params.page_location)).toContain('utm_source=google');
+    await page.locator('main a[href^="tel:"][data-call-location="hero"]').click();
+    await waitForEvent(page, 'click_to_call', { button_location: 'hero', page_type: 'landing', transport_type: 'beacon' });
+    await expectNoPii(page);
+  });
+});
+
+test('automated browsers and localhost never load GA without the e2e opt-in', async ({ page }) => {
+  let gtagLoads = 0;
+  await page.route('https://www.googletagmanager.com/gtag/js**', (route) => {
+    gtagLoads += 1;
+    return route.fulfill({ status: 200, contentType: 'text/javascript', body: '' });
+  });
+  await page.goto('/');
+  await page.waitForLoadState('networkidle');
+  expect(gtagLoads).toBe(0);
+  expect(await page.evaluate(() => (window as unknown as { dataLayer?: unknown[] }).dataLayer?.length ?? 0)).toBe(0);
+});

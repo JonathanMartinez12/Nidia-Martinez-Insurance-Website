@@ -86,6 +86,7 @@ test.describe('contact form', () => {
     const success = page.getByTestId('contact-success');
     await expect(success).toContainText('Thank you, Lead! Nidia or John will call you soon.');
     await expect(success.getByRole('link', { name: '(504) 313-2317' })).toBeVisible();
+    await expect(success.getByRole('link', { name: /Google review/ })).toHaveAttribute('href', 'https://g.page/r/CTzMhWBwUjMpEAE/review');
 
     await expect.poll(async () => (await outbox()).filter((m) => m.subject.includes(name)).length).toBe(1);
     const lead = (await outbox()).find((m) => m.subject.includes(name))!;

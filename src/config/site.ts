@@ -221,8 +221,8 @@ export const site = {
   hours: null as OpeningHours[] | null,
   /** Social / citation profile URLs used in schema `sameAs`. Empty until real profiles exist. */
   sameAs: [] as string[],
-  /** Real, verifiable reviews only. Empty = no Review/AggregateRating schema, no review UI. */
-  reviews: [] as Array<{ author: string; rating: number; body: string; date: string }>,
+  /** Google Business Profile "write a review" link (footer + form success state). Reviews shown on the site: src/config/reviews.ts. */
+  googleReviewUrl: 'https://g.page/r/CTzMhWBwUjMpEAE/review',
   serviceArea: {
     state: 'Louisiana',
     region: 'Greater New Orleans',

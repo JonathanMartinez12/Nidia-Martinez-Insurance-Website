@@ -142,7 +142,15 @@
       "turning-65": {
         "title": "Turning 65 in Louisiana: Medicare Checklist & Local Help | Martinez Insurance Solutions",
         "description": "When to sign up for Medicare at 65 in Louisiana, how to avoid late penalties, Medigap timing, and free local help in Metairie and New Orleans."
+      },
+      "ma-oep": {
+        "title": "Unhappy With Your Medicare Advantage Plan? Switch by Mar 31 | Martinez Insurance Solutions",
+        "description": "The Medicare Advantage Open Enrollment Period runs January 1 to March 31. Who can switch, what you can change, Medigap rules and free local help."
       }
+    },
+    "landing": {
+      "title": "Medicare Help in Metairie From Licensed Local Agents | Martinez Insurance Solutions",
+      "description": "Free Medicare help in Metairie from licensed local agents. Compare Medicare Advantage, Supplement and Part D plans. Call {phone}. Hablamos español."
     }
   },
   "Common": {
@@ -226,7 +234,8 @@
     "footerNav": "Footer",
     "copyright": "© {year} Martinez Insurance Solutions. All rights reserved.",
     "disclaimerHeading": "Important information",
-    "educational": "Content on this site is for general education. Plan benefits, costs, networks and availability vary by plan and change each year; always review a plan's official documents before enrolling."
+    "educational": "Content on this site is for general education. Plan benefits, costs, networks and availability vary by plan and change each year; always review a plan's official documents before enrolling.",
+    "leaveReview": "Leave us a Google review"
   },
   "MobileBar": {
     "label": "Quick contact",
@@ -445,7 +454,8 @@
       "callUs": "If you'd like to talk sooner, call us:",
       "scamNote": "For your protection: we will never ask for your Medicare number, Social Security number or bank information by email.",
       "signoff": "Nidia & John Martinez — Martinez Insurance Solutions"
-    }
+    },
+    "leaveReview": "Already a client? Leave us a Google review"
   },
   "NotFound": {
     "eyebrow": "Page not found",
@@ -514,5 +524,39 @@
     "reviewedBy": "Reviewed by <link>{name}</link>, Licensed Insurance Agent",
     "updated": "Updated {date}",
     "readGuide": "Read the guide"
+  },
+  "Reviews": {
+    "eyebrow": "Google reviews",
+    "heading": "What our clients say",
+    "stars": "{rating} out of 5 stars",
+    "via": "On {source}",
+    "leaveReview": "Leave us a Google review"
+  },
+  "Landing": {
+    "eyebrow": "Free Medicare help in Metairie",
+    "h1": "Talk to a licensed Medicare agent in Metairie",
+    "lede": "Questions about Medicare Advantage, Medicare Supplement or drug plans? We compare plans from several insurance companies with you, in person at our office or by phone.",
+    "trustHeading": "Why people call us",
+    "trust": {
+      "licensed": {
+        "title": "Licensed local agents",
+        "body": "Nidia and John Martinez, at our office on Veterans Blvd. in Metairie."
+      },
+      "noCost": {
+        "title": "No cost to you",
+        "body": "There's no charge for our help or for a plan review."
+      },
+      "spanish": {
+        "title": "Hablamos español",
+        "body": "Get help in English or Spanish, whichever you prefer."
+      }
+    },
+    "callHint": "Tap to call. A licensed agent answers.",
+    "formHeading": "Or have us call you",
+    "formIntro": "Leave your name and phone number and we'll call you back.",
+    "officeHeading": "Our Metairie office",
+    "officeNote": "Visits are by appointment. Call {phone} to set up a time.",
+    "directions": "Get directions",
+    "logoLabel": "Martinez Insurance Solutions"
   }
 }

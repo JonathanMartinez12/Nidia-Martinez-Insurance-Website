@@ -685,10 +685,185 @@ const turning65: GuideContent = {
   ],
 };
 
+/*
+ * MA Open Enrollment Period sources (verified 2026-11-03):
+ * - Dates, who qualifies (in an MA plan; or within the first 3 months of getting Medicare), what you
+ *   can do, effective "first of the month after the plan gets your request":
+ *   https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan
+ * - "You can only make one change", what you can't do, automatic disenrollment when joining a drug
+ *   plan, trial rights, Medigap after MA: Medicare & You 2027 (pages 75, 82),
+ *   https://www.medicare.gov/publications/10050-medicare-and-you.pdf
+ */
+const maOep: GuideContent = {
+  h1: 'Unhappy With Your Medicare Advantage Plan? You Can Switch January 1 – March 31',
+  lede: "If your new Medicare Advantage plan isn't working out, you get one more chance to change it early in the year. Here's who qualifies, what you can change, and what to check before you switch.",
+  sections: [
+    {
+      id: 'short-answer',
+      heading: 'Can I change my Medicare Advantage plan after January 1?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Yes, once. The **Medicare Advantage Open Enrollment Period** runs from **January 1 to March 31** every year. If you are in a Medicare Advantage plan, you can use it to switch to a different Medicare Advantage plan, or to leave Medicare Advantage and go back to Original Medicare.',
+        },
+        {
+          type: 'callout',
+          tone: 'info',
+          title: 'Not the same as the fall Open Enrollment',
+          text: 'The [Annual Enrollment Period](page:aep) (October 15 – December 7) is open to everyone with Medicare. The January – March period is only for people who are already in a Medicare Advantage plan.',
+        },
+      ],
+    },
+    {
+      id: 'who-qualifies',
+      heading: 'Who can use the Medicare Advantage Open Enrollment Period?',
+      blocks: [
+        {
+          type: 'ul',
+          items: [
+            '**You are in a Medicare Advantage plan** (with or without drug coverage) on January 1, from January 1 to March 31.',
+            '**You are new to Medicare** and joined a Medicare Advantage plan when you first got Medicare: you can make a change within your first 3 months of having Medicare.',
+          ],
+        },
+        {
+          type: 'p',
+          text: "If you have Original Medicare (with or without a Medicare Supplement), this period doesn't apply to you.",
+        },
+      ],
+    },
+    {
+      id: 'what-you-can-do',
+      heading: 'What can I change between January 1 and March 31?',
+      blocks: [
+        { type: 'p', text: 'You can make **one** of these changes:' },
+        {
+          type: 'ul',
+          items: [
+            '**Switch to a different Medicare Advantage plan**, with or without drug coverage. For example, a plan that includes your doctors or covers your prescriptions at a lower cost.',
+            '**Drop your Medicare Advantage plan and return to Original Medicare.** You can also join a separate [Medicare drug plan (Part D)](page:service-part-d-prescription-drug-plans) at the same time.',
+          ],
+        },
+        {
+          type: 'p',
+          text: "You can only make one change during this period. If you're returning to Original Medicare and joining a separate drug plan, you don't need to contact your Medicare Advantage plan to leave it: you're disenrolled automatically when you join the drug plan.",
+        },
+        {
+          type: 'table',
+          caption: 'When your new coverage starts',
+          head: ['The new plan gets your request in…', 'Your new coverage starts'],
+          rows: [
+            ['January', 'February 1'],
+            ['February', 'March 1'],
+            ['March (by March 31)', 'April 1'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'what-you-cant-do',
+      heading: "What can't I do during this period?",
+      blocks: [
+        {
+          type: 'callout',
+          tone: 'warning',
+          title: 'These changes have to wait for the fall',
+          text: "Between January 1 and March 31 you **can't** switch from Original Medicare to a Medicare Advantage plan, join a separate Medicare drug plan if you have Original Medicare, or switch from one drug plan to another if you have Original Medicare. Those changes are made during the [Annual Enrollment Period](page:aep), unless you qualify for a Special Enrollment Period.",
+        },
+      ],
+    },
+    {
+      id: 'medigap',
+      heading: 'Can I get a Medicare Supplement if I go back to Original Medicare?',
+      blocks: [
+        {
+          type: 'p',
+          text: "Maybe. Outside of certain protected situations, a [Medicare Supplement (Medigap)](page:service-medicare-supplement) company can ask health questions and may turn you down or charge more. You have a guaranteed right to buy certain Medigap policies in these cases (called trial rights):",
+        },
+        {
+          type: 'ul',
+          items: [
+            '**You joined a Medicare Advantage plan when you were first eligible for Medicare at 65**, and you switch back to Original Medicare within the first year.',
+            '**You dropped a Medigap policy to join Medicare Advantage for the first time**, and you leave Medicare Advantage within 12 months. You can get your old policy back if the same company still sells it.',
+          ],
+        },
+        {
+          type: 'p',
+          text: "If neither applies to you, talk to us before you drop your Medicare Advantage plan. We'll check whether you're likely to qualify for a Medigap policy first, so you aren't left with Original Medicare alone.",
+        },
+      ],
+    },
+    {
+      id: 'before-you-switch',
+      heading: 'What should I check before I switch?',
+      blocks: [
+        {
+          type: 'ul',
+          items: [
+            '**Doctors and hospitals:** are the ones you use in the new plan’s network?',
+            '**Prescriptions:** are all your medications on the new plan’s drug list, and at what cost?',
+            '**Pharmacy:** is your pharmacy in network, and is it a preferred pharmacy?',
+            "**Costs:** monthly premium, copays, and the plan's yearly out-of-pocket maximum.",
+            '**Extra benefits:** dental, vision, hearing and other extras vary from plan to plan.',
+          ],
+        },
+        {
+          type: 'callout',
+          tone: 'warning',
+          title: "Don't go without drug coverage",
+          text: "If you leave a Medicare Advantage plan that includes drug coverage and don't join a drug plan, you may pay a late enrollment penalty if you later sign up, for as long as you have drug coverage.",
+        },
+      ],
+    },
+    {
+      id: 'after-march-31',
+      heading: 'What if I miss March 31?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'After March 31, you generally keep your Medicare Advantage plan for the rest of the year. Your next chance is the [Annual Enrollment Period](page:aep) from October 15 to December 7, for coverage that starts January 1. You may qualify for a Special Enrollment Period sooner if something changes, such as moving, losing other coverage, or qualifying for Medicaid or Extra Help.',
+        },
+      ],
+    },
+    {
+      id: 'local-help',
+      heading: 'Free help comparing plans in Greater New Orleans',
+      blocks: [
+        {
+          type: 'p',
+          text: "We're licensed agents in Metairie who compare [Medicare Advantage plans](page:service-medicare-advantage) from several insurance companies. Bring your list of doctors and prescriptions, and we'll check them against every plan we offer, in person or by phone, in English or Spanish. There's no cost for our help. [Contact us](page:contact) or call (504) 313-2317.",
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: 'When is the Medicare Advantage Open Enrollment Period?',
+      a: 'January 1 to March 31 every year. People who are new to Medicare and joined a Medicare Advantage plan can also make a change within their first 3 months of having Medicare.',
+    },
+    {
+      q: 'How many times can I change plans between January 1 and March 31?',
+      a: 'Once. You can switch to one different Medicare Advantage plan, or drop Medicare Advantage and return to Original Medicare (and join a separate drug plan).',
+    },
+    {
+      q: 'Can I switch from Original Medicare to a Medicare Advantage plan in January?',
+      a: 'No. The Medicare Advantage Open Enrollment Period is only for people already in a Medicare Advantage plan. To move from Original Medicare to Medicare Advantage, use the Annual Enrollment Period (October 15 – December 7) or a Special Enrollment Period if you qualify.',
+    },
+    {
+      q: 'When does my new plan start if I switch?',
+      a: 'The first day of the month after the new plan gets your request. For example, if the plan gets your request on February 10, your new coverage starts March 1.',
+    },
+    {
+      q: 'Will I have to answer health questions to get a Medicare Supplement?',
+      a: "Possibly. Unless you have a guaranteed right (such as a trial right within your first year of Medicare Advantage), a Medigap company may ask health questions. Talk to a licensed agent before you drop your Medicare Advantage plan.",
+    },
+  ],
+};
+
 export const guides: Record<GuideKey, GuideContent> = {
   'medicare-office': medicareOffice,
   'diabetes-heart-snp': diabetesHeartSnp,
   'turning-65': turning65,
+  'ma-oep': maOep,
 };
 
 export const guidesHub: GuidesHubContent = {
@@ -704,6 +879,7 @@ export const guidesHub: GuidesHubContent = {
           items: [
             '**Trying to reach Medicare or sign up for Part A and Part B?** Start with [where to get Medicare help near you](page:guide-medicare-office).',
             '**Reviewing your plan this fall?** Read about the [Annual Enrollment Period](page:aep), when you can change plans for next year.',
+            '**Unhappy with your Medicare Advantage plan after January 1?** You can [switch once between January 1 and March 31](page:guide-ma-oep).',
             '**Got a call or letter that seems off?** See how to [spot and report Medicare scams](page:scam).',
             '**Comparing coverage?** Learn how [Medicare Advantage](page:service-medicare-advantage) and [Medicare Supplement](page:service-medicare-supplement) plans differ.',
           ],

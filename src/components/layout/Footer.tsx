@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Star } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/Link';
 import type { AppLocale } from '@/i18n/routing';
@@ -98,9 +98,15 @@ export async function Footer({ locale }: { locale: AppLocale }) {
                 </li>
               ))}
             </ul>
+            <p className="mt-6">
+              <a href={site.googleReviewUrl} target="_blank" rel="noopener" className={`${link} gap-2 font-semibold`}>
+                <Star aria-hidden className="h-5 w-5 shrink-0 text-amber-400" fill="currentColor" />
+                {t('leaveReview')}
+              </a>
+            </p>
           </div>
 
-          <nav aria-label={t('footerNav')} className="grid gap-10 sm:grid-cols-2 xl:grid-cols-[1.1fr_0.9fr_1.4fr]">
+          <nav aria-label={t('footerNav')} data-footer-nav className="grid gap-10 sm:grid-cols-2 xl:grid-cols-[1.1fr_0.9fr_1.4fr]">
             <div>
               <h2 className={heading}>{t('plansHeading')}</h2>
               <ul className="mt-3 space-y-1">

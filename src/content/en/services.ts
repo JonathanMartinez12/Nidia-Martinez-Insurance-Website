@@ -159,7 +159,7 @@ const services: Record<ProductKey, ServiceContent> = {
             items: [
               '**When you first get Medicare:** during your Initial Enrollment Period around your 65th birthday. See our [turning-65 Medicare checklist](page:guide-turning-65).',
               '**October 15 – December 7:** the [Annual Enrollment Period](page:aep). Join, switch or drop a plan for coverage starting January 1.',
-              '**January 1 – March 31:** if you are already in a Medicare Advantage plan, you can switch to another one or return to Original Medicare, once.',
+              '**January 1 – March 31:** if you are already in a Medicare Advantage plan, you can switch to another one or return to Original Medicare, once. Read our [Medicare Advantage Open Enrollment guide](page:guide-ma-oep).',
               '**Special Enrollment Periods:** events like moving or losing other coverage can let you change plans at other times. If a plan with a 5-star rating is offered in your area, you can switch to it once during the year, and people with a qualifying chronic condition can join a C-SNP that serves it at any time.',
             ],
           },

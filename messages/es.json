@@ -142,7 +142,15 @@
       "turning-65": {
         "title": "Cumplir 65 en Luisiana: lista de Medicare y ayuda local | Martinez Insurance Solutions",
         "description": "Cuándo inscribirse en Medicare a los 65 en Luisiana, cómo evitar multas, cuándo comprar Medigap y ayuda local gratis en Metairie y Nueva Orleans."
+      },
+      "ma-oep": {
+        "title": "Cambiar de plan Medicare Advantage: 1 ene. al 31 de marzo | Martinez Insurance Solutions",
+        "description": "El Período de Inscripción Abierta de Medicare Advantage va del 1 de enero al 31 de marzo. Quién puede cambiar, qué cambiar y ayuda local gratis."
       }
+    },
+    "landing": {
+      "title": "Ayuda con Medicare en Metairie, en español | Martinez Insurance Solutions",
+      "description": "Ayuda gratis con Medicare en Metairie, en español, con agentes locales con licencia. Compare planes Medicare Advantage, Suplementarios y Parte D. Llame al {phone}."
     }
   },
   "Common": {
@@ -226,7 +234,8 @@
     "footerNav": "Pie de página",
     "copyright": "© {year} Martinez Insurance Solutions. Todos los derechos reservados.",
     "disclaimerHeading": "Información importante",
-    "educational": "El contenido de este sitio es de carácter educativo. Los beneficios, costos, redes y disponibilidad de los planes varían según el plan y cambian cada año; revise siempre los documentos oficiales de un plan antes de inscribirse."
+    "educational": "El contenido de este sitio es de carácter educativo. Los beneficios, costos, redes y disponibilidad de los planes varían según el plan y cambian cada año; revise siempre los documentos oficiales de un plan antes de inscribirse.",
+    "leaveReview": "Déjenos una reseña en Google"
   },
   "MobileBar": {
     "label": "Contacto rápido",
@@ -445,7 +454,8 @@
       "callUs": "Si desea hablar antes, llámenos:",
       "scamNote": "Para su protección: nunca le pediremos por correo electrónico su número de Medicare, su número de Seguro Social ni datos bancarios.",
       "signoff": "Nidia y John Martinez — Martinez Insurance Solutions"
-    }
+    },
+    "leaveReview": "¿Ya es cliente? Déjenos una reseña en Google"
   },
   "NotFound": {
     "eyebrow": "Página no encontrada",
@@ -514,5 +524,39 @@
     "reviewedBy": "Revisado por <link>{name}</link>, agente de seguros con licencia",
     "updated": "Actualizado el {date}",
     "readGuide": "Leer la guía"
+  },
+  "Reviews": {
+    "eyebrow": "Reseñas de Google",
+    "heading": "Lo que dicen nuestros clientes",
+    "stars": "{rating} de 5 estrellas",
+    "via": "En {source}",
+    "leaveReview": "Déjenos una reseña en Google"
+  },
+  "Landing": {
+    "eyebrow": "Ayuda gratis con Medicare en Metairie",
+    "h1": "Hable con un agente de Medicare con licencia en Metairie, en español",
+    "lede": "¿Preguntas sobre Medicare Advantage, planes Suplementarios o de medicamentos? Comparamos con usted planes de varias compañías de seguros, en persona en nuestra oficina o por teléfono.",
+    "trustHeading": "Por qué nos llaman",
+    "trust": {
+      "licensed": {
+        "title": "Agentes locales con licencia",
+        "body": "Nidia y John Martinez, en nuestra oficina de Veterans Blvd. en Metairie."
+      },
+      "noCost": {
+        "title": "Sin costo para usted",
+        "body": "Nuestra ayuda y la revisión de su plan no tienen ningún costo."
+      },
+      "spanish": {
+        "title": "Hablamos español",
+        "body": "Le atendemos en español o en inglés, como usted prefiera."
+      }
+    },
+    "callHint": "Toque para llamar. Le atiende un agente con licencia.",
+    "formHeading": "O pídanos que le llamemos",
+    "formIntro": "Déjenos su nombre y número de teléfono y le devolvemos la llamada.",
+    "officeHeading": "Nuestra oficina en Metairie",
+    "officeNote": "Las visitas son con cita previa. Llame al {phone} para coordinar un horario.",
+    "directions": "Cómo llegar",
+    "logoLabel": "Martinez Insurance Solutions"
   }
 }

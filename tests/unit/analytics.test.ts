@@ -1,7 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { markAnalyticsReady, resetAnalytics, sanitizeParams, setPageContext, track } from '@/lib/analytics';
 import { analyticsPageInfo } from '@/lib/page-analytics';
-import { applyInternalParam, gpcEnabled } from '@/components/Analytics';
+import { applyInternalParam, gpcEnabled, isRealVisit, PRODUCTION_HOSTS } from '@/components/Analytics';
+import { site } from '@/config/site';
 import { pages } from '@/config/pages';
 
 const PII = /@|(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/;
@@ -122,5 +123,19 @@ describe('internal traffic and privacy', () => {
   it('detects Global Privacy Control', () => {
     expect(gpcEnabled({ globalPrivacyControl: true } as Navigator & { globalPrivacyControl?: boolean })).toBe(true);
     expect(gpcEnabled({} as Navigator)).toBe(false);
+  });
+
+  it('only counts real visits on the production domain', () => {
+    const iphone = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1';
+    const human = { userAgent: iphone, webdriver: false };
+    expect(PRODUCTION_HOSTS).toContain(new URL(site.url).hostname);
+    expect(isRealVisit(human, 'www.martinezinsurancesolutions.com', false)).toBe(true);
+    expect(isRealVisit({ userAgent: 'Mozilla/5.0 (Linux; Android 13; CUBOT X30)', webdriver: false }, 'www.martinezinsurancesolutions.com', false)).toBe(true);
+    expect(isRealVisit(human, 'localhost', false)).toBe(false);
+    expect(isRealVisit(human, 'martinez-insurance-git-x.vercel.app', false)).toBe(false);
+    expect(isRealVisit({ ...human, webdriver: true }, 'www.martinezinsurancesolutions.com', false)).toBe(false);
+    for (const ua of ['Mozilla/5.0 Chrome-Lighthouse', 'Mozilla/5.0 HeadlessChrome/140.0', 'Mozilla/5.0 (compatible; Googlebot/2.1)', 'Mozilla/5.0 (compatible; bingbot/2.0)', 'Playwright/1.56'])
+      expect(isRealVisit({ userAgent: ua, webdriver: false }, 'www.martinezinsurancesolutions.com', false)).toBe(false);
+    expect(isRealVisit({ ...human, webdriver: true }, 'localhost', true)).toBe(true);
   });
 });

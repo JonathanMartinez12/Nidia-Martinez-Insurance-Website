@@ -6,15 +6,18 @@ type Props = {
   homeLabel: string;
   tagline: string;
   className?: string;
+  /** false: plain lockup, no link home (ad landing pages). */
+  linked?: boolean;
 };
 
 /** Header logo: the official seal + the "Martinez / Insurance Solutions" wordmark in live text (crisp at small sizes). */
-export function Logo({ homeLabel, tagline, className = '' }: Props) {
-  return (
-    <Link href="/" className={`group inline-flex min-h-12 items-center gap-2 no-underline sm:gap-3 ${className}`}>
+export function Logo({ homeLabel, tagline, className = '', linked = true }: Props) {
+  const cls = `group inline-flex min-h-12 items-center gap-2 no-underline sm:gap-3 ${className}`;
+  const lockup = (
+    <>
       <Image
         src={site.brand.seal}
-        alt={`${site.name} — ${homeLabel}`}
+        alt={linked ? `${site.name} — ${homeLabel}` : site.name}
         width={48}
         height={48}
         priority
@@ -28,7 +31,14 @@ export function Logo({ homeLabel, tagline, className = '' }: Props) {
           {tagline}
         </span>
       </span>
+    </>
+  );
+  return linked ? (
+    <Link href="/" className={cls}>
+      {lockup}
     </Link>
+  ) : (
+    <span className={cls}>{lockup}</span>
   );
 }
 

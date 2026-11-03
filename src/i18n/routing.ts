@@ -56,11 +56,17 @@ export const routing = defineRouting({
       en: '/guides/turning-65-medicare-louisiana',
       es: '/guias/cumplir-65-medicare-luisiana',
     },
+    '/guides/medicare-advantage-open-enrollment': {
+      en: '/guides/medicare-advantage-open-enrollment',
+      es: '/guias/inscripcion-abierta-medicare-advantage',
+    },
     '/faq': { en: '/faq', es: '/preguntas-frecuentes' },
     '/contact': { en: '/contact', es: '/contacto' },
     '/privacy-policy': { en: '/privacy-policy', es: '/politica-de-privacidad' },
     '/terms': { en: '/terms', es: '/terminos-de-uso' },
     '/accessibility': { en: '/accessibility', es: '/accesibilidad' },
+    // Google Ads landing page: noindex, not in the sitemap or page registry.
+    '/medicare-help-metairie': { en: '/medicare-help-metairie', es: '/ayuda-medicare-metairie' },
   },
 });
 

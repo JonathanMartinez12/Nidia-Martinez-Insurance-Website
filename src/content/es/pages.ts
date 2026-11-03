@@ -82,7 +82,7 @@ export const aep: GuideContent = {
           type: 'ul',
           items: [
             '**Período de Inscripción Inicial:** los siete meses alrededor de su cumpleaños número 65: los tres meses anteriores, el mes de su cumpleaños y los tres meses siguientes.',
-            '**Período de Inscripción Abierta de Medicare Advantage (del 1 de enero al 31 de marzo):** si tiene un plan Medicare Advantage, puede cambiarse a otro plan Medicare Advantage o volver a Medicare Original, una sola vez.',
+            '**Período de Inscripción Abierta de Medicare Advantage (del 1 de enero al 31 de marzo):** si tiene un plan Medicare Advantage, puede cambiarse a otro plan Medicare Advantage o volver a Medicare Original, una sola vez. Vea [cómo funciona el cambio de enero a marzo](page:guide-ma-oep).',
             '**Períodos de Inscripción Especial:** ciertos acontecimientos, como mudarse, perder otra cobertura o calificar para la Ayuda Adicional, le permiten hacer cambios en otros momentos del año.',
           ],
         },
@@ -643,6 +643,10 @@ export const home: HomeContent = {
     {
       q: 'Si mi plan me gusta, ¿tengo que cambiarlo?',
       a: 'No. Si después de leer su Aviso Anual de Cambios su plan le sigue conviniendo, se renueva automáticamente. Si los cambios le preocupan, programe una revisión con nosotros.',
+    },
+    {
+      q: '¿Puedo cambiar mi plan Medicare Advantage después del 1 de enero?',
+      a: 'Sí, una vez. Si tiene un plan Medicare Advantage, puede cambiarse a otro o volver a Medicare Original entre el 1 de enero y el 31 de marzo. Vea [cómo funciona el Período de Inscripción Abierta de Medicare Advantage](page:guide-ma-oep).',
     },
     {
       q: '¿Es el gobierno o Medicare quien me llama?',

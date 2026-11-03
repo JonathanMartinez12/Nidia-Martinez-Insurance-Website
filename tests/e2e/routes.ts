@@ -80,3 +80,6 @@ export function similarity(a: string, b: string): number {
   const union = A.size + B.size - inter;
   return union === 0 ? 0 : inter / union;
 }
+
+/** Google Ads landing pages: noindex and outside the page registry. */
+export const landingPaths = ['/medicare-help-metairie', '/es/ayuda-medicare-metairie'];

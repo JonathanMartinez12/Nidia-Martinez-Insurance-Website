@@ -29,6 +29,7 @@ export async function contactFormLabels(locale: AppLocale): Promise<ContactFormL
     'errorSummary',
     'successBackup',
     'failureTitle',
+    'leaveReview',
   ] as const;
   return {
     ...(Object.fromEntries(keys.map((k) => [k, t(k)])) as Pick<ContactFormLabels, (typeof keys)[number]>),
@@ -52,6 +53,7 @@ export async function contactFormProps(
     phone: site.primaryPhone,
     renderedAt,
     turnstileSiteKey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || undefined,
+    reviewUrl: site.googleReviewUrl,
   };
 }
 

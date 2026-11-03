@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronDown, CircleCheck, Phone, ShieldCheck, TriangleAlert } from 'lucide-react';
+import { ChevronDown, CircleCheck, Phone, ShieldCheck, Star, TriangleAlert } from 'lucide-react';
 import Script from 'next/script';
 import { startTransition, useActionState, useEffect, useRef, useState, type FormEvent } from 'react';
 import { submitContact, type ContactState } from '@/app/actions/contact';
@@ -30,6 +30,7 @@ export type ContactFormLabels = {
   successTitle: string;
   successBackup: string;
   failureTitle: string;
+  leaveReview: string;
 };
 
 export type ContactFormProps = {
@@ -47,6 +48,8 @@ export type ContactFormProps = {
   idPrefix?: string;
   /** Focus the name field on mount (bottom sheet). */
   autoFocus?: boolean;
+  /** Google review link shown on the success state. */
+  reviewUrl?: string;
 };
 
 const initial: ContactState = { status: 'idle' };
@@ -67,6 +70,7 @@ export function ContactForm({
   turnstileSiteKey,
   idPrefix = 'cf',
   autoFocus = false,
+  reviewUrl,
 }: ContactFormProps) {
   const [state, formAction, pending] = useActionState(submitContact, initial);
   const startedAt = useRef(0);
@@ -175,6 +179,19 @@ export function ContactForm({
           <Phone aria-hidden className="h-5 w-5" />
           {phone.display}
         </a>
+        {reviewUrl ? (
+          <p className="mt-6">
+            <a
+              href={reviewUrl}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex min-h-12 items-center gap-2 font-semibold text-navy-800 underline underline-offset-4"
+            >
+              <Star aria-hidden className="h-5 w-5 shrink-0 text-amber-500" fill="currentColor" />
+              {labels.leaveReview}
+            </a>
+          </p>
+        ) : null}
       </div>
     );
   }

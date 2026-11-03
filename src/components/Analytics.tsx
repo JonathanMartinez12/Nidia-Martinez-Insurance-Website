@@ -34,6 +34,31 @@ export function gpcEnabled(nav: Navigator & { globalPrivacyControl?: boolean } =
   return nav.globalPrivacyControl === true;
 }
 
+/** Hosts that report to GA (production only; keep in sync with `site.url`). */
+export const PRODUCTION_HOSTS = ['www.martinezinsurancesolutions.com', 'martinezinsurancesolutions.com'];
+// Case-sensitive "bot"/"Bot" so phone models like "CUBOT" don't match.
+const AUTOMATED_UA = /Lighthouse|HeadlessChrome|Playwright|PageSpeed|Google-InspectionTool|crawler|spider|[Bb]ot\b/;
+
+/**
+ * The e2e suite opts in to GA on localhost: the build must allow it (NEXT_PUBLIC_GA_TEST_MODE=1,
+ * set only by `npm run verify`) and the test must set `window.__misGaTest`. Lighthouse runs on the
+ * same build don't set the flag, so they measure the page without GA, as on production.
+ */
+function e2eTestMode(): boolean {
+  return process.env.NEXT_PUBLIC_GA_TEST_MODE === '1' && (window as Window & { __misGaTest?: boolean }).__misGaTest === true;
+}
+
+/**
+ * Only real visitors on the production domain count: no automated browsers (Lighthouse,
+ * Playwright, crawlers), localhost or preview deployments.
+ */
+export function isRealVisit(nav: Pick<Navigator, 'userAgent' | 'webdriver'>, hostname: string, testMode = e2eTestMode()): boolean {
+  if (testMode) return true;
+  if (nav.webdriver) return false;
+  if (AUTOMATED_UA.test(nav.userAgent)) return false;
+  return PRODUCTION_HOSTS.includes(hostname);
+}
+
 const AREA_LOCATIONS: Array<[string, string]> = [
   ['[data-testid="mobile-bar"]', 'sticky_bar'],
   ['header', 'header'],
@@ -106,13 +131,20 @@ export function classifyClick(
 
 /**
  * GA4: loaded once (from the locale layout) with next/script afterInteractive, only when
- * NEXT_PUBLIC_GA_ID is set and the browser doesn't send Global Privacy Control. One delegated
+ * NEXT_PUBLIC_GA_ID is set, the browser doesn't send Global Privacy Control, and it's a real
+ * visit on the production domain (see `isRealVisit`). One delegated
  * click listener covers every tel:/sms:/mailto:/maps/outbound/CTA/body link on the site.
  */
+const CORE_VITALS = new Set(['TTFB', 'FCP', 'LCP', 'CLS', 'INP']);
+const sentVitals = new Set<string>();
+
 export function Analytics({ gaId }: { gaId: string }) {
   const [enabled, setEnabled] = useState(false);
 
   useReportWebVitals((metric) => {
+    // Core Web Vitals only (not Next.js' internal timings), and each metric once per page.
+    if (!CORE_VITALS.has(metric.name) || sentVitals.has(metric.id)) return;
+    sentVitals.add(metric.id);
     track('web_vitals', {
       metric_name: metric.name,
       // GA4 metrics are integers: CLS is sent ×1000.
@@ -123,7 +155,7 @@ export function Analytics({ gaId }: { gaId: string }) {
   });
 
   useEffect(() => {
-    if (gpcEnabled()) return;
+    if (gpcEnabled() || !isRealVisit(navigator, window.location.hostname)) return;
     const w = window as Window & { __misGaInit?: boolean };
     if (!w.__misGaInit) {
       w.__misGaInit = true;

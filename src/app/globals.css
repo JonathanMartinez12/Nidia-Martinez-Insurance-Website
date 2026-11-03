@@ -269,3 +269,8 @@
     animation: none;
   }
 }
+
+/* Ad landing pages: keep the footer's contact, disclaimers and legal links, drop the site navigation. */
+body:has(main[data-landing]) [data-footer-nav] {
+  display: none;
+}

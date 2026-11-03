@@ -655,10 +655,177 @@ const turning65: GuideContent = {
   ],
 };
 
+/* Período de Inscripción Abierta de Medicare Advantage: fuentes en src/content/en/guides.ts (maOep). */
+const maOep: GuideContent = {
+  h1: '¿No está contento con su plan Medicare Advantage? Puede cambiarlo del 1 de enero al 31 de marzo',
+  lede: 'Si su nuevo plan Medicare Advantage no le funciona, tiene una oportunidad más para cambiarlo a principios de año. Le explicamos quién puede hacerlo, qué puede cambiar y qué revisar antes del cambio.',
+  sections: [
+    {
+      id: 'short-answer',
+      heading: '¿Puedo cambiar mi plan Medicare Advantage después del 1 de enero?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Sí, una vez. El **Período de Inscripción Abierta de Medicare Advantage** va del **1 de enero al 31 de marzo** de cada año. Si usted tiene un plan Medicare Advantage, puede usarlo para cambiarse a otro plan Medicare Advantage, o para dejar Medicare Advantage y volver a Medicare Original.',
+        },
+        {
+          type: 'callout',
+          tone: 'info',
+          title: 'No es lo mismo que la inscripción de otoño',
+          text: 'El [Período de Inscripción Anual](page:aep) (15 de octubre – 7 de diciembre) es para todas las personas con Medicare. El período de enero a marzo es solo para quienes ya tienen un plan Medicare Advantage.',
+        },
+      ],
+    },
+    {
+      id: 'who-qualifies',
+      heading: '¿Quién puede usar el Período de Inscripción Abierta de Medicare Advantage?',
+      blocks: [
+        {
+          type: 'ul',
+          items: [
+            '**Tiene un plan Medicare Advantage** (con o sin cobertura de medicamentos) el 1 de enero: del 1 de enero al 31 de marzo.',
+            '**Es nuevo en Medicare** y se inscribió en un plan Medicare Advantage cuando obtuvo Medicare: puede hacer un cambio dentro de sus primeros 3 meses con Medicare.',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Si tiene Medicare Original (con o sin un seguro Suplementario de Medicare), este período no le corresponde.',
+        },
+      ],
+    },
+    {
+      id: 'what-you-can-do',
+      heading: '¿Qué puedo cambiar entre el 1 de enero y el 31 de marzo?',
+      blocks: [
+        { type: 'p', text: 'Puede hacer **uno** de estos cambios:' },
+        {
+          type: 'ul',
+          items: [
+            '**Cambiarse a otro plan Medicare Advantage**, con o sin cobertura de medicamentos. Por ejemplo, un plan que incluya a sus médicos o que cubra sus medicamentos a menor costo.',
+            '**Dejar su plan Medicare Advantage y volver a Medicare Original.** Al mismo tiempo puede inscribirse en un [plan de medicamentos de Medicare (Parte D)](page:service-part-d-prescription-drug-plans) por separado.',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Solo puede hacer un cambio durante este período. Si vuelve a Medicare Original y se inscribe en un plan de medicamentos por separado, no necesita comunicarse con su plan Medicare Advantage para salirse: su baja es automática al inscribirse en el plan de medicamentos.',
+        },
+        {
+          type: 'table',
+          caption: 'Cuándo empieza su nueva cobertura',
+          head: ['El nuevo plan recibe su solicitud en…', 'Su nueva cobertura empieza el'],
+          rows: [
+            ['Enero', '1 de febrero'],
+            ['Febrero', '1 de marzo'],
+            ['Marzo (hasta el 31 de marzo)', '1 de abril'],
+          ],
+        },
+      ],
+    },
+    {
+      id: 'what-you-cant-do',
+      heading: '¿Qué no puedo hacer durante este período?',
+      blocks: [
+        {
+          type: 'callout',
+          tone: 'warning',
+          title: 'Estos cambios tienen que esperar al otoño',
+          text: 'Entre el 1 de enero y el 31 de marzo **no puede** cambiarse de Medicare Original a un plan Medicare Advantage, inscribirse en un plan de medicamentos por separado si tiene Medicare Original, ni cambiar de un plan de medicamentos a otro si tiene Medicare Original. Esos cambios se hacen durante el [Período de Inscripción Anual](page:aep), a menos que califique para un Período de Inscripción Especial.',
+        },
+      ],
+    },
+    {
+      id: 'medigap',
+      heading: '¿Puedo obtener un seguro Suplementario si vuelvo a Medicare Original?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Tal vez. Fuera de ciertas situaciones protegidas, una compañía de [seguro Suplementario de Medicare (Medigap)](page:service-medicare-supplement) puede hacerle preguntas de salud y podría negarle la póliza o cobrarle más. Tiene el derecho garantizado de comprar ciertas pólizas Medigap en estos casos (llamados derechos de prueba):',
+        },
+        {
+          type: 'ul',
+          items: [
+            '**Se inscribió en un plan Medicare Advantage cuando tuvo derecho a Medicare por primera vez a los 65 años**, y vuelve a Medicare Original dentro del primer año.',
+            '**Dejó una póliza Medigap para inscribirse en Medicare Advantage por primera vez**, y sale de Medicare Advantage dentro de 12 meses. Puede recuperar su póliza anterior si la misma compañía todavía la vende.',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Si ninguno de estos casos le aplica, hable con nosotros antes de dejar su plan Medicare Advantage. Primero revisamos si es probable que califique para una póliza Medigap, para que no se quede solo con Medicare Original.',
+        },
+      ],
+    },
+    {
+      id: 'before-you-switch',
+      heading: '¿Qué debo revisar antes de cambiarme?',
+      blocks: [
+        {
+          type: 'ul',
+          items: [
+            '**Médicos y hospitales:** ¿los que usted usa están en la red del nuevo plan?',
+            '**Medicamentos:** ¿todos sus medicamentos están en la lista del nuevo plan, y a qué costo?',
+            '**Farmacia:** ¿su farmacia está en la red, y es una farmacia preferida?',
+            '**Costos:** prima mensual, copagos y el máximo anual de gastos de bolsillo del plan.',
+            '**Beneficios adicionales:** la cobertura dental, de la vista, de audición y otros extras varían de un plan a otro.',
+          ],
+        },
+        {
+          type: 'callout',
+          tone: 'warning',
+          title: 'No se quede sin cobertura de medicamentos',
+          text: 'Si deja un plan Medicare Advantage que incluye medicamentos y no se inscribe en un plan de medicamentos, podría pagar una multa por inscripción tardía si se inscribe más adelante, mientras tenga cobertura de medicamentos.',
+        },
+      ],
+    },
+    {
+      id: 'after-march-31',
+      heading: '¿Qué pasa si se me pasa el 31 de marzo?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Después del 31 de marzo, por lo general se queda con su plan Medicare Advantage el resto del año. Su próxima oportunidad es el [Período de Inscripción Anual](page:aep), del 15 de octubre al 7 de diciembre, para cobertura que empieza el 1 de enero. Podría calificar antes para un Período de Inscripción Especial si algo cambia, como una mudanza, perder otra cobertura, o calificar para Medicaid o Ayuda Adicional.',
+        },
+      ],
+    },
+    {
+      id: 'local-help',
+      heading: 'Ayuda gratis para comparar planes en el área de Nueva Orleans',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Somos agentes con licencia en Metairie y comparamos [planes Medicare Advantage](page:service-medicare-advantage) de varias compañías de seguros. Traiga su lista de médicos y medicamentos y los revisamos con cada plan que ofrecemos, en persona o por teléfono, en español o en inglés. Nuestra ayuda no tiene costo. [Contáctenos](page:contact) o llame al (504) 313-2317.',
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: '¿Cuándo es el Período de Inscripción Abierta de Medicare Advantage?',
+      a: 'Del 1 de enero al 31 de marzo de cada año. Las personas nuevas en Medicare que se inscribieron en un plan Medicare Advantage también pueden hacer un cambio dentro de sus primeros 3 meses con Medicare.',
+    },
+    {
+      q: '¿Cuántas veces puedo cambiar de plan entre el 1 de enero y el 31 de marzo?',
+      a: 'Una vez. Puede cambiarse a otro plan Medicare Advantage, o dejar Medicare Advantage y volver a Medicare Original (e inscribirse en un plan de medicamentos por separado).',
+    },
+    {
+      q: '¿Puedo cambiarme de Medicare Original a un plan Medicare Advantage en enero?',
+      a: 'No. El Período de Inscripción Abierta de Medicare Advantage es solo para quienes ya tienen un plan Medicare Advantage. Para pasar de Medicare Original a Medicare Advantage, use el Período de Inscripción Anual (15 de octubre – 7 de diciembre) o un Período de Inscripción Especial si califica.',
+    },
+    {
+      q: '¿Cuándo empieza mi nuevo plan si me cambio?',
+      a: 'El primer día del mes después de que el nuevo plan recibe su solicitud. Por ejemplo, si el plan recibe su solicitud el 10 de febrero, su nueva cobertura empieza el 1 de marzo.',
+    },
+    {
+      q: '¿Tendré que contestar preguntas de salud para obtener un seguro Suplementario?',
+      a: 'Posiblemente. A menos que tenga un derecho garantizado (como un derecho de prueba dentro de su primer año en Medicare Advantage), una compañía Medigap puede hacerle preguntas de salud. Hable con un agente con licencia antes de dejar su plan Medicare Advantage.',
+    },
+  ],
+};
+
 export const guides: Record<GuideKey, GuideContent> = {
   'medicare-office': medicareOffice,
   'diabetes-heart-snp': diabetesHeartSnp,
   'turning-65': turning65,
+  'ma-oep': maOep,
 };
 
 export const guidesHub: GuidesHubContent = {
@@ -674,6 +841,7 @@ export const guidesHub: GuidesHubContent = {
           items: [
             '**¿Quiere comunicarse con Medicare o inscribirse en la Parte A y la Parte B?** Empiece por [dónde recibir ayuda con Medicare cerca de usted](page:guide-medicare-office).',
             '**¿Va a revisar su plan este otoño?** Lea sobre el [Período de Inscripción Anual](page:aep), cuando puede cambiar de plan para el año siguiente.',
+            '**¿No está contento con su plan Medicare Advantage después del 1 de enero?** Puede [cambiarlo una vez entre el 1 de enero y el 31 de marzo](page:guide-ma-oep).',
             '**¿Recibió una llamada o carta sospechosa?** Vea cómo [detectar y denunciar fraudes de Medicare](page:scam).',
             '**¿Está comparando coberturas?** Conozca en qué se diferencian los planes [Medicare Advantage](page:service-medicare-advantage) y [Medicare Suplementario](page:service-medicare-supplement).',
           ],
