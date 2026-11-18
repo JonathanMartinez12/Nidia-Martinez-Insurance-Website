@@ -60,6 +60,10 @@ export const routing = defineRouting({
       en: '/guides/medicare-advantage-open-enrollment',
       es: '/guias/inscripcion-abierta-medicare-advantage',
     },
+    '/guides/find-doctor-medicare-advantage-new-orleans': {
+      en: '/guides/find-doctor-medicare-advantage-new-orleans',
+      es: '/guias/encontrar-medico-medicare-advantage-nueva-orleans',
+    },
     '/faq': { en: '/faq', es: '/preguntas-frecuentes' },
     '/contact': { en: '/contact', es: '/contacto' },
     '/privacy-policy': { en: '/privacy-policy', es: '/politica-de-privacidad' },

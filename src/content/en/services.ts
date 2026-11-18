@@ -173,7 +173,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: "Doctors can join or leave a plan's network at any time during the year, and you generally can't change plans mid-year because of it. The plan must still give you access to qualified doctors and specialists, help you choose a new provider, help you continue care that's already in progress, and tell you about any enrollment options you have.",
+            text: "Doctors can join or leave a plan's network at any time during the year, and you generally can't change plans mid-year because of it. The plan must still give you access to qualified doctors and specialists, help you choose a new provider, help you continue care that's already in progress, and tell you about any enrollment options you have. Read our guide to [finding a doctor in your Medicare Advantage network](page:guide-find-doctor).",
           },
           {
             type: 'p',

@@ -29,6 +29,12 @@ export const guides = [
     published: '2026-11-03',
     modified: '2026-11-03',
   },
+  {
+    key: 'find-doctor',
+    pathname: '/guides/find-doctor-medicare-advantage-new-orleans',
+    published: '2026-11-18',
+    modified: '2026-11-18',
+  },
 ] as const;
 
 export type GuideKey = (typeof guides)[number]['key'];

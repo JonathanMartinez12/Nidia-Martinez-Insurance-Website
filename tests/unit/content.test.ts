@@ -107,6 +107,7 @@ const guideWords: Record<string, [number, number]> = {
   'diabetes-heart-snp': [1800, 2200],
   'turning-65': [1400, 2200],
   'ma-oep': [900, 1500],
+  'find-doctor': [900, 1500],
 };
 
 /** City word floors (h1 + lede + sections + FAQs); the priority pages go deeper. */

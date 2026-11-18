@@ -124,6 +124,15 @@ export default async function CityPage({ params }: Params) {
                 {t('turning65', { city: name })}
               </Link>
             </p>
+            <p>
+              <Link
+                href="/guides/find-doctor-medicare-advantage-new-orleans"
+                className="inline-flex min-h-12 items-center gap-2 font-bold text-navy-800 underline underline-offset-4"
+              >
+                <ArrowRight aria-hidden className="h-5 w-5 shrink-0 text-red-600" />
+                {t('findDoctor')}
+              </Link>
+            </p>
           </div>
         </aside>
       </div>

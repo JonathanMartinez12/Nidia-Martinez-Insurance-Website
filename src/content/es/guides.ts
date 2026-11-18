@@ -825,11 +825,150 @@ const maOep: GuideContent = {
   ],
 };
 
+/* Guía para encontrar un médico en la red: fuentes en src/content/en/guides.ts (findDoctor). */
+const findDoctor: GuideContent = {
+  h1: 'Cómo encontrar un médico en la red de su plan Medicare Advantage en Nueva Orleans',
+  lede: 'Antes de inscribirse en un plan Medicare Advantage, o de quedarse con el que tiene, asegúrese de que los médicos y hospitales que usa estén en su red. Le explicamos cómo comprobarlo, en qué se diferencian las reglas de los planes HMO y PPO, y qué pasa si su médico deja la red.',
+  sections: [
+    {
+      id: 'how-to-check',
+      heading: '¿Cómo compruebo si mi médico está en la red de un plan Medicare Advantage?',
+      blocks: [
+        { type: 'p', text: 'Use más de una de estas opciones, porque los directorios pueden estar desactualizados:' },
+        {
+          type: 'ol',
+          items: [
+            '**Busque en el directorio de proveedores del plan.** Cada plan Medicare Advantage publica uno en su sitio web. Busque por el nombre del médico y la dirección de su consultorio, y asegúrese de mirar el plan exacto y el año correcto.',
+            '**Llame al consultorio del médico.** Pregunte: "¿Están en la red de [nombre del plan] para el próximo año?". Dé el nombre completo del plan, no solo el de la compañía, porque un médico puede estar en un plan de una compañía y no en otro.',
+            '**Use el Buscador de planes de Medicare.** En [Medicare.gov/plan-compare](https://www.medicare.gov/plan-compare) puede agregar los proveedores más importantes para usted, y los resultados le mostrarán si están en la red de los planes que está considerando.',
+          ],
+        },
+        {
+          type: 'callout',
+          tone: 'info',
+          title: 'Revise a cada médico, no solo a uno',
+          text: 'Haga una lista con su médico de cabecera, sus especialistas, sus hospitales y cualquier laboratorio o clínica de terapia que use, y revise cada uno. Un solo especialista fuera de la red puede cambiar qué plan le conviene.',
+        },
+      ],
+    },
+    {
+      id: 'health-systems',
+      heading: '¿Y Ochsner, LCMC Health y otros sistemas de salud?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'En el área de Nueva Orleans muchas personas nos preguntan si un plan incluye un sistema de salud grande, como Ochsner Health o LCMC Health. Las redes se definen plan por plan, no compañía por compañía, y pueden incluir algunos médicos y hospitales de un sistema y otros no. Por eso, en lugar de preguntar "¿Este plan acepta Ochsner?", revise los médicos, hospitales y ubicaciones específicas que usted usa.',
+        },
+      ],
+    },
+    {
+      id: 'hmo-vs-ppo',
+      heading: 'HMO o PPO: reglas de referidos y de la red',
+      blocks: [
+        {
+          type: 'table',
+          caption: 'Cómo funcionan normalmente los planes Medicare Advantage HMO y PPO',
+          head: ['', 'HMO', 'PPO'],
+          rows: [
+            ['Médico de cabecera', 'Normalmente es obligatorio', 'No es obligatorio'],
+            [
+              'Referido para ver a un especialista',
+              'Obligatorio en la mayoría de los casos (algunos servicios, como la mamografía anual, no lo necesitan)',
+              'No es obligatorio',
+            ],
+            [
+              'Atención fuera de la red',
+              'Por lo general no está cubierta, salvo emergencias, atención urgente cuando está fuera del área y diálisis temporal fuera del área. Los planes HMO-POS pueden cubrir algunos servicios fuera de la red a un costo mayor.',
+              'Por lo general está cubierta, pero normalmente paga más',
+            ],
+            ['Emergencias y atención urgente', 'Cubiertas', 'Cubiertas'],
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Sea cual sea el tipo de plan, siga sus reglas, como obtener una aprobación previa cuando el plan la exige. Lea más sobre los [tipos de planes Medicare Advantage](page:service-medicare-advantage).',
+        },
+      ],
+    },
+    {
+      id: 'doctor-leaves',
+      heading: '¿Qué pasa si mi médico deja la red de mi plan?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Los médicos y otros proveedores pueden entrar o salir de la red de un plan en cualquier momento del año. Si su proveedor de atención primaria o de salud mental se va y usted lo ha visitado en los últimos tres años, su plan debe avisarle, y le avisa sobre otros proveedores en ciertas situaciones. El plan debe seguir dándole acceso a médicos y especialistas calificados.',
+        },
+        {
+          type: 'ul',
+          items: [
+            'Su plan le ayudará a elegir un nuevo proveedor de la red y a continuar la atención que ya está recibiendo.',
+            'Por lo general no puede cambiar de plan a mitad de año, pero podría calificar para un Período de Inscripción Especial. Su plan le informará sobre las opciones de inscripción que tiene.',
+            'Lea con cuidado cada aviso de su plan y llámenos si no está seguro de lo que significa para usted.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'aep-questions',
+      heading: 'Preguntas para hacer durante la Inscripción Anual',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Las redes pueden cambiar de un año a otro. Durante el [Período de Inscripción Anual](page:aep) (15 de octubre – 7 de diciembre), haga estas preguntas sobre cada plan que esté considerando, incluido el que tiene ahora:',
+        },
+        {
+          type: 'ul',
+          items: [
+            '¿Mi médico de cabecera y todos mis especialistas estarán en la red el próximo año?',
+            '¿Los hospitales y clínicas de atención urgente que usaría están en la red?',
+            '¿Necesito un referido para ver a un especialista?',
+            '¿Cuánto pagaría si veo a un médico fuera de la red?',
+            '¿Mi Aviso Anual de Cambios menciona cambios que afectan mi atención?',
+          ],
+        },
+        {
+          type: 'p',
+          text: 'Si su plan no le funciona después del 1 de enero, podría cambiarse una vez durante el [Período de Inscripción Abierta de Medicare Advantage](page:guide-ma-oep).',
+        },
+      ],
+    },
+    {
+      id: 'how-we-help',
+      heading: 'Cómo revisamos las redes por usted',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Tráiganos la lista de los médicos, hospitales y medicamentos que usa. Revisamos cada proveedor con los planes disponibles donde usted vive, llamamos a los consultorios cuando el directorio no está claro y le mostramos lado a lado qué planes mantienen su atención. No recomendamos médicos específicos; le ayudamos a conservar los que usted elige. Le atendemos en persona en nuestra oficina de Metairie o por teléfono, en español o en inglés, sin costo por nuestra ayuda. [Contáctenos](page:contact) o lea sobre la [ayuda con Medicare en Nueva Orleans](page:city-new-orleans).',
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: '¿Medicare.gov puede decirme si mi médico está en la red de un plan?',
+      a: 'Sí. En el Buscador de planes de Medicare, en Medicare.gov/plan-compare, puede agregar a sus proveedores y los resultados le mostrarán si están en la red de los planes que está considerando. Aun así, conviene confirmarlo con el consultorio del médico.',
+    },
+    {
+      q: '¿Necesito un referido para ver a un especialista en un plan Medicare Advantage?',
+      a: 'En un plan HMO, en la mayoría de los casos sí, aunque algunos servicios, como la mamografía anual, no lo necesitan. En un plan PPO no necesita referido.',
+    },
+    {
+      q: '¿Qué pasa si mi médico deja mi plan Medicare Advantage a mitad de año?',
+      a: 'Su plan le avisará en ciertas situaciones y le ayudará a elegir un nuevo proveedor de la red y a continuar la atención que ya recibe. Por lo general no puede cambiar de plan a mitad de año, pero podría calificar para un Período de Inscripción Especial.',
+    },
+    {
+      q: '¿Pueden recomendarme un médico?',
+      a: 'No. No recomendamos médicos ni consultorios. Le ayudamos a comprobar si los médicos y hospitales que usted elige están en la red de los planes que está considerando.',
+    },
+  ],
+};
+
 export const guides: Record<GuideKey, GuideContent> = {
   'medicare-office': medicareOffice,
   'diabetes-heart-snp': diabetesHeartSnp,
   'turning-65': turning65,
   'ma-oep': maOep,
+  'find-doctor': findDoctor,
 };
 
 export const guidesHub: GuidesHubContent = {
@@ -845,6 +984,7 @@ export const guidesHub: GuidesHubContent = {
           items: [
             '**¿Quiere comunicarse con Medicare o inscribirse en la Parte A y la Parte B?** Empiece por [dónde recibir ayuda con Medicare cerca de usted](page:guide-medicare-office).',
             '**¿Va a revisar su plan este otoño?** Lea sobre el [Período de Inscripción Anual](page:aep), cuando puede cambiar de plan para el año siguiente.',
+            '**¿Quiere conservar a sus médicos?** Vea [cómo encontrar un médico en la red de su plan Medicare Advantage](page:guide-find-doctor).',
             '**¿No está contento con su plan Medicare Advantage después del 1 de enero?** Puede [cambiarlo una vez entre el 1 de enero y el 31 de marzo](page:guide-ma-oep).',
             '**¿Recibió una llamada o carta sospechosa?** Vea cómo [detectar y denunciar fraudes de Medicare](page:scam).',
             '**¿Está comparando coberturas?** Conozca en qué se diferencian los planes [Medicare Advantage](page:service-medicare-advantage) y [Medicare Suplementario](page:service-medicare-supplement).',

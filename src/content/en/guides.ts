@@ -863,11 +863,166 @@ const maOep: GuideContent = {
   ],
 };
 
+/*
+ * Find-a-doctor guide sources (verified 2026-11-18):
+ * - HMO: usually choose a primary care doctor; referral to a specialist in most cases (yearly
+ *   mammograms excepted); out-of-network care may cost the full amount except emergency,
+ *   out-of-area urgent care and temporary out-of-area dialysis; HMO-POS may allow some
+ *   out-of-network care at higher cost; "If your doctor ... leaves the plan, your plan will notify you":
+ *   https://www.medicare.gov/health-drug-plans/health-plans/your-coverage-options/HMO
+ * - PPO: no primary care doctor or referral required; out-of-network generally covered at higher
+ *   cost; emergency and urgent care always covered:
+ *   https://www.medicare.gov/health-drug-plans/health-plans/your-coverage-options/PPO
+ * - Plan Finder shows whether the providers you add are in network; you can also ask the provider;
+ *   providers can leave a network any time; notice for primary care/behavioral health providers seen
+ *   in the past 3 years; plan helps you choose a new provider and continue care in progress; you may
+ *   qualify for a Special Enrollment Period: Medicare & You 2027 (pages 66, 69-70),
+ *   https://www.medicare.gov/publications/10050-medicare-and-you.pdf
+ * Health systems are named only as examples of what people ask about; never doctors or practices.
+ */
+const findDoctor: GuideContent = {
+  h1: 'How to Find a Doctor in Your Medicare Advantage Network in New Orleans',
+  lede: "Before you join or keep a Medicare Advantage plan, make sure the doctors and hospitals you count on are in its network. Here's how to check, how HMO and PPO rules differ, and what happens if your doctor leaves.",
+  sections: [
+    {
+      id: 'how-to-check',
+      heading: 'How do I check if my doctor is in a Medicare Advantage network?',
+      blocks: [
+        { type: 'p', text: 'Use more than one of these, because directories can be out of date:' },
+        {
+          type: 'ol',
+          items: [
+            "**Search the plan's provider directory.** Every Medicare Advantage plan publishes one on its website. Search by the doctor's name and office address, and make sure you're looking at the exact plan and the right year.",
+            '**Call the doctor\'s office.** Ask, "Are you in network with [plan name] for next year?" Give the full plan name, not just the insurance company, because a doctor can be in one of a company\'s plans and not another.',
+            '**Use the Medicare Plan Finder.** At [Medicare.gov/plan-compare](https://www.medicare.gov/plan-compare) you can add the providers who matter most to you, and your search results will show whether they are in network with the plans you are considering.',
+          ],
+        },
+        {
+          type: 'callout',
+          tone: 'info',
+          title: 'Check every doctor, not just one',
+          text: 'Make a list of your primary care doctor, specialists, hospitals, and any lab or therapy clinic you use, and check each one. One out-of-network specialist can change which plan makes sense for you.',
+        },
+      ],
+    },
+    {
+      id: 'health-systems',
+      heading: 'What about Ochsner, LCMC Health and other health systems?',
+      blocks: [
+        {
+          type: 'p',
+          text: 'People in Greater New Orleans often ask us whether a plan includes a large health system, such as Ochsner Health or LCMC Health. Networks are set plan by plan, not company by company, and they can include some of a system\'s doctors and hospitals and not others. So instead of asking "Does this plan take Ochsner?", check the specific doctors, hospitals and locations you actually use.',
+        },
+      ],
+    },
+    {
+      id: 'hmo-vs-ppo',
+      heading: 'HMO vs PPO: referral and network rules',
+      blocks: [
+        {
+          type: 'table',
+          caption: 'How HMO and PPO Medicare Advantage plans usually work',
+          head: ['', 'HMO', 'PPO'],
+          rows: [
+            ['Primary care doctor', 'Usually required', 'Not required'],
+            [
+              'Referral to see a specialist',
+              'Required in most cases (some services, like yearly mammograms, don’t need one)',
+              'Not required',
+            ],
+            [
+              'Out-of-network care',
+              "Generally not covered, except emergencies, urgent care when you're away and temporary dialysis out of the area. HMO-POS plans may cover some services out of network for a higher cost.",
+              'Generally covered, but you usually pay more',
+            ],
+            ['Emergency and urgent care', 'Covered', 'Covered'],
+          ],
+        },
+        {
+          type: 'p',
+          text: "Whichever type you choose, follow the plan's rules, like getting prior approval when the plan requires it. Read more about [Medicare Advantage plan types](page:service-medicare-advantage).",
+        },
+      ],
+    },
+    {
+      id: 'doctor-leaves',
+      heading: 'What happens if my doctor leaves my plan’s network?',
+      blocks: [
+        {
+          type: 'p',
+          text: "Doctors and other providers can join or leave a plan's network at any time during the year. If your primary care or behavioral health provider is leaving and you've seen them in the past three years, your plan must notify you, and it notifies you about other providers in certain situations. The plan must still give you access to qualified doctors and specialists.",
+        },
+        {
+          type: 'ul',
+          items: [
+            'Your plan will help you choose a new in-network provider and help you continue care that is already in progress.',
+            'You usually can’t change plans in the middle of the year, but you may qualify for a Special Enrollment Period. Your plan will tell you about the enrollment options available to you.',
+            'Read every notice from your plan carefully, and call us if you’re not sure what it means for you.',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'aep-questions',
+      heading: 'Questions to ask during Annual Enrollment',
+      blocks: [
+        {
+          type: 'p',
+          text: "Networks can change from one year to the next. During the [Annual Enrollment Period](page:aep) (October 15 – December 7), ask these questions about any plan you're considering, including the one you have now:",
+        },
+        {
+          type: 'ul',
+          items: [
+            'Are my primary care doctor and every specialist in network for next year?',
+            'Are the hospitals and urgent care clinics I would use in network?',
+            'Do I need a referral to see a specialist?',
+            'What would I pay if I saw a doctor out of network?',
+            'Does my Annual Notice of Change mention changes that affect my care?',
+          ],
+        },
+        {
+          type: 'p',
+          text: "If your plan isn't working out after January 1, you may be able to switch once during the [Medicare Advantage Open Enrollment Period](page:guide-ma-oep).",
+        },
+      ],
+    },
+    {
+      id: 'how-we-help',
+      heading: 'How we check networks for you',
+      blocks: [
+        {
+          type: 'p',
+          text: "Bring us the list of doctors, hospitals and prescriptions you use. We check each provider against the plans available where you live, call offices when a directory isn't clear, and show you side by side which plans keep your care together. We don't recommend specific doctors; we help you keep the ones you choose. We meet in person at our Metairie office or by phone, in English or Spanish, at no cost for our help. [Contact us](page:contact) or read about [Medicare help in New Orleans](page:city-new-orleans).",
+        },
+      ],
+    },
+  ],
+  faqs: [
+    {
+      q: 'Can Medicare.gov tell me if my doctor is in a plan’s network?',
+      a: 'Yes. In the Medicare Plan Finder at Medicare.gov/plan-compare, you can add your providers and your results will show whether they are in network with the plans you are considering. It is still a good idea to confirm with the doctor’s office.',
+    },
+    {
+      q: 'Do I need a referral to see a specialist in a Medicare Advantage plan?',
+      a: 'In an HMO, in most cases yes, though some services, like yearly mammograms, don’t need one. In a PPO, you don’t need a referral.',
+    },
+    {
+      q: 'What if my doctor leaves my Medicare Advantage plan in the middle of the year?',
+      a: 'Your plan will notify you in certain situations and help you choose a new in-network provider and continue care in progress. You usually can’t change plans mid-year, but you may qualify for a Special Enrollment Period.',
+    },
+    {
+      q: 'Can you recommend a doctor?',
+      a: 'No. We don’t recommend doctors or practices. We help you check whether the doctors and hospitals you choose are in the network of the plans you’re considering.',
+    },
+  ],
+};
+
 export const guides: Record<GuideKey, GuideContent> = {
   'medicare-office': medicareOffice,
   'diabetes-heart-snp': diabetesHeartSnp,
   'turning-65': turning65,
   'ma-oep': maOep,
+  'find-doctor': findDoctor,
 };
 
 export const guidesHub: GuidesHubContent = {
@@ -883,6 +1038,7 @@ export const guidesHub: GuidesHubContent = {
           items: [
             '**Trying to reach Medicare or sign up for Part A and Part B?** Start with [where to get Medicare help near you](page:guide-medicare-office).',
             '**Reviewing your plan this fall?** Read about the [Annual Enrollment Period](page:aep), when you can change plans for next year.',
+            '**Want to keep your doctors?** Learn [how to find a doctor in your Medicare Advantage network](page:guide-find-doctor).',
             '**Unhappy with your Medicare Advantage plan after January 1?** You can [switch once between January 1 and March 31](page:guide-ma-oep).',
             '**Got a call or letter that seems off?** See how to [spot and report Medicare scams](page:scam).',
             '**Comparing coverage?** Learn how [Medicare Advantage](page:service-medicare-advantage) and [Medicare Supplement](page:service-medicare-supplement) plans differ.',

@@ -99,7 +99,7 @@ export const aep: GuideContent = {
             'Su Aviso Anual de Cambios y la tarjeta de su plan actual',
             'Su tarjeta roja, blanca y azul de Medicare',
             'Una lista de sus medicamentos, con las dosis',
-            'Los nombres de sus médicos, especialistas y hospital de preferencia',
+            'Los nombres de sus médicos, especialistas y hospital de preferencia (vea [cómo comprobar si su médico está en la red](page:guide-find-doctor))',
             'La farmacia que usa',
           ],
         },

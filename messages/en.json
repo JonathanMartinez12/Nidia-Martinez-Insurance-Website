@@ -146,6 +146,10 @@
       "ma-oep": {
         "title": "Unhappy With Your Medicare Advantage Plan? Switch by Mar 31 | Martinez Insurance Solutions",
         "description": "The Medicare Advantage Open Enrollment Period runs January 1 to March 31. Who can switch, what you can change, Medigap rules and free local help."
+      },
+      "find-doctor": {
+        "title": "How to Find a Doctor in Your Medicare Advantage Network | Martinez Insurance Solutions",
+        "description": "How to check if your doctor is in a Medicare Advantage network in New Orleans, HMO vs PPO referral rules, and what happens if your doctor leaves."
       }
     },
     "landing": {
@@ -394,7 +398,8 @@
     "exploreCity": "Medicare help in {city}",
     "faqHeading": "Medicare questions in {city}",
     "spanishLine": "Spanish-speaking Medicare agents (Hablamos español)",
-    "turning65": "Turning 65 in {city}? Get local Medicare help"
+    "turning65": "Turning 65 in {city}? Get local Medicare help",
+    "findDoctor": "How to check if your doctor is in network"
   },
   "Faq": {
     "categoriesNav": "Question categories"

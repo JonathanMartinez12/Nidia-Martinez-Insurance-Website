@@ -146,6 +146,10 @@
       "ma-oep": {
         "title": "Cambiar de plan Medicare Advantage: 1 ene. al 31 de marzo | Martinez Insurance Solutions",
         "description": "El Período de Inscripción Abierta de Medicare Advantage va del 1 de enero al 31 de marzo. Quién puede cambiar, qué cambiar y ayuda local gratis."
+      },
+      "find-doctor": {
+        "title": "Cómo encontrar un médico en la red de Medicare Advantage | Martinez Insurance Solutions",
+        "description": "Cómo comprobar si su médico está en la red de un plan Medicare Advantage en Nueva Orleans, reglas de HMO y PPO, y qué pasa si su médico se va."
       }
     },
     "landing": {
@@ -394,7 +398,8 @@
     "exploreCity": "Ayuda con Medicare en {city}",
     "faqHeading": "Preguntas sobre Medicare en {city}",
     "spanishLine": "Agentes de Medicare que hablan español",
-    "turning65": "¿Cumple 65 en {city}? Obtenga ayuda local con Medicare"
+    "turning65": "¿Cumple 65 en {city}? Obtenga ayuda local con Medicare",
+    "findDoctor": "Cómo comprobar si su médico está en la red"
   },
   "Faq": {
     "categoriesNav": "Categorías de preguntas"

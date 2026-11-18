@@ -161,7 +161,7 @@ const services: Record<ProductKey, ServiceContent> = {
         blocks: [
           {
             type: 'p',
-            text: 'Los médicos pueden entrar o salir de la red de un plan en cualquier momento del año, y por lo general eso no le permite cambiar de plan a mitad de año. Aun así, el plan debe darle acceso a médicos y especialistas calificados, ayudarle a elegir un nuevo proveedor, ayudarle a continuar la atención que ya está recibiendo e informarle sobre las opciones de inscripción que tenga.',
+            text: 'Los médicos pueden entrar o salir de la red de un plan en cualquier momento del año, y por lo general eso no le permite cambiar de plan a mitad de año. Aun así, el plan debe darle acceso a médicos y especialistas calificados, ayudarle a elegir un nuevo proveedor, ayudarle a continuar la atención que ya está recibiendo e informarle sobre las opciones de inscripción que tenga. Lea nuestra guía para [encontrar un médico en la red de su plan Medicare Advantage](page:guide-find-doctor).',
           },
           {
             type: 'p',
