@@ -23,6 +23,7 @@ import { ProductCard } from '@/components/sections/ProductsGrid';
 import { FinalCta } from '@/components/sections/FinalCta';
 import { PageShell } from '@/components/layout/PageShell';
 import { CarrierStrip } from '@/components/sections/CarrierStrip';
+import { OfficeVisit } from '@/components/sections/OfficeVisit';
 
 type Params = { params: Promise<{ locale: string; city: string }> };
 
@@ -110,6 +111,8 @@ export default async function CityPage({ params }: Params) {
           </div>
         </aside>
       </div>
+
+      {city.slug === 'metairie' ? <OfficeVisit locale={locale} callLocation="city_cta" /> : null}
 
       <section aria-labelledby="city-services" className="container-page pb-16">
         <h2 id="city-services" className="text-3xl font-semibold sm:text-4xl">

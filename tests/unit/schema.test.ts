@@ -17,7 +17,7 @@ const profileUrls = {
 };
 
 describe('JSON-LD builders', () => {
-  it('InsuranceAgency is valid, has the address and omits TODO fields', () => {
+  it('InsuranceAgency is valid, has the GBP address, hours and sameAs, and omits TODO fields', () => {
     const a = agencySchema({
       locale: 'en',
       description: 'Local Medicare help',
@@ -27,7 +27,14 @@ describe('JSON-LD builders', () => {
     expect(validateJsonLd(a)).toEqual([]);
     expect(a).toMatchObject({ '@type': 'InsuranceAgency', knowsLanguage: ['en', 'es'], telephone: '+15043132317' });
     expect(a).toMatchObject({ address: { '@type': 'PostalAddress', addressLocality: 'Metairie', postalCode: '70005' } });
-    expect(a).not.toHaveProperty('openingHoursSpecification');
+    expect(a).toMatchObject({ address: { streetAddress: '110 Veterans Blvd, Suite A' } });
+    expect(a).toMatchObject({
+      openingHoursSpecification: [
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:30' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday', 'Sunday'], opens: '10:00', closes: '16:00' },
+      ],
+    });
+    expect(a).toMatchObject({ sameAs: ['https://www.google.com/maps/place/?q=place_id:ChIJV7bqD4evIIYRPMyFYHBSMyk'] });
     expect(a).not.toHaveProperty('aggregateRating');
     expect(a).not.toHaveProperty('review');
     expect(a).not.toHaveProperty('priceRange');

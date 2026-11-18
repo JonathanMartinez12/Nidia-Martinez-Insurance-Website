@@ -189,7 +189,8 @@
     "combinedYears": "Más de {years} años de experiencia combinada",
     "headshotAlt": "Retrato de {name}, agente de seguros con licencia de Martinez Insurance Solutions",
     "nonAffiliation": "Martinez Insurance Solutions es una agencia de seguros con licencia. No estamos afiliados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare.",
-    "backToTop": "Volver arriba"
+    "backToTop": "Volver arriba",
+    "weekendAppointments": "Citas los fines de semana"
   },
   "Header": {
     "primaryNav": "Principal",
@@ -558,5 +559,9 @@
     "officeNote": "Las visitas son con cita previa. Llame al {phone} para coordinar un horario.",
     "directions": "Cómo llegar",
     "logoLabel": "Martinez Insurance Solutions"
+  },
+  "Office": {
+    "heading": "Visite nuestra oficina",
+    "hoursHeading": "Horario de oficina"
   }
 }

@@ -62,6 +62,9 @@ export async function Hero({ locale }: { locale: AppLocale }) {
               </p>
             ))}
           <p className="mt-3 font-semibold text-muted">{t('reassurance')}</p>
+          {site.hours?.some((h) => h.days.includes('Saturday') || h.days.includes('Sunday')) ? (
+            <p className="mt-1 font-semibold text-navy-800">{tc('weekendAppointments')}</p>
+          ) : null}
         </div>
 
         <figure className="relative">

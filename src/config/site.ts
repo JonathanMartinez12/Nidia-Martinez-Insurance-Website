@@ -212,15 +212,23 @@ export const site = {
   primaryPhone: { display: '(504) 313-2317', e164: '+15043132317' } satisfies Phone,
   /** Street address. `null` = TODO → omitted from NAP and schema (service-area business). */
   address: {
-    streetAddress: '110 Veterans Blvd., Suite 100 A',
+    streetAddress: '110 Veterans Blvd, Suite A',
     addressLocality: 'Metairie',
     addressRegion: 'LA',
     postalCode: '70005',
   } as PostalAddress | null,
-  /** Office hours. `null` = TODO → hours hidden, `openingHoursSpecification` omitted. */
-  hours: null as OpeningHours[] | null,
-  /** Social / citation profile URLs used in schema `sameAs`. Empty until real profiles exist. */
-  sameAs: [] as string[],
+  /** Office hours, exactly as on the Google Business Profile. `null` = TODO → hours hidden, `openingHoursSpecification` omitted. */
+  hours: [
+    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:30' },
+    { days: ['Saturday', 'Sunday'], opens: '10:00', closes: '16:00' },
+  ] as OpeningHours[] | null,
+  /** Google place ID of the Business Profile (directions, reviews and map links). */
+  googlePlaceId: 'ChIJV7bqD4evIIYRPMyFYHBSMyk',
+  /**
+   * Profile URLs for schema `sameAs`. Only real, live profiles. TODO: add the Yelp, Bing Places,
+   * Facebook and Instagram profile URLs once confirmed.
+   */
+  sameAs: ['https://www.google.com/maps/place/?q=place_id:ChIJV7bqD4evIIYRPMyFYHBSMyk'] as string[],
   /** Google Business Profile "write a review" link (footer + form success state). Reviews shown on the site: src/config/reviews.ts. */
   googleReviewUrl: 'https://g.page/r/CTzMhWBwUjMpEAE/review',
   serviceArea: {

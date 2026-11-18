@@ -213,7 +213,7 @@ Types per page (live, all 58 crawled):
 - **InsuranceAgency present:**
   - `name`, `url`, `@id`, `logo`, `image` (both `/brand/seal.png`)
   - `telephone: "+15043132317"`, `email: martinezinsurancesolutions@outlook.com`
-  - `address` (PostalAddress: 110 Veterans Blvd., Suite 100 A, Metairie, LA 70005, US)
+  - `address` (PostalAddress: 110 Veterans Blvd, Suite A, Metairie, LA 70005, US)
   - `areaServed` (State Louisiana + 13 cities), `knowsLanguage ["en","es"]`
   - `contactPoint`, `employee` (both Person refs), `description`
 - **InsuranceAgency missing:**
@@ -357,7 +357,7 @@ So the city pages are unique, just short. Only **8** cities have pages (`src/con
 | **Fake example phone** | **(504) 555-0123** | `messages/en.json:374` (`phoneHint`), `:411` (`phoneInvalid`); same lines in es.json | **visible on 52/58 pages** (form hint "Example: (504) 555-0123") |
 | Business email | martinezinsurancesolutions@outlook.com | `site.ts` (`site.email`) | 60 on 58/58 |
 | Agent emails | nidiamartinez576@outlook.com, martj5493@gmail.com | `site.ts:97, 119`; `.env.example` | 6 pages each (contact + profiles) |
-| Address | 110 Veterans Blvd., Suite 100 A, Metairie, LA 70005 | `site.ts:192-196` | footer on 58/58; home office section; contact |
+| Address | 110 Veterans Blvd, Suite A, Metairie, LA 70005 | `site.ts:192-196` | footer on 58/58; home office section; contact |
 | Name (full) | "Martinez Insurance Solutions" | `site.ts` `name`; messages; content | 246 on 58/58 |
 | Name (short) | "Martinez Insurance" | `site.ts` `shortName`; **41 of 60 `<title>` tags** end in `\| Martinez Insurance` (EN 16/30, ES 25/30) | — |
 | Years (config) | Nidia `yearsExperience: 22`; John `null` | `site.ts:94, 110` | — |
@@ -715,7 +715,7 @@ From `next build` (Next 16.3.6, Turbopack):
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "US",
-    "streetAddress": "110 Veterans Blvd., Suite 100 A",
+    "streetAddress": "110 Veterans Blvd, Suite A",
     "addressLocality": "Metairie",
     "addressRegion": "LA",
     "postalCode": "70005"

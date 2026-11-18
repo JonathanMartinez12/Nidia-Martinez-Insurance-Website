@@ -12,6 +12,7 @@ import { contactPageSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/ui/JsonLd';
 import { localizedPath, localizedUrl } from '@/lib/urls';
 import { telHref } from '@/lib/phone';
+import { officeHours } from '@/lib/hours';
 import { card } from '@/components/ui/styles';
 import { Photo } from '@/components/ui/Photo';
 import { Sections } from '@/components/ui/Blocks';
@@ -128,13 +129,16 @@ export default async function ContactPage({ params }: LocaleParams) {
               {t('hoursHeading')}
             </h2>
             {site.hours && site.hours.length > 0 ? (
-              <ul className="mt-2 space-y-1">
-                {site.hours.map((h) => (
-                  <li key={h.days.join()}>
-                    {h.days.join(', ')}: {h.opens}–{h.closes}
-                  </li>
-                ))}
-              </ul>
+              <>
+                <ul className="mt-2 space-y-1">
+                  {officeHours(locale).map((h) => (
+                    <li key={h.days}>
+                      <span className="font-semibold">{h.days}:</span> {h.time}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-2 font-semibold text-navy-800">{tc('weekendAppointments')}</p>
+              </>
             ) : (
               <p className="mt-2">{t('hoursByAppointment')}</p>
             )}

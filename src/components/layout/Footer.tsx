@@ -5,14 +5,11 @@ import type { AppLocale } from '@/i18n/routing';
 import { agents, site } from '@/config/site';
 import { cityPages } from '@/config/cities';
 import { productKeys, products } from '@/config/products';
+import { officeHours } from '@/lib/hours';
 import { telHref } from '@/lib/phone';
 import { TpmoDisclaimer } from '@/components/sections/TpmoDisclaimer';
 import { BrandLockup } from '@/components/ui/Logo';
 
-const dayNames = {
-  en: { Monday: 'Mon', Tuesday: 'Tue', Wednesday: 'Wed', Thursday: 'Thu', Friday: 'Fri', Saturday: 'Sat', Sunday: 'Sun' },
-  es: { Monday: 'lun', Tuesday: 'mar', Wednesday: 'mié', Thursday: 'jue', Friday: 'vie', Saturday: 'sáb', Sunday: 'dom' },
-} as const;
 
 export async function Footer({ locale }: { locale: AppLocale }) {
   const t = await getTranslations({ locale, namespace: 'Footer' });
@@ -71,12 +68,13 @@ export async function Footer({ locale }: { locale: AppLocale }) {
               <div className="mt-6">
                 <h2 className={heading}>{t('hours')}</h2>
                 <ul className="mt-2 space-y-1 text-white/90">
-                  {site.hours.map((h) => (
-                    <li key={h.days.join()}>
-                      {h.days.map((d) => dayNames[locale][d]).join(', ')}: {h.opens}–{h.closes}
+                  {officeHours(locale).map((h) => (
+                    <li key={h.days}>
+                      {h.days}: {h.time}
                     </li>
                   ))}
                 </ul>
+                <p className="mt-2 text-white/90">{tc('weekendAppointments')}</p>
               </div>
             ) : null}
             <h2 className={`${heading} mt-8`}>{t('teamHeading')}</h2>

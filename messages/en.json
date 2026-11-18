@@ -189,7 +189,8 @@
     "combinedYears": "Over {years} years of combined experience",
     "headshotAlt": "Portrait of {name}, licensed insurance agent with Martinez Insurance Solutions",
     "nonAffiliation": "Martinez Insurance Solutions is a licensed insurance agency. We are not connected with or endorsed by the U.S. government or the federal Medicare program.",
-    "backToTop": "Back to top"
+    "backToTop": "Back to top",
+    "weekendAppointments": "Weekend appointments available"
   },
   "Header": {
     "primaryNav": "Main",
@@ -558,5 +559,9 @@
     "officeNote": "Visits are by appointment. Call {phone} to set up a time.",
     "directions": "Get directions",
     "logoLabel": "Martinez Insurance Solutions"
+  },
+  "Office": {
+    "heading": "Visit our office",
+    "hoursHeading": "Office hours"
   }
 }
