@@ -242,6 +242,8 @@ const services: Record<ProductKey, ServiceContent> = {
    * Sources (verified 2026-10-25):
    * - Plan chart (A–N benefits, K/L out-of-pocket limits, N copays up to $20 / $50, high-deductible
    *   option in some states): https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits
+   *   (Plan G vs N FAQ re-verified 2026-11-18 against the same chart: G and N both exclude the Part B
+   *   deductible; only G pays Part B excess charges; both 80% foreign travel emergency.)
    * - Plans C/F only for people eligible before Jan 1, 2020; D/G instead; Medigap Open Enrollment
    *   Period rules, pre-existing waiting period, pricing methods (community / issue-age / attained-age),
    *   Medicare SELECT, Louisiana on the list of states requiring at least one Medigap policy for people
@@ -475,6 +477,10 @@ const services: Record<ProductKey, ServiceContent> = {
       {
         q: 'Which Medicare Supplement plan is right for me?',
         a: 'It depends on how often you see doctors, your budget and how predictable you want your costs to be. Many people choose between Plan G (more coverage) and Plan N (some copays and excess charges). We walk through your situation and show you the numbers.',
+      },
+      {
+        q: 'Plan G vs Plan N: what’s the difference?',
+        a: 'Both cover the Part A deductible, Part B coinsurance, blood, hospice and skilled nursing facility coinsurance, and 80% of foreign travel emergencies (up to plan limits). Neither covers the yearly Part B deductible. The difference: Plan G pays Part B excess charges and has no office copays; with Plan N you may pay up to $20 for some office visits and up to $50 for emergency room visits when you aren’t admitted, and Plan N doesn’t cover excess charges. We quote both so you can compare.',
       },
       {
         q: 'Can I switch Medigap plans in Louisiana?',

@@ -228,7 +228,7 @@ const services: Record<ProductKey, ServiceContent> = {
 
   /* Fuentes: ver 'medicare-supplement' en src/content/en/services.ts (Medicare.gov, verificadas el 2026-10-25). */
   'medicare-supplement': {
-    h1: 'Planes Suplementarios de Medicare (Medigap) en Luisiana',
+    h1: 'Seguro Suplementario de Medicare (Medigap) en Luisiana',
     lede: 'Un plan Suplementario de Medicare, también llamado Medigap, ayuda a pagar los costos que Medicare Original no cubre, como los deducibles y el 20% de coseguro. Aquí le explicamos cómo se comparan los planes por letra, las reglas que importan en Luisiana y cómo le ayudamos a elegir sin costo.',
     summary:
       'Orientación sin costo para elegir y solicitar un seguro Suplementario de Medicare (Medigap) en Luisiana, con agentes locales bilingües y con licencia.',
@@ -247,7 +247,7 @@ const services: Record<ProductKey, ServiceContent> = {
     sections: [
       {
         id: 'how-medigap-works',
-        heading: '¿Cómo funcionan los planes Suplementarios de Medicare?',
+        heading: '¿Cómo funciona el seguro suplementario de Medicare?',
         blocks: [
           {
             type: 'p',
@@ -261,7 +261,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         id: 'plan-chart',
-        heading: '¿Qué cubre cada plan Medigap?',
+        heading: '¿Qué cubre cada plan del seguro suplementario de Medicare?',
         blocks: [
           {
             type: 'p',
@@ -440,7 +440,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         id: 'companies-we-compare',
-        heading: 'Compañías de seguro Suplementario de Medicare que comparamos en Luisiana',
+        heading: 'Compañías de seguro suplementario de Medicare que comparamos en Luisiana',
         blocks: [
           {
             type: 'p',
@@ -463,8 +463,12 @@ const services: Record<ProductKey, ServiceContent> = {
         a: 'Elija la letra de plan que le conviene y luego compare esa misma letra entre compañías. Los beneficios son idénticos, así que fíjese en la prima, en cómo la compañía ajusta sus tarifas con la edad y en su servicio. Hacemos esta comparación con usted gratis.',
       },
       {
-        q: '¿Qué plan Suplementario de Medicare me conviene?',
+        q: '¿Qué plan suplementario me conviene?',
         a: 'Depende de cuántas veces va al médico, de su presupuesto y de qué tan previsibles quiere que sean sus costos. Muchas personas eligen entre el Plan G (más cobertura) y el Plan N (algunos copagos y cargos en exceso). Revisamos su situación y le mostramos los números.',
+      },
+      {
+        q: '¿Plan G o Plan N: cuál es la diferencia?',
+        a: 'Los dos cubren el deducible de la Parte A, el coseguro de la Parte B, la sangre, el coseguro de hospicio y de la atención de enfermería especializada, y el 80% de las emergencias en el extranjero (hasta los límites del plan). Ninguno cubre el deducible anual de la Parte B. La diferencia: el Plan G paga los cargos en exceso de la Parte B y no tiene copagos en el consultorio; con el Plan N puede pagar hasta $20 en algunas consultas y hasta $50 en la sala de emergencias cuando no lo internan, y el Plan N no cubre los cargos en exceso. Cotizamos los dos para que compare.',
       },
       {
         q: '¿Puedo cambiar de plan Medigap en Luisiana?',
