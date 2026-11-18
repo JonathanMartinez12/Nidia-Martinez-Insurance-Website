@@ -1,6 +1,7 @@
 import type { ProductKey } from '@/config/products';
 import type { ServiceContent } from '../types';
 import { carrierNames } from '../carrier-names';
+import { maParishSection } from '../ma-landscape';
 
 const services: Record<ProductKey, ServiceContent> = {
   /*
@@ -17,7 +18,7 @@ const services: Record<ProductKey, ServiceContent> = {
    * Health systems are named only as examples people ask about; no network participation is claimed.
    */
   'medicare-advantage': {
-    h1: 'Medicare Advantage Plans in Louisiana',
+    h1: 'Medicare Advantage (Part C) Plans in Louisiana',
     lede: 'Medicare Advantage, also called Part C, bundles your hospital, medical and usually drug coverage into one plan from a Medicare-approved private company. We help people across Louisiana compare plans for {planYear} and choose one that fits their doctors, medicines and budget.',
     summary:
       'Personal, no-cost help comparing and enrolling in Medicare Advantage (Part C) plans in Louisiana, from licensed, bilingual local agents.',
@@ -110,6 +111,7 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      maParishSection('en'),
       {
         id: 'how-to-choose',
         heading: 'How to choose the right Medicare Advantage plan in Louisiana',

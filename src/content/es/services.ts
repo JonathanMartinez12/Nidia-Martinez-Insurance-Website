@@ -1,11 +1,12 @@
 import type { ProductKey } from '@/config/products';
 import type { ServiceContent } from '../types';
 import { carrierNames } from '../carrier-names';
+import { maParishSection } from '../ma-landscape';
 
 const services: Record<ProductKey, ServiceContent> = {
   /* Fuentes: ver 'medicare-advantage' en src/content/en/services.ts (Medicare.gov, verificadas el 2026-10-25). */
   'medicare-advantage': {
-    h1: 'Planes Medicare Advantage en Luisiana',
+    h1: 'Planes Medicare Advantage (Parte C) en Luisiana',
     lede: 'Medicare Advantage, también llamado Parte C, reúne su cobertura de hospital, médica y por lo general de medicamentos en un solo plan de una compañía privada aprobada por Medicare. Ayudamos a personas en toda Luisiana a comparar planes para {planYear} y a elegir uno que funcione con sus médicos, sus medicamentos y su presupuesto.',
     summary:
       'Ayuda personal y sin costo para comparar e inscribirse en planes Medicare Advantage (Parte C) en Luisiana, con agentes locales bilingües y con licencia.',
@@ -98,6 +99,7 @@ const services: Record<ProductKey, ServiceContent> = {
           },
         ],
       },
+      maParishSection('es'),
       {
         id: 'how-to-choose',
         heading: 'Cómo elegir el plan Medicare Advantage adecuado en Luisiana',

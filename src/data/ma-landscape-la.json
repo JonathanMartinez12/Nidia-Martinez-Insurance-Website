@@ -1,0 +1,68 @@
+{
+  "year": 2027,
+  "source": {
+    "title": "CMS CY2027 Medicare Advantage and Prescription Drug Plan Landscape",
+    "file": "CY2027_Landscape_202611.csv",
+    "url": "https://www.cms.gov/files/zip/cy2027-landscape-202611.zip",
+    "dataLastUpdated": "2026-11-01",
+    "retrieved": "2026-11-18"
+  },
+  "parishes": [
+    {
+      "parish": "Orleans",
+      "hmo": 17,
+      "ppo": 17,
+      "snp": 33,
+      "other": 0,
+      "total": 67
+    },
+    {
+      "parish": "Jefferson",
+      "hmo": 17,
+      "ppo": 16,
+      "snp": 33,
+      "other": 0,
+      "total": 66
+    },
+    {
+      "parish": "St. Tammany",
+      "hmo": 10,
+      "ppo": 16,
+      "snp": 31,
+      "other": 0,
+      "total": 57
+    },
+    {
+      "parish": "St. Bernard",
+      "hmo": 12,
+      "ppo": 11,
+      "snp": 30,
+      "other": 0,
+      "total": 53
+    },
+    {
+      "parish": "St. Charles",
+      "hmo": 16,
+      "ppo": 16,
+      "snp": 30,
+      "other": 0,
+      "total": 62
+    },
+    {
+      "parish": "St. John the Baptist",
+      "hmo": 12,
+      "ppo": 10,
+      "snp": 31,
+      "other": 0,
+      "total": 53
+    },
+    {
+      "parish": "East Baton Rouge",
+      "hmo": 16,
+      "ppo": 17,
+      "snp": 32,
+      "other": 0,
+      "total": 65
+    }
+  ]
+}

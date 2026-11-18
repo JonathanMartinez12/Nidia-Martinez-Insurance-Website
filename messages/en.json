@@ -6,7 +6,7 @@
     },
     "services": {
       "medicare-advantage": {
-        "title": "Medicare Advantage Plans in Louisiana ({planYear}) | Martinez Insurance Solutions",
+        "title": "Medicare Advantage (Part C) Plans in Louisiana ({planYear}) | Martinez Insurance Solutions",
         "description": "Compare Medicare Advantage (Part C) plans in Louisiana from Humana, Peoples Health, UnitedHealthcare and more with a local agent. Over {years} years. No cost."
       },
       "medicare-supplement": {
