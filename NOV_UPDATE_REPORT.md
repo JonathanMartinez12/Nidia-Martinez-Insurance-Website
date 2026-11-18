@@ -2,7 +2,7 @@
 
 Date: November 18, 2026. Based on the Search Console, GA4 and Google Business Profile data through Nov 16.
 
-Every step was committed separately, Steps 1–3 were deployed first, and everything was deployed again at the end. `npm run verify` was green before the final deploy (type check, lint, unit tests, build, Playwright and Lighthouse on every route × locale).
+Every step was committed separately, Steps 1–3 were deployed first, and everything was deployed again at the end. `npm run verify` passed before the final deploy, apart from one single-run Lighthouse dip that re-measured at 100 (details under Production verification).
 
 ---
 
@@ -135,7 +135,48 @@ Every step was committed separately, Steps 1–3 were deployed first, and everyt
 
 ---
 
-PRODUCTION_VERIFICATION
+## Production verification (curl, November 18)
+
+**After the Steps 1–3 deploy** (commit 25256e2):
+
+| Check | Result |
+|---|---|
+| "100 A" on /, /contact, Metairie (EN/ES) | 0 occurrences |
+| Address in InsuranceAgency JSON-LD | `110 Veterans Blvd, Suite A` |
+| `openingHoursSpecification` | Mon–Fri 08:00–18:30, Sat–Sun 10:00–16:00 |
+| `sameAs` | GBP place-ID URL; no AggregateRating/Review |
+| Hours and "Weekend appointments available" / "Citas los fines de semana" | /, /es, /contact, Metairie (EN/ES), AEP (EN/ES) |
+| Review badge | / and /contact |
+| "Visit our office" with `destination_place_id=ChIJV7bqD4evIIYRPMyFYHBSMyk` | /contact, /service-area/metairie, /es/area-de-servicio/metairie |
+| Footer directions link | present |
+| Seasonal banner | present |
+| Write-review links (`local/writereview?placeid=…`) | present |
+
+**Step 2 live tap test:** `click_to_call`, `sms_click`, `email_click` and `directions_click` all reached GA4 with the DebugView flag (table in Step 2).
+
+**After the final deploy** (commit 382ce94):
+
+| Check | Result |
+|---|---|
+| /medicare-advantage title | `Medicare Advantage (Part C) Plans in Louisiana (2027) \| Martinez Insurance Solutions` |
+| /medicare-advantage H1 | `Medicare Advantage (Part C) Plans in Louisiana` |
+| /es/medicare-advantage title | `Planes Medicare Advantage (Parte C) en Luisiana (2027) \| …` |
+| /es/medicare-advantage H1 | `Planes Medicare Advantage (Parte C) en Luisiana` |
+| Parish section | H2 present; Orleans row 17 / 17 / 33; cites `cy2027-landscape-202611.zip`; H2 "Medicare Part C plans in Louisiana" and the Part C FAQ present |
+| /es/area-de-servicio/baton-rouge | H2 "Agentes de seguros que hablan español en Baton Rouge", the FAQ, and "¿Cumple 65 en Baton Rouge? Obtenga ayuda local con Medicare" |
+| /service-area/kenner | "Spanish-speaking Medicare agents (Hablamos español)", "Turning 65 in Kenner? Get local Medicare help", find-doctor link |
+| Home | Spanish line and "Turning 65 in Greater New Orleans? Get local Medicare help" |
+| /es/seguro-suplementario-medicare | Title and H1 "Seguro Suplementario de Medicare (Medigap) en Luisiana"; both new FAQs |
+| /dental-vision-insurance | Title unchanged (already correct); 3 new/renamed sections and the new FAQ |
+| Find-doctor guide (EN + ES) | 200; Article + FAQPage schema; linked from MA, AEP, Kenner (every city) and the guides hub |
+| Turning-65 guide | New FAQ present |
+| Sitemap | 70 URLs; new guide included (EN/ES); landing pages excluded; 34 URLs at lastmod 2026-11-18 |
+| IndexNow | Key file 200; GitHub Action run 44234040458 after the deploy: success |
+
+`npm run verify` (final run):
+- Passed: type check, lint, 217 unit tests, build, all Playwright tests (SEO, links, axe, keyboard, form, language, content QA, analytics, banner, office, badge) and Lighthouse CI on 72 URLs.
+- One exception: `/es/area-de-servicio` (unchanged in this update) scored 94 on its single Lighthouse run. Re-run three times, it scored 100 / 100 / 100. Every other URL scored ≥95 / 100 / 100 / 100. The noindex ad landing pages are excluded from the SEO check by design.
+
 
 ---
 
