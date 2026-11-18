@@ -8,6 +8,7 @@ import { telHref } from '@/lib/phone';
 import { btn } from '@/components/ui/styles';
 import { Swoosh } from '@/components/ui/Curve';
 import { AgentPortrait } from './AgentPortrait';
+import { ReviewBadge } from './ReviewBadge';
 
 export async function Hero({ locale }: { locale: AppLocale }) {
   const t = await getTranslations({ locale, namespace: 'Home' });
@@ -46,6 +47,7 @@ export async function Hero({ locale }: { locale: AppLocale }) {
               {tc('freeConsultation')}
             </Link>
           </div>
+          <ReviewBadge locale={locale} className="mt-4" />
           {agents
             .filter((a) => a.phone.e164 !== site.primaryPhone.e164)
             .map((a) => (

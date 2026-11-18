@@ -274,3 +274,22 @@
 body:has(main[data-landing]) [data-footer-nav] {
   display: none;
 }
+
+/* Seasonal banner: <html data-season> is set in <head> before first paint (src/lib/season.ts). */
+.season-banner,
+.season-banner [data-variant] {
+  display: none;
+}
+html[data-season]:not([data-banner-dismissed]) .season-banner {
+  display: block;
+}
+html[data-season='aep'] .season-banner [data-variant='aep'],
+html[data-season='post'] .season-banner [data-variant='post'],
+html[data-season='oep'] .season-banner [data-variant='oep'] {
+  display: flex;
+}
+@media print {
+  .season-banner {
+    display: none !important;
+  }
+}

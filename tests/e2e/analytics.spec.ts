@@ -301,3 +301,13 @@ test('automated browsers and localhost never load GA without the e2e opt-in', as
   expect(gtagLoads).toBe(0);
   expect(await page.evaluate(() => (window as unknown as { dataLayer?: unknown[] }).dataLayer?.length ?? 0)).toBe(0);
 });
+
+test('banner_click (season, call) alongside click_to_call from the banner', async ({ page }) => {
+  await setup(page);
+  await page.clock.setFixedTime(new Date('2026-11-18T17:00:00Z'));
+  await page.goto('/');
+  await page.locator('[data-season-banner] a[href^="tel:"]').click();
+  await waitForEvent(page, 'banner_click', { season: 'aep', link_type: 'call', transport_type: 'beacon' });
+  await waitForEvent(page, 'click_to_call', { button_location: 'banner' });
+  await expectNoPii(page);
+});

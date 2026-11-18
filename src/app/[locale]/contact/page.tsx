@@ -17,6 +17,8 @@ import { card } from '@/components/ui/styles';
 import { Photo } from '@/components/ui/Photo';
 import { Sections } from '@/components/ui/Blocks';
 import { PageHeader } from '@/components/sections/PageHeader';
+import { ReviewBadge } from '@/components/sections/ReviewBadge';
+import { OfficeVisit } from '@/components/sections/OfficeVisit';
 import { TpmoDisclaimer } from '@/components/sections/TpmoDisclaimer';
 import { ContactFormSection } from '@/components/contact/ContactFormSection';
 import { PageShell } from '@/components/layout/PageShell';
@@ -42,7 +44,9 @@ export default async function ContactPage({ params }: LocaleParams) {
         crumbs={[{ name: th('contact'), path: localizedPath(locale, getPage('contact').href) }]}
         title={contact.h1}
         lede={contact.lede}
-      />
+      >
+        <ReviewBadge locale={locale} className="mt-6" />
+      </PageHeader>
       <div className="container-page grid gap-10 py-12 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:py-16">
         <section aria-labelledby="form-heading" className={`${card} p-6 sm:p-10`}>
           <h2 id="form-heading" className="text-3xl font-semibold sm:text-4xl">
@@ -164,6 +168,7 @@ export default async function ContactPage({ params }: LocaleParams) {
           </div>
         </div>
       </div>
+      <OfficeVisit locale={locale} callLocation="contact_page" />
       <div className="container-page pb-16" data-content="contact-body">
         <div className="prose-page">
           <Sections sections={contact.sections} locale={locale} />

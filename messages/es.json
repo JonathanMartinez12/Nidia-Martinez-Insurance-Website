@@ -236,7 +236,8 @@
     "copyright": "© {year} Martinez Insurance Solutions. Todos los derechos reservados.",
     "disclaimerHeading": "Información importante",
     "educational": "El contenido de este sitio es de carácter educativo. Los beneficios, costos, redes y disponibilidad de los planes varían según el plan y cambian cada año; revise siempre los documentos oficiales de un plan antes de inscribirse.",
-    "leaveReview": "Déjenos una reseña en Google"
+    "leaveReview": "Déjenos una reseña en Google",
+    "directions": "Cómo llegar"
   },
   "MobileBar": {
     "label": "Contacto rápido",
@@ -531,7 +532,8 @@
     "heading": "Lo que dicen nuestros clientes",
     "stars": "{rating} de 5 estrellas",
     "via": "En {source}",
-    "leaveReview": "Déjenos una reseña en Google"
+    "leaveReview": "Déjenos una reseña en Google",
+    "badge": "{rating} en Google · más de {count} reseñas"
   },
   "Landing": {
     "eyebrow": "Ayuda gratis con Medicare en Metairie",
@@ -562,6 +564,21 @@
   },
   "Office": {
     "heading": "Visite nuestra oficina",
-    "hoursHeading": "Horario de oficina"
+    "hoursHeading": "Horario de oficina",
+    "directions": "Cómo llegar",
+    "showMap": "Ver mapa",
+    "mapTitle": "Mapa de Martinez Insurance Solutions en Metairie",
+    "parkingHeading": "Estacionamiento y entrada"
+  },
+  "Banner": {
+    "label": "Aviso",
+    "dismiss": "Cerrar aviso",
+    "aep": "La Inscripción Anual de Medicare termina el 7 de diciembre: {days, plural, one {# día restante} other {# días restantes}}. Revisiones de planes gratis, también los fines de semana.",
+    "aepToday": "La Inscripción Anual de Medicare termina hoy, 7 de diciembre. Revisiones de planes gratis, también los fines de semana.",
+    "aepCall": "Llame al {phone}",
+    "post": "¿Va a cumplir 65 o es nuevo en Medicare? Le ayudamos todo el año.",
+    "postLink": "Lista para cumplir 65",
+    "oep": "¿No está contento con su plan Medicare Advantage? Puede cambiarlo una vez hasta el 31 de marzo.",
+    "oepLink": "Cómo cambiarse"
   }
 }

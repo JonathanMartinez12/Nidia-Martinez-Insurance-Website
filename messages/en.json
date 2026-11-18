@@ -236,7 +236,8 @@
     "copyright": "© {year} Martinez Insurance Solutions. All rights reserved.",
     "disclaimerHeading": "Important information",
     "educational": "Content on this site is for general education. Plan benefits, costs, networks and availability vary by plan and change each year; always review a plan's official documents before enrolling.",
-    "leaveReview": "Leave us a Google review"
+    "leaveReview": "Leave us a Google review",
+    "directions": "Get directions"
   },
   "MobileBar": {
     "label": "Quick contact",
@@ -531,7 +532,8 @@
     "heading": "What our clients say",
     "stars": "{rating} out of 5 stars",
     "via": "On {source}",
-    "leaveReview": "Leave us a Google review"
+    "leaveReview": "Leave us a Google review",
+    "badge": "{rating} on Google · {count}+ reviews"
   },
   "Landing": {
     "eyebrow": "Free Medicare help in Metairie",
@@ -562,6 +564,21 @@
   },
   "Office": {
     "heading": "Visit our office",
-    "hoursHeading": "Office hours"
+    "hoursHeading": "Office hours",
+    "directions": "Get directions",
+    "showMap": "Show map",
+    "mapTitle": "Map to Martinez Insurance Solutions in Metairie",
+    "parkingHeading": "Parking and entrance"
+  },
+  "Banner": {
+    "label": "Announcement",
+    "dismiss": "Dismiss announcement",
+    "aep": "Medicare Annual Enrollment ends December 7: {days, plural, one {# day left} other {# days left}}. Free plan reviews, weekends too.",
+    "aepToday": "Medicare Annual Enrollment ends today, December 7. Free plan reviews, weekends too.",
+    "aepCall": "Call {phone}",
+    "post": "Turning 65 or new to Medicare? We help year-round.",
+    "postLink": "Turning 65 checklist",
+    "oep": "Not happy with your Medicare Advantage plan? You can switch once by March 31.",
+    "oepLink": "How to switch"
   }
 }

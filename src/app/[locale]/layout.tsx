@@ -7,6 +7,8 @@ import { routing } from '@/i18n/routing';
 import { agents, getSiteUrl, site } from '@/config/site';
 import { Footer } from '@/components/layout/Footer';
 import { MobileCallBar } from '@/components/layout/MobileCallBar';
+import { SeasonalBanner } from '@/components/layout/SeasonalBanner';
+import { seasonBootScript } from '@/lib/season';
 import { textSizeBootScript } from '@/components/layout/TextSizeToggle';
 import { Analytics } from '@/components/Analytics';
 import { JsonLd } from '@/components/ui/JsonLd';
@@ -70,6 +72,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     <html lang={hreflangCode[locale]} className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: textSizeBootScript }} />
+        <script dangerouslySetInnerHTML={{ __html: seasonBootScript }} />
       </head>
       <body className="min-h-dvh">
         <a
@@ -78,6 +81,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         >
           {tc('skipToContent')}
         </a>
+        <SeasonalBanner locale={locale} />
         {children}
         <Footer locale={locale} />
         <MobileCallBar locale={locale} />

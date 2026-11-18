@@ -19,7 +19,7 @@ test.describe('Ad landing pages', () => {
       await expect(page.locator('main form input[name="name"]')).toBeVisible();
       await expect(page.locator('main form input[name="phone"]')).toBeVisible();
       await expect(page.locator('main [data-carriers]')).toBeVisible();
-      await expect(page.locator('main').getByText('110 Veterans Blvd.')).toBeVisible();
+      await expect(page.locator('main').getByText('110 Veterans Blvd, Suite A')).toBeVisible();
       await expect(page.locator('main [data-testid="tpmo-disclaimer"]')).toBeVisible();
       await expect(page.locator('main [lang="es"]').first()).toBeVisible();
     });
@@ -39,7 +39,7 @@ test.describe('Reviews and review links', () => {
     await expect(reviews.locator('li')).not.toHaveCount(0);
     const ld = await page.locator('script[type="application/ld+json"]').allTextContents();
     expect(ld.join('\n')).not.toMatch(/"(Review|AggregateRating)"|aggregateRating/);
-    await expect(page.locator('footer a[href="https://g.page/r/CTzMhWBwUjMpEAE/review"]')).toBeVisible();
+    await expect(page.locator('footer a[href="https://search.google.com/local/writereview?placeid=ChIJV7bqD4evIIYRPMyFYHBSMyk"]')).toBeVisible();
   });
 });
 

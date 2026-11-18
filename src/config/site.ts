@@ -230,7 +230,16 @@ export const site = {
    */
   sameAs: ['https://www.google.com/maps/place/?q=place_id:ChIJV7bqD4evIIYRPMyFYHBSMyk'] as string[],
   /** Google Business Profile "write a review" link (footer + form success state). Reviews shown on the site: src/config/reviews.ts. */
-  googleReviewUrl: 'https://g.page/r/CTzMhWBwUjMpEAE/review',
+  googleReviewUrl: 'https://search.google.com/local/writereview?placeid=ChIJV7bqD4evIIYRPMyFYHBSMyk',
+  /** Read our Google reviews (the rating badge links here). */
+  googleReviewsUrl: 'https://search.google.com/local/reviews?placeid=ChIJV7bqD4evIIYRPMyFYHBSMyk',
+  /**
+   * Google rating shown in the badge, copied from the Business Profile. Update by hand when it
+   * changes; `count` renders as "40+". Never turned into AggregateRating/Review schema.
+   */
+  googleRating: { rating: 5.0, count: 40 } as { rating: number; count: number } | null,
+  /** Parking and entrance directions for "Visit our office". `null` = TODO → hidden. */
+  parkingInfo: null as { en: string; es: string } | null,
   serviceArea: {
     state: 'Louisiana',
     region: 'Greater New Orleans',

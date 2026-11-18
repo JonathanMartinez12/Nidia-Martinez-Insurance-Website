@@ -77,7 +77,7 @@ test.describe('contact form', () => {
     await fillRequired(page, name);
     await page.locator('#contact-details-toggle').click();
     await page.getByText('Final Expense/Life').click();
-    await page.getByText('Turning 65').click();
+    await page.getByTestId('contact-form-full').getByText('Turning 65', { exact: true }).click();
     await page.getByText('Morning').click();
     await page.locator('#contact-email').fill('lead@example.com');
     await page.waitForTimeout(MIN_MS);
@@ -86,7 +86,7 @@ test.describe('contact form', () => {
     const success = page.getByTestId('contact-success');
     await expect(success).toContainText('Thank you, Lead! Nidia or John will call you soon.');
     await expect(success.getByRole('link', { name: '(504) 313-2317' })).toBeVisible();
-    await expect(success.getByRole('link', { name: /Google review/ })).toHaveAttribute('href', 'https://g.page/r/CTzMhWBwUjMpEAE/review');
+    await expect(success.getByRole('link', { name: /Google review/ })).toHaveAttribute('href', 'https://search.google.com/local/writereview?placeid=ChIJV7bqD4evIIYRPMyFYHBSMyk');
 
     await expect.poll(async () => (await outbox()).filter((m) => m.subject.includes(name)).length).toBe(1);
     const lead = (await outbox()).find((m) => m.subject.includes(name))!;

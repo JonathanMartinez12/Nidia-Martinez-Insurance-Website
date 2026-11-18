@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Star } from 'lucide-react';
+import { Mail, MapPin, Navigation, Phone, Star } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/Link';
 import type { AppLocale } from '@/i18n/routing';
@@ -6,6 +6,7 @@ import { agents, site } from '@/config/site';
 import { cityPages } from '@/config/cities';
 import { productKeys, products } from '@/config/products';
 import { officeHours } from '@/lib/hours';
+import { directionsUrl } from '@/lib/maps';
 import { telHref } from '@/lib/phone';
 import { TpmoDisclaimer } from '@/components/sections/TpmoDisclaimer';
 import { BrandLockup } from '@/components/ui/Logo';
@@ -56,6 +57,14 @@ export async function Footer({ locale }: { locale: AppLocale }) {
                     <br />
                     {site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}
                   </span>
+                </p>
+              ) : null}
+              {directionsUrl() ? (
+                <p>
+                  <a href={directionsUrl()!} className={`${link} gap-2 font-semibold`}>
+                    <Navigation aria-hidden className="h-5 w-5 shrink-0" />
+                    {t('directions')}
+                  </a>
                 </p>
               ) : (
                 <p className="flex items-start gap-2 pt-2 text-white/90">

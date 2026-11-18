@@ -37,7 +37,8 @@ export function gpcEnabled(nav: Navigator & { globalPrivacyControl?: boolean } =
 /** The only host that reports to GA (production; keep in sync with `site.url`). The apex 308-redirects here. */
 export const PRODUCTION_HOSTS = ['www.martinezinsurancesolutions.com'];
 // Case-sensitive "bot"/"Bot" so phone models like "CUBOT" don't match.
-const AUTOMATED_UA = /Lighthouse|HeadlessChrome|Playwright|Puppeteer|PageSpeed|Google-InspectionTool|[Cc]rawler|[Ss]pider|[Bb]ot\b/;
+const AUTOMATED_UA =
+  /Lighthouse|HeadlessChrome|Playwright|Puppeteer|PageSpeed|Google-InspectionTool|[Cc]rawler|[Ss]pider|[Bb]ot\b/;
 
 /**
  * The e2e suite opts in to GA on localhost: the build must allow it (NEXT_PUBLIC_GA_TEST_MODE=1,
@@ -52,7 +53,11 @@ function e2eTestMode(): boolean {
  * Only real visitors on the production domain count: no automated browsers (Lighthouse,
  * Playwright, crawlers), localhost or preview deployments.
  */
-export function isRealVisit(nav: Pick<Navigator, 'userAgent' | 'webdriver'>, hostname: string, testMode = e2eTestMode()): boolean {
+export function isRealVisit(
+  nav: Pick<Navigator, 'userAgent' | 'webdriver'>,
+  hostname: string,
+  testMode = e2eTestMode(),
+): boolean {
   if (testMode) return true;
   if (nav.webdriver) return false;
   if (AUTOMATED_UA.test(nav.userAgent)) return false;
@@ -186,6 +191,16 @@ export function Analytics({ gaId }: { gaId: string }) {
       const a = (e.target as Element | null)?.closest?.('a[href]');
       if (!(a instanceof HTMLAnchorElement)) return;
       const ctx = getPageContext();
+      if (a.closest('[data-season-banner]')) {
+        const href = a.getAttribute('href') ?? '';
+        track(
+          'banner_click',
+          href.startsWith('tel:')
+            ? { season: document.documentElement.dataset.season, link_type: 'call' }
+            : { season: document.documentElement.dataset.season, link_type: 'link', link_text: linkText(a) },
+          { beacon: true },
+        );
+      }
       const ev = classifyClick(a, window.location.href, ctx?.page_type, ctx?.locale);
       if (ev) track(ev.name, ev.params, { beacon: ev.beacon });
     };
