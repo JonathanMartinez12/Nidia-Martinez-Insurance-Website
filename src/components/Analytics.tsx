@@ -34,10 +34,10 @@ export function gpcEnabled(nav: Navigator & { globalPrivacyControl?: boolean } =
   return nav.globalPrivacyControl === true;
 }
 
-/** Hosts that report to GA (production only; keep in sync with `site.url`). */
-export const PRODUCTION_HOSTS = ['www.martinezinsurancesolutions.com', 'martinezinsurancesolutions.com'];
+/** The only host that reports to GA (production; keep in sync with `site.url`). The apex 308-redirects here. */
+export const PRODUCTION_HOSTS = ['www.martinezinsurancesolutions.com'];
 // Case-sensitive "bot"/"Bot" so phone models like "CUBOT" don't match.
-const AUTOMATED_UA = /Lighthouse|HeadlessChrome|Playwright|PageSpeed|Google-InspectionTool|crawler|spider|[Bb]ot\b/;
+const AUTOMATED_UA = /Lighthouse|HeadlessChrome|Playwright|Puppeteer|PageSpeed|Google-InspectionTool|[Cc]rawler|[Ss]pider|[Bb]ot\b/;
 
 /**
  * The e2e suite opts in to GA on localhost: the build must allow it (NEXT_PUBLIC_GA_TEST_MODE=1,
