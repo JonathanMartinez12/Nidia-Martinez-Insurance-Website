@@ -13,6 +13,7 @@ import { spawn, spawnSync, type ChildProcess } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { chromium } from '@playwright/test';
+import { landingPaths } from '../tests/e2e/routes';
 
 const PORT = Number(process.env.PORT ?? 3100);
 const BASE = `http://localhost:${PORT}`;
@@ -86,16 +87,19 @@ function lighthouseTable(): { table: string; ok: boolean } {
     });
   }
   rows.sort((a, b) => a.url.localeCompare(b.url));
-  const min = (k: 'perf' | 'a11y' | 'bp' | 'seo') => Math.min(...rows.map((r) => r[k]));
-  const avg = (k: 'perf' | 'a11y' | 'bp' | 'seo') => Math.round(rows.reduce((s, r) => s + r[k], 0) / rows.length);
+  // Ad landing pages are noindex on purpose, so their SEO score ("is crawlable") is excluded from the SEO minimum.
+  const isLanding = (url: string) => landingPaths.includes(url);
+  const indexable = rows.filter((r) => !isLanding(r.url));
+  const min = (k: 'perf' | 'a11y' | 'bp' | 'seo', set = rows) => Math.min(...set.map((r) => r[k]));
+  const avg = (k: 'perf' | 'a11y' | 'bp' | 'seo', set = rows) => Math.round(set.reduce((s, r) => s + r[k], 0) / set.length);
   const lines = [
     `| Route | Performance | Accessibility | Best Practices | SEO |`,
     `|---|---:|---:|---:|---:|`,
-    ...rows.map((r) => `| ${r.url} | ${r.perf} | ${r.a11y} | ${r.bp} | ${r.seo} |`),
-    `| **Minimum (${rows.length} URLs)** | **${min('perf')}** | **${min('a11y')}** | **${min('bp')}** | **${min('seo')}** |`,
-    `| **Average** | ${avg('perf')} | ${avg('a11y')} | ${avg('bp')} | ${avg('seo')} |`,
+    ...rows.map((r) => `| ${r.url} | ${r.perf} | ${r.a11y} | ${r.bp} | ${isLanding(r.url) ? `${r.seo} (noindex)` : r.seo} |`),
+    `| **Minimum (${rows.length} URLs)** | **${min('perf')}** | **${min('a11y')}** | **${min('bp')}** | **${min('seo', indexable)}** |`,
+    `| **Average** | ${avg('perf')} | ${avg('a11y')} | ${avg('bp')} | ${avg('seo', indexable)} |`,
   ];
-  const ok = rows.length > 0 && min('perf') >= 95 && min('a11y') === 100 && min('bp') === 100 && min('seo') === 100;
+  const ok = rows.length > 0 && min('perf') >= 95 && min('a11y') === 100 && min('bp') === 100 && min('seo', indexable) === 100;
   return { table: lines.join('\n'), ok };
 }
 

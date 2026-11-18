@@ -868,7 +868,7 @@ const findDoctor: GuideContent = {
         {
           type: 'table',
           caption: 'Cómo funcionan normalmente los planes Medicare Advantage HMO y PPO',
-          head: ['', 'HMO', 'PPO'],
+          head: ['Regla', 'HMO', 'PPO'],
           rows: [
             ['Médico de cabecera', 'Normalmente es obligatorio', 'No es obligatorio'],
             [

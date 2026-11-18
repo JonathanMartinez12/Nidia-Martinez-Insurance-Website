@@ -922,7 +922,7 @@ const findDoctor: GuideContent = {
         {
           type: 'table',
           caption: 'How HMO and PPO Medicare Advantage plans usually work',
-          head: ['', 'HMO', 'PPO'],
+          head: ['Rule', 'HMO', 'PPO'],
           rows: [
             ['Primary care doctor', 'Usually required', 'Not required'],
             [
