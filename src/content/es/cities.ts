@@ -133,8 +133,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'nola-spanish',
+        heading: 'Agentes de seguros que hablan español en Nueva Orleans',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Para muchas familias de Nueva Orleans es más fácil hablar de Medicare en español. Nuestros dos agentes con licencia, Nidia y John Martinez, hablan español con fluidez y revisan con usted sus médicos, sus medicamentos y las opciones de planes sin necesidad de un intérprete. Sus hijos o nietos también pueden participar, en español o en inglés.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: '¿Hay agentes de Medicare que hablen español en Nueva Orleans?',
+        a: 'Sí. Nidia y John Martinez hablan español e inglés. Le atendemos por teléfono en Nueva Orleans o en persona en nuestra oficina de Metairie, y toda su cita puede ser en español.',
+      },
       {
         q: '¿Puedo reunirme en persona con un agente de Medicare en Nueva Orleans?',
         a: `Sí. Atendemos a los residentes de Nueva Orleans en nuestra oficina de ${office}, a poca distancia de la ciudad, con cita previa. Si no puede trasladarse, le ayudamos por teléfono.`,
@@ -230,7 +244,7 @@ const cities: Record<CitySlug, CityContent> = {
       },
       {
         id: 'metairie-spanish',
-        heading: 'Agentes de Medicare que hablan español, cerca de usted',
+        heading: 'Agentes de seguros que hablan español en Metairie',
         blocks: [
           {
             type: 'p',
@@ -319,7 +333,7 @@ const cities: Record<CitySlug, CityContent> = {
         a: 'No. Somos una agencia de seguros privada con licencia, no Medicare ni el gobierno. Le ayudamos a comparar e inscribirse en planes privados de Medicare. Para Medicare, vea nuestra guía de [dónde recibir ayuda con Medicare cerca de usted](page:guide-medicare-office).',
       },
       {
-        q: '¿Tienen agentes de Medicare que hablen español en Metairie?',
+        q: '¿Hay agentes de Medicare que hablen español en Metairie?',
         a: 'Sí. Nuestros dos agentes hablan español e inglés, y toda su cita puede ser en español.',
       },
       {
@@ -439,8 +453,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'kenner-spanish',
+        heading: 'Agentes de seguros que hablan español en Kenner',
+        blocks: [
+          {
+            type: 'p',
+            text: 'En Kenner atendemos a muchas familias que prefieren hacer sus trámites de Medicare en español. Le explicamos cada parte de su cobertura en su idioma, por teléfono o en nuestra oficina de Metairie, a pocos minutos por Veterans Boulevard o la I-10.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: '¿Hay agentes de Medicare que hablen español en Kenner?',
+        a: 'Sí. Nuestros dos agentes con licencia hablan español. Puede reunirse con nosotros en Metairie, muy cerca de Kenner, o hablar por teléfono, siempre en español si así lo prefiere.',
+      },
       {
         q: '¿Puedo reunirme en persona con un agente de Medicare en Kenner?',
         a: 'Sí. Nuestra oficina está al lado, en Metairie, a poca distancia de Kenner, y las visitas son con cita previa. También le ayudamos por teléfono.',
@@ -570,8 +598,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'gretna-spanish',
+        heading: 'Agentes de seguros que hablan español en Gretna',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Si vive en Gretna o en otra parte del West Bank y prefiere hablar en español, le atendemos de principio a fin en su idioma. Revisamos con calma las cartas que le envía su plan, como el Aviso Anual de Cambios, y le explicamos qué significan para usted.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: '¿Hay agentes de Medicare que hablen español en Gretna?',
+        a: 'Sí. Le ayudamos en español a revisar y comparar sus opciones de Medicare, por teléfono desde Gretna o en persona en nuestra oficina de Metairie.',
+      },
       {
         q: '¿Puedo reunirme en persona con un agente de Medicare si vivo en Gretna?',
         a: 'Sí. Atendemos a los residentes del West Bank en nuestra oficina de Metairie, al otro lado del río, con cita previa, y también le ayudamos por teléfono si cruzar el puente le resulta complicado.',
@@ -659,7 +701,7 @@ const cities: Record<CitySlug, CityContent> = {
       },
       {
         id: 'chalmette-spanish',
-        heading: 'Ayuda en español para las familias de St. Bernard',
+        heading: 'Agentes de seguros que hablan español en Chalmette',
         blocks: [
           {
             type: 'p',
@@ -717,6 +759,10 @@ const cities: Record<CitySlug, CityContent> = {
       },
     ],
     faqs: [
+      {
+        q: '¿Hay agentes de Medicare que hablen español en Chalmette?',
+        a: 'Sí. Nuestros dos agentes hablan español y pueden explicarle Medicare en su idioma, por teléfono o en persona en Metairie. Sus familiares también son bienvenidos.',
+      },
       {
         q: '¿Puedo reunirme en persona con un agente de Medicare si vivo en Chalmette?',
         a: 'Sí, en nuestra oficina de Metairie, con cita previa. A muchos clientes de St. Bernard les resulta más fácil una cita por teléfono, y con gusto hacemos cualquiera de las dos.',
@@ -846,8 +892,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'slidell-spanish',
+        heading: 'Agentes de seguros que hablan español en Slidell',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Aunque Slidell está al otro lado del lago, no tiene que conformarse con ayuda solo en inglés. Le atendemos en español por teléfono desde su casa, o en persona en nuestra oficina de Metairie cuando le quede cómodo.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: '¿Hay agentes de Medicare que hablen español en Slidell?',
+        a: 'Sí. Atendemos a personas de Slidell en español, por teléfono o en nuestra oficina de Metairie, sin costo para usted.',
+      },
       {
         q: '¿Puedo reunirme en persona con un agente de Medicare si vivo en Slidell?',
         a: 'Sí, en nuestra oficina de Metairie, con cita previa. La mayoría de los clientes de Slidell prefieren reunirse por teléfono, y trabajamos igual de cualquier forma.',
@@ -983,8 +1043,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'covington-spanish',
+        heading: 'Agentes de seguros que hablan español en Covington',
+        blocks: [
+          {
+            type: 'p',
+            text: 'En Covington y Mandeville también puede contar con agentes de seguros que hablan español. Revisamos sus opciones de Medicare por teléfono o en persona, y si un familiar le ayuda con sus trámites, puede unirse a la llamada.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: '¿Hay agentes de Medicare que hablen español en Covington?',
+        a: 'Sí. Nidia y John Martinez hablan español con fluidez y atienden a personas de Covington y Mandeville por teléfono o en persona en Metairie.',
+      },
       {
         q: '¿Puedo reunirme en persona con un agente de Medicare desde Covington o Mandeville?',
         a: 'Sí. Nuestra oficina está en Metairie, cerca del extremo sur del Causeway, y las visitas son con cita previa. Las revisiones por teléfono también funcionan bien.',
@@ -1078,7 +1152,7 @@ const cities: Record<CitySlug, CityContent> = {
       },
       {
         id: 'br-spanish',
-        heading: 'Ayuda bilingüe con Medicare en la capital',
+        heading: 'Agentes de seguros que hablan español en Baton Rouge',
         blocks: [
           {
             type: 'p',
@@ -1108,6 +1182,10 @@ const cities: Record<CitySlug, CityContent> = {
       },
     ],
     faqs: [
+      {
+        q: '¿Hay agentes de Medicare que hablen español en Baton Rouge?',
+        a: 'Sí. Atendemos a personas de Baton Rouge por teléfono, en español o en inglés, y toda la revisión de su plan puede hacerse en español.',
+      },
       {
         q: '¿Puedo reunirme en persona con un agente de Medicare en Baton Rouge?',
         a: 'Por lo general ayudamos a los clientes de Baton Rouge por teléfono, y con gusto hablamos de una reunión en persona. Nuestra oficina está en Metairie.',

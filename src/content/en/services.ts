@@ -749,6 +749,9 @@ const services: Record<ProductKey, ServiceContent> = {
    * - Glaucoma screening every 12 months for people at high risk.
    * - Medigap generally doesn't cover vision or dental, hearing aids or eyeglasses.
    * - MA plans may cover extra benefits like vision, hearing and dental; generally limited.
+   * Re-verified 2026-11-18: https://www.medicare.gov/coverage/dental-services ,
+   * https://www.medicare.gov/coverage/eye-exams-routine ("Some Medicare Advantage Plans (Part C)
+   * offer extra benefits that Original Medicare doesn't cover - like vision, hearing, or dental").
    */
   'dental-vision-insurance': {
     h1: 'Dental & Vision Insurance in Metairie & New Orleans',
@@ -794,7 +797,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         id: 'your-options',
-        heading: 'Your options for dental and vision coverage',
+        heading: 'Dental insurance for seniors and people on Medicare',
         blocks: [
           {
             type: 'ul',
@@ -851,17 +854,21 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         id: 'under-65',
-        heading: 'Dental and vision insurance if you’re under 65',
+        heading: 'Under 65 dental plans',
         blocks: [
           {
             type: 'p',
             text: 'If you’re self-employed, retired early or work somewhere without benefits, an individual dental and vision plan can cover checkups and glasses for you and your family. We can look at it together with your [health insurance](page:service-health-insurance) so the pieces fit.',
           },
+          {
+            type: 'p',
+            text: 'Family dental plans can cover a spouse and children on the same policy, and many cover preventive visits like cleanings and exams from the start. Tell us who needs coverage and what work you expect, and we’ll compare individual and family options for you.',
+          },
         ],
       },
       {
         id: 'how-to-choose',
-        heading: 'How to choose the right dental plan for you',
+        heading: 'How to choose a dental plan: a checklist',
         blocks: [
           {
             type: 'ol',
@@ -917,6 +924,10 @@ const services: Record<ProductKey, ServiceContent> = {
       },
     ],
     faqs: [
+      {
+        q: 'Does a Medicare Advantage plan include dental coverage?',
+        a: 'Some do. Some Medicare Advantage plans offer extra benefits that Original Medicare doesn’t cover, like dental, vision or hearing, but what’s covered and how much the plan pays varies from plan to plan. Bring your plan’s Evidence of Coverage and we’ll check what it really includes before you buy a separate dental plan.',
+      },
       {
         q: 'Does Medicare pay for dentures?',
         a: 'No. In most cases Original Medicare doesn’t cover dentures or routine dental care. A stand-alone dental plan or the dental benefit in some Medicare Advantage plans can help, often after a waiting period.',

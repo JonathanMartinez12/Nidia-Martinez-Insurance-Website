@@ -637,6 +637,10 @@ const turning65: GuideContent = {
   ],
   faqs: [
     {
+      q: '¿Dónde puedo obtener ayuda con Medicare cerca de mí cuando cumpla 65?',
+      a: 'El Seguro Social le inscribe en la Parte A y la Parte B, en línea en [SSA.gov](https://www.ssa.gov/medicare/sign-up), por teléfono al 1-800-772-1213 (TTY 1-800-325-0778) o en una oficina local. Para orientación gratuita e imparcial, llame al programa SHIIP de Luisiana al 1-800-259-5300. Para comparar planes privados en persona, un agente local con licencia puede ayudarle: nuestra oficina está en Metairie y nuestra ayuda no tiene costo.',
+    },
+    {
       q: '¿Dónde recibo ayuda con Medicare cerca de mí al cumplir 65?',
       a: 'El Seguro Social se encarga de la inscripción en la Parte A y la Parte B, y el programa SHIIP de Luisiana (1-800-259-5300) ofrece asesoría gratuita. Para comparar e inscribirse en planes con un agente local con licencia, puede reunirse con nosotros en Metairie o hablar por teléfono. Nuestra ayuda es gratis.',
     },

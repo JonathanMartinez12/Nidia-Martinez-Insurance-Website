@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Languages, MapPin, Phone } from 'lucide-react';
 import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/Link';
 import { routing, type AppLocale } from '@/i18n/routing';
 import { getContent } from '@/content';
 import { site } from '@/config/site';
@@ -108,6 +109,21 @@ export default async function CityPage({ params }: Params) {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="mt-6 space-y-3 rounded-[var(--radius-card)] border border-line bg-sand p-6">
+            <p className="flex items-start gap-2 font-bold text-navy-900">
+              <Languages aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
+              <span>{t('spanishLine')}</span>
+            </p>
+            <p>
+              <Link
+                href="/guides/turning-65-medicare-louisiana"
+                className="inline-flex min-h-12 items-center gap-2 font-bold text-navy-800 underline underline-offset-4"
+              >
+                <ArrowRight aria-hidden className="h-5 w-5 shrink-0 text-red-600" />
+                {t('turning65', { city: name })}
+              </Link>
+            </p>
           </div>
         </aside>
       </div>

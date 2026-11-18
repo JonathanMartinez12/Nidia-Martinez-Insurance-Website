@@ -127,7 +127,7 @@ describe('city pages', () => {
         const city = content.cities[c.slug];
         expect(wordCount(cityText(c.slug))).toBeGreaterThanOrEqual(cityMinWords[c.slug] ?? 800);
         expect(city.faqs.length).toBeGreaterThanOrEqual(3);
-        expect(city.faqs.length).toBeLessThanOrEqual(4);
+        expect(city.faqs.length).toBeLessThanOrEqual(5);
         expect(city.h1).toMatch(/Medicare Advantage/);
       });
 

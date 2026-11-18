@@ -774,7 +774,7 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         id: 'your-options',
-        heading: 'Sus opciones de cobertura dental y de la vista',
+        heading: 'Seguro dental para personas mayores y personas con Medicare',
         blocks: [
           {
             type: 'ul',
@@ -831,17 +831,21 @@ const services: Record<ProductKey, ServiceContent> = {
       },
       {
         id: 'under-65',
-        heading: 'Seguro dental y de visión si tiene menos de 65 años',
+        heading: 'Planes dentales para menores de 65 años',
         blocks: [
           {
             type: 'p',
             text: 'Si trabaja por su cuenta, se jubiló antes de tiempo o trabaja en un lugar sin beneficios, un plan dental y de visión individual puede cubrir los chequeos y los anteojos para usted y su familia. Podemos revisarlo junto con su [seguro médico](page:service-health-insurance) para que todo encaje.',
           },
+          {
+            type: 'p',
+            text: 'Los planes dentales familiares pueden cubrir a su cónyuge y a sus hijos en la misma póliza, y muchos cubren desde el principio las visitas preventivas, como limpiezas y exámenes. Díganos quién necesita cobertura y qué tratamientos espera, y comparamos para usted las opciones individuales y familiares.',
+          },
         ],
       },
       {
         id: 'how-to-choose',
-        heading: 'Cómo elegir el plan dental adecuado para usted',
+        heading: 'Cómo elegir un plan dental: lista de verificación',
         blocks: [
           {
             type: 'ol',
@@ -897,6 +901,10 @@ const services: Record<ProductKey, ServiceContent> = {
       },
     ],
     faqs: [
+      {
+        q: '¿Los planes Medicare Advantage incluyen cobertura dental?',
+        a: 'Algunos sí. Algunos planes Medicare Advantage ofrecen beneficios adicionales que Medicare Original no cubre, como la atención dental, de la vista o de la audición, pero lo que cubren y cuánto pagan varía de un plan a otro. Traiga la Evidencia de Cobertura de su plan y revisamos lo que realmente incluye antes de que compre un plan dental aparte.',
+      },
       {
         q: '¿Medicare paga las dentaduras?',
         a: 'No. En la mayoría de los casos, Medicare Original no cubre las dentaduras ni la atención dental de rutina. Un plan dental independiente o el beneficio dental de algunos planes Medicare Advantage pueden ayudar, a menudo después de un período de espera.',

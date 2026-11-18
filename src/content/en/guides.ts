@@ -667,6 +667,10 @@ const turning65: GuideContent = {
   ],
   faqs: [
     {
+      q: 'Where can I get Medicare help near me when I turn 65?',
+      a: "Social Security signs you up for Part A and Part B, online at [SSA.gov](https://www.ssa.gov/medicare/sign-up), by phone at 1-800-772-1213 (TTY 1-800-325-0778) or at a local office. For free, unbiased counseling, call Louisiana's SHIIP program at 1-800-259-5300. To compare private plans face to face, a licensed local agent can help: our office is in Metairie, and there's no cost for our help.",
+    },
+    {
       q: 'Where can I get help with Medicare when I turn 65 near me?',
       a: 'Social Security handles signing up for Part A and Part B, and Louisiana’s SHIIP program (1-800-259-5300) offers free counseling. To compare and enroll in plans with a local licensed agent, you can meet with us in Metairie or talk by phone. Our help is free.',
     },
@@ -777,7 +781,7 @@ const maOep: GuideContent = {
       blocks: [
         {
           type: 'p',
-          text: "Maybe. Outside of certain protected situations, a [Medicare Supplement (Medigap)](page:service-medicare-supplement) company can ask health questions and may turn you down or charge more. You have a guaranteed right to buy certain Medigap policies in these cases (called trial rights):",
+          text: 'Maybe. Outside of certain protected situations, a [Medicare Supplement (Medigap)](page:service-medicare-supplement) company can ask health questions and may turn you down or charge more. You have a guaranteed right to buy certain Medigap policies in these cases (called trial rights):',
         },
         {
           type: 'ul',
@@ -854,7 +858,7 @@ const maOep: GuideContent = {
     },
     {
       q: 'Will I have to answer health questions to get a Medicare Supplement?',
-      a: "Possibly. Unless you have a guaranteed right (such as a trial right within your first year of Medicare Advantage), a Medigap company may ask health questions. Talk to a licensed agent before you drop your Medicare Advantage plan.",
+      a: 'Possibly. Unless you have a guaranteed right (such as a trial right within your first year of Medicare Advantage), a Medigap company may ask health questions. Talk to a licensed agent before you drop your Medicare Advantage plan.',
     },
   ],
 };

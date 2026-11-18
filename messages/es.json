@@ -392,7 +392,9 @@
     "parish": "Parroquia",
     "servicesHeading": "Cómo podemos ayudarle en {city}",
     "exploreCity": "Ayuda con Medicare en {city}",
-    "faqHeading": "Preguntas sobre Medicare en {city}"
+    "faqHeading": "Preguntas sobre Medicare en {city}",
+    "spanishLine": "Agentes de Medicare que hablan español",
+    "turning65": "¿Cumple 65 en {city}? Obtenga ayuda local con Medicare"
   },
   "Faq": {
     "categoriesNav": "Categorías de preguntas"

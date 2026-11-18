@@ -392,7 +392,9 @@
     "parish": "Parish",
     "servicesHeading": "How we can help in {city}",
     "exploreCity": "Medicare help in {city}",
-    "faqHeading": "Medicare questions in {city}"
+    "faqHeading": "Medicare questions in {city}",
+    "spanishLine": "Spanish-speaking Medicare agents (Hablamos español)",
+    "turning65": "Turning 65 in {city}? Get local Medicare help"
   },
   "Faq": {
     "categoriesNav": "Question categories"

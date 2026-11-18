@@ -142,8 +142,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'nola-spanish',
+        heading: 'Spanish-speaking insurance agents in New Orleans',
+        blocks: [
+          {
+            type: 'p',
+            text: 'For many New Orleans families, Medicare is easier to talk through in Spanish. Both of our licensed agents, Nidia and John Martinez, speak Spanish fluently and can go over your doctors, prescriptions and plan options with you without an interpreter. Your children or grandchildren are welcome to join, in Spanish or English.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: 'Are there Spanish-speaking Medicare agents in New Orleans?',
+        a: 'Yes. Nidia and John Martinez speak Spanish and English. We help New Orleans residents by phone or in person at our Metairie office, and your whole appointment can be in Spanish.',
+      },
       {
         q: 'Can I meet a Medicare agent in person in New Orleans?',
         a: `Yes. We meet New Orleans residents at our office at ${office}, a short drive from the city, by appointment. If you can’t travel, we can help by phone.`,
@@ -239,7 +253,7 @@ const cities: Record<CitySlug, CityContent> = {
       },
       {
         id: 'metairie-spanish',
-        heading: 'Hablamos español',
+        heading: 'Spanish-speaking insurance agents in Metairie',
         blocks: [
           {
             type: 'p',
@@ -328,7 +342,7 @@ const cities: Record<CitySlug, CityContent> = {
         a: 'No. We are a licensed private insurance agency, not Medicare or the government. We help you compare and enroll in private Medicare plans. For Medicare itself, see our guide to [where to get Medicare help near you](page:guide-medicare-office).',
       },
       {
-        q: 'Do you have Medicare agents who speak Spanish in Metairie?',
+        q: 'Are there Spanish-speaking Medicare agents in Metairie?',
         a: 'Yes. Both of our agents speak English and Spanish, and your whole appointment can be in Spanish.',
       },
       {
@@ -448,8 +462,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'kenner-spanish',
+        heading: 'Spanish-speaking insurance agents in Kenner',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Many Kenner families we work with prefer to handle Medicare in Spanish. We explain every part of your coverage in your language, by phone or at our Metairie office, a few minutes away by Veterans Boulevard or I-10.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: 'Are there Spanish-speaking Medicare agents in Kenner?',
+        a: 'Yes. Both of our licensed agents speak Spanish. Meet with us in Metairie, right next to Kenner, or talk by phone, in Spanish if you prefer.',
+      },
       {
         q: 'Can I meet a Medicare agent in person in Kenner?',
         a: 'Yes. Our office is next door in Metairie, an easy trip from Kenner, and visits are by appointment. We can also help by phone.',
@@ -579,8 +607,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'gretna-spanish',
+        heading: 'Spanish-speaking insurance agents in Gretna',
+        blocks: [
+          {
+            type: 'p',
+            text: 'If you live in Gretna or elsewhere on the West Bank and would rather talk in Spanish, we help you start to finish in your language. We go through the letters your plan sends, like the Annual Notice of Change, and explain what they mean for you.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: 'Are there Spanish-speaking Medicare agents in Gretna?',
+        a: 'Yes. We help you review and compare your Medicare options in Spanish, by phone from Gretna or in person at our Metairie office.',
+      },
       {
         q: 'Can I meet a Medicare agent in person if I live in Gretna?',
         a: 'Yes. We meet West Bank residents at our Metairie office by appointment, across the river, and we can also help by phone if crossing the bridge is a hassle.',
@@ -668,7 +710,7 @@ const cities: Record<CitySlug, CityContent> = {
       },
       {
         id: 'chalmette-spanish',
-        heading: 'Spanish-language help for St. Bernard families',
+        heading: 'Spanish-speaking insurance agents in Chalmette',
         blocks: [
           {
             type: 'p',
@@ -726,6 +768,10 @@ const cities: Record<CitySlug, CityContent> = {
       },
     ],
     faqs: [
+      {
+        q: 'Are there Spanish-speaking Medicare agents in Chalmette?',
+        a: 'Yes. Both of our agents speak Spanish and can explain Medicare in your language, by phone or in person in Metairie. Family members are welcome too.',
+      },
       {
         q: 'Can I meet a Medicare agent in person from Chalmette?',
         a: 'Yes, at our Metairie office by appointment. Many St. Bernard clients find a phone appointment easier, and we’re glad to do either.',
@@ -855,8 +901,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'slidell-spanish',
+        heading: 'Spanish-speaking insurance agents in Slidell',
+        blocks: [
+          {
+            type: 'p',
+            text: "Slidell is across the lake, but you don't have to settle for help in English only. We can help you in Spanish by phone from home, or in person at our Metairie office when it suits you.",
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: 'Are there Spanish-speaking Medicare agents in Slidell?',
+        a: 'Yes. We help Slidell residents in Spanish, by phone or at our Metairie office, at no cost to you.',
+      },
       {
         q: 'Can I meet a Medicare agent in person if I live in Slidell?',
         a: 'Yes, at our Metairie office by appointment. Most Slidell clients prefer to meet by phone, and we work the same way either way.',
@@ -992,8 +1052,22 @@ const cities: Record<CitySlug, CityContent> = {
           },
         ],
       },
+      {
+        id: 'covington-spanish',
+        heading: 'Spanish-speaking insurance agents in Covington',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Covington and Mandeville residents can work with Spanish-speaking insurance agents too. We review your Medicare options by phone or in person, and a family member who helps with your paperwork is welcome to join the call.',
+          },
+        ],
+      },
     ],
     faqs: [
+      {
+        q: 'Are there Spanish-speaking Medicare agents in Covington?',
+        a: 'Yes. Nidia and John Martinez speak Spanish fluently and help people in Covington and Mandeville by phone or in person in Metairie.',
+      },
       {
         q: 'Can I meet a Medicare agent in person from Covington or Mandeville?',
         a: 'Yes. Our office is in Metairie, near the south end of the Causeway, and visits are by appointment. Phone reviews work well too.',
@@ -1087,7 +1161,7 @@ const cities: Record<CitySlug, CityContent> = {
       },
       {
         id: 'br-spanish',
-        heading: 'Bilingual Medicare help in the capital',
+        heading: 'Spanish-speaking insurance agents in Baton Rouge',
         blocks: [
           {
             type: 'p',
@@ -1117,6 +1191,10 @@ const cities: Record<CitySlug, CityContent> = {
       },
     ],
     faqs: [
+      {
+        q: 'Are there Spanish-speaking Medicare agents in Baton Rouge?',
+        a: 'Yes. We help Baton Rouge residents by phone in Spanish or English, and your whole plan review can be in Spanish.',
+      },
       {
         q: 'Can I meet a Medicare agent in person in Baton Rouge?',
         a: 'We usually help Baton Rouge clients by phone, and we’re happy to talk about an in-person meeting. Our office is in Metairie.',
